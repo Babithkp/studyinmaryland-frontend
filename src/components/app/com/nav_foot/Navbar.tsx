@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { RiCloseCircleFill } from "react-icons/ri";
+// import { RiCloseCircleFill } from "react-icons/ri";
 
 import {
   AlertDialog,
@@ -93,7 +93,7 @@ export default function Navbar() {
           </div>
         </AlertDialogTrigger>
         <AlertDialogContent
-          className="h-[50rem] w-full overflow-scroll bg-transparent"
+          className="h-screen w-full overflow-scroll bg-transparent"
           onClick={() => handleFirstButtonClick()}
         >
           <section className="grid h-full grid-cols-[40%,1fr] bg-transparent">
@@ -176,11 +176,11 @@ export default function Navbar() {
             ref={newRef}
             className="absolute -top-[48rem] right-[5rem] z-[-1] h-[200%] w-full border-none bg-transparent hover:bg-transparent"
           >
-            <RiCloseCircleFill
+            {/* <RiCloseCircleFill
               size={"2.5rem"}
               color="white"
               className="z-[100]"
-            />
+            /> */}
           </AlertDialogCancel>
         </AlertDialogContent>
       </AlertDialog>
