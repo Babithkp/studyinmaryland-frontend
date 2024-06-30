@@ -1,7 +1,8 @@
+import AgentSlide from "./com/objects/AgentSlide";
 
 export default function BecomeAnAgent() {
   return (
-    <main className="flex items-center justify-center">
+    <main className="flex items-center flex-col justify-center">
       <section className="w-[60%] p-10 max-md:w-full max-md:p-4">
         <article>
           <h1 className="my-10 text-5xl font-bold text-red-500 max-md:text-3xl">
@@ -47,6 +48,9 @@ export default function BecomeAnAgent() {
             form is received.
           </p>
         </article>
+      </section>
+      <section className="w-[95%] text-white newFont ">
+      <AgentSlide/>
       </section>
     </main>
   );

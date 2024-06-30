@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+// eslint-disable-next-line no-undef
 module.exports = {
   darkMode: ["class"],
   content: [
@@ -9,6 +10,9 @@ module.exports = {
   ],
   prefix: "",
   theme: {
+    fontFamily:{
+      'display': ['Oswald']
+    },
     container: {
       center: true,
       padding: "2rem",
@@ -73,5 +77,6 @@ module.exports = {
       },
     },
   },
+  // eslint-disable-next-line no-undef
   plugins: [require("tailwindcss-animate")],
 }

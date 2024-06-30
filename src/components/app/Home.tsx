@@ -1,5 +1,4 @@
-import image from ".././../../public/backgroundHeroPage.jpg";
-import icon1 from ".././../../public/city.svg";
+import image from ".././../../public/backgroundHeroPage.jpg";import icon1 from ".././../../public/city.svg";
 import icon2 from ".././../../public/rocket-graph.svg";
 import icon4 from ".././../../public/flag-point.svg";
 import cardBg from ".././../../public/backgroung-card.png";
@@ -13,8 +12,9 @@ import counsellingIcon from ".././../../public/icon-counselling.png";
 import coachingIcon from ".././../../public/coaching-vector.png";
 import visaIcon from ".././../../public/icon-visa.png";
 import financialIcon from ".././../../public/icon-financial.png";
-import CardApply from "./com/cards/CardApply";
+import CardApply from "./com/objects/CardApply";
 import MarylandMap from ".././../../public/baltimore-map.jpg";
+import Slider from "./com/objects/HomeSlider";
 
 export default function Home() {
   return (
@@ -49,8 +49,8 @@ export default function Home() {
           </h2>
           <p className="px-5 text-center text-lg font-extralight">
             Each year we provide scholarship opportunities for more than 1000
-            international students from worldwide to study a postgraduate
-            or doctoral degree program at one of our partner universities.
+            international students from worldwide to study a postgraduate or
+            doctoral degree program at one of our partner universities.
           </p>
           <div className="my-10 flex w-full gap-5 text-center max-lg:flex-wrap max-sm:grid max-sm:grid-cols-2">
             <figure className="flex flex-col items-center justify-center max-sm:w-full">
@@ -112,8 +112,8 @@ export default function Home() {
               Direct Entry To Our Prestigious Partner Universities
             </h3>
             <p className="text-center">
-              Our mission is to make your dream of studying in
-              the USA come true.
+              Our mission is to make your dream of studying in the USA come
+              true.
             </p>
           </div>
           <div className="flex flex-wrap items-center justify-center gap-5">
@@ -163,8 +163,8 @@ export default function Home() {
               Through our organization&apos;s partnership with leading public
               universities in Maryland, we offer international students the
               opportunity to pursue Masters and PhD degree programs with fully
-              funded scholarships provided by the Maryland State
-              Department of Education.
+              funded scholarships provided by the Maryland State Department of
+              Education.
             </p>
             <a
               href={"/"}
@@ -207,8 +207,8 @@ export default function Home() {
             <p className="col-start-2">
               The annual student data in Maryland shows that 72% of university
               graduates in Maryland find jobs within 6 months of graduation.
-              International students can benefit from our international
-              student alumni network.
+              International students can benefit from our international student
+              alumni network.
             </p>
             <a
               href={"/"}
@@ -290,11 +290,13 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="h-[70vh]">
+      <section className="w-[98vw] p-5   ">
         <h3 className="pt-10 text-center text-5xl font-bold text-red-500 max-md:text-3xl">
           See for yourself!
         </h3>
-        <p className="mt-10 text-center">Instagram: #StudyInMaryland</p>
+        <div className="my-14 font-semibold newFont text-white relative">
+          <Slider />
+        </div>
       </section>
     </main>
   );

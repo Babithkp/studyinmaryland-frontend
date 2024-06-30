@@ -3,7 +3,7 @@ import { FaInstagram } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="flex justify-around bg-blue-600 py-10 text-white max-lg:gap-5 max-lg:p-10 max-lg:text-xs  max-md:flex-col">
+    <footer className="flex justify-around bg-[#004890] py-10 text-white max-lg:gap-5 max-lg:p-10 max-lg:text-xs  max-md:flex-col">
       <div className="flex flex-col gap-10 max-lg:gap-5">
         <a href={"/"} className="w-1.5">
           <svg
