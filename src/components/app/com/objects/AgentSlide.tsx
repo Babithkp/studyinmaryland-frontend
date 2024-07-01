@@ -1,8 +1,8 @@
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";import { BiSolidQuoteAltRight } from "react-icons/bi";
 import { Swiper, SwiperSlide } from "swiper/react";
-import stud1Img from "../../../../../public/reviewImage/student1.jpg";
-import stud2Img from "../../../../../public/reviewImage/student2.jpg";
-import stud3Img from "../../../../../public/reviewImage/student3.jpg";
+import agent1Img from "../../../../../public/reviewImage/agent1.jpg";
+import agent2Img from "../../../../../public/reviewImage/agent2.jpg";
+import agent3Img from "../../../../../public/reviewImage/agent3.jpg";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -71,15 +71,15 @@ export default function AgentSlide() {
           <div className="flex my-4 justify-around items-center gap-3">
             <div className="w-[5rem] h-[4rem] ">
               <img
-                src={stud1Img}
+                src={agent1Img}
                 alt={"student Image"}
                 className="object-cover w-[5rem] h-[5rem] rounded-2xl"
               />
             </div>
             <div>
-              <p className="font-medium text-lg">Inaaya Singh</p>
+              <p className="font-medium text-lg">Samuel dima</p>
               <p className="font-extralight">
-                Student at University of Baltimore
+              Study abroad consultant, Nigeria.
               </p>
             </div>
           </div>
@@ -113,15 +113,15 @@ export default function AgentSlide() {
           <div className="flex my-4 justify-around items-center gap-3">
             <div className="w-[5rem] h-[4rem] ">
               <img
-                src={stud2Img}
+                src={agent2Img}
                 alt={"student Image"}
                 className="object-cover w-[5rem] h-[5rem] rounded-2xl"
               />
             </div>
             <div>
-              <p className="font-medium text-lg">Rajesh Atwal</p>
+              <p className="font-medium text-lg">Parveen sharma</p>
               <p className="font-extralight">
-                Student at Morgan State University
+              Education consultant, India.
               </p>
             </div>
           </div>
@@ -159,15 +159,15 @@ export default function AgentSlide() {
           <div className="flex my-4 justify-around items-center gap-3">
             <div className="w-[5rem] h-[4rem] ">
               <img
-                src={stud3Img}
+                src={agent3Img}
                 alt={"student Image"}
                 className="object-cover w-[5rem] h-[5rem] rounded-2xl"
               />
             </div>
             <div>
-              <p className="font-medium text-lg">Sunil Samad</p>
+              <p className="font-medium text-lg">Rafiq khan</p>
               <p className="font-extralight">
-                Student at University of Maryland
+              International student recruiter, Pakistan.
               </p>
             </div>
           </div>
