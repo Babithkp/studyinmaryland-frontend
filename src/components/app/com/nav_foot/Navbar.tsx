@@ -93,7 +93,7 @@ export default function Navbar() {
           </div>
         </AlertDialogTrigger>
         <AlertDialogContent
-          className="h-screen w-full overflow-scroll bg-transparent"
+          className="h-[100vh] w-full overflow-scroll bg-transparent md:hidden"
           onClick={() => handleFirstButtonClick()}
         >
           <section className="grid h-full grid-cols-[40%,1fr] bg-transparent">
@@ -102,71 +102,71 @@ export default function Navbar() {
             <ul className="h-full flex-wrap gap-10 bg-white text-black">
               <a
                 href={"/"}
-                className="block w-full border-b-[1px] bg-red-500 p-5 text-base font-medium text-white"
+                className="block w-full border-b-[1px] bg-red-500 px-5 py-4 text-base font-medium text-white"
               >
                 <p>Home</p>
               </a>
               <a
                 href={"/aboutus"}
-                className="block w-full border-b-[1px] p-5 text-base font-medium text-black"
+                className="block w-full border-b-[1px] px-5 py-4 text-base font-medium text-black"
               >
                 About Us
               </a>
               <a
                 href={"/partner-universities"}
-                className="block w-full border-b-[1px] p-5 text-base font-medium text-black"
+                className="block w-full border-b-[1px] px-5 py-4 text-base font-medium text-black"
               >
                 Partner Universities
               </a>
               <a
                 href={"/Scholarships"}
-                className="block w-full border-b-[1px] p-5 text-base font-medium text-black"
+                className="block w-full border-b-[1px] px-5 py-4 text-base font-medium text-black"
               >
                 Scholarships
               </a>
               <a
                 href={"/student-life"}
-                className="block w-full border-b-[1px] p-5 text-base font-medium text-black"
+                className="block w-full border-b-[1px] px-5 py-4 text-base font-medium text-black"
               >
                 Student Life
               </a>
               <a
                 href={"/visa"}
-                className="block w-full border-b-[1px] p-5 text-base font-medium text-black"
+                className="block w-full border-b-[1px] px-5 py-4 text-base font-medium text-black"
               >
                 Visa
               </a>
               <a
                 href={"/faq"}
-                className="flex w-full items-center border-b-[1px] p-5 text-base font-medium text-black hover:bg-red-500 hover:text-white"
+                className="flex w-full items-center border-b-[1px] px-5 py-4 text-base font-medium text-black hover:bg-red-500 hover:text-white"
               >
                 FAQ
               </a>
 
               <a
                 href={"/applicationPortal"}
-                className="flex w-full items-center border-b-[1px] p-5 text-base font-medium text-black hover:bg-red-500 hover:text-white"
+                className="flex w-full items-center border-b-[1px] px-5 py-4 text-base font-medium text-black hover:bg-red-500 hover:text-white"
               >
                 Application Portal
               </a>
 
               <a
                 href={"/becomeAnAgent"}
-                className="flex w-full items-center border-b-[1px] p-5 text-base font-medium text-black hover:bg-red-500 hover:text-white"
+                className="flex w-full items-center border-b-[1px] px-5 py-4 text-base font-medium text-black hover:bg-red-500 hover:text-white"
               >
                 Become An Agent
               </a>
 
               <a
                 href={"/referralProgram"}
-                className="flex w-full items-center border-b-[1px] p-5 text-base font-medium text-black hover:bg-red-500 hover:text-white"
+                className="flex w-full items-center border-b-[1px] px-5 py-4 text-base font-medium text-black hover:bg-red-500 hover:text-white"
               >
                 Referral Program
               </a>
 
               <a
                 href={"/contact"}
-                className="flex w-full items-center border-b-[1px] p-5 text-base font-medium text-black hover:bg-red-500 hover:text-white"
+                className="flex w-full items-center border-b-[1px] px-5 py-4 text-base font-medium text-black hover:bg-red-500 hover:text-white"
               >
                 Contact
               </a>
