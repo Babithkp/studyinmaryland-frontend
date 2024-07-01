@@ -6,7 +6,7 @@ import { MdLocalPhone } from "react-icons/md";
 import { Button } from "../../../ui/button";
 import { useForm, SubmitHandler } from "react-hook-form";
 import AddApplicationArtical from "../objects/AddApplicationArtical";
-import { useRef } from "react";
+import { ChangeEvent, useRef, useState } from "react";
 
 interface FormValues {
   firstName: string;
@@ -28,6 +28,17 @@ interface FormValues {
   indentityFile: FileList;
 }
 
+interface FormValuesFileType {
+  identityFileName: string;
+  degreeFileName: string;
+  academiFileName: string;
+  birthcerFileName: string;
+  motivationFileName: string;
+  ieltFileName: string;
+  translatedFileName: string;
+  recommendationFileName: string;
+}
+
 export default function AddApplication() {
   const indentityRef = useRef<HTMLInputElement | null>(null);
   const degreeRef = useRef<HTMLInputElement | null>(null);
@@ -37,6 +48,79 @@ export default function AddApplication() {
   const ieltsRef = useRef<HTMLInputElement | null>(null);
   const translatedRef = useRef<HTMLInputElement | null>(null);
   const recommendationRef = useRef<HTMLInputElement | null>(null);
+  const [fileName, setFileName] = useState<FormValuesFileType>({
+    identityFileName: "",
+    degreeFileName: "",
+    academiFileName: "",
+    birthcerFileName: "",
+    motivationFileName: "",
+    ieltFileName: "",
+    translatedFileName: "",
+    recommendationFileName: "",
+  });
+
+  const handleIdentityChange = async (event: ChangeEvent<HTMLInputElement>) => {
+    const files = event.target.files;
+    if (files) {
+      const file = files[0];
+      setFileName((prev) => ({ ...prev, identityFileName: file.name }));
+    }
+  };
+  const handleDegreeChange = async (event: ChangeEvent<HTMLInputElement>) => {
+    const files = event.target.files;
+    if (files) {
+      const file = files[0];
+      setFileName((prev) => ({ ...prev, degreeFileName: file.name }));
+    }
+  };
+  const handleAcademiChange = async (event: ChangeEvent<HTMLInputElement>) => {
+    const files = event.target.files;
+    if (files) {
+      const file = files[0];
+      setFileName((prev) => ({ ...prev, birthcerFileName: file.name }));
+    }
+  };
+  const handleBirthcerChange = async (event: ChangeEvent<HTMLInputElement>) => {
+    const files = event.target.files;
+    if (files) {
+      const file = files[0];
+      setFileName((prev) => ({ ...prev, motivationFileName: file.name }));
+    }
+  };
+  const handleMotivationChange = async (
+    event: ChangeEvent<HTMLInputElement>
+  ) => {
+    const files = event.target.files;
+    if (files) {
+      const file = files[0];
+      setFileName((prev) => ({ ...prev, ieltFileName: file.name }));
+    }
+  };
+  const handlEieltChange = async (event: ChangeEvent<HTMLInputElement>) => {
+    const files = event.target.files;
+    if (files) {
+      const file = files[0];
+      setFileName((prev) => ({ ...prev, translatedFileName: file.name }));
+    }
+  };
+  const handleTranslatedChange = async (
+    event: ChangeEvent<HTMLInputElement>
+  ) => {
+    const files = event.target.files;
+    if (files) {
+      const file = files[0];
+      setFileName((prev) => ({ ...prev, identityFileName: file.name }));
+    }
+  };
+  const handleRecommendationChange = async (
+    event: ChangeEvent<HTMLInputElement>
+  ) => {
+    const files = event.target.files;
+    if (files) {
+      const file = files[0];
+      setFileName((prev) => ({ ...prev, recommendationFileName: file.name }));
+    }
+  };
 
   const {
     register,
@@ -44,8 +128,7 @@ export default function AddApplication() {
     formState: { errors },
   } = useForm<FormValues>();
   const onSubmit: SubmitHandler<FormValues> = (data) => {
-    
-    console.log(data)
+    console.log(data);
   };
   return (
     <main className="flex items-center justify-center">
@@ -391,7 +474,7 @@ export default function AddApplication() {
               Upload Identity document.
               <span className="text-red-500 ml-1">*</span>
             </label>
-            <div className="flex rounded-sm border-[1.9px] border-slate-300">
+            <div className="flex items-center rounded-sm border-[1.9px] border-slate-300">
               <button
                 type="button"
                 className="bg-blue-500 px-2 py-1 text-white"
@@ -403,22 +486,22 @@ export default function AddApplication() {
                 type="file"
                 className="w-full px-2 text-sm focus:outline-blue-400 hidden"
                 placeholder=""
-                {...register("indentityFile", { required: "File is required" })}
                 ref={indentityRef}
+                onChange={handleIdentityChange}
               />
+              {fileName.identityFileName && (
+                <span className=" text-sm font-medium ml-2">
+                  {fileName.identityFileName}
+                </span>
+              )}
             </div>
-            {errors.indentityFile && (
-              <span className="text-red-500 text-sm font-medium mt-2">
-                This Field is Required
-              </span>
-            )}
           </div>
           <div className="my-5">
             <label className="text-sm font-semibold">
               Degree certificate and transcript
               <span className="text-red-500 ml-1">*</span>
             </label>
-            <div className="flex rounded-sm border-[1.9px] border-slate-300">
+            <div className="flex items-center rounded-sm border-[1.9px] border-slate-300">
               <button
                 type="button"
                 className="bg-blue-500 px-2 py-1 text-white"
@@ -431,7 +514,13 @@ export default function AddApplication() {
                 className="w-full px-2 text-sm focus:outline-blue-400 hidden"
                 placeholder=""
                 ref={degreeRef}
+                onChange={handleDegreeChange}
               />
+              {fileName.degreeFileName && (
+                <span className=" text-sm font-medium ml-2">
+                  {fileName.degreeFileName}
+                </span>
+              )}
             </div>
           </div>
           <div className="my-5">
@@ -439,7 +528,7 @@ export default function AddApplication() {
               Academic Credential Report
               <span className="text-red-500 ml-1">*</span>
             </label>
-            <div className="flex rounded-sm border-[1.9px] border-slate-300">
+            <div className="flex items-center rounded-sm border-[1.9px] border-slate-300">
               <button
                 type="button"
                 className="bg-blue-500 px-2 py-1 text-white"
@@ -452,7 +541,13 @@ export default function AddApplication() {
                 className="w-full px-2 text-sm focus:outline-blue-400 hidden"
                 placeholder=""
                 ref={academicRef}
+                onChange={handleAcademiChange}
               />
+              {fileName.academiFileName && (
+                <span className=" text-sm font-medium ml-2">
+                  {fileName.academiFileName}
+                </span>
+              )}
             </div>
           </div>
           <div className="my-5">
@@ -460,7 +555,7 @@ export default function AddApplication() {
               Birth Certificate
               <span className="text-red-500 ml-1">*</span>
             </label>
-            <div className="flex rounded-sm border-[1.9px] border-slate-300">
+            <div className="flex items-center rounded-sm border-[1.9px] border-slate-300">
               <button
                 type="button"
                 className="bg-blue-500 px-2 py-1 text-white"
@@ -473,7 +568,13 @@ export default function AddApplication() {
                 className="w-full px-2 text-sm focus:outline-blue-400 hidden"
                 placeholder=""
                 ref={birthRef}
+                onChange={handleBirthcerChange}
               />
+              {fileName.birthcerFileName && (
+                <span className=" text-sm font-medium ml-2">
+                  {fileName.birthcerFileName}
+                </span>
+              )}
             </div>
           </div>
           <div className="my-5">
@@ -481,7 +582,7 @@ export default function AddApplication() {
               Upload motivational letter/statement of purpose
             </label>
             <span className="text-red-500 ml-1">*</span>
-            <div className="flex rounded-sm border-[1.9px] border-slate-300">
+            <div className="flex items-center rounded-sm border-[1.9px] border-slate-300">
               <button
                 type="button"
                 className="bg-blue-500 px-2 py-1 text-white"
@@ -494,12 +595,18 @@ export default function AddApplication() {
                 className="w-full px-2 text-sm focus:outline-blue-400 hidden"
                 placeholder=""
                 ref={motivationRef}
+                onChange={handleMotivationChange}
               />
+              {fileName.motivationFileName && (
+                <span className=" text-sm font-medium ml-2">
+                  {fileName.motivationFileName}
+                </span>
+              )}
             </div>
           </div>
           <div className="my-5">
             <label className="text-sm font-semibold">IELTS or TOEFL</label>
-            <div className="flex rounded-sm border-[1.9px] border-slate-300">
+            <div className="flex items-center rounded-sm border-[1.9px] border-slate-300">
               <button
                 type="button"
                 className="bg-blue-500 px-2 py-1 text-white"
@@ -512,7 +619,13 @@ export default function AddApplication() {
                 className="w-full px-2 text-sm focus:outline-blue-400 hidden"
                 placeholder=""
                 ref={ieltsRef}
+                onChange={handlEieltChange}
               />
+              {fileName.ieltFileName && (
+                <span className=" text-sm font-medium ml-2">
+                  {fileName.ieltFileName}
+                </span>
+              )}
             </div>
           </div>
           <div className="my-5">
@@ -520,7 +633,7 @@ export default function AddApplication() {
               Official Translated Copy of Your Degree Certificates and
               Transcripts in English Language.
             </label>
-            <div className="flex rounded-sm border-[1.9px] border-slate-300">
+            <div className="flex items-center rounded-sm border-[1.9px] border-slate-300">
               <button
                 type="button"
                 className="bg-blue-500 px-2 py-1 text-white"
@@ -533,7 +646,13 @@ export default function AddApplication() {
                 className="w-full px-2 text-sm focus:outline-blue-400 hidden"
                 placeholder=""
                 ref={translatedRef}
+                onChange={handleTranslatedChange}
               />
+              {fileName.translatedFileName && (
+                <span className=" text-sm font-medium ml-2">
+                  {fileName.translatedFileName}
+                </span>
+              )}
             </div>
           </div>
 
@@ -541,7 +660,7 @@ export default function AddApplication() {
             <label className="text-sm font-semibold">
               Upload copy of recommendation or reference letter (optional)
             </label>
-            <div className="flex rounded-sm border-[1.9px] border-slate-300">
+            <div className="flex items-center rounded-sm border-[1.9px] border-slate-300">
               <button
                 type="button"
                 className="bg-blue-500 px-2 py-1 text-white"
@@ -554,7 +673,13 @@ export default function AddApplication() {
                 className="w-full px-2 text-sm focus:outline-blue-400 hidden"
                 placeholder=""
                 ref={recommendationRef}
+                onChange={handleRecommendationChange}
               />
+              {fileName.recommendationFileName && (
+                <span className=" text-sm font-medium ml-2">
+                  {fileName.recommendationFileName}
+                </span>
+              )}
             </div>
           </div>
 
