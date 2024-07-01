@@ -1,5 +1,4 @@
-export default function Visa() {
-  return (
+export default function Visa() {  return (
     <main className="flex items-center justify-center ">
       <section className="w-[60%] p-10 max-md:w-full max-md:p-4">
         <article>
@@ -187,8 +186,12 @@ export default function Visa() {
               <li>
                 <p className="text-lg font-bold">Extension of Stay:</p>
                 <p>
-                  f your program takes longer than expected, you may need to
-                  apply for an extension.
+                  Bringing a Dependent to the U.S: An international student can
+                  be accompanied to the U.S. by their dependent(s) at any time.
+                  Dependents are defined as spouses and/or unmarried minor
+                  children. Children over the age of 21 are not eligible to
+                  enter as the dependent of an international student (F-1 or J-1
+                  student).
                 </p>
               </li>
             </ul>

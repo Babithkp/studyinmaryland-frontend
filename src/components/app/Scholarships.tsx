@@ -1,7 +1,6 @@
-
-export default function Scholarships() {
+import HomeSlider from "./com/objects/HomeSlider";export default function Scholarships() {
   return (
-    <main className="flex items-center justify-center">
+    <main className="flex flex-col items-center justify-center">
       <section className="w-[60%] p-10 max-md:w-full max-md:p-4">
         <article>
           <p className="my-10 text-3xl font-bold text-red-500 max-md:text-3xl">
@@ -19,16 +18,11 @@ export default function Scholarships() {
             students have played a major role in shaping U.S. communities and
             economy over the past decade.
           </p>
-          <p className="my-10 text-3xl font-bold text-red-500 max-md:text-3xl">
-            Community and Networking
-          </p>
+
           <p className="text-md my-5">
             The Study in Maryland scholarship aids up to 1,500 international
             students annually with fully funded scholarships to study Masters or
             PhD degree program at a partner university in the state of Maryland.
-          </p>
-          <p className="my-10 text-3xl font-bold text-red-500 max-md:text-3xl">
-            Partnership
           </p>
 
           <p className="text-md my-5">
@@ -42,8 +36,7 @@ export default function Scholarships() {
             Scholarship Details
           </p>
           <div className="text-md my-5">
-            Scholarship Details
-            <ul className="ml-5 list-disc">
+            <ul className="ml-5 list-disc flex flex-col gap-3">
               <li>
                 <span className="text-lg font-bold">Scholarship Name:</span>
                 <p>Study in Maryland Scholarship</p>
@@ -89,7 +82,7 @@ export default function Scholarships() {
             </ul>
           </div>
           <p className="my-10 text-3xl font-bold text-red-500 max-md:text-3xl">
-            Eligibility Requirements
+            Application Requirements
           </p>
           <div className="text-md my-5">
             <ul className="ml-5 list-disc">
@@ -106,23 +99,50 @@ export default function Scholarships() {
             </ul>
           </div>
           <div className="text-md my-5">
-            Official translated copies of degree certificates (for non-English
-            academic certificates)
-            <ul className="ml-5 list-disc">
+            <ul className="ml-5 list-disc flex flex-col gap-3">
+              <li>
+                Official translated copies of degree certificates (Only required
+                for academic certificates and transcripts not in English
+                language)
+              </li>
               <li>
                 Credentials evaluation report from ARS.org (to verify the U.S.
                 equivalency of courses and GPA, and authenticity of academic
                 documents)
               </li>
               <li>
-                English language proficiency certificate from IELTS or TOEFL
-                (for students whose previous degrees were not in English)
+                Official translated copies of degree certificates and
+                transcripts from academic records service ars.org
+              </li>
+              <li>
+                Academic credentials evaluation report from the Maryland
+                academic records service ars.org (This report shows that the U.S
+                equivalency of your courses and gpa has been evaluated, and that
+                the authenticity of your degree certificate and transcripts has
+                been verified by an official academic credential evaluation
+                service in the United States.)
+              </li>
+              <li>
+                English language proficiency test result from IELTS or TOEFL
+                www.ielts.org/ www.ets.org/toefl.html ( This is only required
+                for international students with degree certificates and
+                transcripts that are not in English language)
               </li>
               <li>
                 Birth certificate issued by relevant government authorities in
                 your home country
               </li>
               <li>Motivation letter/personal statement</li>
+              <li>
+                Identification document: (Accepted means of identification can
+                be a copy of your international passport, national identity
+                card, or a driver’s license.)
+              </li>
+              <li>
+                Recommendations or Reference letter from your previous or
+                current employer or an advisor, representative of your academic
+                institution.
+              </li>
             </ul>
           </div>
           <p className="my-10 text-3xl font-bold text-red-500 max-md:text-3xl">
@@ -145,6 +165,9 @@ export default function Scholarships() {
             State of Maryland.
           </p>
         </article>
+      </section>
+      <section className="w-[95%] text-white newFont my-5">
+        <HomeSlider />
       </section>
     </main>
   );

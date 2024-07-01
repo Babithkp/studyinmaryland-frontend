@@ -1,4 +1,3 @@
-
 import {
   Accordion,
   AccordionContent,
@@ -81,56 +80,50 @@ export default function PartnerUniversities() {
             <AccordionContent className=" ">
               <p className="w-full bg-slate-300 p-3 text-center font-semibold">
                 International students are eligible to study any of the
-                following masters and phd programs at one of our
-                partners universities.
+                following masters and phd programs at one of our partners
+                universities.
               </p>
-              <ul>
+              <ul className="">
                 <li className={dropdownTextClass}> Accounting</li>
                 <li className={dropdownTextClass}>
-                  {" "}
                   Artificial Intelligence for Business.
                 </li>
                 <li className={dropdownTextClass}>
-                  {" "}
                   Applied Molecular Biology and Biochemistry
                 </li>
                 <li className={dropdownTextClass}> Architecture </li>
                 <li className={dropdownTextClass}> Business Administration</li>
                 <li className={dropdownTextClass}> Business-Finance</li>
-                <li className={dropdownTextClass}> Construction management </li>
+                <li className={dropdownTextClass}> Construction Management </li>
                 <li className={dropdownTextClass}> Cybersecurity </li>
-                <li className={dropdownTextClass}> Civil engineering </li>
+                <li className={dropdownTextClass}> Civil Engineering </li>
                 <li className={dropdownTextClass}> Chemical Engineering </li>
-                <li className={dropdownTextClass}> Computer engineering </li>
+                <li className={dropdownTextClass}> Computer Engineering </li>
                 <li className={dropdownTextClass}>
-                  {" "}
-                  Data analytics and visualization{" "}
+                  Data Analytics And Visualization
                 </li>
-                <li className={dropdownTextClass}> Electrical engineering </li>
-                <li className={dropdownTextClass}> Environmental science </li>
+                <li className={dropdownTextClass}> Electrical Angineering </li>
+                <li className={dropdownTextClass}> Environmental Science </li>
                 <li className={dropdownTextClass}>
-                  {" "}
-                  Global journalism and communications{" "}
+                  Global Journalism And Communications
                 </li>
                 <li className={dropdownTextClass}>
-                  {" "}
                   Global Affairs and Human Security
                 </li>
                 <li className={dropdownTextClass}> Health Administration</li>
-                <li className={dropdownTextClass}> Hospitality management </li>
+                <li className={dropdownTextClass}> Hospitality Management </li>
                 <li className={dropdownTextClass}>
-                  {" "}
-                  Information systems/Technology{" "}
+                  Information Systems/Technology
                 </li>
-                <li className={dropdownTextClass}> International business </li>
+                <li className={dropdownTextClass}> International Business </li>
                 <li className={dropdownTextClass}> Management </li>
                 <li className={dropdownTextClass}> Marketing </li>
                 <li className={dropdownTextClass}> Mechanical Engineering</li>
                 <li className={dropdownTextClass}> Nursing </li>
-                <li className={dropdownTextClass}> Project management </li>
-                <li className={dropdownTextClass}> Public health </li>
-                <li className={dropdownTextClass}> Social work </li>
-                <li className={dropdownTextClass}> Urban transportation</li>
+                <li className={dropdownTextClass}> Project Management </li>
+                <li className={dropdownTextClass}> Public Health </li>
+                <li className={dropdownTextClass}> Social Work </li>
+                <li className={dropdownTextClass}> Urban Transportation</li>
               </ul>
             </AccordionContent>
           </AccordionItem>
@@ -138,17 +131,17 @@ export default function PartnerUniversities() {
         <Accordion type="single" collapsible className="w-full">
           <AccordionItem value="item-1">
             <AccordionTrigger className="bg-slate-100">
-              <span className="ml-5 mr-10">Admission requirements</span>
+              <span className="ml-5 mr-10">Admission Requirements</span>
             </AccordionTrigger>
             <AccordionContent className=" ">
               <p className="w-full bg-slate-300 p-3 font-semibold">
-                International students must meet the following
-                admission requirements.
+                International students must submit the following requirements to
+                apply for a scholarship to study at one of our partner
+                universities.
               </p>
               <ul>
                 <li className={dropdownTextClass + "text-start"}>
-                  {" "}
-                  <ul className="my-2 flex list-inside list-disc flex-col items-start justify-start px-5">
+                  <ul className="my-2 flex list-inside list-disc flex-col items-start justify-start px-5 gap-5">
                     <li>
                       Bachelor degree certificate and transcript (For Masters
                       programs)
@@ -164,18 +157,15 @@ export default function PartnerUniversities() {
                   </li>
                 </li>
                 <li className={dropdownTextClass}>
-                  <span className="font-bold mr-2">
-                  IELTS/TOEFL: 
-                  </span>
-                  To be eligible for a bachelors or a masters
-                  degree program at one of our partner universities on a
-                  state-funded scholarship, international students with degree
-                  certificates and transcripts in English language are not
-                  required to submit an English language proficiency
-                  certificate, such as IELTS or TOEFL. However, international
-                  students with degree certificates and transcripts in a foreign
-                  language (Not in English language) must submit an IELTS or
-                  TOEFL certificate.
+                  <span className="font-bold mr-2">IELTS/TOEFL:</span>
+                  To be eligible for a bachelors or a masters degree program at
+                  one of our partner universities on a state-funded scholarship,
+                  international students with degree certificates and
+                  transcripts in English language are not required to submit an
+                  English language proficiency certificate, such as IELTS or
+                  TOEFL. However, international students with degree
+                  certificates and transcripts in a foreign language (Not in
+                  English language) must submit an IELTS or TOEFL certificate.
                   <ul className="my-3 w-full text-center">
                     <li>
                       - IELTS:
@@ -200,15 +190,14 @@ export default function PartnerUniversities() {
                   </ul>
                 </li>
                 <li className={dropdownTextClass + " flex flex-col gap-5"}>
-                  {" "}
                   <span>
-                  <span className="font-bold mr-2">
-                  Credential Evaluation:
-                  </span>
-                    It is mandatory for all international
-                    students to submit an evaluation report of their academic
-                    credentials in other to be eligible for admission and a
-                    scholarship to study at one of our partner universities.
+                    <span className="font-bold mr-2">
+                      Credential Evaluation:
+                    </span>
+                    It is mandatory for all international students to submit an
+                    evaluation report of their academic credentials in other to
+                    be eligible for admission and a scholarship to study at one
+                    of our partner universities.
                   </span>
                   <span>
                     An academic credential evaluation in the United States is a
@@ -226,18 +215,54 @@ export default function PartnerUniversities() {
                   </span>
                   <span>
                     International students can get their academic documents
-                    evaluated and verified by an academic evaluation
-                    service in Maryland
+                    evaluated and verified by an academic evaluation service in
+                    Maryland
                   </span>
                 </li>
 
                 <li className={dropdownTextClass}>
-                  {" "}
                   Statement of purpose: A personal statement, that tells the
                   admissions committee who you are, what your academic and
                   professional interests are, how you will add value to your
                   chosen degree program and how the degree program aligns with
                   your career goals.
+                </li>
+                <li className={dropdownTextClass + " flex flex-col gap-3"}>
+                  <p>
+                    Identification Documents: a copy of your ID document is
+                    required ( International passport, Driver’s license, or
+                    National identity card are accepted.)
+                  </p>
+                  <p>
+                    Birth certificate: an original copy of your birth issued by
+                    the relevant authority in your home country.
+                  </p>
+                </li>
+                <li className={dropdownTextClass + " flex flex-col gap-3"}>
+                  <p>
+                    Official academic credentials translation: International
+                    student with a bachelor or masters degree certificate and
+                    transcript must have their academic qualifications
+                    translated into English Language by an official translator
+                    in the United States. International students with academic
+                    qualifications in English language are not required to have
+                    their documents translated.
+                  </p>
+                  <p>
+                    We accept English language translated documents from
+                    Maryland Academic records service arg.org
+                  </p>
+                </li>
+                <li className={dropdownTextClass}>
+                  <p>
+                    Recommendation Letter or Reference Letter: a recommendation
+                    letter or references letter from your current or previous
+                    employer or an academic supervisor or representative at your
+                    previous academic institution can help boost your
+                    application chances of securing a full scholarship to study
+                    a defined program at one of our partner universities in
+                    Maryland.
+                  </p>
                 </li>
               </ul>
             </AccordionContent>
@@ -248,7 +273,21 @@ export default function PartnerUniversities() {
             <AccordionTrigger className="bg-slate-100">
               <span className="ml-5 mr-10">Admission deadline</span>
             </AccordionTrigger>
-            <AccordionContent className="text-lg">content</AccordionContent>
+            <AccordionContent className="text-lg">
+              <p className="w-full bg-slate-300 p-3 font-semibold">
+                All international students would have to submit their
+                scholarship application to study at one of our partner
+                universities in Maryland before the application deadline.
+              </p>
+              <ul>
+                <li className={dropdownTextClass}>
+                  Spring semester( starting in January 2025.)
+                </li>
+                <li className={dropdownTextClass}>
+                  Application deadline: September 30th, 2024.
+                </li>
+              </ul>
+            </AccordionContent>
           </AccordionItem>
         </Accordion>
       </section>

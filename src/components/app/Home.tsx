@@ -30,25 +30,28 @@ export default function Home() {
             Study in Maryland - home to diverse and a vibrant student community
             in Maryland, United States.
           </h1>
-          <p className="bg-blue-600 p-8 text-lg font-medium max-md:p-4 max-sm:text-base text-center">
+          <p className="bg-[#004890] p-8 text-lg font-medium max-md:p-4 max-sm:text-base text-center">
             We make it possible for international students to study in Maryland
             through scholarships which provides them with free access to a
             world-class education and career opportunities in Maryland, USA.
           </p>
         </article>
         <div className="flex max-sm:flex-col">
-          <button className="rounded-md bg-white px-9 py-3 font-semibold text-red-500">
+          <a
+            href="student-life"
+            className="rounded-md bg-white px-9 py-3 font-semibold text-red-500"
+          >
             DISCOVER Maryland
-          </button>
+          </a>
         </div>
       </section>
       <section className="flex w-[95%] flex-col items-center">
         <div className="flex w-[90%] flex-col items-center justify-center gap-3">
-          <h2 className="my-8 text-5xl font-bold text-red-500 max-md:text-3xl">
+          <h2 className="my-8 text-5xl font-bold text-red-500 max-md:text-3xl text-center">
             Study at one of our partner institutions
           </h2>
           <p className="px-5 text-center text-lg font-extralight">
-            Each year we provide scholarship opportunities for more than 1000
+            Each year we provide scholarship opportunities for more than 1500
             international students from worldwide to study a postgraduate or
             doctoral degree program at one of our partner universities.
           </p>
@@ -109,7 +112,7 @@ export default function Home() {
               what we do
             </span>
             <h3 className="my-8 w-[80%] text-center text-3xl font-bold text-red-500 max-md:text-lg">
-              Direct Entry To Our Prestigious Partner Universities
+              Direct Entry Into Our Prestigious Partner Universities
             </h3>
             <p className="text-center">
               Our mission is to make your dream of studying in the USA come
@@ -120,12 +123,12 @@ export default function Home() {
             <CardApply
               image={coachingIcon}
               title="Scholarship Assistance"
-              content="Free access to apply for Maryland state-funded scholarships on our application portal."
+              content="Free access to apply for Maryland state-funded scholarship on our application portal."
             />
             <CardApply
               image={counsellingIcon}
               title="University Placement"
-              content="Submit your application directly to six of our partner universities using our application portal."
+              content="All scholarship recipients are admitted to study at one of our partner universities."
             />
             <CardApply
               image={visaIcon}
@@ -139,7 +142,10 @@ export default function Home() {
             />
           </div>
         </div>
-        <a href="/" className="mb-10 text-lg font-medium underline">
+        <a
+          href="/partner-universities"
+          className="mb-10 text-lg font-medium underline"
+        >
           View Our Top Study Programs.
         </a>
       </section>
@@ -167,7 +173,7 @@ export default function Home() {
               Education.
             </p>
             <a
-              href={"/"}
+              href={"/Scholarships"}
               className="col-start-2 text-lg font-medium text-red-500 underline"
             >
               MORE INFO
@@ -188,7 +194,7 @@ export default function Home() {
               programs at no cost!
             </p>
             <a
-              href={"/"}
+              href={"/applicationPortal"}
               className="col-start-2 text-lg font-medium text-red-500 underline"
             >
               MORE INFO
@@ -211,7 +217,7 @@ export default function Home() {
               alumni network.
             </p>
             <a
-              href={"/"}
+              href={"/student-life"}
               className="col-start-2 text-lg font-medium text-red-500 underline"
             >
               MORE INFO
@@ -220,18 +226,21 @@ export default function Home() {
         </div>
       </section>
       <section className="flex w-full flex-col items-center justify-center gap-10">
-        <h3 className="my-8 px-5 text-5xl font-bold text-red-500 max-md:text-3xl">
+        <a
+          href="/partner-universities"
+          className="my-8 px-5 text-5xl font-bold text-red-500 max-md:text-3xl hover:underline"
+        >
           Find out more about the universities
-        </h3>
+        </a>
         <div className="my-10 flex w-[80%] flex-wrap justify-between gap-10 max-md:justify-center">
           <div className="relative flex flex-col items-center text-center">
-            <h6 className="text-7xl font-semibold text-yellow-300">14</h6>
+            <h6 className="text-7xl font-semibold text-yellow-300">4</h6>
             <p className="absolute top-[30%] w-[300%] text-lg font-bold text-slate-600 max-md:top-[35%]">
               YEARS OF EXPERIENCE
             </p>
           </div>
           <div className="relative flex flex-col items-center">
-            <h6 className="text-7xl font-semibold text-yellow-300">18000+</h6>
+            <h6 className="text-7xl font-semibold text-yellow-300">8000+</h6>
             <p className="absolute top-[30%] text-lg font-bold text-slate-600 max-md:top-[35%]">
               Scholarships Awarded
             </p>
@@ -262,32 +271,25 @@ export default function Home() {
               There is always someone you can ask
             </h3>
           </div>
-          <div className="relative flex h-[28rem] w-[19rem] items-center justify-center bg-red-500 max-md:h-[20rem] max-md:w-[100%]">
-            <a
-              href={"/"}
-              className="text-center text-2xl font-bold text-white underline max-md:text-xl"
-            >
-              FAQ
-            </a>
-          </div>
+          <a
+            href={"/faq"}
+            className=" text-2xl font-bold text-white underline hover:-translate-y-1 duration-100 max-md:text-xl flex h-[28rem] w-[19rem] items-center justify-center bg-red-500 max-md:h-[20rem] max-md:w-[100%]"
+          >
+            FAQ
+          </a>
           <div className="relative flex h-[28rem] w-[19rem] items-center justify-center max-md:h-[20rem] max-md:w-[100%]">
             <img
               src={MarylandMap}
               alt="college background"
               className="absolute h-full w-full object-cover"
             />
-            <h3 className="z-20 text-center text-4xl font-bold text-red-500 max-md:text-2xl">
-              Ambassadors
-            </h3>
           </div>
-          <div className="relative flex h-[28rem] w-[19rem] items-center justify-center bg-blue-500 max-md:h-[20rem] max-md:w-[100%]">
-            <a
-              href={"/"}
-              className="text-center text-2xl font-bold text-white underline max-md:text-xl"
-            >
-              Contact
-            </a>
-          </div>
+          <a
+            href={"/contact"}
+            className="text-2xl font-bold text-white underline hover:-translate-y-1 duration-100 max-md:text-xl flex h-[28rem] w-[19rem] items-center justify-center bg-blue-500 max-md:h-[20rem] max-md:w-[100%]"
+          >
+            Contact
+          </a>
         </div>
       </section>
       <section className="w-[98vw] p-5   ">

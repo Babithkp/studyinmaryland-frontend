@@ -4,13 +4,14 @@ import { GoPersonFill } from "react-icons/go";
 import { FaCalendarAlt } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { MdLocalPhone } from "react-icons/md";
+import { Button } from "../../../ui/button";
 
 export default function AddApplication() {
   return (
     <main className="flex items-center justify-center">
       <section className="w-[60%] border p-10 max-md:w-full max-md:p-4">
         <article>
-          <h1 className="my-10 text-5xl font-bold text-red-500 max-md:text-3xl">
+          <h1 className="my-10 text-5xl font-bold text-red-500  max-md:text-3xl">
             Application portal
           </h1>
           <p className="text-md my-5">
@@ -276,8 +277,8 @@ export default function AddApplication() {
           </div>
           <div className="my-5">
             <label className="text-sm font-semibold">
-              Upload copy of Identification
-              <span className="text-red-500">*</span>
+            Upload Identity document.
+              <span className="text-red-500 ml-1">*</span>
             </label>
             <div className="flex rounded-sm border-[1.9px] border-slate-300">
               <button
@@ -296,8 +297,8 @@ export default function AddApplication() {
           </div>
           <div className="my-5">
             <label className="text-sm font-semibold">
-              Upload scanned copies of Educational Certificates and Transcripts{" "}
-              <span className="text-red-500">*</span>
+            Degree certificate and transcript 
+              <span className="text-red-500 ml-1">*</span>
             </label>
             <div className="flex rounded-sm border-[1.9px] border-slate-300">
               <button
@@ -316,8 +317,8 @@ export default function AddApplication() {
           </div>
           <div className="my-5">
             <label className="text-sm font-semibold">
-            Upload copy of your academic credential evaluation report{" "}
-              <span className="text-red-500">*</span>
+            Academic Credential Report 
+              <span className="text-red-500 ml-1">*</span>
             </label>
             <div className="flex rounded-sm border-[1.9px] border-slate-300">
               <button
@@ -336,47 +337,8 @@ export default function AddApplication() {
           </div>
           <div className="my-5">
             <label className="text-sm font-semibold">
-            Upload copy of birth certificate
-              <span className="text-red-500">*</span>
-            </label>
-            <div className="flex rounded-sm border-[1.9px] border-slate-300">
-              <button
-                type="button"
-                className="bg-blue-500 px-2 py-1 text-white"
-              >
-                Browse
-              </button>
-              <input
-                type="text"
-                className="w-full px-2 text-sm focus:outline-blue-400"
-                placeholder=""
-                disabled
-              />
-            </div>
-          </div>
-          <div className="my-5">
-            <label className="text-sm font-semibold">
-            Upload copy of IELTS/TOEFL
-              <span className="text-red-500">*</span>
-            </label>
-            <div className="flex rounded-sm border-[1.9px] border-slate-300">
-              <button
-                type="button"
-                className="bg-blue-500 px-2 py-1 text-white"
-              >
-                Browse
-              </button>
-              <input
-                type="text"
-                className="w-full px-2 text-sm focus:outline-blue-400"
-                placeholder=""
-                disabled
-              />
-            </div>
-          </div>
-          <div className="my-5">
-            <label className="text-sm font-semibold">
-            Upload official translated copy of your degree certificates and transcripts in English language.
+            Birth Certificate 
+              <span className="text-red-500 ml-1">*</span>
             </label>
             <div className="flex rounded-sm border-[1.9px] border-slate-300">
               <button
@@ -397,6 +359,7 @@ export default function AddApplication() {
             <label className="text-sm font-semibold">
             Upload motivational letter/statement of purpose 
             </label>
+            <span className="text-red-500 ml-1">*</span>
             <div className="flex rounded-sm border-[1.9px] border-slate-300">
               <button
                 type="button"
@@ -412,6 +375,45 @@ export default function AddApplication() {
               />
             </div>
           </div>
+          <div className="my-5">
+            <label className="text-sm font-semibold">
+            IELTS or TOEFL
+            </label>
+            <div className="flex rounded-sm border-[1.9px] border-slate-300">
+              <button
+                type="button"
+                className="bg-blue-500 px-2 py-1 text-white"
+              >
+                Browse
+              </button>
+              <input
+                type="text"
+                className="w-full px-2 text-sm focus:outline-blue-400"
+                placeholder=""
+                disabled
+              />
+            </div>
+          </div>
+          <div className="my-5">
+            <label className="text-sm font-semibold">
+            Official Translated Copy of Your Degree Certificates and Transcripts in English Language.
+            </label>
+            <div className="flex rounded-sm border-[1.9px] border-slate-300">
+              <button
+                type="button"
+                className="bg-blue-500 px-2 py-1 text-white"
+              >
+                Browse
+              </button>
+              <input
+                type="text"
+                className="w-full px-2 text-sm focus:outline-blue-400"
+                placeholder=""
+                disabled
+              />
+            </div>
+          </div>
+          
           <div className="my-5">
             <label className="text-sm font-semibold">
             Upload copy of recommendation or reference letter (optional)
@@ -433,12 +435,11 @@ export default function AddApplication() {
           </div>
 
           <p className="text-md my-5">
-            By clicking submit you are agreeing to our terms and conditions and
-            privacy policy
+          By clicking submit you are agreeing that you have uploaded all the original documents for your scholarship application
           </p>
-          <button className="rounded-sm bg-red-500 px-2 py-1 text-white">
+          <Button className="rounded-sm bg-red-500 px-2 py-1 text-white w-[5rem]">
             Submit
-          </button>
+          </Button>
         </form>
       </section>
     </main>

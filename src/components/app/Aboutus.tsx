@@ -25,7 +25,7 @@ export default function Aboutus() {
             world-class study destination for international students.
           </p>
           <p className="text-md my-5">
-            Since our inception in 2010, we have supported over 18,000
+            Since our inception in 2020, we have supported over 8,000
             international students from around the world in studying at
             prestigious universities in Maryland on full scholarships funded by
             the state of Maryland and the Maryland State Department of
