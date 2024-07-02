@@ -184,9 +184,9 @@ export default function Visa() {  return (
                 </p>
               </li>
               <li>
-                <p className="text-lg font-bold">Extension of Stay:</p>
+                <p className="text-lg font-bold">Bringing a Dependent to the U.S:</p>
                 <p>
-                  Bringing a Dependent to the U.S: An international student can
+                   An international student can
                   be accompanied to the U.S. by their dependent(s) at any time.
                   Dependents are defined as spouses and/or unmarried minor
                   children. Children over the age of 21 are not eligible to

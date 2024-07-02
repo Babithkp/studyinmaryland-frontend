@@ -7,40 +7,40 @@ export default function Faq() {
             FAQ
           </h1>
           <p className="my-10 text-3xl font-bold text-red-500 max-md:text-3xl">
-            Which universities does Study in Baltimore assist with?
+            Which universities does Study in Maryland assist with?
           </p>
           <p className="text-md my-5">
-            Study in Baltimore works with a wide range of universities in
-            Baltimore, including prestigious institutions such as Johns Hopkins
+            Study in Maryland works with a wide range of universities in
+            Maryland, including prestigious institutions such as Johns Hopkins
             University, University of Maryland, Loyola University Maryland, and
             many others. We tailor our services to match your academic interests
             and career goals.
           </p>
           <p className="my-10 text-3xl font-bold text-red-500 max-md:text-3xl">
-            What services does Study in Baltimore provide?
+            What services does Study in Maryland provide?
           </p>
           <p className="text-md my-5">
             We offer comprehensive services to international students, including
             university selection guidance, application assistance, visa support,
             accommodation advice, and ongoing support throughout your academic
-            journey in Baltimore.
+            journey in Maryland.
           </p>
           <p className="my-10 text-3xl font-bold text-red-500 max-md:text-3xl">
-            How can Study in Baltimore help with the application process?
+            How can Study in Maryland help with the application process?
           </p>
 
           <p className="text-md my-5">
             Our experienced counselors provide personalized guidance through
             every step of the application process. We assist with preparing
             application documents, such as transcripts and recommendation
-            letters, and ensure they meet the requirements of Baltimore
+            letters, and ensure they meet the requirements of Maryland
             universities..
           </p>
           <p className="my-10 text-3xl font-bold text-red-500 max-md:text-3xl">
             Access to Top-tier Education and Research Opportunities
           </p>
           <p className="text-md my-5">
-            International students in Baltimore have access to some of the best
+            International students in Maryland have access to some of the best
             educational and research facilities in the world. Institutions like
             Johns Hopkins University are leaders in research and innovation,
             providing international students with opportunities to engage in
@@ -48,46 +48,46 @@ export default function Faq() {
             fields.
           </p>
           <p className="my-10 text-3xl font-bold text-red-500 max-md:text-3xl">
-            What are the admission requirements for universities in Baltimore?
+            What are the admission requirements for universities in Maryland?
           </p>
           <p className="text-md my-5">
             Admission requirements vary by university and program. Study in
-            Baltimore helps you understand these requirements and ensures your
+            Maryland helps you understand these requirements and ensures your
             application package is complete and competitive. Typical
             requirements include academic transcripts, standardized test scores
             (like SAT or GRE), essays, and proof of English proficiency.
           </p>
           <p className="my-10 text-3xl font-bold text-red-500 max-md:text-3xl">
-            Can Study in Baltimore assist with scholarships and financial aid?
+            Can Study in Maryland assist with scholarships and financial aid?
           </p>
           <p className="text-md my-5">
             Yes, we provide information on scholarships and financial aid
-            opportunities offered by Baltimore universities. We guide you on how
+            opportunities offered by Maryland universities. We guide you on how
             to apply for scholarships and help you explore other funding options
             to support your studies.
           </p>
           <p className="my-10 text-3xl font-bold text-red-500 max-md:text-3xl">
-            What is student life like in Baltimore for international students?
+            What is student life like in Maryland for international students?
           </p>
           <p className="text-md my-5">
-            Baltimore offers a vibrant and diverse student life experience. From
+            Maryland offers a vibrant and diverse student life experience. From
             cultural events to recreational activities and student clubs,
-            there&apos;s always something to do. Study in Baltimore provides
+            there&apos;s always something to do. Study in Maryland provides
             insights into campus life and helps you settle into the city.
           </p>
           <p className="my-10 text-3xl font-bold text-red-500 max-md:text-3xl">
-            How does Study in Baltimore support students after arrival?
+            How does Study in Maryland support students after arrival?
           </p>
           <p className="text-md my-5">
-            Our support doesn’t end once you arrive in Baltimore. We offer
+            Our support doesn’t end once you arrive in Maryland. We offer
             orientation sessions, help you get acquainted with campus resources,
-            provide advice on living in Baltimore, and address any concerns you
+            provide advice on living in Maryland, and address any concerns you
             may have throughout your academic journey.
           </p>
           <p className="text-md my-5">
-            These FAQs cover essential aspects of Study in Baltimore&apos;s services
+            These FAQs cover essential aspects of Study in Maryland&apos;s services
             and how we assist international students aiming to study in
-            Baltimore. For further inquiries or personalized assistance, feel
+            Maryland. For further inquiries or personalized assistance, feel
             free to reach out to us directly.
           </p>
         </article>

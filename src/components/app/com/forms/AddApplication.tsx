@@ -197,7 +197,7 @@ export default function AddApplication() {
     await postFile(data);
   };
   return (
-    <main className="flex items-center justify-center">
+    <main className="flex items-center justify-center font-medium">
       <section className="w-[60%] border p-10 max-md:w-full max-md:p-4">
         <AddApplicationArtical />
         <form onSubmit={handleSubmit(onSubmit)}>
@@ -402,7 +402,7 @@ export default function AddApplication() {
           </div>
           <div className="my-5 md:w-[50%]">
             <label className="text-sm font-semibold">
-              Phone number<span className="text-red-500">*</span>
+              Phone Number<span className="text-red-500">*</span>
             </label>
             <div className="flex rounded-sm border-[1.9px] border-slate-300 md:w-[50%]">
               <MdLocalPhone className="bg-slate-100 p-[0.4rem]" size={"2rem"} />
@@ -464,7 +464,7 @@ export default function AddApplication() {
 
           <div className="my-5">
             <label className="text-sm font-semibold">
-              Study Program/course <span className="text-red-500">*</span>
+              Study Program/Course <span className="text-red-500">*</span>
             </label>
             <div className="flex rounded-sm border-[1.9px] border-slate-300 md:w-[50%]">
               <IoMdHome className="bg-slate-100 p-[0.4rem]" size={"2rem"} />
@@ -537,7 +537,7 @@ export default function AddApplication() {
           </div>
           <div className="my-5">
             <label className="text-sm font-semibold">
-              Identity document.
+              Identity Document.
               <span className="text-red-500 ml-1">*</span>
             </label>
             <div className="flex items-center rounded-sm border-[1.9px] border-slate-300">
@@ -565,7 +565,7 @@ export default function AddApplication() {
           </div>
           <div className="my-5">
             <label className="text-sm font-semibold">
-              Degree certificate and transcript
+              Degree Certificate and Transcript
               <span className="text-red-500 ml-1">*</span>
             </label>
             <div className="flex items-end gap-2 rounded-sm border-[1.9px] border-slate-300 ">
@@ -611,7 +611,7 @@ export default function AddApplication() {
           </div>
           <div className="my-5">
             <label className="text-sm font-semibold">
-              Academic Credential Report
+            Academic Credential Evaluation Report
               <span className="text-red-500 ml-1">*</span>
             </label>
             <div className="flex items-end gap-1 rounded-sm border-[1.9px] border-slate-300">
@@ -685,7 +685,7 @@ export default function AddApplication() {
           </div>
           <div className="my-5">
             <label className="text-sm font-semibold">
-              Motivational letter/statement of purpose
+              Motivational Letter/Statement of Purpose
             </label>
             <span className="text-red-500 ml-1">*</span>
             <div className="flex items-center rounded-sm border-[1.9px] border-slate-300">

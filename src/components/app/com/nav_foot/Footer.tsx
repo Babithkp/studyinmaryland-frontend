@@ -2,10 +2,10 @@ import { FaFacebookF, FaLinkedin } from "react-icons/fa";import { FaInstagram } 
 
 export default function Footer() {
   return (
-    <footer className="flex flex-col justify-center items-center gap-5 bg-[#004890] py-10 text-white max-lg:gap-5 max-lg:p-10 max-lg:text-xs  max-md:flex-col">
-      <div className="flex  justify-around items-center w-full">
+    <footer className="flex flex-col  justify-center items-center gap-5 bg-[#004890] py-10 text-white max-lg:gap-5 max-lg:p-10 max-lg:text-xs  max-md:flex-col">
+      <div className="flex max-md:flex-col justify-around items-center w-full gap-5">
         <div className="flex flex-col gap-10 max-lg:gap-5">
-          <a href={"/"} className="w-[10rem]">
+          <a href={"/"} className="w-[10rem] ">
             <svg
               className="h-full w-full"
               width="306"

@@ -1,5 +1,4 @@
-import {
-  Accordion,
+import {  Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
@@ -20,7 +19,7 @@ export default function PartnerUniversities() {
         <h1 className="my-10 text-5xl font-bold text-red-500 max-md:text-3xl">
           Partner universities
         </h1>
-        <div className="my-10 flex w-full gap-5 text-center max-lg:flex-wrap max-sm:grid max-sm:grid-cols-2">
+        <div className="my-10 flex w-full gap-5 text-center max-lg:flex-wrap max-sm:grid max-sm:grid-cols-2 ">
           <figure className="flex flex-col items-center justify-center max-sm:w-full">
             <img
               src={img3}
@@ -221,17 +220,20 @@ export default function PartnerUniversities() {
                 </li>
 
                 <li className={dropdownTextClass}>
-                  Statement of purpose: A personal statement, that tells the
-                  admissions committee who you are, what your academic and
-                  professional interests are, how you will add value to your
-                  chosen degree program and how the degree program aligns with
-                  your career goals.
+                  <span className="font-bold mr-2">Statement of purpose:</span>{" "}
+                  A personal statement, that tells the admissions committee who
+                  you are, what your academic and professional interests are,
+                  how you will add value to your chosen degree program and how
+                  the degree program aligns with your career goals.
                 </li>
                 <li className={dropdownTextClass + " flex flex-col gap-3"}>
                   <p>
-                    Identification Documents: a copy of your ID document is
-                    required ( International passport, Driver’s license, or
-                    National identity card are accepted.)
+                    <span className="font-bold mr-2">
+                      Identification Documents:
+                    </span>
+                    a copy of your ID document is required ( International
+                    passport, Driver’s license, or National identity card are
+                    accepted.)
                   </p>
                   <p>
                     Birth certificate: an original copy of your birth issued by
@@ -240,13 +242,15 @@ export default function PartnerUniversities() {
                 </li>
                 <li className={dropdownTextClass + " flex flex-col gap-3"}>
                   <p>
-                    Official academic credentials translation: International
-                    student with a bachelor or masters degree certificate and
-                    transcript must have their academic qualifications
-                    translated into English Language by an official translator
-                    in the United States. International students with academic
-                    qualifications in English language are not required to have
-                    their documents translated.
+                    <span className="font-bold mr-2">
+                      Official academic credentials translation:
+                    </span>
+                    International student with a bachelor or masters degree
+                    certificate and transcript must have their academic
+                    qualifications translated into English Language by an
+                    official translator in the United States. International
+                    students with academic qualifications in English language
+                    are not required to have their documents translated.
                   </p>
                   <p>
                     We accept English language translated documents from
@@ -255,13 +259,15 @@ export default function PartnerUniversities() {
                 </li>
                 <li className={dropdownTextClass}>
                   <p>
-                    Recommendation Letter or Reference Letter: a recommendation
-                    letter or references letter from your current or previous
-                    employer or an academic supervisor or representative at your
-                    previous academic institution can help boost your
-                    application chances of securing a full scholarship to study
-                    a defined program at one of our partner universities in
-                    Maryland.
+                    <span className="font-bold mr-2">
+                      Recommendation Letter or Reference Letter:
+                    </span>
+                    a recommendation letter or references letter from your
+                    current or previous employer or an academic supervisor or
+                    representative at your previous academic institution can
+                    help boost your application chances of securing a full
+                    scholarship to study a defined program at one of our partner
+                    universities in Maryland.
                   </p>
                 </li>
               </ul>
@@ -273,7 +279,7 @@ export default function PartnerUniversities() {
             <AccordionTrigger className="bg-slate-100">
               <span className="ml-5 mr-10">Admission deadline</span>
             </AccordionTrigger>
-            <AccordionContent className="text-lg">
+            <AccordionContent>
               <p className="w-full bg-slate-300 p-3 font-semibold">
                 All international students would have to submit their
                 scholarship application to study at one of our partner

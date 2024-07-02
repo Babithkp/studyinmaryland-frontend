@@ -1,7 +1,4 @@
-
-
-export default function ApplicationPortal() {
-  return (
+export default function ApplicationPortal() {  return (
     <main className="flex items-center justify-center">
       <section className="w-[60%] p-10 max-md:w-full max-md:p-4 font-medium">
         <article>
@@ -37,23 +34,36 @@ export default function ApplicationPortal() {
               </li>
               <li>
                 IELTS or TOEFL result ( This is only required for students with
-                a degree certificates and transcripts that are not in
-                English language.)
+                a degree certificates and transcripts that are not in English
+                language.)
               </li>
               <li>
-                official English translated copy of your degree certificates and
-                transcripts( This is only required for students with a degree
-                certificates that are not in English language)
+                Official English translated copy of your degree certificates and
+                transcripts from ars.org (This is only required for students
+                with a degree certificates that are not in English language).
               </li>
               <li>
                 Official copy of your birth certificate from the relevant
                 issuing authority in your home country.
               </li>
               <li>A motivation letter or statement of purpose.</li>
+              <li>
+                Identification document: (Accepted means of identification can
+                be a copy of your international passport, national identity
+                card, or a driver’s license.)
+              </li>
+              <li>
+                Recommendations or Reference letter from your previous or
+                current employer or an advisor, representative of your academic
+                institution.
+              </li>
             </ul>
           </div>
         </article>
-        <a href={"applicationPortal/addApplication/"} className="h-fit w-fit rounded-md bg-red-500 px-3 py-2 text-lg uppercase text-white">
+        <a
+          href={"applicationPortal/addApplication/"}
+          className="h-fit w-fit rounded-md bg-red-500 hover:bg-red-600 px-3 py-2 text-lg uppercase text-white"
+        >
           Application portal
         </a>
       </section>
