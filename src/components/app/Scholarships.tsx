@@ -1,5 +1,4 @@
-import HomeSlider from "./com/objects/HomeSlider";
-export default function Scholarships() {
+import HomeSlider from "./com/objects/HomeSlider";export default function Scholarships() {
   return (
     <main className="flex flex-col items-center justify-center">
       <section className="w-[60%] p-10 max-md:w-full max-md:p-4 font-medium">
@@ -121,10 +120,19 @@ export default function Scholarships() {
               <li>
                 English language proficiency test result from{" "}
                 <a
-                  href="www.ielts.org/ www.ets.org/toefl.html"
+                  href="http://www.ielts.org"
                   className="underline text-blue-600"
+                  target="_blank"
                 >
-                  IELTS or TOEFL
+                  IELTS
+                </a>
+                or
+                <a
+                  href="http://www.ets.org/toefl.html"
+                  className="underline text-blue-600"
+                  target="_blank"
+                >
+                  TOEFL
                 </a>
                 ( This is only required for international students with degree
                 certificates and transcripts that are not in English language).
@@ -146,12 +154,14 @@ export default function Scholarships() {
               </li>
             </ul>
           </div>
-          <a
-            href="applicationPortal"
-            className="rounded-md bg-red-500 px-9 py-3 font-semibold text-white  hover:bg-red-600 "
-          >
-            Apply
-          </a>
+          <div className="my-10 mt-11">
+            <a
+              href="applicationPortal"
+              className="rounded-md bg-red-500 px-9 py-3 font-semibold text-white  hover:bg-red-600 "
+            >
+              Apply
+            </a>
+          </div>
         </article>
       </section>
       <section className="w-[95%] text-white newFont my-5">
