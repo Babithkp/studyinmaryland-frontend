@@ -1,7 +1,6 @@
-export default function Aboutus() {
-  return (
+export default function Aboutus() {  return (
     <main className="flex items-center justify-center">
-      <section className="w-[60%] p-10 max-md:w-full max-md:p-4">
+      <section className="w-[60%] p-10 max-md:w-full max-md:p-4 font-medium">
         <article>
           <h1 className="my-10 text-5xl font-bold text-red-500 max-md:text-3xl">
             About us
@@ -12,7 +11,7 @@ export default function Aboutus() {
           </p>
           <p className="text-md my-5">
             Our organization is commissioned by the state of Maryland to promote
-            higher education in one of America&apos;s most vibrant and historic
+            higher education in one of America's most vibrant and historic
             regions. We specialize in facilitating fully funded scholarships for
             international students with strong academic backgrounds to study at
             one of our prestigious partner universities in Maryland, USA.
@@ -22,13 +21,13 @@ export default function Aboutus() {
             community and the diverse, impactful contributions that
             international students have made in various cities across the United
             States drives our mission to promote the state of Maryland as a
-            world-class study destination for international students.
+            world-class study destination for international students. Since our
+            inception in 2020, we have
           </p>
           <p className="text-md my-5">
-            Since our inception in 2020, we have supported over 8,000
-            international students from around the world in studying at
-            prestigious universities in Maryland on full scholarships funded by
-            the state of Maryland and the Maryland State Department of
+            supported over 8,000 international students from around the world to
+            study at prestigious universities in Maryland on a full scholarship
+            funded by the state of Maryland and the Maryland State Department of
             Education.
           </p>
           <p className="text-md my-5">

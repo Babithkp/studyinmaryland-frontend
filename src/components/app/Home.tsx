@@ -1,4 +1,5 @@
-import image from ".././../../public/backgroundHeroPage.jpg";import icon1 from ".././../../public/city.svg";
+import image from ".././../../public/backgroundHeroPage.jpg";
+import icon1 from ".././../../public/city.svg";
 import icon2 from ".././../../public/rocket-graph.svg";
 import icon4 from ".././../../public/flag-point.svg";
 import cardBg from ".././../../public/backgroung-card.png";
@@ -51,7 +52,7 @@ export default function Home() {
             Study at one of our partner institutions
           </h2>
           <p className="px-5 text-center text-lg font-extralight">
-            Each year we provide scholarship opportunities for more than 1500
+            Each year we provide scholarship opportunities for more than 1,500
             international students from worldwide to study a postgraduate or
             doctoral degree program at one of our partner universities.
           </p>
@@ -128,7 +129,7 @@ export default function Home() {
             <CardApply
               image={counsellingIcon}
               title="University Placement"
-              content="All scholarship recipients are admitted to study at one of our partner universities."
+              content="All scholarship recipients are directly admitted to study at one of our partner universities."
             />
             <CardApply
               image={visaIcon}
@@ -168,7 +169,7 @@ export default function Home() {
             <p className="col-start-2">
               Through our organization&apos;s partnership with leading public
               universities in Maryland, we offer international students the
-              opportunity to pursue Masters and PhD degree programs with fully
+              opportunity to pursue masters and phd degree programs with fully
               funded scholarships provided by the Maryland State Department of
               Education.
             </p>
@@ -190,8 +191,8 @@ export default function Home() {
             </h3>
             <p className="col-start-2">
               International students can use our seamless application portal to
-              apply directly to our partner universities for masters and PhD
-              programs at no cost!
+              apply directly for a scholarship to study a graduate program at a
+              partner university at no cost!
             </p>
             <a
               href={"/applicationPortal"}

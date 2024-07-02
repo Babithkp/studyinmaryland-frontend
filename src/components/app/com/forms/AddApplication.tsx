@@ -554,6 +554,7 @@ export default function AddApplication() {
                 placeholder=""
                 ref={indentityRef}
                 onChange={handleIdentityChange}
+                accept=".xlsx,.xls,image/*,.doc, .docx,.ppt, .pptx,.txt,.pdf"
               />
               {fileName.identityFileName && (
                 <span className=" text-sm font-medium ml-2">
@@ -581,6 +582,7 @@ export default function AddApplication() {
                 placeholder=""
                 ref={degreeRef}
                 onChange={handleDegreeChange}
+                accept=".xlsx,.xls,image/*,.doc, .docx,.ppt, .pptx,.txt,.pdf"
               />
               <div className="w-full  flex flex-wrap gap-1">
                 {degreeFileHolder.map((doc, i) => (
@@ -626,6 +628,7 @@ export default function AddApplication() {
                 placeholder=""
                 ref={academicRef}
                 onChange={handleAcademiChange}
+                accept=".xlsx,.xls,image/*,.doc, .docx,.ppt, .pptx,.txt,.pdf"
               />
               <div className="w-full  flex flex-wrap gap-1">
                 {academicFileHolder.map((doc, i) => (
@@ -671,6 +674,7 @@ export default function AddApplication() {
                 placeholder=""
                 ref={birthRef}
                 onChange={handleBirthcerChange}
+                accept=".xlsx,.xls,image/*,.doc, .docx,.ppt, .pptx,.txt,.pdf"
               />
               {fileName.birthcerFileName && (
                 <span className=" text-sm font-medium ml-2">
@@ -698,6 +702,7 @@ export default function AddApplication() {
                 placeholder=""
                 ref={motivationRef}
                 onChange={handleMotivationChange}
+                accept=".xlsx,.xls,image/*,.doc, .docx,.ppt, .pptx,.txt,.pdf"
               />
               {fileName.motivationFileName && (
                 <span className=" text-sm font-medium ml-2">
@@ -723,6 +728,7 @@ export default function AddApplication() {
                 placeholder=""
                 ref={ieltsRef}
                 onChange={handlEieltChange}
+                accept=".xlsx,.xls,image/*,.doc, .docx,.ppt, .pptx,.txt,.pdf"
               />
               {fileName.ieltFileName && (
                 <span className=" text-sm font-medium ml-2">
@@ -750,6 +756,7 @@ export default function AddApplication() {
                 placeholder=""
                 ref={translatedRef}
                 onChange={handleTranslatedChange}
+                accept=".xlsx,.xls,image/*,.doc, .docx,.ppt, .pptx,.txt,.pdf"
               />
               <div className="w-full  flex flex-wrap gap-1">
                 {engTransFileHolder.map((doc, i) => (
@@ -795,6 +802,7 @@ export default function AddApplication() {
                 placeholder=""
                 ref={recommendationRef}
                 onChange={handleRecommendationChange}
+                accept=".xlsx,.xls,image/*,.doc, .docx,.ppt, .pptx,.txt,.pdf"
               />
               {fileName.recommendationFileName && (
                 <span className=" text-sm font-medium ml-2">

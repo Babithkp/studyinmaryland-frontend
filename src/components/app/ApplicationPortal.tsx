@@ -3,7 +3,7 @@
 export default function ApplicationPortal() {
   return (
     <main className="flex items-center justify-center">
-      <section className="w-[60%] p-10 max-md:w-full max-md:p-4">
+      <section className="w-[60%] p-10 max-md:w-full max-md:p-4 font-medium">
         <article>
           <h1 className="my-10 text-5xl font-bold text-red-500 max-md:text-3xl">
             How To Apply:
