@@ -1,4 +1,5 @@
-import { TfiMenuAlt } from "react-icons/tfi";import { IoMdHome } from "react-icons/io";
+import { TfiMenuAlt } from "react-icons/tfi";
+import { IoMdHome } from "react-icons/io";
 import { GoPersonFill } from "react-icons/go";
 import { FaCalendarAlt } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
@@ -8,6 +9,7 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import AddApplicationArtical from "../objects/AddApplicationArtical";
 import { ChangeEvent, useRef, useState } from "react";
 import { postFile } from "../../../../http/fetch";
+import { RxCrossCircled } from "react-icons/rx";
 
 interface FormValues {
   firstName: string;
@@ -40,6 +42,12 @@ interface FormValuesFileType {
   recommendationFileName: string;
 }
 
+interface multiFileType {
+  degreeMsg: boolean;
+  academicMsg: boolean;
+  englishMsg: boolean;
+}
+
 export default function AddApplication() {
   const indentityRef = useRef<HTMLInputElement | null>(null);
   const degreeRef = useRef<HTMLInputElement | null>(null);
@@ -59,40 +67,67 @@ export default function AddApplication() {
     translatedFileName: "",
     recommendationFileName: "",
   });
-  const [storedFiles,setStoredFiles] = useState<File[]>([]);
+  const [storedFiles, setStoredFiles] = useState<File[]>([]);
+  const [degreeFileHolder, setDegreeFileHolder] = useState<File[]>([]);
+  const [academicFileHolder, setAcademicFileHolder] = useState<File[]>([]);
+  const [engTransFileHolder, setEngTransFileHolder] = useState<File[]>([]);
+  const [overloadmsg, setOverloadmsg] = useState<multiFileType>({
+    degreeMsg: false,
+    academicMsg: false,
+    englishMsg: false,
+  });
   const docData = new FormData();
 
   const handleIdentityChange = async (event: ChangeEvent<HTMLInputElement>) => {
     const files = event.target.files;
     if (files) {
       const file = files[0];
-      setStoredFiles(prev => [...prev,file])
+      setStoredFiles((prev) => [...prev, file]);
       setFileName((prev) => ({ ...prev, identityFileName: file.name }));
-      
-      
     }
   };
   const handleDegreeChange = async (event: ChangeEvent<HTMLInputElement>) => {
+    if (degreeFileHolder.length >= 3) {
+      setOverloadmsg((prev) => ({ ...prev, degreeMsg: true }));
+      return;
+    }
     const files = event.target.files;
     if (files) {
       const file = files[0];
-      setStoredFiles(prev => [...prev,file])
-      setFileName((prev) => ({ ...prev, degreeFileName: file.name }));
+      setDegreeFileHolder((prev) => [...prev, file]);
+      
     }
   };
+
+  const deleteSingleFileDeg = (index:number) => {
+    const finalFile = degreeFileHolder.filter((_,i) => i !== index)
+    setDegreeFileHolder(finalFile)
+    
+  }
+
+
   const handleAcademiChange = async (event: ChangeEvent<HTMLInputElement>) => {
+    if (academicFileHolder.length >= 2) {
+      setOverloadmsg((prev) => ({ ...prev, academicMsg: true }));
+      return;
+    }
     const files = event.target.files;
     if (files) {
       const file = files[0];
-            setStoredFiles(prev => [...prev,file])
-      setFileName((prev) => ({ ...prev, academiFileName: file.name }));
+      setAcademicFileHolder((prev) => [...prev, file]);
     }
   };
+  const deleteSingleFileAca = (index:number) => {
+    const finalFile = academicFileHolder.filter((_,i) => i !== index)
+    setAcademicFileHolder(finalFile)
+  }
+
+
   const handleBirthcerChange = async (event: ChangeEvent<HTMLInputElement>) => {
     const files = event.target.files;
     if (files) {
       const file = files[0];
-            setStoredFiles(prev => [...prev,file])
+      setStoredFiles((prev) => [...prev, file]);
       setFileName((prev) => ({ ...prev, birthcerFileName: file.name }));
     }
   };
@@ -102,7 +137,7 @@ export default function AddApplication() {
     const files = event.target.files;
     if (files) {
       const file = files[0];
-            setStoredFiles(prev => [...prev,file])
+      setStoredFiles((prev) => [...prev, file]);
       setFileName((prev) => ({ ...prev, motivationFileName: file.name }));
     }
   };
@@ -110,27 +145,38 @@ export default function AddApplication() {
     const files = event.target.files;
     if (files) {
       const file = files[0];
-            setStoredFiles(prev => [...prev,file])
+      setStoredFiles((prev) => [...prev, file]);
       setFileName((prev) => ({ ...prev, ieltFileName: file.name }));
     }
   };
   const handleTranslatedChange = async (
     event: ChangeEvent<HTMLInputElement>
   ) => {
+    if (engTransFileHolder.length >= 2) {
+      setOverloadmsg((prev) => ({ ...prev, englishMsg: true }));
+      return;
+    }
     const files = event.target.files;
     if (files) {
       const file = files[0];
-            setStoredFiles(prev => [...prev,file])
-      setFileName((prev) => ({ ...prev, translatedFileName: file.name }));
+      setEngTransFileHolder((prev) => [...prev, file]);
     }
   };
+  const deleteSingleFileEng = (index:number) => {
+    const finalFile = engTransFileHolder.filter((_,i) => i !== index)
+    setEngTransFileHolder(finalFile)
+  }
+
+
+
+
   const handleRecommendationChange = async (
     event: ChangeEvent<HTMLInputElement>
   ) => {
     const files = event.target.files;
     if (files) {
       const file = files[0];
-            setStoredFiles(prev => [...prev,file])
+      setStoredFiles((prev) => [...prev, file]);
       setFileName((prev) => ({ ...prev, recommendationFileName: file.name }));
     }
   };
@@ -141,16 +187,14 @@ export default function AddApplication() {
     formState: { errors },
   } = useForm<FormValues>();
   const onSubmit: SubmitHandler<FormValues> = async (data) => {
-
     console.log(data);
     console.log("\n");
-    
-    for(let i=0;i<storedFiles.length;i++) {
+
+    for (let i = 0; i < storedFiles.length; i++) {
       docData.append("files", storedFiles[i]);
     }
     data.files = docData;
     await postFile(data);
-
   };
   return (
     <main className="flex items-center justify-center">
@@ -523,7 +567,7 @@ export default function AddApplication() {
               Degree certificate and transcript
               <span className="text-red-500 ml-1">*</span>
             </label>
-            <div className="flex items-center rounded-sm border-[1.9px] border-slate-300">
+            <div className="flex items-end gap-2 rounded-sm border-[1.9px] border-slate-300 ">
               <button
                 type="button"
                 className="bg-blue-500 px-2 py-1 text-white"
@@ -538,19 +582,37 @@ export default function AddApplication() {
                 ref={degreeRef}
                 onChange={handleDegreeChange}
               />
-              {fileName.degreeFileName && (
-                <span className=" text-sm font-medium ml-2">
-                  {fileName.degreeFileName}
-                </span>
-              )}
+              <div className="w-full  flex flex-wrap gap-1">
+                {degreeFileHolder.map((doc, i) => (
+                  <span
+                    className="text-sm  font-medium mx-2 border rounded-lg p-1 bg-blue-200 max-md:m-0  max-md:text-xs flex items-center gap-1"
+                    key={i}
+                  >
+                    {doc.name.substring(0,20)}
+                    <Button
+                      variant={"secondary"}
+                      className="p-0 rounded-full w-5 h-5"
+                      onClick={()=>deleteSingleFileDeg(i)}
+                      type="button"
+                    >
+                      <RxCrossCircled className="w-full h-full" />
+                    </Button>
+                  </span>
+                ))}
+              </div>
             </div>
+            {overloadmsg.degreeMsg && (
+              <span className=" text-sm font-medium  text-red-500">
+                Maxmium File Count Exceeded
+              </span>
+            )}
           </div>
           <div className="my-5">
             <label className="text-sm font-semibold">
               Academic Credential Report
               <span className="text-red-500 ml-1">*</span>
             </label>
-            <div className="flex items-center rounded-sm border-[1.9px] border-slate-300">
+            <div className="flex items-end gap-1 rounded-sm border-[1.9px] border-slate-300">
               <button
                 type="button"
                 className="bg-blue-500 px-2 py-1 text-white"
@@ -565,12 +627,30 @@ export default function AddApplication() {
                 ref={academicRef}
                 onChange={handleAcademiChange}
               />
-              {fileName.academiFileName && (
-                <span className=" text-sm font-medium ml-2">
-                  {fileName.academiFileName}
-                </span>
-              )}
+              <div className="w-full  flex flex-wrap gap-1">
+                {academicFileHolder.map((doc, i) => (
+                  <span
+                    className="text-sm  font-medium mx-2 border rounded-lg p-1 bg-blue-200 max-md:m-0  max-md:text-xs flex items-center gap-1"
+                    key={i}
+                  >
+                    {doc.name.substring(0,20)}
+                    <Button
+                      variant={"secondary"}
+                      className="p-0 rounded-full w-5 h-5"
+                      onClick={()=>deleteSingleFileAca(i)}
+                      type="button"
+                    >
+                      <RxCrossCircled className="w-full h-full" />
+                    </Button>
+                  </span>
+                ))}
+              </div>
             </div>
+            {overloadmsg.academicMsg && (
+              <span className=" text-sm font-medium  text-red-500">
+                Maxmium File Count Exceeded
+              </span>
+            )}
           </div>
           <div className="my-5">
             <label className="text-sm font-semibold">
@@ -625,6 +705,7 @@ export default function AddApplication() {
                 </span>
               )}
             </div>
+            
           </div>
           <div className="my-5">
             <label className="text-sm font-semibold">IELTS or TOEFL</label>
@@ -655,7 +736,7 @@ export default function AddApplication() {
               Official Translated Copy of Your Degree Certificates and
               Transcripts in English Language.
             </label>
-            <div className="flex items-center rounded-sm border-[1.9px] border-slate-300">
+            <div className="flex items-end gap-1 rounded-sm border-[1.9px] border-slate-300">
               <button
                 type="button"
                 className="bg-blue-500 px-2 py-1 text-white"
@@ -670,12 +751,30 @@ export default function AddApplication() {
                 ref={translatedRef}
                 onChange={handleTranslatedChange}
               />
-              {fileName.translatedFileName && (
-                <span className=" text-sm font-medium ml-2">
-                  {fileName.translatedFileName}
-                </span>
-              )}
+              <div className="w-full  flex flex-wrap gap-1">
+                {engTransFileHolder.map((doc, i) => (
+                  <span
+                    className="text-sm  font-medium mx-2 border rounded-lg p-1 bg-blue-200 max-md:m-0  max-md:text-xs flex items-center gap-1"
+                    key={i}
+                  >
+                    {doc.name.substring(0,20)}
+                    <Button
+                      variant={"secondary"}
+                      className="p-0 rounded-full w-5 h-5"
+                      onClick={()=>deleteSingleFileEng(i)}
+                      type="button"
+                    >
+                      <RxCrossCircled className="w-full h-full" />
+                    </Button>
+                  </span>
+                ))}
+              </div>
             </div>
+              {overloadmsg.englishMsg && (
+              <span className=" text-sm font-medium  text-red-500">
+                Maxmium File Count Exceeded
+              </span>
+            )}
           </div>
 
           <div className="my-5">
