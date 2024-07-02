@@ -7,6 +7,7 @@ import { Button } from "../../../ui/button";
 import { useForm, SubmitHandler } from "react-hook-form";
 import AddApplicationArtical from "../objects/AddApplicationArtical";
 import { ChangeEvent, useRef, useState } from "react";
+import { postFile } from "../../../../http/fetch";
 
 interface FormValues {
   firstName: string;
@@ -25,7 +26,7 @@ interface FormValues {
   studyProgram: string;
   courseStartMonth: string;
   courseStartYear: number;
-  indentityFile: FileList;
+  files: FormData;
 }
 
 interface FormValuesFileType {
@@ -58,18 +59,24 @@ export default function AddApplication() {
     translatedFileName: "",
     recommendationFileName: "",
   });
+  const [storedFiles,setStoredFiles] = useState<File[]>([]);
+  const docData = new FormData();
 
   const handleIdentityChange = async (event: ChangeEvent<HTMLInputElement>) => {
     const files = event.target.files;
     if (files) {
       const file = files[0];
+      setStoredFiles(prev => [...prev,file])
       setFileName((prev) => ({ ...prev, identityFileName: file.name }));
+      
+      
     }
   };
   const handleDegreeChange = async (event: ChangeEvent<HTMLInputElement>) => {
     const files = event.target.files;
     if (files) {
       const file = files[0];
+      setStoredFiles(prev => [...prev,file])
       setFileName((prev) => ({ ...prev, degreeFileName: file.name }));
     }
   };
@@ -77,14 +84,16 @@ export default function AddApplication() {
     const files = event.target.files;
     if (files) {
       const file = files[0];
-      setFileName((prev) => ({ ...prev, birthcerFileName: file.name }));
+            setStoredFiles(prev => [...prev,file])
+      setFileName((prev) => ({ ...prev, academiFileName: file.name }));
     }
   };
   const handleBirthcerChange = async (event: ChangeEvent<HTMLInputElement>) => {
     const files = event.target.files;
     if (files) {
       const file = files[0];
-      setFileName((prev) => ({ ...prev, motivationFileName: file.name }));
+            setStoredFiles(prev => [...prev,file])
+      setFileName((prev) => ({ ...prev, birthcerFileName: file.name }));
     }
   };
   const handleMotivationChange = async (
@@ -93,14 +102,16 @@ export default function AddApplication() {
     const files = event.target.files;
     if (files) {
       const file = files[0];
-      setFileName((prev) => ({ ...prev, ieltFileName: file.name }));
+            setStoredFiles(prev => [...prev,file])
+      setFileName((prev) => ({ ...prev, motivationFileName: file.name }));
     }
   };
   const handlEieltChange = async (event: ChangeEvent<HTMLInputElement>) => {
     const files = event.target.files;
     if (files) {
       const file = files[0];
-      setFileName((prev) => ({ ...prev, translatedFileName: file.name }));
+            setStoredFiles(prev => [...prev,file])
+      setFileName((prev) => ({ ...prev, ieltFileName: file.name }));
     }
   };
   const handleTranslatedChange = async (
@@ -109,7 +120,8 @@ export default function AddApplication() {
     const files = event.target.files;
     if (files) {
       const file = files[0];
-      setFileName((prev) => ({ ...prev, identityFileName: file.name }));
+            setStoredFiles(prev => [...prev,file])
+      setFileName((prev) => ({ ...prev, translatedFileName: file.name }));
     }
   };
   const handleRecommendationChange = async (
@@ -118,6 +130,7 @@ export default function AddApplication() {
     const files = event.target.files;
     if (files) {
       const file = files[0];
+            setStoredFiles(prev => [...prev,file])
       setFileName((prev) => ({ ...prev, recommendationFileName: file.name }));
     }
   };
@@ -127,8 +140,17 @@ export default function AddApplication() {
     handleSubmit,
     formState: { errors },
   } = useForm<FormValues>();
-  const onSubmit: SubmitHandler<FormValues> = (data) => {
+  const onSubmit: SubmitHandler<FormValues> = async (data) => {
+
     console.log(data);
+    console.log("\n");
+    
+    for(let i=0;i<storedFiles.length;i++) {
+      docData.append("files", storedFiles[i]);
+    }
+    data.files = docData;
+    await postFile(data);
+
   };
   return (
     <main className="flex items-center justify-center">
@@ -471,7 +493,7 @@ export default function AddApplication() {
           </div>
           <div className="my-5">
             <label className="text-sm font-semibold">
-              Upload Identity document.
+              Identity document.
               <span className="text-red-500 ml-1">*</span>
             </label>
             <div className="flex items-center rounded-sm border-[1.9px] border-slate-300">
@@ -579,7 +601,7 @@ export default function AddApplication() {
           </div>
           <div className="my-5">
             <label className="text-sm font-semibold">
-              Upload motivational letter/statement of purpose
+              Motivational letter/statement of purpose
             </label>
             <span className="text-red-500 ml-1">*</span>
             <div className="flex items-center rounded-sm border-[1.9px] border-slate-300">
@@ -658,7 +680,7 @@ export default function AddApplication() {
 
           <div className="my-5">
             <label className="text-sm font-semibold">
-              Upload copy of recommendation or reference letter (optional)
+              Copy of Recommendation or Reference Letter (optional)
             </label>
             <div className="flex items-center rounded-sm border-[1.9px] border-slate-300">
               <button
