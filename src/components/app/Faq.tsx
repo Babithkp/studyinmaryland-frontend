@@ -1,4 +1,5 @@
-export default function Faq() {  return (
+export default function Faq() {
+  return (
     <main className="flex items-center justify-center ">
       <section className="w-[60%] p-10 max-md:w-full max-md:p-4 font-medium">
         <article>
@@ -32,7 +33,7 @@ export default function Faq() {  return (
           <p className="text-md my-5">
             Our experienced counselors provide personalized guidance throughout
             every step of the scholarship application process. We also assist
-            with helping students with vital information regarding the
+            with helping students with vital information in regards to the
             preparation of application documents, such as certificates,
             transcripts and recommendation letters, to ensure that it meets the
             admission requirements of our partner universities in Maryland.
@@ -57,9 +58,10 @@ export default function Faq() {  return (
             Maryland scholarship at a partner university. Visit our partner
             universities page to know more about the application requirements.
           </p>
-          
+
           <p className="my-10 text-3xl font-bold text-red-500 max-md:text-3xl">
-            What is student life like in Maryland for international students?
+            What is the student life like in Maryland for international
+            students?
           </p>
           <p className="text-md my-5">
             Maryland offers a vibrant and diverse student life experience. From

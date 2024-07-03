@@ -814,7 +814,7 @@ export default function AddApplication() {
 
           <p className="text-md my-5">
             By clicking submit you are agreeing that you have uploaded all the
-            original documents for your scholarship application
+            original documents for your scholarship application.
           </p>
           <Button className="rounded-sm bg-red-500 px-2 py-1 text-white w-[5rem]">
             Submit

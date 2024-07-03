@@ -41,27 +41,27 @@ import HomeSlider from "./com/objects/HomeSlider";export default function Schola
             <ul className="ml-5 list-disc flex flex-col gap-3">
               <li>
                 <span className="text-lg font-bold">Scholarship Name:</span>
-                <p>Study in Maryland Scholarship</p>
+                <p>Study in Maryland Scholarship.</p>
               </li>
               <li>
                 <span className="text-lg font-bold">Host:</span>
                 <p>
-                  Study in Maryland and Maryland State Department of Education
+                  Study in Maryland and Maryland State Department of Education.
                 </p>
               </li>
               <li>
                 <span className="text-lg font-bold">Host Country:</span>
-                <p>United States</p>
+                <p>United States.</p>
               </li>
               <li>
                 <span className="text-lg font-bold">Eligible Countries:</span>
-                <p>Worldwide</p>
+                <p>Worldwide.</p>
               </li>
               <li>
                 <span className="text-lg font-bold">Eligible Candidates:</span>
                 <p>
                   International students with bachelors or masters degree
-                  certificates
+                  certificates.
                 </p>
               </li>
               <li>
@@ -69,16 +69,16 @@ import HomeSlider from "./com/objects/HomeSlider";export default function Schola
                 <p>
                   {" "}
                   Covers full tuition and accommodation fees for the entire
-                  duration of the Masters or PhD program at a partner university
+                  duration of the Masters or PhD program at a partner university.
                 </p>
               </li>
               <li>
                 <span className="text-lg font-bold">Age Limit:</span>
-                <p>40 years</p>
+                <p>40 years.</p>
               </li>
               <li>
                 <span className="text-lg font-bold">Application Deadline:</span>
-                <p>September 30th, 2024</p>
+                <p>September 30th, 2024.</p>
               </li>
             </ul>
           </div>
@@ -89,11 +89,11 @@ import HomeSlider from "./com/objects/HomeSlider";export default function Schola
             <ul className="ml-5 list-disc">
               <li>
                 <span className="text-lg font-bold">For Masters Program:</span>
-                <p>Bachelors degree certificate and transcript</p>
+                <p>Bachelors degree certificate and transcript.</p>
               </li>
               <li>
                 <span className="text-lg font-bold">For PhD Program:</span>
-                <p>Masters degree certificate and transcript</p>
+                <p>Masters degree certificate and transcript.</p>
               </li>
             </ul>
           </div>
