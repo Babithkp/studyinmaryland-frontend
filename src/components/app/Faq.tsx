@@ -1,5 +1,4 @@
-export default function Faq() {
-  return (
+export default function Faq() {  return (
     <main className="flex items-center justify-center ">
       <section className="w-[60%] p-10 max-md:w-full max-md:p-4 font-medium">
         <article>
@@ -10,31 +9,33 @@ export default function Faq() {
             Which universities does Study in Maryland assist with?
           </p>
           <p className="text-md my-5">
-            Study in Maryland works with a wide range of universities in
-            Maryland, including prestigious institutions such as Johns Hopkins
-            University, University of Maryland, Loyola University Maryland, and
-            many others. We tailor our services to match your academic interests
-            and career goals.
+            Study in Maryland works with some of the prestigious universities in
+            Maryland, such as; University of Baltimore, University of Maryland,
+            Morgan State University and many others.
           </p>
           <p className="my-10 text-3xl font-bold text-red-500 max-md:text-3xl">
             What services does Study in Maryland provide?
           </p>
           <p className="text-md my-5">
-            We offer comprehensive services to international students, including
-            university selection guidance, application assistance, visa support,
-            accommodation advice, and ongoing support throughout your academic
-            journey in Maryland.
+            We provide an opportunity for international students with a strong
+            academic background to study in Maryland on a full scholarship at
+            one of our partner universities. We also offer free counseling
+            services tailored to support international students with all the
+            necessary guidance and information needed for them to successfully
+            enroll at a prestigious institution in Maryland on a full
+            scholarship.
           </p>
           <p className="my-10 text-3xl font-bold text-red-500 max-md:text-3xl">
             How can Study in Maryland help with the application process?
           </p>
 
           <p className="text-md my-5">
-            Our experienced counselors provide personalized guidance through
-            every step of the application process. We assist with preparing
-            application documents, such as transcripts and recommendation
-            letters, and ensure they meet the requirements of Maryland
-            universities..
+            Our experienced counselors provide personalized guidance throughout
+            every step of the scholarship application process. We also assist
+            with helping students with vital information regarding the
+            preparation of application documents, such as certificates,
+            transcripts and recommendation letters, to ensure that it meets the
+            admission requirements of our partner universities in Maryland.
           </p>
           <p className="my-10 text-3xl font-bold text-red-500 max-md:text-3xl">
             Access to Top-tier Education and Research Opportunities
@@ -42,7 +43,7 @@ export default function Faq() {
           <p className="text-md my-5">
             International students in Maryland have access to some of the best
             educational and research facilities in the world. Institutions like
-            Johns Hopkins University are leaders in research and innovation,
+            the University of Maryland are leaders in research and innovation,
             providing international students with opportunities to engage in
             cutting-edge projects and collaborate with leading experts in their
             fields.
@@ -51,21 +52,12 @@ export default function Faq() {
             What are the admission requirements for universities in Maryland?
           </p>
           <p className="text-md my-5">
-            Admission requirements vary by university and program. Study in
-            Maryland helps you understand these requirements and ensures your
-            application package is complete and competitive. Typical
-            requirements include academic transcripts, standardized test scores
-            (like SAT or GRE), essays, and proof of English proficiency.
+            Study in Maryland helps you to understand the requirements to secure
+            a direct admission to study a graduate program through the study in
+            Maryland scholarship at a partner university. Visit our partner
+            universities page to know more about the application requirements.
           </p>
-          <p className="my-10 text-3xl font-bold text-red-500 max-md:text-3xl">
-            Can Study in Maryland assist with scholarships and financial aid?
-          </p>
-          <p className="text-md my-5">
-            Yes, we provide information on scholarships and financial aid
-            opportunities offered by Maryland universities. We guide you on how
-            to apply for scholarships and help you explore other funding options
-            to support your studies.
-          </p>
+          
           <p className="my-10 text-3xl font-bold text-red-500 max-md:text-3xl">
             What is student life like in Maryland for international students?
           </p>
@@ -85,8 +77,8 @@ export default function Faq() {
             may have throughout your academic journey.
           </p>
           <p className="text-md my-5">
-            These FAQs cover essential aspects of Study in Maryland&apos;s services
-            and how we assist international students aiming to study in
+            These FAQs cover essential aspects of Study in Maryland&apos;s
+            services and how we assist international students aiming to study in
             Maryland. For further inquiries or personalized assistance, feel
             free to reach out to us directly.
           </p>

@@ -23,7 +23,7 @@ export default function Contact() {
           </p>
           <p className="text-md my-5 max-md:flex-col flex items-center gap-3 ">
             <p className=" font-bold ">Phone: </p>
-            987654321
+            <p className="  ">+1 4437509584</p>
           </p>
         </article>
       </section>

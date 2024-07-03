@@ -1,5 +1,4 @@
-export default function StudentLife() {
-  return (
+export default function StudentLife() {  return (
     <main className="flex items-center justify-center ">
       <section className="w-[60%] p-10 max-md:w-full max-md:p-4 font-medium">
         <article>
@@ -7,7 +6,7 @@ export default function StudentLife() {
             Student Life
           </h1>
           <p className="text-md my-5">
-            Maryland’s cultural scene is rich and varied, offering students 
+            Maryland’s cultural scene is rich and varied, offering students
             numerous opportunities to engage in arts, music, and history. The
             city&apos;s neighborhoods, such as Fells Point, Federal Hill, and
             Mount Vernon, offer unique experiences with their historic charm,
@@ -28,9 +27,7 @@ export default function StudentLife() {
             Networking events, career fairs, and professional seminars are
             frequently organized to help students build their careers.
           </p>
-          <p className="text-red-500 text-3xl font-bold my-10 max-md:text-3xl">
-            Benefits of Studying in Maryland for International Students
-          </p>
+
           <p className="text-red-500 text-3xl font-bold my-10 max-md:text-3xl">
             Diverse and Inclusive Environment
           </p>

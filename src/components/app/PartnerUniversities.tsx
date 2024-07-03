@@ -19,6 +19,11 @@ export default function PartnerUniversities() {
         <h1 className="my-10 text-5xl font-bold text-red-500 max-md:text-3xl">
           Partner universities
         </h1>
+        <p className="text-md my-5 font-medium">
+          We have collaborated with some of the prestigious public universities
+          in Maryland to help international students globally to achieve their
+          dreams of study in United States on a full scholarship.
+        </p>
         <div className="my-10 flex w-full gap-5 text-center max-lg:flex-wrap max-sm:grid max-sm:grid-cols-2 ">
           <figure className="flex flex-col items-center justify-center max-sm:w-full">
             <img
@@ -74,7 +79,7 @@ export default function PartnerUniversities() {
         <Accordion type="single" collapsible className="w-full">
           <AccordionItem value="item-1">
             <AccordionTrigger className="bg-slate-100">
-              <span className="ml-5 mr-10">Degree programs</span>
+              <span className="ml-5 mr-10">Degree Programs</span>
             </AccordionTrigger>
             <AccordionContent className=" ">
               <p className="w-full bg-slate-300 p-3 text-center font-semibold">
@@ -236,8 +241,9 @@ export default function PartnerUniversities() {
                     accepted.)
                   </p>
                   <p>
-                    Birth certificate: an original copy of your birth issued by
-                    the relevant authority in your home country.
+                    <span className="font-bold mr-2">Birth certificate:</span>
+                    an original copy of your birth issued by the relevant
+                    authority in your home country.
                   </p>
                 </li>
                 <li className={dropdownTextClass + " flex flex-col gap-3"}>
@@ -277,7 +283,7 @@ export default function PartnerUniversities() {
         <Accordion type="single" collapsible className="w-full">
           <AccordionItem value="item-1">
             <AccordionTrigger className="bg-slate-100">
-              <span className="ml-5 mr-10">Admission deadline</span>
+              <span className="ml-5 mr-10">Admission Deadline</span>
             </AccordionTrigger>
             <AccordionContent>
               <p className="w-full bg-slate-300 p-3 font-semibold">
