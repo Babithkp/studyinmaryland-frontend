@@ -127,21 +127,25 @@ export default function Home() {
               image={coachingIcon}
               title="Scholarship Assistance"
               content="Free access to apply for Maryland state-funded scholarship on our application portal."
+              url="Scholarships"
             />
             <CardApply
               image={counsellingIcon}
               title="University Placement"
               content="All scholarship recipients are directly admitted to study at one of our partner universities."
+              url="partner-universities"
             />
             <CardApply
               image={visaIcon}
               title="Visa Counselling"
               content="Get professional  student visa counseling and guidance from professionals."
+              url="contact"
             />
             <CardApply
               image={financialIcon}
               title="Free Counseling"
               content="We guide you throughout the entire process of achieving your goals and dreams free of charge!"
+              url="contact"
             />
           </div>
         </div>
