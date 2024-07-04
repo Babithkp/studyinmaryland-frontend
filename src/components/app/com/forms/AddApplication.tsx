@@ -1,5 +1,4 @@
-import { TfiMenuAlt } from "react-icons/tfi";
-import { IoMdHome } from "react-icons/io";
+import { TfiMenuAlt } from "react-icons/tfi";import { IoMdHome } from "react-icons/io";
 import { GoPersonFill } from "react-icons/go";
 import { FaCalendarAlt } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
@@ -8,8 +7,9 @@ import { Button } from "../../../ui/button";
 import { useForm, SubmitHandler } from "react-hook-form";
 import AddApplicationArtical from "../objects/AddApplicationArtical";
 import { ChangeEvent, useRef, useState } from "react";
-import { postFile } from "../../../../http/fetch";
+import { uploadsingleFile } from "../../../../http/fetch";
 import { RxCrossCircled } from "react-icons/rx";
+import { v4 } from "uuid";
 
 interface FormValues {
   firstName: string;
@@ -19,16 +19,23 @@ interface FormValues {
   town: string;
   state: string;
   country: string;
-  dob: Date;
+  dob: string;
   nationality: string;
   email: string;
-  phone: number;
+  phone: string;
   residence: string;
   programType: string;
   studyProgram: string;
   courseStartMonth: string;
-  courseStartYear: number;
-  files: FormData;
+  courseStartYear: string;
+  identityDocName: string;
+  degreeDocName: string[];
+  academicDocName: string[];
+  birthDocName: string;
+  motivationName: string;
+  ieltsDocName: string;
+  englishDocName: string[];
+  recommendationDocName: string;
 }
 
 interface FormValuesFileType {
@@ -80,13 +87,45 @@ export default function AddApplication() {
     academicMsg: false,
     englishMsg: false,
   });
+  const [dataStorage, setDataStorage] = useState<FormValues>({
+    firstName: "",
+    lastName: "",
+    gender: "",
+    address: "",
+    town: "",
+    state: "",
+    country: "",
+    dob: "",
+    nationality: "",
+    email: "",
+    phone: "",
+    residence: "",
+    programType: "",
+    studyProgram: "",
+    courseStartMonth: "",
+    courseStartYear: "",
+    identityDocName: "",
+    degreeDocName: [],
+    academicDocName: [],
+    birthDocName: "",
+    motivationName: "",
+    ieltsDocName: "",
+    englishDocName: [],
+    recommendationDocName: "",
+  });
   const formdata = new FormData();
 
   const handleIdentityChange = async (event: ChangeEvent<HTMLInputElement>) => {
     const files = event.target.files;
     if (files) {
+      formdata.delete("files");
       const file = files[0];
       setIndentityFileHolder(file);
+      const newId = v4() + file.name;
+      setDataStorage((prev) => ({ ...prev, identityDocName: newId }));
+      console.log(newId);
+      formdata.append("files", file, newId);
+      await uploadsingleFile(formdata);
       setFileName((prev) => ({ ...prev, identityFileName: file.name }));
     }
   };
@@ -184,32 +223,28 @@ export default function AddApplication() {
     formState: { errors },
   } = useForm<FormValues>();
   const onSubmit: SubmitHandler<FormValues> = async (data) => {
-    console.log(data);
-    console.log("\n");
-
-    if (indentityFileHolder) formdata.append("identify", indentityFileHolder);
-    if (birthFileHolder) formdata.append("birth", birthFileHolder);
-    if (motivateFileHolder) formdata.append("motivation", motivateFileHolder);
-    if (ieltsFileHolder) formdata.append("ielts", ieltsFileHolder);
-    if (recFileHolder) formdata.append("recommandation", recFileHolder);
+    if (indentityFileHolder) formdata.append("files", indentityFileHolder);
+    if (birthFileHolder) formdata.append("files", birthFileHolder);
+    if (motivateFileHolder) formdata.append("files", motivateFileHolder);
+    if (ieltsFileHolder) formdata.append("files", ieltsFileHolder);
+    if (recFileHolder) formdata.append("files", recFileHolder);
     if (degreeFileHolder) {
       for (let i = 0; i < degreeFileHolder.length; i++) {
-        formdata.append("degree", degreeFileHolder[i]);
+        formdata.append("files", degreeFileHolder[i]);
       }
     }
     if (academicFileHolder) {
       for (let i = 0; i < academicFileHolder.length; i++) {
-        formdata.append("academic", academicFileHolder[i]);
+        formdata.append("files", academicFileHolder[i]);
       }
     }
     if (engTransFileHolder) {
       for (let i = 0; i < engTransFileHolder.length; i++) {
-        formdata.append("english", engTransFileHolder[i]);
+        formdata.append("files", engTransFileHolder[i]);
       }
     }
-
+    dataStorage
     formdata.append("data", JSON.stringify(data));
-    await postFile(formdata);
   };
   return (
     <main className="flex items-center justify-center font-medium">

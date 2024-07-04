@@ -1,8 +1,10 @@
 import axios from "axios";
-export const postFile = async (file: unknown) => {
-  console.log(file);
+// const vercelUrl = "https://studyinmaryland-backend.vercel.app/api/fileupload";
+const localUrl = "http://localhost:3000/api/fileupload"
 
-  const response = await axios.post("http://localhost:3000/", file, {
+export const uploadsingleFile = async (file: unknown) => {
+  
+  const response = await axios.post(`${localUrl}`, file, {
     headers: {
       "Content-Type": "multipart/form-data",
     },
