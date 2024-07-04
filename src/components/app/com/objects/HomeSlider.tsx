@@ -37,8 +37,6 @@ export default function HomeSlider() {
           prevEl: ".button-prev-slide",
         }}
         pagination={{ clickable: true }}
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log("slide change")}
         effect="fade"
         className="relative"
       >

@@ -1,4 +1,5 @@
-import Backdrop from "@mui/material/Backdrop";import CircularProgress from "@mui/material/CircularProgress";
+import Backdrop from "@mui/material/Backdrop";
+import CircularProgress from "@mui/material/CircularProgress";
 import Button from "@mui/material/Button";
 import { TfiMenuAlt } from "react-icons/tfi";
 import { IoMdHome } from "react-icons/io";
@@ -6,7 +7,7 @@ import { GoPersonFill } from "react-icons/go";
 import { FaCalendarAlt } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { MdLocalPhone } from "react-icons/md";
-// import { Button } from "../../../ui/button";
+import { Button as ButtonOld } from "../../../ui/button";
 import { useForm, SubmitHandler } from "react-hook-form";
 import AddApplicationArtical from "../objects/AddApplicationArtical";
 import { ChangeEvent, useRef, useState } from "react";
@@ -130,13 +131,11 @@ export default function AddApplication() {
   const fullScreen = useMediaQuery(theme.breakpoints.down("md"));
   const [open, setOpen] = useState(false);
 
-
-
   const handleClose = () => {
     setOpen(false);
   };
   const handleRedirect = () => {
-    window.location.href = "/"
+    window.location.href = "/";
   };
 
   // functions for handling Indentity Document
@@ -370,6 +369,7 @@ export default function AddApplication() {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm<FormValues>();
   const onSubmit: SubmitHandler<FormValues> = async (data) => {
@@ -451,8 +451,11 @@ export default function AddApplication() {
       setIsloading(true);
       const response = await newUserregistration(formSubmittiedData);
       if (response) {
+        console.log(response);
+
         setOpen(true);
         setIsloading(false);
+        reset();
       }
     } catch (err) {
       console.log(err);
@@ -858,14 +861,14 @@ export default function AddApplication() {
                     key={i}
                   >
                     {doc.substring(0, 20)}
-                    <Button
-                      variant="contained"
+                    <ButtonOld
+                      variant={"secondary"}
                       className="p-0 rounded-full w-5 h-5"
                       onClick={() => deleteSingleFileDeg(i)}
                       type="button"
                     >
                       <RxCrossCircled className="w-full h-full" />
-                    </Button>
+                    </ButtonOld>
                   </span>
                 ))}
               </div>
@@ -909,14 +912,14 @@ export default function AddApplication() {
                     key={i}
                   >
                     {doc.substring(0, 20)}
-                    <Button
-                      variant="contained"
+                    <ButtonOld
+                      variant={"secondary"}
                       className="p-0 rounded-full w-5 h-5"
                       onClick={() => deleteSingleFileAca(i)}
                       type="button"
                     >
                       <RxCrossCircled className="w-full h-full" />
-                    </Button>
+                    </ButtonOld>
                   </span>
                 ))}
               </div>
@@ -1056,14 +1059,14 @@ export default function AddApplication() {
                     key={i}
                   >
                     {doc.substring(0, 20)}
-                    <Button
-                      variant="contained"
+                    <ButtonOld
+                      variant={"secondary"}
                       className="p-0 rounded-full w-5 h-5"
                       onClick={() => deleteSingleFileEng(i)}
                       type="button"
                     >
                       <RxCrossCircled className="w-full h-full" />
-                    </Button>
+                    </ButtonOld>
                   </span>
                 ))}
               </div>
@@ -1134,26 +1137,28 @@ export default function AddApplication() {
         <CircularProgress color="inherit" />
       </Backdrop>
       <div>
-        
         <Dialog
           fullScreen={fullScreen}
           open={open}
           onClose={handleClose}
           aria-labelledby="responsive-dialog-title"
         >
-          <DialogTitle id="responsive-dialog-title" className="flex justify-center">
+          <DialogTitle
+            id="responsive-dialog-title"
+            className="flex justify-center"
+          >
             <div className="w-[5rem] h-[5rem] bg-green-500 rounded-full flex justify-center items-center ">
-            <FaCheck className="w-full h-[3rem] text-white"/>
+              <FaCheck className="w-full h-[3rem] text-white" />
             </div>
           </DialogTitle>
           <DialogContent className="w-full text-center">
-            <span className="text-lg font-semibold ">Registration Successfull</span>
-            <DialogContentText>
-              ThankYou 
-            </DialogContentText>
+            <span className="text-lg font-semibold ">
+              Registration Successfull
+            </span>
+            <DialogContentText>ThankYou</DialogContentText>
           </DialogContent>
-          <DialogActions >
-            <Button onClick={handleRedirect} autoFocus variant="contained" >
+          <DialogActions>
+            <Button onClick={handleRedirect} autoFocus variant="contained">
               Ok
             </Button>
           </DialogActions>
