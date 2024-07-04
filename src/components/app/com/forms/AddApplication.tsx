@@ -1,4 +1,8 @@
-import { TfiMenuAlt } from "react-icons/tfi";import { IoMdHome } from "react-icons/io";
+import Backdrop from "@mui/material/Backdrop";
+import CircularProgress from "@mui/material/CircularProgress";
+// import Button from '@mui/material/Button';
+import { TfiMenuAlt } from "react-icons/tfi";
+import { IoMdHome } from "react-icons/io";
 import { GoPersonFill } from "react-icons/go";
 import { FaCalendarAlt } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
@@ -7,7 +11,7 @@ import { Button } from "../../../ui/button";
 import { useForm, SubmitHandler } from "react-hook-form";
 import AddApplicationArtical from "../objects/AddApplicationArtical";
 import { ChangeEvent, useRef, useState } from "react";
-import { uploadsingleFile } from "../../../../http/fetch";
+import { newUserregistration, uploadsingleFile } from "../../../../http/fetch";
 import { RxCrossCircled } from "react-icons/rx";
 import { v4 } from "uuid";
 
@@ -32,7 +36,7 @@ interface FormValues {
   degreeDocName: string[];
   academicDocName: string[];
   birthDocName: string;
-  motivationName: string;
+  motivationDocName: string;
   ieltsDocName: string;
   englishDocName: string[];
   recommendationDocName: string;
@@ -40,12 +44,12 @@ interface FormValues {
 
 interface FormValuesFileType {
   identityFileName: string;
-  degreeFileName: string;
-  academiFileName: string;
+  degreeDocName: string[];
+  academiFileName: string[];
   birthcerFileName: string;
-  motivationFileName: string;
   ieltFileName: string;
-  translatedFileName: string;
+  motivationFileName: string;
+  englishDocName: string[];
   recommendationFileName: string;
 }
 
@@ -66,22 +70,22 @@ export default function AddApplication() {
   const recommendationRef = useRef<HTMLInputElement | null>(null);
   const [fileName, setFileName] = useState<FormValuesFileType>({
     identityFileName: "",
-    degreeFileName: "",
-    academiFileName: "",
+    degreeDocName: [],
+    academiFileName: [],
     birthcerFileName: "",
-    motivationFileName: "",
     ieltFileName: "",
-    translatedFileName: "",
+    motivationFileName: "",
+    englishDocName: [],
     recommendationFileName: "",
   });
-  const [indentityFileHolder, setIndentityFileHolder] = useState<File>();
-  const [degreeFileHolder, setDegreeFileHolder] = useState<File[]>([]);
-  const [academicFileHolder, setAcademicFileHolder] = useState<File[]>([]);
-  const [birthFileHolder, setBirthFileHolder] = useState<File>();
-  const [motivateFileHolder, setMotivateFileHolder] = useState<File>();
-  const [ieltsFileHolder, setIeltsFileHolder] = useState<File>();
-  const [engTransFileHolder, setEngTransFileHolder] = useState<File[]>([]);
-  const [recFileHolder, setRecFileHolder] = useState<File>();
+  const [indentityFileError, setIndentityFileError] = useState<string | null>();
+  const [degreeFileError, setDegreeFileError] = useState<string | null>();
+  const [academicFileError, setAcademicFileError] = useState<string | null>();
+  const [birthFileError, setBirthFileError] = useState<string | null>();
+  const [motivateFileError, setMotivateFileError] = useState<string | null>();
+  const [ieltsFileError, setIeltsFileError] = useState<string | null>();
+  const [engTransFileError, setEngTransFileError] = useState<string | null>();
+  const [recFileError, setRecFileError] = useState<string | null>();
   const [overloadmsg, setOverloadmsg] = useState<multiFileType>({
     degreeMsg: false,
     academicMsg: false,
@@ -108,102 +112,215 @@ export default function AddApplication() {
     degreeDocName: [],
     academicDocName: [],
     birthDocName: "",
-    motivationName: "",
+    motivationDocName: "",
     ieltsDocName: "",
     englishDocName: [],
     recommendationDocName: "",
   });
+  const [isLoading, setIsloading] = useState(false);
   const formdata = new FormData();
 
+  // functions for handling Indentity Document
   const handleIdentityChange = async (event: ChangeEvent<HTMLInputElement>) => {
     const files = event.target.files;
     if (files) {
+      if (files[0].size > 5000000) {
+        setIndentityFileError("File size is too large, (minimum sixe is 5Mb)");
+        return;
+      } else {
+        setIndentityFileError(null);
+      }
       formdata.delete("files");
-      const file = files[0];
-      setIndentityFileHolder(file);
-      const newId = v4() + file.name;
+      const newId = v4() + files[0].name;
+      setIsloading(true);
       setDataStorage((prev) => ({ ...prev, identityDocName: newId }));
-      console.log(newId);
-      formdata.append("files", file, newId);
+      formdata.append("files", files[0], newId);
       await uploadsingleFile(formdata);
-      setFileName((prev) => ({ ...prev, identityFileName: file.name }));
+      setIsloading(false);
+      setFileName((prev) => ({ ...prev, identityFileName: files[0].name }));
     }
   };
+
+  // functions for handling Degree Document
   const handleDegreeChange = async (event: ChangeEvent<HTMLInputElement>) => {
-    if (degreeFileHolder.length >= 3) {
+    if (dataStorage.degreeDocName.length >= 3) {
       setOverloadmsg((prev) => ({ ...prev, degreeMsg: true }));
       return;
     }
     const files = event.target.files;
     if (files) {
       const file = files[0];
-      setDegreeFileHolder((prev) => [...prev, file]);
+      if (file.size > 5000000) {
+        setDegreeFileError("File size is too large, (minimum sixe is 5Mb)");
+        return;
+      } else {
+        setDegreeFileError(null);
+      }
+      formdata.delete("files");
+      const newId = v4() + file.name;
+      setDataStorage((prev) => ({
+        ...prev,
+        degreeDocName: [...prev.degreeDocName, newId],
+      }));
+      setIsloading(true);
+      formdata.append("files", file, newId);
+      await uploadsingleFile(formdata);
+      setIsloading(false);
+      setFileName((prev) => ({
+        ...prev,
+        degreeDocName: [...prev.degreeDocName, file.name],
+      }));
     }
   };
 
   const deleteSingleFileDeg = (index: number) => {
-    const finalFile = degreeFileHolder.filter((_, i) => i !== index);
-    setDegreeFileHolder(finalFile);
+    const filteredOut = dataStorage.degreeDocName.filter((_, i) => i != index);
+    const filteredName = fileName.degreeDocName.filter((_, i) => i != index);
+    setFileName((prev) => ({ ...prev, degreeDocName: filteredName }));
+    setDataStorage((prev) => ({ ...prev, degreeDocName: filteredOut }));
   };
 
+  // functions for handling Academic Document
   const handleAcademiChange = async (event: ChangeEvent<HTMLInputElement>) => {
-    if (academicFileHolder.length >= 2) {
+    if (dataStorage.academicDocName.length >= 2) {
       setOverloadmsg((prev) => ({ ...prev, academicMsg: true }));
       return;
     }
     const files = event.target.files;
     if (files) {
       const file = files[0];
-      setAcademicFileHolder((prev) => [...prev, file]);
+      if (file.size > 5000000) {
+        setAcademicFileError("File size is too large, (minimum sixe is 5Mb)");
+        return;
+      } else {
+        setAcademicFileError(null);
+      }
+      formdata.delete("files");
+      const newId = v4() + file.name;
+      setDataStorage((prev) => ({
+        ...prev,
+        academicDocName: [...prev.academicDocName, newId],
+      }));
+      setIsloading(true);
+      formdata.append("files", file, newId);
+      await uploadsingleFile(formdata);
+      setIsloading(false);
+      setFileName((prev) => ({
+        ...prev,
+        academiFileName: [...prev.academiFileName, file.name],
+      }));
     }
   };
   const deleteSingleFileAca = (index: number) => {
-    const finalFile = academicFileHolder.filter((_, i) => i !== index);
-    setAcademicFileHolder(finalFile);
+    const filteredOut = dataStorage.academicDocName.filter(
+      (_, i) => i != index
+    );
+    const filteredName = fileName.academiFileName.filter((_, i) => i != index);
+    setFileName((prev) => ({ ...prev, academiFileName: filteredName }));
+    setDataStorage((prev) => ({ ...prev, academicDocName: filteredOut }));
   };
 
+  // functions for handling Birth certificate Document
   const handleBirthcerChange = async (event: ChangeEvent<HTMLInputElement>) => {
     const files = event.target.files;
     if (files) {
-      const file = files[0];
-      setBirthFileHolder(file);
-      setFileName((prev) => ({ ...prev, birthcerFileName: file.name }));
+      if (files[0].size > 5000000) {
+        setBirthFileError("File size is too large, (minimum sixe is 5Mb)");
+        return;
+      } else {
+        setBirthFileError(null);
+      }
+      formdata.delete("files");
+      const newId = v4() + files[0].name;
+      setDataStorage((prev) => ({ ...prev, birthDocName: newId }));
+      setIsloading(true);
+      formdata.append("files", files[0], newId);
+      await uploadsingleFile(formdata);
+      setIsloading(false);
+      setFileName((prev) => ({ ...prev, birthcerFileName: files[0].name }));
     }
   };
+
+  // functions for handling motivation certificate Document
   const handleMotivationChange = async (
     event: ChangeEvent<HTMLInputElement>
   ) => {
     const files = event.target.files;
     if (files) {
-      const file = files[0];
-      setMotivateFileHolder(file);
-      setFileName((prev) => ({ ...prev, motivationFileName: file.name }));
+      if (files[0].size > 5000000) {
+        setMotivateFileError("File size is too large, (minimum sixe is 5Mb)");
+        return;
+      } else {
+        setMotivateFileError(null);
+      }
+      formdata.delete("files");
+      const newId = v4() + files[0].name;
+      setDataStorage((prev) => ({ ...prev, motivationDocName: newId }));
+      setIsloading(true);
+      formdata.append("files", files[0], newId);
+      await uploadsingleFile(formdata);
+      setIsloading(false);
+      setFileName((prev) => ({ ...prev, motivationFileName: files[0].name }));
     }
   };
   const handlIeltChange = async (event: ChangeEvent<HTMLInputElement>) => {
     const files = event.target.files;
     if (files) {
-      const file = files[0];
-      setIeltsFileHolder(file);
-      setFileName((prev) => ({ ...prev, ieltFileName: file.name }));
+      if (files[0].size > 5000000) {
+        setIeltsFileError("File size is too large, (minimum sixe is 5Mb)");
+        return;
+      } else {
+        setIeltsFileError(null);
+      }
+      formdata.delete("files");
+      const newId = v4() + files[0].name;
+      setDataStorage((prev) => ({ ...prev, ieltsDocName: newId }));
+      setIsloading(true);
+      formdata.append("files", files[0], newId);
+      await uploadsingleFile(formdata);
+      setIsloading(false);
+      setFileName((prev) => ({ ...prev, ieltFileName: files[0].name }));
     }
   };
+
+  // functions for handling English Translated certificate Document
   const handleTranslatedChange = async (
     event: ChangeEvent<HTMLInputElement>
   ) => {
-    if (engTransFileHolder.length >= 2) {
+    if (dataStorage.englishDocName.length >= 2) {
       setOverloadmsg((prev) => ({ ...prev, englishMsg: true }));
       return;
     }
     const files = event.target.files;
     if (files) {
       const file = files[0];
-      setEngTransFileHolder((prev) => [...prev, file]);
+      if (file.size > 5000000) {
+        setEngTransFileError("File size is too large, (minimum sixe is 5Mb)");
+        return;
+      } else {
+        setEngTransFileError(null);
+      }
+      formdata.delete("files");
+      const newId = v4() + file.name;
+      setDataStorage((prev) => ({
+        ...prev,
+        englishDocName: [...prev.englishDocName, newId],
+      }));
+      setIsloading(true);
+      formdata.append("files", file, newId);
+      await uploadsingleFile(formdata);
+      setIsloading(false);
+      setFileName((prev) => ({
+        ...prev,
+        englishDocName: [...prev.englishDocName, file.name],
+      }));
     }
   };
   const deleteSingleFileEng = (index: number) => {
-    const finalFile = engTransFileHolder.filter((_, i) => i !== index);
-    setEngTransFileHolder(finalFile);
+    const filteredOut = dataStorage.englishDocName.filter((_, i) => i != index);
+    const filteredName = fileName.englishDocName.filter((_, i) => i != index);
+    setFileName((prev) => ({ ...prev, englishDocName: filteredName }));
+    setDataStorage((prev) => ({ ...prev, englishDocName: filteredOut }));
   };
 
   const handleRecommendationChange = async (
@@ -211,9 +328,23 @@ export default function AddApplication() {
   ) => {
     const files = event.target.files;
     if (files) {
-      const file = files[0];
-      setRecFileHolder(file);
-      setFileName((prev) => ({ ...prev, recommendationFileName: file.name }));
+      if (files[0].size > 5000000) {
+        setRecFileError("File size is too large, (minimum sixe is 5Mb)");
+        return;
+      } else {
+        setRecFileError(null);
+      }
+      formdata.delete("files");
+      const newId = v4() + files[0].name;
+      setDataStorage((prev) => ({ ...prev, recommendationDocName: newId }));
+      setIsloading(true);
+      formdata.append("files", files[0], newId);
+      await uploadsingleFile(formdata);
+      setIsloading(false);
+      setFileName((prev) => ({
+        ...prev,
+        recommendationFileName: files[0].name,
+      }));
     }
   };
 
@@ -223,28 +354,86 @@ export default function AddApplication() {
     formState: { errors },
   } = useForm<FormValues>();
   const onSubmit: SubmitHandler<FormValues> = async (data) => {
-    if (indentityFileHolder) formdata.append("files", indentityFileHolder);
-    if (birthFileHolder) formdata.append("files", birthFileHolder);
-    if (motivateFileHolder) formdata.append("files", motivateFileHolder);
-    if (ieltsFileHolder) formdata.append("files", ieltsFileHolder);
-    if (recFileHolder) formdata.append("files", recFileHolder);
-    if (degreeFileHolder) {
-      for (let i = 0; i < degreeFileHolder.length; i++) {
-        formdata.append("files", degreeFileHolder[i]);
-      }
+    if (dataStorage.identityDocName.length <= 0) {
+      indentityRef.current?.classList.remove("hidden");
+      indentityRef.current?.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+      indentityRef.current?.classList.add("hidden");
+
+      setIndentityFileError("This Field is Required To Register");
+      return;
     }
-    if (academicFileHolder) {
-      for (let i = 0; i < academicFileHolder.length; i++) {
-        formdata.append("files", academicFileHolder[i]);
-      }
+    if (dataStorage.degreeDocName.length <= 0) {
+      degreeRef.current?.classList.remove("hidden");
+      degreeRef.current?.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+      degreeRef.current?.classList.add("hidden");
+      setDegreeFileError("This Field is Required To Register");
+      return;
     }
-    if (engTransFileHolder) {
-      for (let i = 0; i < engTransFileHolder.length; i++) {
-        formdata.append("files", engTransFileHolder[i]);
-      }
+    if (dataStorage.academicDocName.length <= 0) {
+      academicRef.current?.classList.remove("hidden");
+      academicRef.current?.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+      academicRef.current?.classList.add("hidden");
+      setAcademicFileError("This Field is Required To Register");
+      return;
     }
-    dataStorage
-    formdata.append("data", JSON.stringify(data));
+    if (dataStorage.birthDocName.length <= 0) {
+      birthRef.current?.classList.remove("hidden");
+      birthRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+      birthRef.current?.classList.add("hidden");
+      setBirthFileError("This Field is Required To Register");
+      return;
+    }
+    if (dataStorage.motivationDocName.length <= 0) {
+      motivationRef.current?.classList.remove("hidden");
+      motivationRef.current?.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+      motivationRef.current?.classList.add("hidden");
+      setMotivateFileError("This Field is Required To Register");
+      return;
+    }
+    const formSubmittiedData = {
+      firstName: data.firstName,
+      lastName: data.lastName,
+      gender: data.gender,
+      address: data.address,
+      town: data.town,
+      state: data.state,
+      country: data.country,
+      dob: data.dob,
+      nationality: data.nationality,
+      email: data.email,
+      phone: data.phone,
+      residence: data.residence,
+      programType: data.programType,
+      studyProgram: data.studyProgram,
+      courseStartMonth: data.courseStartMonth,
+      courseStartYear: data.courseStartYear,
+      identityDocName: dataStorage.identityDocName,
+      degreeDocName: dataStorage.degreeDocName,
+      academicDocName: dataStorage.academicDocName,
+      birthDocName: dataStorage.birthDocName,
+      motivationDocName: dataStorage.motivationDocName,
+      ieltsDocName: dataStorage.ieltsDocName,
+      englishDocName: dataStorage.englishDocName,
+      recommendationDocName: dataStorage.recommendationDocName,
+    };
+    try {
+      // await newUserregistration(formSubmittiedData);
+      setIsloading(true);
+    } catch (err) {
+      console.log(err);
+    }
   };
   return (
     <main className="flex items-center justify-center font-medium">
@@ -612,6 +801,11 @@ export default function AddApplication() {
                 </span>
               )}
             </div>
+            {indentityFileError && (
+              <span className="text-red-500 text-sm font-medium mt-2">
+                {indentityFileError}
+              </span>
+            )}
           </div>
           <div className="my-5">
             <label className="text-sm font-semibold">
@@ -635,12 +829,12 @@ export default function AddApplication() {
                 accept=".xlsx,.xls,image/*,.doc, .docx,.ppt, .pptx,.txt,.pdf"
               />
               <div className="w-full  flex flex-wrap gap-1">
-                {degreeFileHolder.map((doc, i) => (
+                {fileName.degreeDocName.map((doc, i) => (
                   <span
                     className="text-sm  font-medium mx-2 border rounded-lg p-1 bg-blue-200 max-md:m-0  max-md:text-xs flex items-center gap-1"
                     key={i}
                   >
-                    {doc.name.substring(0, 20)}
+                    {doc.substring(0, 20)}
                     <Button
                       variant={"secondary"}
                       className="p-0 rounded-full w-5 h-5"
@@ -656,6 +850,11 @@ export default function AddApplication() {
             {overloadmsg.degreeMsg && (
               <span className=" text-sm font-medium  text-red-500">
                 Maxmium File Count Exceeded
+              </span>
+            )}
+            {degreeFileError && (
+              <span className="text-red-500 text-sm font-medium mt-2">
+                {degreeFileError}
               </span>
             )}
           </div>
@@ -681,12 +880,12 @@ export default function AddApplication() {
                 accept=".xlsx,.xls,image/*,.doc, .docx,.ppt, .pptx,.txt,.pdf"
               />
               <div className="w-full  flex flex-wrap gap-1">
-                {academicFileHolder.map((doc, i) => (
+                {fileName.academiFileName.map((doc, i) => (
                   <span
                     className="text-sm  font-medium mx-2 border rounded-lg p-1 bg-blue-200 max-md:m-0  max-md:text-xs flex items-center gap-1"
                     key={i}
                   >
-                    {doc.name.substring(0, 20)}
+                    {doc.substring(0, 20)}
                     <Button
                       variant={"secondary"}
                       className="p-0 rounded-full w-5 h-5"
@@ -702,6 +901,11 @@ export default function AddApplication() {
             {overloadmsg.academicMsg && (
               <span className=" text-sm font-medium  text-red-500">
                 Maxmium File Count Exceeded
+              </span>
+            )}
+            {academicFileError && (
+              <span className="text-red-500 text-sm font-medium mt-2">
+                {academicFileError}
               </span>
             )}
           </div>
@@ -732,6 +936,11 @@ export default function AddApplication() {
                 </span>
               )}
             </div>
+            {birthFileError && (
+              <span className="text-red-500 text-sm font-medium mt-2">
+                {birthFileError}
+              </span>
+            )}
           </div>
           <div className="my-5">
             <label className="text-sm font-semibold">
@@ -760,6 +969,11 @@ export default function AddApplication() {
                 </span>
               )}
             </div>
+            {motivateFileError && (
+              <span className="text-red-500 text-sm font-medium mt-2">
+                {motivateFileError}
+              </span>
+            )}
           </div>
           <div className="my-5">
             <label className="text-sm font-semibold">IELTS or TOEFL</label>
@@ -785,6 +999,11 @@ export default function AddApplication() {
                 </span>
               )}
             </div>
+            {ieltsFileError && (
+              <span className="text-red-500 text-sm font-medium mt-2">
+                {ieltsFileError}
+              </span>
+            )}
           </div>
           <div className="my-5">
             <label className="text-sm font-semibold">
@@ -808,12 +1027,12 @@ export default function AddApplication() {
                 accept=".xlsx,.xls,image/*,.doc, .docx,.ppt, .pptx,.txt,.pdf"
               />
               <div className="w-full  flex flex-wrap gap-1">
-                {engTransFileHolder.map((doc, i) => (
+                {fileName.englishDocName.map((doc, i) => (
                   <span
                     className="text-sm  font-medium mx-2 border rounded-lg p-1 bg-blue-200 max-md:m-0  max-md:text-xs flex items-center gap-1"
                     key={i}
                   >
-                    {doc.name.substring(0, 20)}
+                    {doc.substring(0, 20)}
                     <Button
                       variant={"secondary"}
                       className="p-0 rounded-full w-5 h-5"
@@ -829,6 +1048,11 @@ export default function AddApplication() {
             {overloadmsg.englishMsg && (
               <span className=" text-sm font-medium  text-red-500">
                 Maxmium File Count Exceeded
+              </span>
+            )}
+            {engTransFileError && (
+              <span className="text-red-500 text-sm font-medium mt-2">
+                {engTransFileError}
               </span>
             )}
           </div>
@@ -859,6 +1083,11 @@ export default function AddApplication() {
                 </span>
               )}
             </div>
+            {recFileError && (
+              <span className="text-red-500 text-sm font-medium mt-2">
+                {recFileError}
+              </span>
+            )}
           </div>
 
           <p className="text-md my-5">
@@ -870,6 +1099,12 @@ export default function AddApplication() {
           </Button>
         </form>
       </section>
+      <Backdrop
+        sx={{ color: "#fff", zIndex: (theme) => theme.zIndex.drawer + 1 }}
+        open={isLoading}
+      >
+        <CircularProgress color="inherit" />
+      </Backdrop>
     </main>
   );
 }
