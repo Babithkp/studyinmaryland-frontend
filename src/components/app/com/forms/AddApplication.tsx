@@ -1,19 +1,26 @@
-import Backdrop from "@mui/material/Backdrop";
-import CircularProgress from "@mui/material/CircularProgress";
-// import Button from '@mui/material/Button';
+import Backdrop from "@mui/material/Backdrop";import CircularProgress from "@mui/material/CircularProgress";
+import Button from "@mui/material/Button";
 import { TfiMenuAlt } from "react-icons/tfi";
 import { IoMdHome } from "react-icons/io";
 import { GoPersonFill } from "react-icons/go";
 import { FaCalendarAlt } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { MdLocalPhone } from "react-icons/md";
-import { Button } from "../../../ui/button";
+// import { Button } from "../../../ui/button";
 import { useForm, SubmitHandler } from "react-hook-form";
 import AddApplicationArtical from "../objects/AddApplicationArtical";
 import { ChangeEvent, useRef, useState } from "react";
 import { newUserregistration, uploadsingleFile } from "../../../../http/fetch";
 import { RxCrossCircled } from "react-icons/rx";
 import { v4 } from "uuid";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme } from "@mui/material/styles";
+import Dialog from "@mui/material/Dialog";
+import DialogActions from "@mui/material/DialogActions";
+import DialogContent from "@mui/material/DialogContent";
+import DialogContentText from "@mui/material/DialogContentText";
+import DialogTitle from "@mui/material/DialogTitle";
+import { FaCheck } from "react-icons/fa6";
 
 interface FormValues {
   firstName: string;
@@ -119,6 +126,18 @@ export default function AddApplication() {
   });
   const [isLoading, setIsloading] = useState(false);
   const formdata = new FormData();
+  const theme = useTheme();
+  const fullScreen = useMediaQuery(theme.breakpoints.down("md"));
+  const [open, setOpen] = useState(false);
+
+
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+  const handleRedirect = () => {
+    window.location.href = "/"
+  };
 
   // functions for handling Indentity Document
   const handleIdentityChange = async (event: ChangeEvent<HTMLInputElement>) => {
@@ -429,8 +448,12 @@ export default function AddApplication() {
       recommendationDocName: dataStorage.recommendationDocName,
     };
     try {
-      // await newUserregistration(formSubmittiedData);
       setIsloading(true);
+      const response = await newUserregistration(formSubmittiedData);
+      if (response) {
+        setOpen(true);
+        setIsloading(false);
+      }
     } catch (err) {
       console.log(err);
     }
@@ -836,7 +859,7 @@ export default function AddApplication() {
                   >
                     {doc.substring(0, 20)}
                     <Button
-                      variant={"secondary"}
+                      variant="contained"
                       className="p-0 rounded-full w-5 h-5"
                       onClick={() => deleteSingleFileDeg(i)}
                       type="button"
@@ -887,7 +910,7 @@ export default function AddApplication() {
                   >
                     {doc.substring(0, 20)}
                     <Button
-                      variant={"secondary"}
+                      variant="contained"
                       className="p-0 rounded-full w-5 h-5"
                       onClick={() => deleteSingleFileAca(i)}
                       type="button"
@@ -1034,7 +1057,7 @@ export default function AddApplication() {
                   >
                     {doc.substring(0, 20)}
                     <Button
-                      variant={"secondary"}
+                      variant="contained"
                       className="p-0 rounded-full w-5 h-5"
                       onClick={() => deleteSingleFileEng(i)}
                       type="button"
@@ -1094,7 +1117,12 @@ export default function AddApplication() {
             By clicking submit you are agreeing that you have uploaded all the
             original documents for your scholarship application.
           </p>
-          <Button className="rounded-sm bg-red-500 px-2 py-1 text-white w-[5rem]">
+          <Button
+            variant="contained"
+            color="error"
+            className="rounded-sm bg-red-500 px-2 py-1 text-white w-[5rem] "
+            type="submit"
+          >
             Submit
           </Button>
         </form>
@@ -1105,6 +1133,32 @@ export default function AddApplication() {
       >
         <CircularProgress color="inherit" />
       </Backdrop>
+      <div>
+        
+        <Dialog
+          fullScreen={fullScreen}
+          open={open}
+          onClose={handleClose}
+          aria-labelledby="responsive-dialog-title"
+        >
+          <DialogTitle id="responsive-dialog-title" className="flex justify-center">
+            <div className="w-[5rem] h-[5rem] bg-green-500 rounded-full flex justify-center items-center ">
+            <FaCheck className="w-full h-[3rem] text-white"/>
+            </div>
+          </DialogTitle>
+          <DialogContent className="w-full text-center">
+            <span className="text-lg font-semibold ">Registration Successfull</span>
+            <DialogContentText>
+              ThankYou 
+            </DialogContentText>
+          </DialogContent>
+          <DialogActions >
+            <Button onClick={handleRedirect} autoFocus variant="contained" >
+              Ok
+            </Button>
+          </DialogActions>
+        </Dialog>
+      </div>
     </main>
   );
 }
