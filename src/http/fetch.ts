@@ -20,3 +20,10 @@ export const newAgentCreation = async (file: unknown) => {
 export const agentLogin = async (file: unknown) => {
   return await axios.post(`${vercelUrl}loginAgent`, file);
 };
+
+export const getAllStudents = async () => {
+  return await axios.get(`${vercelUrl}getStudentData`);
+};
+export const getAllAgents = async () => {
+  return await axios.get(`${vercelUrl}getAgentData`);
+};

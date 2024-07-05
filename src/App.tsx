@@ -15,6 +15,7 @@ import Contact from "./components/app/Contact";
 import SelectionLayout from "./components/app/com/logging/SelectionLayout";
 import AgentSignUp from "./components/app/com/logging/AgentSignUp";
 import AgentSignin from "./components/app/com/logging/AgentSignin";
+import AdminDashboard from "./components/app/AdminDashboard";
 
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
         <Route path="Logging-selection" element={<SelectionLayout />} />
         <Route path="Agent-signup" element={<AgentSignUp />} />
         <Route path="Agent-signin" element={<AgentSignin />} />
+        <Route path="admin-dashboard" element={<AdminDashboard />} />
       </Routes>
     </div>
     <Footer/>
