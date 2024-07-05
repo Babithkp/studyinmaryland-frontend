@@ -70,11 +70,11 @@ export default function AgentLogin() {
             variant="outlined"
             type="password"
             required
-            {...register("password", { required: true, minLength: 8 })}
+            {...register("password", { required: true, minLength: 5 })}
           />
           {errors.password && (
             <span className="font-medium text-red-500">
-              This Field is Required with Minimum 8 Characters
+              This Field is Required with Minimum 5 Characters
             </span>
           )}
           {wrongPass && (
