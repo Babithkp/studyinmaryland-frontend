@@ -1,4 +1,5 @@
-import { GrWorkshop } from "react-icons/gr";import { PiStudentBold } from "react-icons/pi";
+import { GrWorkshop } from "react-icons/gr";
+import { PiStudentBold } from "react-icons/pi";
 import { FaRegCircle } from "react-icons/fa";
 import { Button } from "../../../ui/button";
 import { useState } from "react";
@@ -19,17 +20,19 @@ export default function SelectionLayout() {
     if (isStudenttPressed) {
       window.location.href = "applicationPortal";
     } else {
-      window.location.href = "Agent-signning";
+      window.location.href = "Agent-signup";
     }
   };
 
   return (
     <main className="flex items-center justify-center ">
       <section className="w-[50%] p-10 max-md:w-full gap-14 max-md:p-4 font-medium flex flex-col items-center">
-        <h1 className="text-4xl font-semibold">Join as an Agent or Student</h1>
+        <h1 className="md:text-4xl font-semibold text-3xl text-center text-red-500">
+          Join as an Ambassador or Student
+        </h1>
         <div className="flex max-md:flex-col gap-8">
           <div
-            className={`grid grid-cols-[8rem,2rem] p-5 grid-rows-[2rem,6rem] hover:bg-slate-50 rounded-lg border-[2px] gap-5 hover:border-blue-500 shadow-blue-500 hover:shadow-lg active:scale-95 duration-150 ${
+            className={`grid grid-cols-[10rem,2rem] p-5 grid-rows-[2rem,6rem] hover:bg-slate-50 rounded-lg border-[2px] gap-5 hover:border-blue-500 shadow-blue-500 hover:shadow-lg active:scale-95 duration-150 ${
               isAgentPressed ? "border-blue-500" : ""
             }`}
             onClick={agentButttonHandler}
@@ -43,10 +46,12 @@ export default function SelectionLayout() {
                 <FaRegCircle className="justify-self-end text-white w-[1rem] h-[0.8rem]" />
               </div>
             )}
-            <p className="text-lg ">I'm an Agent, Ask Students to join</p>
+            <p className="text-lg ">
+              I am an ambassador. (I can refer or recruit students)
+            </p>
           </div>
           <div
-            className={`grid grid-cols-[8rem,2rem] p-5 grid-rows-[2rem,6rem] hover:bg-slate-50 rounded-lg border-[2px] gap-5 hover:border-blue-500 shadow-blue-500 hover:shadow-lg active:scale-95 duration-150 ${
+            className={`grid grid-cols-[10rem,2rem] p-5 grid-rows-[2rem,7rem] hover:bg-slate-50 rounded-lg border-[2px] gap-5 hover:border-blue-500 shadow-blue-500 hover:shadow-lg active:scale-95 duration-150 ${
               isStudenttPressed ? "border-blue-500" : ""
             }`}
             onClick={studentButttonHandler}
@@ -60,7 +65,10 @@ export default function SelectionLayout() {
                 <FaRegCircle className="justify-self-end text-white w-[1rem] h-[0.8rem]" />
               </div>
             )}
-            <p className="text-lg ">I'm a Student, Came to student</p>
+            <p className="text-lg ">
+              I am a student. (I would like to apply for a scholarship and an
+              admission)
+            </p>
           </div>
         </div>
         <Button

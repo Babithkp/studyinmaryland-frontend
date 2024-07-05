@@ -13,7 +13,8 @@ import AddApplication from "./components/app/com/forms/AddApplication";
 import ReferralProgram from "./components/app/ReferralProgram";
 import Contact from "./components/app/Contact";
 import SelectionLayout from "./components/app/com/logging/SelectionLayout";
-import AgentSigning from "./components/app/com/logging/AgentSigninng";
+import AgentSignUp from "./components/app/com/logging/AgentSignUp";
+import AgentSignin from "./components/app/com/logging/AgentSignin";
 
 
 function App() {
@@ -34,7 +35,8 @@ function App() {
         <Route path="referralProgram" element={<ReferralProgram />} />
         <Route path="contact" element={<Contact />} />
         <Route path="Logging-selection" element={<SelectionLayout />} />
-        <Route path="Agent-signning" element={<AgentSigning />} />
+        <Route path="Agent-signup" element={<AgentSignUp />} />
+        <Route path="Agent-signin" element={<AgentSignin />} />
       </Routes>
     </div>
     <Footer/>
