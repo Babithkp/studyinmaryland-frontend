@@ -1,5 +1,4 @@
-import Backdrop from "@mui/material/Backdrop";
-import CircularProgress from "@mui/material/CircularProgress";
+import Backdrop from "@mui/material/Backdrop";import CircularProgress from "@mui/material/CircularProgress";
 import Button from "@mui/material/Button";
 import { TfiMenuAlt } from "react-icons/tfi";
 import { IoMdHome } from "react-icons/io";
@@ -126,16 +125,21 @@ export default function AddApplication() {
     recommendationDocName: "",
   });
   const [isLoading, setIsloading] = useState(false);
+  const [open, setOpen] = useState(false);
+  const [responseStatus, setResponseStatus] = useState(false);
   const formdata = new FormData();
   const theme = useTheme();
   const fullScreen = useMediaQuery(theme.breakpoints.down("md"));
-  const [open, setOpen] = useState(false);
 
   const handleClose = () => {
     setOpen(false);
   };
   const handleRedirect = () => {
-    window.location.href = "/";
+    if (!responseStatus) {
+      window.location.href = "/";
+    } else {
+      handleClose();
+    }
   };
 
   // functions for handling Indentity Document
@@ -450,12 +454,26 @@ export default function AddApplication() {
     try {
       setIsloading(true);
       const response = await newUserregistration(formSubmittiedData);
-      if (response) {
-        console.log(response);
-
+      console.log(response);
+      if (response.data.error) {
+        setResponseStatus(true);
+        setOpen(true);
+        setIsloading(false);
+      } else {
+        setResponseStatus(false);
         setOpen(true);
         setIsloading(false);
         reset();
+        setFileName({
+          identityFileName: "",
+          degreeDocName: [],
+          academiFileName: [],
+          birthcerFileName: "",
+          ieltFileName: "",
+          motivationFileName: "",
+          englishDocName: [],
+          recommendationFileName: "",
+        });
       }
     } catch (err) {
       console.log(err);
@@ -1142,22 +1160,44 @@ export default function AddApplication() {
           open={open}
           onClose={handleClose}
           aria-labelledby="responsive-dialog-title"
+          onClick={() => {
+            return;
+          }}
         >
           <DialogTitle
             id="responsive-dialog-title"
             className="flex justify-center"
           >
-            <div className="w-[5rem] h-[5rem] bg-green-500 rounded-full flex justify-center items-center ">
-              <FaCheck className="w-full h-[3rem] text-white" />
-            </div>
+            {!responseStatus && (
+              <div className="w-[5rem] h-[5rem] bg-green-500 rounded-full flex justify-center items-center ">
+                <FaCheck className="w-full h-[3rem] text-white" />
+              </div>
+            )}
+            {responseStatus && (
+              <div className="w-[5rem] h-[5rem] bg-red-500 rounded-full flex justify-center items-center ">
+                <RxCrossCircled className="w-full h-[3rem] text-white" />
+              </div>
+            )}
           </DialogTitle>
           <DialogContent className="w-full text-center">
-            <span className="text-lg font-semibold ">
-              Registration Successfull
-            </span>
-            <DialogContentText>ThankYou</DialogContentText>
+            {!responseStatus && (
+              <span className="text-lg font-semibold ">
+                Registration Successfull
+              </span>
+            )}
+            {responseStatus && (
+              <span className="text-lg font-semibold ">
+                Failed Registration
+              </span>
+            )}
+            {!responseStatus && <DialogContentText>ThankYou</DialogContentText>}
+            {responseStatus && (
+              <DialogContentText>
+                User Already exist,Try using Different email
+              </DialogContentText>
+            )}
           </DialogContent>
-          <DialogActions>
+          <DialogActions disableSpacing={false}>
             <Button onClick={handleRedirect} autoFocus variant="contained">
               Ok
             </Button>
