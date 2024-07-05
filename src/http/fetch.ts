@@ -12,3 +12,4 @@ export const uploadsingleFile = async (file: unknown) => {
 export const newUserregistration = async (file: unknown) => {
   return await axios.post(`${vercelUrl}newRegistration`, file);
 };
+
