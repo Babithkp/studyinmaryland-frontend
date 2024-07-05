@@ -1,4 +1,5 @@
 import { Button } from "../ui/button";
+import AgentSlide from "./com/objects/AgentSlide";
 export default function ReferralProgram() {
   return (
     <main className="flex items-center justify-center">
@@ -188,8 +189,14 @@ export default function ReferralProgram() {
             If you have any questions or need more information, please don't
             hesitate to reach our support team at
           </p>
-
-          <Button className="bg-red-500 hover:bg-red-600 active:scale-95 duration-100" >Sign Up Now</Button>
+          <div>
+            <AgentSlide />
+          </div>
+          <div className="flex justify-center w-full">
+          <Button className="bg-red-500 hover:bg-red-600 active:scale-95 duration-100 mt-10" onClick={()=>window.location.href = "Logging-selection"}>
+            Sign Up Now
+          </Button>
+          </div>
         </article>
       </section>
     </main>

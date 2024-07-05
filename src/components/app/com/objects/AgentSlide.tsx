@@ -27,7 +27,7 @@ export default function AgentSlide() {
             spaceBetween: 40,
           },
           1024: {
-            slidesPerView: 3,
+            slidesPerView: 2,
             spaceBetween: 50,
           },
         }}
@@ -41,7 +41,7 @@ export default function AgentSlide() {
         effect="fade"
         className="relative"
       >
-        <SwiperSlide className="bg-[#004890] rounded-2xl p-5 h-[50rem] flex flex-col justify-evenly max-md:h-[60rem]">
+        <SwiperSlide className="bg-[#004890] rounded-2xl p-5 h-[70rem] flex flex-col justify-evenly max-md:h-[60rem]">
           <span>
             <BiSolidQuoteAltRight className="-scale-x-100 mb-5" size={"3rem"} />
           </span>
@@ -84,7 +84,7 @@ export default function AgentSlide() {
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="bg-[#004890] rounded-2xl p-5 h-[50rem] flex flex-col justify-evenly max-md:h-[60rem]">
+        <SwiperSlide className="bg-[#004890] rounded-2xl p-5 h-[70rem] flex flex-col justify-evenly max-md:h-[60rem]">
           <span>
             <BiSolidQuoteAltRight className="-scale-x-100 mb-5" size={"3rem"} />
           </span>
@@ -126,7 +126,7 @@ export default function AgentSlide() {
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="bg-[#004890] rounded-2xl p-5 h-[50rem] flex flex-col justify-evenly max-md:h-[60rem]">
+        <SwiperSlide className="bg-[#004890] rounded-2xl p-5 h-[70rem] flex flex-col justify-evenly max-md:h-[60rem]">
           <span>
             <BiSolidQuoteAltRight className="-scale-x-100 mb-5" size={"3rem"} />
           </span>

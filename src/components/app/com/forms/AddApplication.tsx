@@ -1160,9 +1160,6 @@ export default function AddApplication() {
           open={open}
           onClose={handleClose}
           aria-labelledby="responsive-dialog-title"
-          onClick={() => {
-            return;
-          }}
         >
           <DialogTitle
             id="responsive-dialog-title"
@@ -1179,7 +1176,7 @@ export default function AddApplication() {
               </div>
             )}
           </DialogTitle>
-          <DialogContent className="w-full text-center">
+          <DialogContent className="w-full text-center ">
             {!responseStatus && (
               <span className="text-lg font-semibold ">
                 Registration Successfull
@@ -1198,7 +1195,7 @@ export default function AddApplication() {
             )}
           </DialogContent>
           <DialogActions disableSpacing={false}>
-            <Button onClick={handleRedirect} autoFocus variant="contained">
+            <Button onClick={handleRedirect} autoFocus variant="contained" >
               Ok
             </Button>
           </DialogActions>

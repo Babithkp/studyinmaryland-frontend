@@ -1,5 +1,4 @@
-import { useRef, useState } from "react";
-import { GiHamburgerMenu } from "react-icons/gi";
+import { useRef, useState } from "react";import { GiHamburgerMenu } from "react-icons/gi";
 // import { RiCloseCircleFill } from "react-icons/ri";
 
 import {
@@ -21,7 +20,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="flex justify-between border-b-[1px] p-4 text-lg font-medium">
+    <nav className="flex justify-between border-b-[1px] p-4 text-lg font-medium ">
       <figure className="mr-16 h-14 max-md:w-[10rem]">
         <a href={"/"}>
           <svg
@@ -50,7 +49,7 @@ export default function Navbar() {
           </svg>
         </a>
       </figure>
-      <ul className="relative flex flex-wrap gap-10 max-lg:w-[80%] max-lg:gap-5 max-md:hidden">
+      <ul className="relative flex justify-end flex-wrap gap-8 max-lg:w-[80%] max-lg:gap-5 max-md:hidden">
         <li>
           <a href={"/aboutus"}>About Us</a>
         </li>
@@ -72,9 +71,7 @@ export default function Navbar() {
         <li>
           <a href={"/applicationPortal"}>Application Portal</a>
         </li>
-        <li>
-          <a href={"/becomeAnAgent"}>Become An Agent</a>
-        </li>
+
         <li>
           <a href={"/referralProgram"}>Referral Program</a>
         </li>
@@ -148,13 +145,6 @@ export default function Navbar() {
                 className="flex w-full items-center border-b-[1px] px-5 py-4 text-base font-medium text-black hover:bg-red-500 hover:text-white"
               >
                 Application Portal
-              </a>
-
-              <a
-                href={"/becomeAnAgent"}
-                className="flex w-full items-center border-b-[1px] px-5 py-4 text-base font-medium text-black hover:bg-red-500 hover:text-white"
-              >
-                Become An Agent
               </a>
 
               <a

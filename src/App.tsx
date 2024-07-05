@@ -10,9 +10,10 @@ import Visa from "./components/app/Visa";
 import Faq from "./components/app/Faq";
 import ApplicationPortal from "./components/app/ApplicationPortal";
 import AddApplication from "./components/app/com/forms/AddApplication";
-import BecomeAnAgent from "./components/app/BecomeAnAgent";
 import ReferralProgram from "./components/app/ReferralProgram";
 import Contact from "./components/app/Contact";
+import SelectionLayout from "./components/app/com/logging/SelectionLayout";
+import AgentSigning from "./components/app/com/logging/AgentSigninng";
 
 
 function App() {
@@ -30,9 +31,10 @@ function App() {
         <Route path="faq" element={<Faq />} />
         <Route path="applicationPortal" element={<ApplicationPortal />} />
         <Route path="applicationPortal/addApplication" element={<AddApplication />} />
-        <Route path="becomeAnAgent" element={<BecomeAnAgent />} />
         <Route path="referralProgram" element={<ReferralProgram />} />
         <Route path="contact" element={<Contact />} />
+        <Route path="Logging-selection" element={<SelectionLayout />} />
+        <Route path="Agent-signning" element={<AgentSigning />} />
       </Routes>
     </div>
     <Footer/>
