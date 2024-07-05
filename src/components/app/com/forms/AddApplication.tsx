@@ -1179,7 +1179,7 @@ export default function AddApplication() {
           <DialogContent className="w-full text-center ">
             {!responseStatus && (
               <span className="text-lg font-semibold ">
-                Registration Successfull
+                Application successfully submitted
               </span>
             )}
             {responseStatus && (
