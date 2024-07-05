@@ -1,4 +1,5 @@
-import Backdrop from "@mui/material/Backdrop";import CircularProgress from "@mui/material/CircularProgress";
+import Backdrop from "@mui/material/Backdrop";
+import CircularProgress from "@mui/material/CircularProgress";
 import Button from "@mui/material/Button";
 import { TfiMenuAlt } from "react-icons/tfi";
 import { IoMdHome } from "react-icons/io";
@@ -455,11 +456,7 @@ export default function AddApplication() {
       setIsloading(true);
       const response = await newUserregistration(formSubmittiedData);
       console.log(response);
-      if (response.data.error) {
-        setResponseStatus(true);
-        setOpen(true);
-        setIsloading(false);
-      } else {
+      if (!response.data.error) {
         setResponseStatus(false);
         setOpen(true);
         setIsloading(false);
@@ -474,6 +471,10 @@ export default function AddApplication() {
           englishDocName: [],
           recommendationFileName: "",
         });
+      } else {
+        setResponseStatus(true);
+        setOpen(true);
+        setIsloading(false);
       }
     } catch (err) {
       console.log(err);
@@ -1195,7 +1196,7 @@ export default function AddApplication() {
             )}
           </DialogContent>
           <DialogActions disableSpacing={false}>
-            <Button onClick={handleRedirect} autoFocus variant="contained" >
+            <Button onClick={handleRedirect} autoFocus variant="contained">
               Ok
             </Button>
           </DialogActions>

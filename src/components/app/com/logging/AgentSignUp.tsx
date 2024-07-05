@@ -1,5 +1,4 @@
-import {
-  Backdrop,
+import {  Backdrop,
   Button,
   Checkbox,
   CircularProgress,
@@ -35,6 +34,10 @@ export default function AgentSigning() {
     isSubmitted: false,
   });
   const [open, setOpen] = useState(false);
+  const [checkboxStatus, setCheckboxStatus] = useState({
+    firstCheckbox: false,
+    secCheckbox: false,
+  });
   const theme = useTheme();
   const fullScreen = useMediaQuery(theme.breakpoints.down("md"));
 
@@ -48,10 +51,10 @@ export default function AgentSigning() {
   };
 
   const handleRedirect = () => {
-    if(formState.isSubmitted){
-      window.location.href = "Agent-signin"
-    }else{
-      handleClose()
+    if (formState.isSubmitted) {
+      window.location.href = "Agent-signin";
+    } else {
+      handleClose();
     }
   };
 
@@ -63,26 +66,30 @@ export default function AgentSigning() {
     formState: { errors },
   } = useForm<FormValues>();
   const onSubmit: SubmitHandler<FormValues> = async (data) => {
+    setFormState((prev) => ({ ...prev, isLoading: true }));
     const ip = await componentDidMount();
 
     data.agentCountry = ip.country_name;
     data.agentIpAddress = ip.IPv4;
 
     try {
-      setFormState((prev) => ({ ...prev, isLoading: true }));
-      
       const response = await newAgentCreation(data);
-      console.log(response);
-      
-      if (response.data.error) {
-        setFormState((prev) => ({ ...prev, isLoading: false }));
-        setFormState((prev) => ({ ...prev, isError: true }));
-        setOpen(true);
-      } else {
+
+      if (!response.data.error) {
         setFormState((prev) => ({ ...prev, isLoading: false }));
         setFormState((prev) => ({ ...prev, isSubmitted: true }));
+        setFormState((prev) => ({ ...prev, isError: false }));
         setOpen(true);
-        reset()
+        reset();
+        setCheckboxStatus({
+          firstCheckbox: false,
+          secCheckbox: false,
+        });
+      } else {
+        setFormState((prev) => ({ ...prev, isLoading: false }));
+        setFormState((prev) => ({ ...prev, isSubmitted: false }));
+        setFormState((prev) => ({ ...prev, isError: true }));
+        setOpen(true);
       }
     } catch (error) {
       console.log(error);
@@ -147,13 +154,25 @@ export default function AgentSigning() {
             </span>
           )}
           <FormControlLabel
+            onClick={() =>
+              setCheckboxStatus((prev) => ({
+                ...prev,
+                firstCheckbox: !checkboxStatus.firstCheckbox,
+              }))
+            }
             required
-            control={<Checkbox />}
+            control={<Checkbox checked={checkboxStatus.firstCheckbox} />}
             label="I agree to the Privacy Policy, Terms of Service and IP Policy."
           />
           <FormControlLabel
+            onClick={() =>
+              setCheckboxStatus((prev) => ({
+                ...prev,
+                secCheckbox: !checkboxStatus.secCheckbox,
+              }))
+            }
             required
-            control={<Checkbox />}
+            control={<Checkbox checked={checkboxStatus.secCheckbox} />}
             label="Send me useful emails to help me get the most out of studyinmarylang.edu"
           />
           <div className="w-full flex justify-end">
@@ -200,16 +219,18 @@ export default function AgentSigning() {
           <DialogContent className="w-full text-center ">
             {formState.isSubmitted && (
               <span className="text-lg font-semibold ">
-                Signup successfully 
+                Signup successfully
               </span>
             )}
             {formState.isError && (
               <span className="text-lg font-semibold ">
-                Registration Failed,try again 
+                Registration Failed,try again
               </span>
             )}
             {formState.isSubmitted && (
-              <DialogContentText>ThankYou</DialogContentText>
+              <DialogContentText>
+                Now you can Sign in, Page will be redirect to sign In, click OK
+              </DialogContentText>
             )}
             {formState.isError && (
               <DialogContentText>

@@ -17,3 +17,6 @@ export const newUserregistration = async (file: unknown) => {
 export const newAgentCreation = async (file: unknown) => {
   return await axios.post(`${vercelUrl}createAgent`, file);
 };
+export const agentLogin = async (file: unknown) => {
+  return await axios.post(`${vercelUrl}loginAgent`, file);
+};
