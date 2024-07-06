@@ -135,6 +135,14 @@ export default function Navbar() {
               >
                 About Us
               </a>
+              {agentId && (
+                <a
+                  href={`/agent-dashboard/${agentId}`}
+                  className="block w-full border-b-[1px] px-5 py-4 text-base font-medium text-black"
+                >
+                  Dashboard
+                </a>
+              )}
               <a
                 href={"/partner-universities"}
                 className="block w-full border-b-[1px] px-5 py-4 text-base font-medium text-black"
@@ -180,12 +188,20 @@ export default function Navbar() {
                 Referral Program
               </a>
 
-              <button
-                onClick={logoutHandler}
+              <a
+                href="/contact"
                 className="flex w-full items-center border-b-[1px] px-5 py-4 text-base font-medium text-black hover:bg-red-500 hover:text-white"
               >
                 Contact
-              </button>
+              </a>
+              {agentId && (
+                <button
+                  onClick={logoutHandler}
+                  className="flex w-full items-center border-b-[1px] px-5 py-4 text-base font-medium text-black hover:bg-red-500 hover:text-white"
+                >
+                  Logout
+                </button>
+              )}
             </ul>
           </section>
           <AlertDialogCancel
