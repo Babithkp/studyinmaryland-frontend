@@ -1,4 +1,5 @@
-import { useRef, useState } from "react";import { GiHamburgerMenu } from "react-icons/gi";
+import { useRef, useState } from "react";
+import { GiHamburgerMenu } from "react-icons/gi";
 // import { RiCloseCircleFill } from "react-icons/ri";
 
 import {
@@ -11,12 +12,27 @@ import {
 export default function Navbar() {
   const newRef = useRef<HTMLButtonElement>(null);
   const [menuState, setMenustate] = useState(false);
+  const [agentId, setAgentId] = useState<string | null>();
+
+  if (
+    sessionStorage.getItem("agentid") &&
+    sessionStorage.getItem("agentid") != agentId
+  ) {
+    setAgentId(sessionStorage.getItem("agentid"));
+  }
 
   const handleFirstButtonClick = () => {
     // Programmatically click the second button
     if (newRef.current) {
       newRef.current.click();
     }
+  };
+
+  const logoutHandler = () => {
+    sessionStorage.removeItem("token");
+    sessionStorage.removeItem("agentid");
+    setAgentId(null);
+    window.location.href = "/";
   };
 
   return (
@@ -53,6 +69,11 @@ export default function Navbar() {
         <li>
           <a href={"/aboutus"}>About Us</a>
         </li>
+        {agentId && (
+          <li>
+            <a href={`/agent-dashboard/${agentId}`}>Dashboard</a>
+          </li>
+        )}
         <li>
           <a href={"/partner-universities"}>Partner Universities</a>
         </li>
@@ -78,6 +99,11 @@ export default function Navbar() {
         <li>
           <a href={"/contact"}>Contact</a>
         </li>
+        {agentId && (
+          <li onClick={logoutHandler}>
+            <button>Logout</button>
+          </li>
+        )}
       </ul>
 
       <AlertDialog>
@@ -154,12 +180,12 @@ export default function Navbar() {
                 Referral Program
               </a>
 
-              <a
-                href={"/contact"}
+              <button
+                onClick={logoutHandler}
                 className="flex w-full items-center border-b-[1px] px-5 py-4 text-base font-medium text-black hover:bg-red-500 hover:text-white"
               >
                 Contact
-              </a>
+              </button>
             </ul>
           </section>
           <AlertDialogCancel

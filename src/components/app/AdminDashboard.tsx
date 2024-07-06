@@ -40,6 +40,7 @@ interface Agent {
   email: string;
   agentIpAddress: string;
   agentCountry: string;
+  password: string;
 }
 
 export default function AdminDashboard() {
@@ -136,6 +137,9 @@ export default function AdminDashboard() {
               </Typography>
               <Typography className="md:w-[70rem]">
                 Country: {agent.agentCountry}
+              </Typography>
+              <Typography className="md:w-[70rem]">
+                Password: {agent.password}
               </Typography>
             </AccordionDetails>
           </Accordion>

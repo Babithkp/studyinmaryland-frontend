@@ -33,3 +33,6 @@ export const getAgentsById = async (id:unknown) => {
 export const getUserDetailsByAgentId = async (id:unknown) => {
   return await axios.post(`${vercelUrl}getUserDetailsByAgentId`,id);
 };
+export const updateAgentProfileImg = async (data:unknown) => {
+  return await axios.post(`${vercelUrl}updateAgentProfileImg`,data);
+};

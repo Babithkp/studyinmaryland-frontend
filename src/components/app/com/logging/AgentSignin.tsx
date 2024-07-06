@@ -1,4 +1,5 @@
-import {  Backdrop,
+import {
+  Backdrop,
   Button,
   Checkbox,
   CircularProgress,
@@ -7,7 +8,7 @@ import {  Backdrop,
 import TextField from "@mui/material/TextField";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { agentLogin } from "../../../../http/fetch";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 interface FormValues {
   email: string;
   password: string;
@@ -19,32 +20,37 @@ export default function AgentLogin() {
   const [isError, setError] = useState(false);
   const [userNotFoundMessage, setuserNotFoundMessage] = useState(false);
 
+  
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm<FormValues>();
   const onSubmit: SubmitHandler<FormValues> = async (data) => {
-    setuserNotFoundMessage(false)
+    setuserNotFoundMessage(false);
     setWrongPass(false);
     setError(false);
     setLoading(true);
     try {
       const response = await agentLogin(data);
-      console.log(response);
-      
+
       if (response.data.wrongPassword) {
         setLoading(false);
         setWrongPass(true);
       } else if (response.data.admin) {
         setLoading(false);
         window.location.href = "admin-dashboard";
+        reset();
       } else if (response.data.message) {
         window.location.href = `agent-dashboard/${response.data.agent}`;
+        reset();
         setLoading(false);
-      } else if(response.data.userNotFound){
+        sessionStorage.setItem("token", response.data.token);
+        sessionStorage.setItem("agentid", response.data.agent);
+      } else if (response.data.userNotFound) {
         setLoading(false);
-        setuserNotFoundMessage(true)
+        setuserNotFoundMessage(true);
       } else {
         setLoading(false);
         setError(true);
@@ -53,6 +59,12 @@ export default function AgentLogin() {
       console.log(err);
     }
   };
+
+  useEffect(()=>{
+    if (sessionStorage.getItem("agentid")) {
+      window.location.href = "/";
+    }
+  },[])
   return (
     <main className=" flex justify-center items-center">
       <section className="w-[60%]  p-10  max-md:w-full max-md:p-0 flex flex-col items-center my-5 md:shadow-lg">
@@ -71,11 +83,11 @@ export default function AgentLogin() {
             required
             {...register("email")}
           />
-            {userNotFoundMessage && (
-              <span className="font-medium text-red-500">
-                Email not found please loggin
-              </span>
-            )}
+          {userNotFoundMessage && (
+            <span className="font-medium text-red-500">
+              Email not found please loggin
+            </span>
+          )}
           <TextField
             id="outlined-basic 2"
             label="Password"

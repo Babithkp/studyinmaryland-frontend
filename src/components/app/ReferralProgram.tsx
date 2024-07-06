@@ -1,5 +1,15 @@
+import { useState } from "react";
 import { Button } from "../ui/button";import AgentSlide from "./com/objects/AgentSlide";
 export default function ReferralProgram() {
+  const [isLoggined,setIsLoggined] = useState(false)
+
+  if (sessionStorage.getItem("agentid") && isLoggined === false) {
+    setIsLoggined(true)
+  }
+  if(!sessionStorage.getItem("agentid") && isLoggined === true) {
+    setIsLoggined(false)
+  }
+
   return (
     <main className="flex items-center justify-center">
       <section className="w-[60%] p-10 max-md:w-full max-md:p-4 font-medium">
@@ -188,14 +198,14 @@ export default function ReferralProgram() {
             If you have any questions or need more information, please don't
             hesitate to reach our support team at
           </p>
-          <div className="flex w-full justify-center">
+          {!isLoggined && <div className="flex w-full justify-center">
             <Button
               className="bg-red-500 hover:bg-red-600 active:scale-95 duration-100 my-10"
-              onClick={() => (window.location.href = "Logging-selection")}
+              onClick={() => (window.location.href = "Agent-signup")}
             >
               Sign Up Now
             </Button>
-          </div>
+          </div>}
           <div className="text-white">
             <AgentSlide />
           </div>
