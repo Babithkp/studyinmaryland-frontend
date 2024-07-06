@@ -205,7 +205,7 @@ export default function AgentDashboard() {
             <h3 className="text-lg font-semibold uppercase text-slate-400">
               Referral url
             </h3>
-            <div className="flex w-full  h-full border-[2px] rounded-md gap-3  items-center  bg-slate-50">
+            <div className="flex w-full  h-full border-[2px] rounded-md gap-3  items-start  bg-slate-50">
               <p className="ml-1  overflow-x-auto">
                 https://studyinmaryland.vercel.app/Scholarships?referral=
                 {agentDetails?.referralCode}
@@ -223,7 +223,7 @@ export default function AgentDashboard() {
           </div>
         </div>
       </section>
-      <section className="my-5">
+      <section className="my-5 w-[90%]">
         <h2 className="text-lg font-semibold mb-3">Student List</h2>
         {studentDetails?.map((stud, i) => (
           <Accordion
@@ -235,7 +235,7 @@ export default function AgentDashboard() {
               expandIcon={<RiArrowUpSLine />}
               aria-controls="panel4bh-content"
               id="panel4bh-header"
-              className="max-md:w-[20rem] "
+              className=""
             >
               <Typography sx={{ width: "33%", flexShrink: 0 }}>
                 {stud.firstName}
