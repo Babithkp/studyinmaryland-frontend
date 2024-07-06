@@ -1,4 +1,5 @@
-import { useParams } from "react-router-dom";import defaultImage from "/deafultProfile.jpg";
+import { useParams } from "react-router-dom";
+import defaultImage from "/deafultProfile.jpg";
 import { SyntheticEvent, useEffect, useState } from "react";
 import {
   Accordion,
@@ -97,8 +98,8 @@ export default function AgentDashboard() {
   }, []);
   return (
     <main className="flex flex-col items-center justify-center">
-      <section className="w-[90%] flex justify-around p-10 max-md:w-full max-md:p-4">
-        <div className="relative h-[12rem] w-[12rem] ">
+      <section className="w-[90%] gap-16 flex max-md:flex-col justify-center items-center p-10 max-md:w-full max-md:p-4">
+        <div className="relative h-[12rem] w-[12rem] md:mb-16">
           {/* {Error && <p className="text-sm text-red-500 ">{Error}</p>} */}
           <img
             src={defaultImage}
@@ -119,39 +120,34 @@ export default function AgentDashboard() {
             </p>
           </div>
         </div>
-        <div>
-          <div className="w-full border border-blue-400 bg-white p-4 text-lg mb-10 rounded-xl drop-shadow-lg">
+        <div className="w-fit max-md:w-full border  border-blue-400 bg-white p-4 text-lg mb-10 rounded-xl drop-shadow-lg">
+          <h3 className="text-lg font-semibold uppercase text-slate-400">
+            User Info
+          </h3>
+          <div className="flex flex-col gap-3 ">
+            <p className="font-semibold">
+              Name: <span className="font-medium">{agentDetails?.name}</span>
+            </p>
+            <p className="font-semibold">
+              Email: <span className="font-medium">{agentDetails?.email}</span>
+            </p>
             <h3 className="text-lg font-semibold uppercase text-slate-400">
-              User Info
+              Referral url
             </h3>
-            <div className="flex flex-col gap-3 w-[100vh]">
-              <p className="font-semibold">
-                Name: <span className="font-medium">{agentDetails?.name}</span>
+            <div className="flex w-full  h-full border-[2px] rounded-md gap-3    bg-slate-50">
+              <p className="ml-1  overflow-scroll">
+                https://studyinmaryland.vercel.app/Scholarships?referral=
+                {agentDetails?.referralCode}
               </p>
-              <p className="font-semibold">
-                Email:{" "}
-                <span className="font-medium">{agentDetails?.email}</span>
-              </p>
-              <h3 className="text-lg font-semibold uppercase text-slate-400">
-                Referral url
-              </h3>
-              <div className="flex border-[2px] rounded-md gap-3 items-center w-fit  bg-slate-50">
-                <p className="ml-1">
-                  https://studyinmaryland.vercel.app/Scholarships?referral=
-                  {agentDetails?.referralCode}
-                </p>
-                <Button
-                  variant={"ghost"}
-                  className="border-l-[2px] active:scale-95"
-                >
-                  {!isCopying && (
-                    <FaRegCopy size={24} onClick={copyClipHandler} />
-                  )}
-                  {isCopying && (
-                    <FaCheck size={24} className="text-green-500" />
-                  )}
-                </Button>
-              </div>
+              <Button
+                variant={"ghost"}
+                className="border-[2px] active:scale-95"
+              >
+                {!isCopying && (
+                  <FaRegCopy size={24} onClick={copyClipHandler} />
+                )}
+                {isCopying && <FaCheck size={24} className="text-green-500" />}
+              </Button>
             </div>
           </div>
         </div>
