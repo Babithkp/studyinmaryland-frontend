@@ -1,9 +1,9 @@
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";import { BiSolidQuoteAltRight } from "react-icons/bi";
 import { Swiper, SwiperSlide } from "swiper/react";
-import stud1Img from "../../../../../public/reviewImage/student1.jpg";
-import stud2Img from "../../../../../public/reviewImage/student2.jpg";
-import stud3Img from "../../../../../public/reviewImage/student3.jpg";
-import stud4Img from "../../../../../public/reviewImage/student4.jpg";
+import stud1Img from "/reviewImage/student1.jpg";
+import stud2Img from "/reviewImage/student2.jpg";
+import stud3Img from "/reviewImage/student3.jpg";
+import stud4Img from "/reviewImage/student4.jpg";
 
 import "swiper/css";
 import "swiper/css/navigation";

@@ -1,8 +1,8 @@
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";import { BiSolidQuoteAltRight } from "react-icons/bi";
 import { Swiper, SwiperSlide } from "swiper/react";
-import agent1Img from "../../../../../public/reviewImage/agent1.jpg";
-import agent2Img from "../../../../../public/reviewImage/agent2.jpg";
-import agent3Img from "../../../../../public/reviewImage/agent3.jpg";
+import agent1Img from "/reviewImage/agent1.jpg";
+import agent2Img from "/reviewImage/agent2.jpg";
+import agent3Img from "/reviewImage/agent3.jpg";
 
 import "swiper/css";
 import "swiper/css/navigation";

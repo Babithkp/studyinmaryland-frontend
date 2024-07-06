@@ -17,6 +17,7 @@ export default function AgentLogin() {
   const [wrongPass, setWrongPass] = useState(false);
   const [isLoading, setLoading] = useState(false);
   const [isError, setError] = useState(false);
+  const [userNotFoundMessage, setuserNotFoundMessage] = useState(false);
 
   const {
     register,
@@ -24,11 +25,14 @@ export default function AgentLogin() {
     formState: { errors },
   } = useForm<FormValues>();
   const onSubmit: SubmitHandler<FormValues> = async (data) => {
+    setuserNotFoundMessage(false)
     setWrongPass(false);
     setError(false);
     setLoading(true);
     try {
       const response = await agentLogin(data);
+      console.log(response);
+      
       if (response.data.wrongPassword) {
         setLoading(false);
         setWrongPass(true);
@@ -36,8 +40,11 @@ export default function AgentLogin() {
         setLoading(false);
         window.location.href = "admin-dashboard";
       } else if (response.data.message) {
-        window.location.href = "agent-dashboard";
+        window.location.href = `agent-dashboard/${response.data.agent}`;
         setLoading(false);
+      } else if(response.data.userNotFound){
+        setLoading(false);
+        setuserNotFoundMessage(true)
       } else {
         setLoading(false);
         setError(true);
@@ -64,6 +71,11 @@ export default function AgentLogin() {
             required
             {...register("email")}
           />
+            {userNotFoundMessage && (
+              <span className="font-medium text-red-500">
+                Email not found please loggin
+              </span>
+            )}
           <TextField
             id="outlined-basic 2"
             label="Password"

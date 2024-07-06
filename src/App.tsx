@@ -16,6 +16,7 @@ import SelectionLayout from "./components/app/com/logging/SelectionLayout";
 import AgentSignUp from "./components/app/com/logging/AgentSignUp";
 import AgentSignin from "./components/app/com/logging/AgentSignin";
 import AdminDashboard from "./components/app/AdminDashboard";
+import AgentDashboard from "./components/app/AgentDashboard";
 
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
         <Route path="Agent-signup" element={<AgentSignUp />} />
         <Route path="Agent-signin" element={<AgentSignin />} />
         <Route path="admin-dashboard" element={<AdminDashboard />} />
+        <Route path="agent-dashboard/:id" element={<AgentDashboard />} />
       </Routes>
     </div>
     <Footer/>

@@ -1,4 +1,20 @@
-import HomeSlider from "./com/objects/HomeSlider";export default function Scholarships() {
+import { useEffect } from "react";
+import HomeSlider from "./com/objects/HomeSlider";
+export default function Scholarships() {
+  useEffect(() => {
+    const url = new URLSearchParams(window.location.search);
+    const myParam = url.get("referral");
+    console.log(myParam);
+    if (myParam) {
+      if (
+        !localStorage.getItem("referral") ||
+        localStorage.getItem("referral") !== myParam
+      ) {
+        localStorage.setItem("referral", JSON.stringify(myParam));
+      }
+    }
+  }, []);
+
   return (
     <main className="flex flex-col items-center justify-center">
       <section className="w-[60%] p-10 max-md:w-full max-md:p-4 font-medium">
@@ -69,7 +85,8 @@ import HomeSlider from "./com/objects/HomeSlider";export default function Schola
                 <p>
                   {" "}
                   Covers full tuition and accommodation fees for the entire
-                  duration of the Masters or PhD program at a partner university.
+                  duration of the Masters or PhD program at a partner
+                  university.
                 </p>
               </li>
               <li>

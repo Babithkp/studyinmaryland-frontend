@@ -1,5 +1,4 @@
-import Backdrop from "@mui/material/Backdrop";
-import CircularProgress from "@mui/material/CircularProgress";
+import Backdrop from "@mui/material/Backdrop";import CircularProgress from "@mui/material/CircularProgress";
 import Button from "@mui/material/Button";
 import { TfiMenuAlt } from "react-icons/tfi";
 import { IoMdHome } from "react-icons/io";
@@ -48,6 +47,7 @@ interface FormValues {
   ieltsDocName: string;
   englishDocName: string[];
   recommendationDocName: string;
+  referralCode: string;
 }
 
 interface FormValuesFileType {
@@ -124,6 +124,7 @@ export default function AddApplication() {
     ieltsDocName: "",
     englishDocName: [],
     recommendationDocName: "",
+    referralCode: "",
   });
   const [isLoading, setIsloading] = useState(false);
   const [open, setOpen] = useState(false);
@@ -426,6 +427,14 @@ export default function AddApplication() {
       setMotivateFileError("This Field is Required To Register");
       return;
     }
+    let referralCode;
+    let code;
+    if (localStorage.getItem("referral")) {
+      referralCode = localStorage.getItem("referral");
+      if (referralCode) {
+        code = JSON.parse(referralCode);
+      }
+    }
     const formSubmittiedData = {
       firstName: data.firstName,
       lastName: data.lastName,
@@ -451,11 +460,11 @@ export default function AddApplication() {
       ieltsDocName: dataStorage.ieltsDocName,
       englishDocName: dataStorage.englishDocName,
       recommendationDocName: dataStorage.recommendationDocName,
+      referralCode: code,
     };
     try {
       setIsloading(true);
       const response = await newUserregistration(formSubmittiedData);
-      console.log(response);
       if (!response.data.error) {
         setResponseStatus(false);
         setOpen(true);

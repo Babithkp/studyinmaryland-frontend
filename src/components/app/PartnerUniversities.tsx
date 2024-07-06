@@ -3,12 +3,12 @@ import {  Accordion,
   AccordionItem,
   AccordionTrigger,
 } from "../ui/accordion";
-import img1 from "../../../public/universitiesLogo/bccc.png";
-import img2 from "../../../public/universitiesLogo/marylandpng.png";
-import img3 from "../../../public/universitiesLogo/universityOfBaltimorejpg.jpg";
-import img4 from "../../../public/universitiesLogo/coppin.svg";
-import img5 from "../../../public/universitiesLogo/morgan.png";
-import img6 from "../../../public/universitiesLogo/frostburg.png";
+import img1 from "/universitiesLogo/bccc.png";
+import img2 from "/universitiesLogo/marylandpng.png";
+import img3 from "/universitiesLogo/universityOfBaltimorejpg.jpg";
+import img4 from "/universitiesLogo/coppin.svg";
+import img5 from "/universitiesLogo/morgan.png";
+import img6 from "/universitiesLogo/frostburg.png";
 
 export default function PartnerUniversities() {
   const dropdownTextClass =

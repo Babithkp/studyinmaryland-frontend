@@ -1,4 +1,5 @@
-import { SyntheticEvent, useEffect, useState } from "react";import { GrWorkshop } from "react-icons/gr";
+import { SyntheticEvent, useEffect, useState } from "react";
+import { GrWorkshop } from "react-icons/gr";
 import { PiStudentBold } from "react-icons/pi";
 import { getAllAgents, getAllStudents } from "../../http/fetch";
 import Accordion from "@mui/material/Accordion";
@@ -142,7 +143,7 @@ export default function AdminDashboard() {
       </section>
       <section className="my-5">
         <h2 className="text-lg font-semibold mb-3">Student List</h2>
-        {student?.map((agent, i) => (
+        {student?.map((stud, i) => (
           <Accordion
             key={i}
             expanded={expanded === `student${i}`}
@@ -155,30 +156,29 @@ export default function AdminDashboard() {
               className="max-md:w-[20rem]"
             >
               <Typography sx={{ width: "33%", flexShrink: 0 }}>
-                {agent.firstName}
+                {stud.firstName}
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography className="md:w-[70rem]">
-                Name: {agent.firstName} {agent.lastName}
+                Name: {stud.firstName} {stud.lastName}
               </Typography>
               <Typography className="md:w-[70rem]">
-                Email: {agent.email}
+                Email: {stud.email}
               </Typography>
               <Typography className="md:w-[70rem]">
-              Address: {agent.address}
+                Address: {stud.address}
               </Typography>
               <Typography className="md:w-[70rem]">
-                Country: {agent.country}
+                Country: {stud.country}
               </Typography>
               <Typography className="md:w-[70rem]">
-                Birth date: {agent.dob}
+                Birth date: {stud.dob}
               </Typography>
             </AccordionDetails>
           </Accordion>
         ))}
       </section>
-      
     </main>
   );
 }

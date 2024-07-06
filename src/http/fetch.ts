@@ -27,3 +27,9 @@ export const getAllStudents = async () => {
 export const getAllAgents = async () => {
   return await axios.get(`${vercelUrl}getAgentData`);
 };
+export const getAgentsById = async (id:unknown) => {
+  return await axios.post(`${vercelUrl}getSingleAgentById`,id);
+};
+export const getUserDetailsByAgentId = async (id:unknown) => {
+  return await axios.post(`${vercelUrl}getUserDetailsByAgentId`,id);
+};
