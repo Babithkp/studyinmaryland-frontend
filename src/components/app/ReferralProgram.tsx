@@ -1,13 +1,14 @@
 import { useState } from "react";
-import { Button } from "../ui/button";import AgentSlide from "./com/objects/AgentSlide";
+import { Button } from "../ui/button";
+import AgentSlide from "./com/objects/AgentSlide";
 export default function ReferralProgram() {
-  const [isLoggined,setIsLoggined] = useState(false)
+  const [isLoggined, setIsLoggined] = useState(false);
 
   if (sessionStorage.getItem("agentid") && isLoggined === false) {
-    setIsLoggined(true)
+    setIsLoggined(true);
   }
-  if(!sessionStorage.getItem("agentid") && isLoggined === true) {
-    setIsLoggined(false)
+  if (!sessionStorage.getItem("agentid") && isLoggined === true) {
+    setIsLoggined(false);
   }
 
   return (
@@ -27,25 +28,27 @@ export default function ReferralProgram() {
             destination for international students.
           </p>
           <p className="text-md my-5">
-            Over 2,000 students annually benefit from the study in Maryland
-            scholarship initiative thanks to our ambassador agents such as,
-            study abroad consultants, education consultants, university agents
-            and individuals who has played a significant role in helping us
-            recruit international students who have a strong academic background
-            to study a graduate program on full scholarships at our partner
-            universities in Maryland, USA.
+            Over 2,000 students annually benefit from the Study-In-Maryland
+            scholarship initiative thanks to our ambassador such as, study
+            abroad consultants, education consultants, university
+            agents,scholarship recipients, and the individuals who has played a
+            significant role in helping us recruit international students who
+            have a strong academic background to study in a masters or phd
+            program on a full scholarship at a partner university in Maryland,
+            USA.
           </p>
           <p className="text-md my-5">
             We offer an incredible opportunity for you to earn generous
-            incentives by referring international students to apply to study a
-            masters or phd program at one of our esteemed partner universities
-            through the study in Maryland scholarship initiative.
+            incentives by referring international students to apply for a
+            masters or phd program to study a masters or phd program at one of
+            our esteemed partner universities through the Study-In-Maryland
+            scholarship initiative.
           </p>
           <p className="my-10 text-3xl font-bold text-red-500 max-md:text-3xl">
             How It Works
           </p>
           <div className="text-md my-5">
-            <ul className="ml-5 list-disc">
+            <ul className="ml-5 list-disc flex flex-col gap-3">
               <li>
                 <p>
                   Join our ambassador referral program by signing up on our
@@ -57,20 +60,20 @@ export default function ReferralProgram() {
                 <p>
                   Share the opportunity to study in Maryland at one of our
                   prestigious partner universities with international students
-                  who are looking to study a masters or phd degree program on a
+                  who are looking to pursue a masters or phd degree program on a
                   fully funded scholarship in the United States. You can refer
                   students by sharing your unique referral link to our
-                  scholarship application portal on your social media platforms.
+                  scholarship application portal with your friends, colleagues
+                  or on your social media platforms.
                 </p>
               </li>
               <li>
                 <p className="text-lg font-bold">Students Apply:</p>
                 <p>
-                  Once referred,ً students can apply for a scholarship and an
-                  admission to study at one of our partner universities in
+                  Once referred,ً students can apply for a scholarship to study at one of our partner universities in
                   Maryland on our application portal for free. We offer a
                   streamlined application process to make it as simple as
-                  possible for them.
+                  possible.
                 </p>
               </li>
               <li>
@@ -88,9 +91,9 @@ export default function ReferralProgram() {
             Why Refer Students to Study in Maryland?
           </p>
           <div className="text-md my-5">
-            <ul className="ml-5 list-disc">
+            <ul className="ml-5 list-disc flex flex-col gap-3">
               <li>
-                <p className="text-lg font-bold">Top-Tier Universitie:</p>
+                <p className="text-lg font-bold">Top-Tier Universities:</p>
                 <p>
                   Our partner universities are renowned for their academic
                   excellence, diverse programs, and vibrant campus life.
@@ -99,11 +102,8 @@ export default function ReferralProgram() {
               <li>
                 <p className="text-lg font-bold">Scholarship Opportunities:</p>
                 <p>
-                  Referred students can apply and receive a study in Maryland
-                  full scholarship to study at one of our partner universities
-                  which provides access to various career opportunities that
-                  studying in Maryland, United States has to offer international
-                  students.
+                  Referred students can apply and receive a Study-In-Maryland
+                  full scholarship to study at one of our partner universities.
                 </p>
               </li>
               <li>
@@ -119,7 +119,7 @@ export default function ReferralProgram() {
             Benefits of Joining the Referral Program
           </p>
           <div className="text-md my-5">
-            <ul className="ml-5 list-disc">
+            <ul className="ml-5 list-disc flex flex-col gap-3">
               <li>
                 <p className="text-lg font-bold">Generous Referral Payments:</p>
                 <p>
@@ -147,7 +147,7 @@ export default function ReferralProgram() {
             How to Get Started
           </p>
           <div className="text-md my-5">
-            <ul className="ml-5 list-disc">
+            <ul className="ml-5 list-disc flex flex-col gap-3">
               <li>
                 <p>
                   Download and review our referral program partnership terms and
@@ -198,14 +198,16 @@ export default function ReferralProgram() {
             If you have any questions or need more information, please don't
             hesitate to reach our support team at
           </p>
-          {!isLoggined && <div className="flex w-full justify-center">
-            <Button
-              className="bg-red-500 hover:bg-red-600 active:scale-95 duration-100 my-10"
-              onClick={() => (window.location.href = "Agent-signup")}
-            >
-              Sign Up Now
-            </Button>
-          </div>}
+          {!isLoggined && (
+            <div className="flex w-full justify-center">
+              <Button
+                className="bg-red-500 hover:bg-red-600 active:scale-95 duration-100 my-10"
+                onClick={() => (window.location.href = "Agent-signup")}
+              >
+                Sign Up Now
+              </Button>
+            </div>
+          )}
           <div className="text-white">
             <AgentSlide />
           </div>
