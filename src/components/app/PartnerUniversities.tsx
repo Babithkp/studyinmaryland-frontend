@@ -81,7 +81,7 @@ export default function PartnerUniversities() {
           </figure>
         </div>
       </section>
-      <section className="mb-10 grid w-[90%] grid-cols-3 gap-8 max-md:grid-cols-1">
+      <section className="mb-10 grid w-[95%] grid-cols-3 gap-8 max-md:grid-cols-1">
         <Accordion type="single" collapsible className="w-full">
           <AccordionItem value="item-1">
             <AccordionTrigger className="bg-slate-100">
