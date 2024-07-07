@@ -305,7 +305,7 @@ export default function PartnerUniversities() {
                       target="_blank"
                       className="underline text-blue-600 underline-offset-2"
                     >
-                      https://maec.us
+                      MAEC
                     </a>
                   </p>
                 </li>

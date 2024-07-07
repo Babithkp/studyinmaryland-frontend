@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { Button } from "../ui/button";
+import { useState } from "react";import { Button } from "../ui/button";
 import AgentSlide from "./com/objects/AgentSlide";
 export default function ReferralProgram() {
   const [isLoggined, setIsLoggined] = useState(false);
@@ -70,10 +69,10 @@ export default function ReferralProgram() {
               <li>
                 <p className="text-lg font-bold">Students Apply:</p>
                 <p>
-                  Once referred,ً students can apply for a scholarship to study at one of our partner universities in
-                  Maryland on our application portal for free. We offer a
-                  streamlined application process to make it as simple as
-                  possible.
+                  Once referred,ً students can apply for a scholarship to study
+                  at one of our partner universities in Maryland on our
+                  application portal for free. We offer a streamlined
+                  application process to make it as simple as possible.
                 </p>
               </li>
               <li>
@@ -149,9 +148,15 @@ export default function ReferralProgram() {
           <div className="text-md my-5">
             <ul className="ml-5 list-disc flex flex-col gap-3">
               <li>
-                <p>
+                <p className="text-lg font-bold">
                   Download and review our referral program partnership terms and
-                  conditions.
+                  conditions:
+                </p>
+                <p>
+                  Review the terms and conditions of our referral program and
+                  once they are clearly understood, sign up to join our referral
+                  program. (They will be a link to downloadable pdf document
+                  here)
                 </p>
               </li>
               <li>
@@ -201,10 +206,10 @@ export default function ReferralProgram() {
           {!isLoggined && (
             <div className="flex w-full justify-center">
               <Button
-                className="bg-red-500 hover:bg-red-600 active:scale-95 duration-100 my-10"
+                className="bg-red-500 hover:bg-red-600 active:scale-95 duration-100 my-10 p-6 text-lg"
                 onClick={() => (window.location.href = "Agent-signup")}
               >
-                Sign Up Now
+                Sign Up
               </Button>
             </div>
           )}

@@ -36,7 +36,7 @@ export default function ApplicationPortal() {  return (
                   target="_blank"
                   className="underline-offset-2 underline text-blue-800"
                 >
-                  Maec.us
+                  MAEC
                 </a>{" "}
                 ( This is a mandatory requirement for all international
                 students).
@@ -46,17 +46,17 @@ export default function ApplicationPortal() {  return (
                 <a
                   href={"https://ielts.org"}
                   target="_blank"
-                  className="ml-2 text-blue-800 mr-1"
+                  className="ml-2 underline-offset-2 underline text-blue-800 mr-1"
                 >
-                ielts.org
+                IELTS
                 </a>
                 or
                 <a
                   href={"https://www.ets.org/"}
                   target="_blank"
-                  className="ml-2 text-blue-800 mr-1"
+                  className="ml-2 underline-offset-2 underline text-blue-800 mr-1"
                 >
-                ets.org
+                ETS
                 </a>
                 ( This is only required for students whose degree certificates
                 and transcripts are not in English language)
@@ -69,7 +69,7 @@ export default function ApplicationPortal() {  return (
                   target="_blank"
                   className="underline-offset-2 underline text-blue-800"
                 >
-                  Maec.us
+                  MAEC
                 </a>{" "}
                 (This is only required for students whose birth certificates and
                 academic transcripts are not in English language).

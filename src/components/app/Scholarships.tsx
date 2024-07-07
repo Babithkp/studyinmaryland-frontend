@@ -1,3 +1,4 @@
+import studentsImg from "/scholarshipStudents.jpg"
 import { useEffect } from "react";import HomeSlider from "./com/objects/HomeSlider";
 export default function Scholarships() {
   useEffect(() => {
@@ -17,6 +18,9 @@ export default function Scholarships() {
   return (
     <main className="flex flex-col items-center justify-center">
       <section className="w-[60%] p-10 max-md:w-full max-md:p-4 font-medium">
+      <figure>
+          <img src={studentsImg} alt="Students" />
+        </figure>
         <article>
           <p className="my-10 text-3xl font-bold text-red-500 max-md:text-3xl">
             Overview
@@ -31,7 +35,7 @@ export default function Scholarships() {
             scholarship program has significantly contributed to the influx of
             international students in Maryland. cities and represents a
             long-term investment plan, as international students have played a
-            major role in shaping the U.S economy and communities” over the past
+            major role in shaping the U.S economy and communitie over the past
             decade.
           </p>
 

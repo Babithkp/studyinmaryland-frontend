@@ -41,12 +41,12 @@ export default function AgentSlide() {
         effect="fade"
         className="relative"
       >
-        <SwiperSlide className="bg-[#004890] rounded-2xl p-5 h-[70rem] flex flex-col justify-evenly max-md:h-[60rem] ">
+        <SwiperSlide className="bg-[#004890] rounded-2xl p-5 h-[70rem] flex flex-col justify-evenly max-md:h-[70rem] ">
           <span>
             <BiSolidQuoteAltRight className="-scale-x-100 mb-5" size={"3rem"} />
           </span>
           <p>
-            As an agent partner with Study in Maryland, my experience has been
+            As an ambassador with Study in Maryland, my experience has been
             incredibly rewarding on multiple levels. The organization has
             consistently provided comprehensive support, making the recruitment
             process smooth and efficient. Over the past two years, numerous
@@ -84,7 +84,7 @@ export default function AgentSlide() {
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="bg-[#004890] rounded-2xl p-5 h-[70rem] flex flex-col justify-evenly max-md:h-[60rem]">
+        <SwiperSlide className="bg-[#004890] rounded-2xl p-5 h-[70rem] flex flex-col justify-evenly max-md:h-[70rem]">
           <span>
             <BiSolidQuoteAltRight className="-scale-x-100 mb-5" size={"3rem"} />
           </span>
@@ -126,7 +126,7 @@ export default function AgentSlide() {
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="bg-[#004890] rounded-2xl p-5 h-[70rem] flex flex-col justify-evenly max-md:h-[60rem]">
+        <SwiperSlide className="bg-[#004890] rounded-2xl p-5 h-[70rem] flex flex-col justify-evenly max-md:h-[70rem]">
           <span>
             <BiSolidQuoteAltRight className="-scale-x-100 mb-5" size={"3rem"} />
           </span>
