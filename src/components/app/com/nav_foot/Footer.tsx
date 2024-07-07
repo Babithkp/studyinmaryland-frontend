@@ -1,8 +1,7 @@
-import { FaFacebookF, FaLinkedin } from "react-icons/fa";import { FaInstagram } from "react-icons/fa";
-
+import iiieImg from "/iie_logo.png";
 export default function Footer() {
   return (
-    <footer className="flex flex-col  justify-center items-center gap-5 bg-[#004890] py-10 text-white max-lg:gap-5 max-lg:p-10 max-lg:text-xs  max-md:flex-col">
+    <footer className="flex flex-col  justify-center items-center text-sm gap-5 bg-[#004890] py-10 text-white max-lg:gap-5 max-lg:p-10 max-lg:text-xs  max-md:flex-col">
       <div className="flex max-md:flex-col justify-around items-center w-full gap-5 max-md:gap-10">
         <div className="flex flex-col gap-10 max-lg:gap-5">
           <a href={"/"} className="w-[10rem] ">
@@ -33,34 +32,62 @@ export default function Footer() {
           </a>
         </div>
         <div className="flex flex-col items-center gap-5">
-          <span className="text-3xl max-lg:hidden max-lg:text-2xl">
+          <span className="text-xl max-lg:hidden max-lg:text-2xl">
             General inquiries:
           </span>
           <div className="flex flex-col gap-5">
             <a
-              href={"Info@studyinmaryland.com"}
+              href={"Info@studyinmaryland.org"}
               target="_blank"
               className="text-base underline"
             >
-              Info@studyinmaryland.com
+              Info@studyinmaryland.org
             </a>
           </div>
         </div>
         <div>
-          <figure className="flex flex-wrap gap-3">
-            <a href={"/"} className="border-2 border-white p-3">
-              <FaFacebookF size={"1.3rem"} />
-            </a>
-            <a href={"/"} className="border-2 border-white p-3">
-              <FaInstagram size={"1.3rem"} />
-            </a>
-            <a href={"/"} className="border-2 border-white p-3">
-              <FaLinkedin size={"1.3rem"} />
-            </a>
-          </figure>
+          <p className="text-center">
+            This is a program of the state of Maryland with funding provided by
+            the Maryland state department of education.
+          </p>
+        </div>
+        <div>
+          <image>
+            <img
+              src={iiieImg}
+              className="w-[10rem]"
+              alt="IIE the power of Intergnational Education"
+            />
+          </image>
+        </div>
+        <div>
+          <a href="/">Grantee Directory Press Links</a>
+        </div>
+        <div className="text-xs ">
+          <a
+            href="/"
+            className="underline underline-offset-4 hover:text-blue-950"
+          >
+            Privacy Policy
+          </a>
+          <span className="mx-2">|</span>
+          <a
+            href="/"
+            className="underline underline-offset-4 hover:text-blue-950"
+          >
+            Terms and Conditions
+          </a>
+          <span className="mx-2">|</span>
+          <a
+            href="/"
+            className="underline underline-offset-4 hover:text-blue-950"
+          >
+            Cookie Policy
+          </a>
+          <br />
+          <span className="">© 2020-2024 studyinmaryland.org </span>
         </div>
       </div>
-      <span>© 2020-2024 studyinmaryland.com </span>
     </footer>
   );
 }

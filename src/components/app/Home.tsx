@@ -2,7 +2,7 @@ import image from "/backgroundHeroPage.jpg";
 import icon1 from "/city.svg";
 import icon2 from "/rocket-graph.svg";
 import icon4 from "/flag-point.svg";
-import cardBg from "/backgroung-card.png";
+import cardBg from "/homePageStudent.jpg";
 import img1 from "/universitiesLogo/bccc.png";
 import img2 from "/universitiesLogo/marylandpng.png";
 import img3 from "/universitiesLogo/universityOfBaltimorejpg.jpg";
@@ -17,9 +17,7 @@ import CardApply from "./com/objects/CardApply";
 import MarylandMap from "/baltimore-map.jpg";
 import Slider from "./com/objects/HomeSlider";
 
-
 export default function Home() {
-  
   return (
     <main className="flex min-h-screen flex-col items-center justify-center bg-white">
       <img
@@ -31,7 +29,7 @@ export default function Home() {
         <article className="my-10 text-white">
           <h1 className="bg-red-500 px-14 py-10 text-5xl font-semibold max-md:p-4 max-md:text-2xl">
             Study in Maryland - home to diverse and a vibrant student community
-            in Maryland, United States.
+            in United States.
           </h1>
           <p className="bg-[#004890] p-8 text-lg font-medium max-md:p-4 max-sm:text-base text-center">
             We make it possible for international students to study in Maryland
@@ -55,8 +53,8 @@ export default function Home() {
           </h2>
           <p className="px-5 text-center text-lg font-extralight">
             Each year we provide scholarship opportunities for more than 1,500
-            international students from worldwide to study a postgraduate or
-            doctoral degree program at one of our partner universities.
+            international students from worldwide to study an eligible masters
+            or phd program at a partner university.
           </p>
           <div className="my-10 flex w-full gap-5 text-center max-lg:flex-wrap max-sm:grid max-sm:grid-cols-2">
             <figure className="flex flex-col items-center justify-center max-sm:w-full">
@@ -126,25 +124,25 @@ export default function Home() {
             <CardApply
               image={coachingIcon}
               title="Scholarship Assistance"
-              content="Free access to apply for Maryland state-funded scholarship on our application portal."
+              content="Free access to apply for the study-in-Maryland scholarship on our application portal."
               url="Scholarships"
             />
             <CardApply
               image={counsellingIcon}
               title="University Placement"
-              content="All scholarship recipients are directly admitted to study at one of our partner universities."
+              content="All scholarship recipients are directly admitted to study at one of our partner universities."
               url="partner-universities"
             />
             <CardApply
               image={visaIcon}
               title="Visa Counselling"
-              content="Get professional  student visa counseling and guidance from professionals."
+              content="Get professional  student visa counseling and guidance from professionals."
               url="contact"
             />
             <CardApply
               image={financialIcon}
               title="Free Counseling"
-              content="We guide you throughout the entire process of achieving your goals and dreams free of charge!"
+              content="We guide you throughout the entire process of achieving your goals and dreams free of charge!"
               url="contact"
             />
           </div>
@@ -175,9 +173,9 @@ export default function Home() {
             <p className="col-start-2">
               Through our organization&apos;s partnership with leading public
               universities in Maryland, we offer international students the
-              opportunity to pursue masters and phd degree programs with fully
-              funded scholarships provided by the Maryland State Department of
-              Education.
+              opportunity to pursue an eligible masters or phd degree program through the
+              Study-In-Maryland scholarship provided by the Maryland state
+              department of education.
             </p>
             <a
               href={"/Scholarships"}

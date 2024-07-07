@@ -83,9 +83,9 @@ export default function PartnerUniversities() {
             </AccordionTrigger>
             <AccordionContent className=" ">
               <p className="w-full bg-slate-300 p-3 text-center font-semibold">
-                International students are eligible to study any of the
-                following masters and phd programs at one of our partners
-                universities.
+                International students can apply for a scholarship to study any
+                of the following eligible masters and phd degree programs at one
+                of our partner universities.
               </p>
               <ul className="">
                 <li className={dropdownTextClass}> Accounting</li>
@@ -135,24 +135,53 @@ export default function PartnerUniversities() {
         <Accordion type="single" collapsible className="w-full">
           <AccordionItem value="item-1">
             <AccordionTrigger className="bg-slate-100">
-              <span className="ml-5 mr-10">Admission Requirements</span>
+              <span className="ml-5 mr-10">Program Details:</span>
+            </AccordionTrigger>
+            <AccordionContent className=" ">
+              <ul>
+                <li className={dropdownTextClass}>
+                  <span className="font-bold mr-2">
+                    Masters programs duration:
+                  </span>
+                  2 Years full-time.
+                </li>
+                <li className={dropdownTextClass}>
+                  <span className="font-bold mr-2">PhD programs duration:</span>
+                  5 Years full-time. (Includes Preparation and presentation of a
+                  dissertation proposal, dissertation research, and defense of
+                  final dissertation.)
+                </li>
+                <li className={dropdownTextClass}>
+                  <span className="font-bold mr-2">
+                    Masters and PhD programs start dates:
+                  </span>
+                  January 2025 (Spring Semester) <br />
+                  September 2025 (Fall Semester)
+                </li>
+              </ul>
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
+        <Accordion type="single" collapsible className="w-full">
+          <AccordionItem value="item-1">
+            <AccordionTrigger className="bg-slate-100">
+              <span className="ml-5 mr-10">Application Requirements</span>
             </AccordionTrigger>
             <AccordionContent className=" ">
               <p className="w-full bg-slate-300 p-3 font-semibold">
                 International students must submit the following requirements to
-                apply for a scholarship to study at one of our partner
-                universities.
+                apply for a scholarship to study at a partner university.
               </p>
               <ul>
                 <li className={dropdownTextClass + "text-start"}>
                   <ul className="my-2 flex list-inside list-disc flex-col items-start justify-start px-5 gap-5">
                     <li>
-                      Bachelor degree certificate and transcript (For Masters
-                      programs)
+                      Bachelor degree certificate and transcript ( For
+                      <span className="font-bold mr-2"> Masters programs</span>)
                     </li>
                     <li>
-                      Masters degree certificate and transcript(For PhD
-                      programs)
+                      Masters degree certificate and transcript( For
+                      <span className="font-bold mr-2"> PhD programs</span>)
                     </li>
                   </ul>
                   <li>
@@ -162,14 +191,15 @@ export default function PartnerUniversities() {
                 </li>
                 <li className={dropdownTextClass}>
                   <span className="font-bold mr-2">IELTS/TOEFL:</span>
-                  To be eligible for a bachelors or a masters degree program at
-                  one of our partner universities on a state-funded scholarship,
-                  international students with degree certificates and
-                  transcripts in English language are not required to submit an
-                  English language proficiency certificate, such as IELTS or
-                  TOEFL. However, international students with degree
-                  certificates and transcripts in a foreign language (Not in
-                  English language) must submit an IELTS or TOEFL certificate.
+                  To be eligible for a scholarship to study a bachelors or a
+                  masters degree program at one of our partner universities on a
+                  state-funded scholarship, international students with degree
+                  certificates and transcripts in English language are not
+                  required to submit an English language proficiency
+                  certificate, such as IELTS or TOEFL. However, international
+                  students with degree certificates and transcripts in a foreign
+                  language (Not in English language) must submit an IELTS or
+                  TOEFL certificate.
                   <ul className="my-3 w-full text-center">
                     <li>
                       - IELTS:
@@ -225,42 +255,58 @@ export default function PartnerUniversities() {
                 </li>
 
                 <li className={dropdownTextClass}>
-                  <span className="font-bold mr-2">Statement of purpose:</span>{" "}
-                  A personal statement, that tells the admissions committee who
-                  you are, what your academic and professional interests are,
-                  how you will add value to your chosen degree program and how
-                  the degree program aligns with your career goals.
+                  <span className="font-bold mr-2">Statement of Purpose:</span>
+                  <br />A personal statement, that tells the admissions
+                  committee who you are, what your academic and professional
+                  interests are, how you will add value to your chosen degree
+                  program and how the degree program aligns with your career
+                  goals.
                 </li>
                 <li className={dropdownTextClass + " flex flex-col gap-3"}>
                   <p>
                     <span className="font-bold mr-2">
                       Identification Documents:
                     </span>
-                    a copy of your ID document is required ( International
+                    A copy of your ID document is required ( International
                     passport, Driver’s license, or National identity card are
                     accepted.)
                   </p>
                   <p>
-                    <span className="font-bold mr-2">Birth certificate:</span>
-                    an original copy of your birth issued by the relevant
-                    authority in your home country.
+                    <span className="font-bold mr-2">Birth Certificate:</span>
+                    an original copy of your birth certificate issued by the
+                    relevant authority in your home country.
                   </p>
                 </li>
                 <li className={dropdownTextClass + " flex flex-col gap-3"}>
                   <p>
                     <span className="font-bold mr-2">
-                      Official academic credentials translation:
+                      Official copy of a certified translation of your academic
+                      documents and birth certificate:
                     </span>
-                    International student with a bachelor or masters degree
-                    certificate and transcript must have their academic
-                    qualifications translated into English Language by an
-                    official translator in the United States. International
-                    students with academic qualifications in English language
-                    are not required to have their documents translated.
+                    This is a mandatory requirement only for international
+                    students from non English speaking countries.
                   </p>
                   <p>
-                    We accept English language translated documents from
-                    Maryland Academic records service arg.org
+                    To apply for the Study-in-Maryland scholarship to study at a
+                    partner university, international students from
+                    non-English-speaking countries must have their academic
+                    transcripts and birth certificates translated into English
+                    by an official translator in Maryland, United States, if
+                    these documents are not already in English. However,
+                    international students whose academic transcripts and birth
+                    certificates are in English are exempt from this
+                    requirement.
+                  </p>
+                  <p>
+                    We accept academic transcripts and certificates evaluated
+                    and verified by the Maryland academic evaluation center.{" "}
+                    <a
+                      href="https://maec.us"
+                      target="_blank"
+                      className="underline text-blue-600 underline-offset-2"
+                    >
+                      https://maec.us
+                    </a>
                   </p>
                 </li>
                 <li className={dropdownTextClass}>
@@ -272,8 +318,8 @@ export default function PartnerUniversities() {
                     current or previous employer or an academic supervisor or
                     representative at your previous academic institution can
                     help boost your application chances of securing a full
-                    scholarship to study a defined program at one of our partner
-                    universities in Maryland.
+                    scholarship to study a masters or phd program at a partner
+                    university.
                   </p>
                 </li>
               </ul>
@@ -283,7 +329,7 @@ export default function PartnerUniversities() {
         <Accordion type="single" collapsible className="w-full">
           <AccordionItem value="item-1">
             <AccordionTrigger className="bg-slate-100">
-              <span className="ml-5 mr-10">Admission Deadline</span>
+              <span className="ml-5 mr-10">Application Deadline</span>
             </AccordionTrigger>
             <AccordionContent>
               <p className="w-full bg-slate-300 p-3 font-semibold">
@@ -293,7 +339,7 @@ export default function PartnerUniversities() {
               </p>
               <ul>
                 <li className={dropdownTextClass}>
-                  Spring semester( starting in January 2025.)
+                  Spring semester: starting in January 2025.
                 </li>
                 <li className={dropdownTextClass}>
                   Application deadline: September 30th, 2024.

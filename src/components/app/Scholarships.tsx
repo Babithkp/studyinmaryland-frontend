@@ -1,5 +1,4 @@
-import { useEffect } from "react";
-import HomeSlider from "./com/objects/HomeSlider";
+import { useEffect } from "react";import HomeSlider from "./com/objects/HomeSlider";
 export default function Scholarships() {
   useEffect(() => {
     const url = new URLSearchParams(window.location.search);
@@ -24,31 +23,25 @@ export default function Scholarships() {
           </p>
           <p className="text-md my-5">
             The state of Maryland, in collaboration with public universities,
-            has invested millions of dollars in the Study in Maryland
+            has invested millions of dollars in the Study-In-Maryland
             scholarship initiative to support international students,
             particularly those from developing countries with limited financial
             resources. This scholarship initiative aims to help these students
             achieve their dream of studying in the United States. The
             scholarship program has significantly contributed to the influx of
-            international students across various U.S. cities and represents a
+            international students in Maryland. cities and represents a
             long-term investment plan, as international students have played a
-            major role in shaping U.S. communities and economies over the past
+            major role in shaping the U.S economy and communities” over the past
             decade.
           </p>
 
           <p className="text-md my-5">
-            The Study in Maryland scholarship aids up to 2,000 international
-            students annually with fully funded scholarships to study a Masters
-            or PhD degree program at a public university in the state of
-            Maryland.
-          </p>
-
-          <p className="text-md my-5">
-            To further enhance and promote opportunities for foreign students,
-            our organization has partnered with the Maryland State Department of
-            Education to offer the Study in Maryland scholarship. This
-            scholarship is aimed at graduate international students with strong
-            academic backgrounds who wish to study in Maryland.
+            In line with our partnership with the Maryland state department of
+            education to promote Maryland as a top study destination for
+            international students, the Study-In-Maryland scholarship initiative
+            aids up to 2,000 international students annually with a full
+            scholarship to study an eligible masters or phd degree program at a
+            partner university in Maryland, USA.
           </p>
           <p className="my-10 text-3xl font-bold text-red-500 max-md:text-3xl">
             Scholarship Details
@@ -57,13 +50,11 @@ export default function Scholarships() {
             <ul className="ml-5 list-disc flex flex-col gap-3">
               <li>
                 <span className="text-lg font-bold">Scholarship Name:</span>
-                <p>Study in Maryland Scholarship.</p>
+                <p>Study-In-Maryland Scholarship.</p>
               </li>
               <li>
                 <span className="text-lg font-bold">Host:</span>
-                <p>
-                  Study in Maryland and Maryland State Department of Education.
-                </p>
+                <p>Maryland state department of education.</p>
               </li>
               <li>
                 <span className="text-lg font-bold">Host Country:</span>
@@ -83,7 +74,9 @@ export default function Scholarships() {
               <li>
                 <span className="text-lg font-bold">Scholarship Benefits:</span>
                 <p>
-                  {" "}
+                  Direct admission to study an eligible masters or phd degree
+                  program at a partner university.
+                  <br />
                   Covers full tuition and accommodation fees for the entire
                   duration of the Masters or PhD program at a partner
                   university.
@@ -117,22 +110,26 @@ export default function Scholarships() {
           <div className="text-md my-5">
             <ul className="ml-5 list-disc flex flex-col gap-3">
               <li>
-                Official English translated copies of degree certificates and
-                transcripts from ars.org (Only required for academic
-                certificates and transcripts not in English language).
+                Official English translated copy of acdemic transcripts from the
+                Maryland academic evaluation center. MAEC (Only required for
+                academic transcripts that are not in English).
               </li>
 
               <li>
-                Official translated copies of degree certificates and
-                transcripts from academic records service ars.org
+                Official translated copy of birth certificate from Maryland
+                academic evaluation center MAEC. (Only required for birth
+                certificates that are not in English.).
               </li>
               <li>
-                Academic credentials evaluation report from the Maryland
-                academic records service ars.org (This report shows that the U.S
+                <span className="text-lg font-bold">
+                  Academic credentials evaluation report from the Maryland
+                  academic evaluation center MAEC:{" "}
+                </span>
+                (This credential evaluation report shows that the U.S
                 equivalency of your courses and gpa has been evaluated, and that
                 the authenticity of your degree certificate and transcripts has
                 been verified by an official academic credential evaluation
-                service in the United States.).
+                service in Maryland, United States.).
               </li>
               <li>
                 English language proficiency test result from{" "}
@@ -143,7 +140,7 @@ export default function Scholarships() {
                 >
                   IELTS
                 </a>
-                or
+                 _ or _ 
                 <a
                   href="http://www.ets.org/toefl.html"
                   className="underline text-blue-600"
@@ -151,14 +148,17 @@ export default function Scholarships() {
                 >
                   TOEFL
                 </a>
-                ( This is only required for international students with degree
-                certificates and transcripts that are not in English language).
+                ( This is only required for international students whose degree
+                certificates and transcripts are not in English language. The
+                IELTS or TOEFL is not a mandatory requirement for international
+                students whose degree certificate and transcripts are in
+                English.).
               </li>
               <li>
                 Birth certificate issued by relevant government authorities in
                 your home country.
               </li>
-              <li>Motivation letter/personal statement</li>
+              <li>Motivation letter/personal statement.</li>
               <li>
                 Identification document: (Accepted means of identification can
                 be a copy of your international passport, national identity

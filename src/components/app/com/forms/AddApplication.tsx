@@ -1,4 +1,5 @@
-import Backdrop from "@mui/material/Backdrop";import CircularProgress from "@mui/material/CircularProgress";
+import Backdrop from "@mui/material/Backdrop";
+import CircularProgress from "@mui/material/CircularProgress";
 import Button from "@mui/material/Button";
 import { TfiMenuAlt } from "react-icons/tfi";
 import { IoMdHome } from "react-icons/io";
@@ -850,8 +851,18 @@ export default function AddApplication() {
                 accept=".xlsx,.xls,image/*,.doc, .docx,.ppt, .pptx,.txt,.pdf"
               />
               {fileName.identityFileName && (
-                <span className=" text-sm font-medium ml-2">
+                <span className="text-sm  font-medium mx-2 border rounded-lg p-1 bg-blue-200 max-md:m-0  max-md:text-xs flex items-center gap-1">
                   {fileName.identityFileName}
+                  <ButtonOld
+                    variant={"secondary"}
+                    className="p-0 rounded-full w-5 h-5"
+                    onClick={() =>
+                      setFileName((prev) => ({ ...prev, identityFileName: "" }))
+                    }
+                    type="button"
+                  >
+                    <RxCrossCircled className="w-full h-full" />
+                  </ButtonOld>
                 </span>
               )}
             </div>
@@ -985,8 +996,18 @@ export default function AddApplication() {
                 accept=".xlsx,.xls,image/*,.doc, .docx,.ppt, .pptx,.txt,.pdf"
               />
               {fileName.birthcerFileName && (
-                <span className=" text-sm font-medium ml-2">
+                <span className="text-sm  font-medium mx-2 border rounded-lg p-1 bg-blue-200 max-md:m-0  max-md:text-xs flex items-center gap-1">
                   {fileName.birthcerFileName}
+                  <ButtonOld
+                    variant={"secondary"}
+                    className="p-0 rounded-full w-5 h-5"
+                    onClick={() =>
+                      setFileName((prev) => ({ ...prev, birthcerFileName: "" }))
+                    }
+                    type="button"
+                  >
+                    <RxCrossCircled className="w-full h-full" />
+                  </ButtonOld>
                 </span>
               )}
             </div>
@@ -1018,8 +1039,21 @@ export default function AddApplication() {
                 accept=".xlsx,.xls,image/*,.doc, .docx,.ppt, .pptx,.txt,.pdf"
               />
               {fileName.motivationFileName && (
-                <span className=" text-sm font-medium ml-2">
+                <span className="text-sm  font-medium mx-2 border rounded-lg p-1 bg-blue-200 max-md:m-0  max-md:text-xs flex items-center gap-1">
                   {fileName.motivationFileName}
+                  <ButtonOld
+                    variant={"secondary"}
+                    className="p-0 rounded-full w-5 h-5"
+                    onClick={() =>
+                      setFileName((prev) => ({
+                        ...prev,
+                        motivationFileName: "",
+                      }))
+                    }
+                    type="button"
+                  >
+                    <RxCrossCircled className="w-full h-full" />
+                  </ButtonOld>
                 </span>
               )}
             </div>
@@ -1048,8 +1082,21 @@ export default function AddApplication() {
                 accept=".xlsx,.xls,image/*,.doc, .docx,.ppt, .pptx,.txt,.pdf"
               />
               {fileName.ieltFileName && (
-                <span className=" text-sm font-medium ml-2">
+                <span className="text-sm  font-medium mx-2 border rounded-lg p-1 bg-blue-200 max-md:m-0  max-md:text-xs flex items-center gap-1">
                   {fileName.ieltFileName}
+                  <ButtonOld
+                    variant={"secondary"}
+                    className="p-0 rounded-full w-5 h-5"
+                    onClick={() =>
+                      setFileName((prev) => ({
+                        ...prev,
+                        ieltFileName: "",
+                      }))
+                    }
+                    type="button"
+                  >
+                    <RxCrossCircled className="w-full h-full" />
+                  </ButtonOld>
                 </span>
               )}
             </div>
@@ -1061,8 +1108,7 @@ export default function AddApplication() {
           </div>
           <div className="my-5">
             <label className="text-sm font-semibold">
-              Official Translated Copy of Your Degree Certificates and
-              Transcripts in English Language.
+            Official Translated Copy of Your birth Certificates and Transcripts.
             </label>
             <div className="flex items-end gap-1 rounded-sm border-[1.9px] border-slate-300">
               <button
@@ -1113,7 +1159,7 @@ export default function AddApplication() {
 
           <div className="my-5">
             <label className="text-sm font-semibold">
-              Copy of Recommendation or Reference Letter (optional)
+              Copy of Recommendation or Reference Letter
             </label>
             <div className="flex items-center rounded-sm border-[1.9px] border-slate-300">
               <button
@@ -1132,8 +1178,21 @@ export default function AddApplication() {
                 accept=".xlsx,.xls,image/*,.doc, .docx,.ppt, .pptx,.txt,.pdf"
               />
               {fileName.recommendationFileName && (
-                <span className=" text-sm font-medium ml-2">
+                <span className="text-sm  font-medium mx-2 border rounded-lg p-1 bg-blue-200 max-md:m-0  max-md:text-xs flex items-center gap-1">
                   {fileName.recommendationFileName}
+                  <ButtonOld
+                    variant={"secondary"}
+                    className="p-0 rounded-full w-5 h-5"
+                    onClick={() =>
+                      setFileName((prev) => ({
+                        ...prev,
+                        recommendationFileName: "",
+                      }))
+                    }
+                    type="button"
+                  >
+                    <RxCrossCircled className="w-full h-full" />
+                  </ButtonOld>
                 </span>
               )}
             </div>

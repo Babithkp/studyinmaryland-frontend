@@ -1,6 +1,6 @@
 export default function Contact() {
   return (
-    <main className=" flex justify-center items-center">
+    <main className=" flex justify-center items-center min-h-[67vh]">
       <section className="w-[60%] p-10 max-md:w-full max-md:p-4">
         <article>
           <h1 className="text-red-500 text-5xl font-bold my-10 max-md:text-3xl">
@@ -11,15 +11,11 @@ export default function Contact() {
           </p>
           <p className="text-md my-5 max-md:flex-col flex items-center gap-3 ">
             <p className=" font-bold ">General inquiries :</p>
-            info@studyinmaryland.com
+            info@studyinmaryland.org
           </p>
           <p className="text-md my-5 max-md:flex-col flex items-center gap-3 ">
             <p className=" font-bold ">Referral program inquires :</p>
-            referrals@studyinmaryland.com
-          </p>
-          <p className="text-md my-5 max-md:flex-col flex items-center gap-3 ">
-            <p className=" font-bold ">Become an agent inquires: </p>
-            partner@studyinmaryland.com
+            referrals@studyinmaryland.org
           </p>
           <p className="text-md my-5 max-md:flex-col flex items-center gap-3 ">
             <p className=" font-bold ">Phone: </p>

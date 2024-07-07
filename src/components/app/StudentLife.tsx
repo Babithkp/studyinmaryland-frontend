@@ -1,6 +1,11 @@
-export default function StudentLife() {  return (
+import studentsImg from "/studentLife.jpg";
+export default function StudentLife() {
+  return (
     <main className="flex items-center justify-center ">
       <section className="w-[60%] p-10 max-md:w-full max-md:p-4 font-medium">
+        <figure>
+          <img src={studentsImg} alt="Students" />
+        </figure>
         <article>
           <h1 className="my-10 text-5xl font-bold text-red-500 max-md:text-3xl">
             Student Life
@@ -44,7 +49,7 @@ export default function StudentLife() {  return (
           <p className="text-md my-5">
             International students in Maryland have access to some of the best
             educational and research facilities in the world. Institutions like
-            Johns Hopkins University are leaders in research and innovation,
+            University of Maryland are leaders in research and innovation,
             providing international students with opportunities to engage in
             cutting-edge projects and collaborate with leading experts in their
             fields.
