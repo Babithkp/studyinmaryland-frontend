@@ -27,7 +27,7 @@ export default function PartnerUniversities() {
         <div className="my-10 flex w-full gap-5 text-center max-lg:flex-wrap max-sm:grid max-sm:grid-cols-2 ">
           <figure className="flex flex-col items-center justify-center max-sm:w-full">
             <img
-            loading="lazy"
+              loading="lazy"
               src={img3}
               alt="college"
               className="max-md:w-26 max-md:h-26 h-40 w-40 object-contain"
@@ -36,7 +36,7 @@ export default function PartnerUniversities() {
           </figure>
           <figure className="flex flex-col items-center justify-center max-sm:w-full">
             <img
-            loading="lazy"
+              loading="lazy"
               src={img1}
               alt="college"
               className="max-md:w-26 max-md:h-26 h-40 w-80 object-contain"
@@ -45,7 +45,7 @@ export default function PartnerUniversities() {
           </figure>
           <figure className="flex flex-col items-center justify-center max-sm:w-full">
             <img
-            loading="lazy"
+              loading="lazy"
               src={img2}
               alt="college"
               className="max-md:w-26 max-md:h-26 h-40 w-40 object-contain"
@@ -54,7 +54,7 @@ export default function PartnerUniversities() {
           </figure>
           <figure className="flex flex-col items-center justify-center max-sm:w-full">
             <img
-            loading="lazy"
+              loading="lazy"
               src={img4}
               alt="college"
               className="max-md:w-26 max-md:h-26 h-40 w-40 object-contain"
@@ -63,7 +63,7 @@ export default function PartnerUniversities() {
           </figure>
           <figure className="flex flex-col items-center justify-center max-sm:w-full">
             <img
-            loading="lazy"
+              loading="lazy"
               src={img5}
               alt="college"
               className="max-md:w-26 max-md:h-26 h-40 w-40 object-contain"
@@ -72,7 +72,7 @@ export default function PartnerUniversities() {
           </figure>
           <figure className="flex flex-col items-center justify-center max-sm:w-full">
             <img
-            loading="lazy"
+              loading="lazy"
               src={img6}
               alt="college"
               className="max-md:w-26 max-md:h-26 h-40 w-40 object-cover"
@@ -81,7 +81,7 @@ export default function PartnerUniversities() {
           </figure>
         </div>
       </section>
-      <section className="mb-10 grid w-[90%] grid-cols-3 gap-5 max-md:grid-cols-1">
+      <section className="mb-10 grid w-[90%] grid-cols-3 gap-8 max-md:grid-cols-1">
         <Accordion type="single" collapsible className="w-full">
           <AccordionItem value="item-1">
             <AccordionTrigger className="bg-slate-100">
@@ -182,12 +182,12 @@ export default function PartnerUniversities() {
                 <li className={dropdownTextClass + "text-start"}>
                   <ul className="my-2 flex list-inside list-disc flex-col items-start justify-start px-5 gap-5">
                     <li>
-                      Bachelor degree certificate and transcript ( For
-                      <span className="font-bold mr-2"> Masters programs</span>)
+                      Bachelor degree certificate and transcript (For Masters
+                      programs)
                     </li>
                     <li>
-                      Masters degree certificate and transcript( For
-                      <span className="font-bold mr-2"> PhD programs</span>)
+                      Masters degree certificate and transcript(For PhD
+                      programs)
                     </li>
                   </ul>
                   <li>
@@ -197,6 +197,7 @@ export default function PartnerUniversities() {
                 </li>
                 <li className={dropdownTextClass}>
                   <span className="font-bold mr-2">IELTS/TOEFL:</span>
+                  <br />
                   To be eligible for a scholarship to study a bachelors or a
                   masters degree program at one of our partner universities on a
                   state-funded scholarship, international students with degree
@@ -234,6 +235,7 @@ export default function PartnerUniversities() {
                     <span className="font-bold mr-2">
                       Credential Evaluation:
                     </span>
+                    <br />
                     It is mandatory for all international students to submit an
                     evaluation report of their academic credentials in other to
                     be eligible for admission and a scholarship to study at one
@@ -254,9 +256,15 @@ export default function PartnerUniversities() {
                     educational background on par with U.S. academic standards.
                   </span>
                   <span>
-                    International students can get their academic documents
-                    evaluated and verified by an academic evaluation service in
-                    Maryland
+                    We accept academic transcripts and certificates evaluated
+                    and verified by the Maryland academic evaluation center.
+                    <a
+                      href="https://Maec.us"
+                      target="_blank"
+                      className="underline-offset-2 underline text-blue-800"
+                    >
+                      MAEC
+                    </a>
                   </span>
                 </li>
 
@@ -273,12 +281,13 @@ export default function PartnerUniversities() {
                     <span className="font-bold mr-2">
                       Identification Documents:
                     </span>
-                    A copy of your ID document is required ( International
+                    <br />A copy of your ID document is required ( International
                     passport, Driver’s license, or National identity card are
                     accepted.)
                   </p>
                   <p>
                     <span className="font-bold mr-2">Birth Certificate:</span>
+                    <br />
                     an original copy of your birth certificate issued by the
                     relevant authority in your home country.
                   </p>
@@ -289,6 +298,7 @@ export default function PartnerUniversities() {
                       Official copy of a certified translation of your academic
                       documents and birth certificate:
                     </span>
+                    <br />
                     This is a mandatory requirement only for international
                     students from non English speaking countries.
                   </p>
@@ -320,7 +330,7 @@ export default function PartnerUniversities() {
                     <span className="font-bold mr-2">
                       Recommendation Letter or Reference Letter:
                     </span>
-                    a recommendation letter or references letter from your
+                    <br />A recommendation letter or references letter from your
                     current or previous employer or an academic supervisor or
                     representative at your previous academic institution can
                     help boost your application chances of securing a full
