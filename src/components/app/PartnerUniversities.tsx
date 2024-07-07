@@ -149,18 +149,19 @@ export default function PartnerUniversities() {
                   <span className="font-bold mr-2">
                     Masters programs duration:
                   </span>
-                  2 Years full-time.
+                  <br />2 Years full-time.
                 </li>
                 <li className={dropdownTextClass}>
                   <span className="font-bold mr-2">PhD programs duration:</span>
-                  5 Years full-time. (Includes Preparation and presentation of a
-                  dissertation proposal, dissertation research, and defense of
-                  final dissertation.)
+                  <br />5 Years full-time. (Includes Preparation and
+                  presentation of a dissertation proposal, dissertation
+                  research, and defense of final dissertation.)
                 </li>
                 <li className={dropdownTextClass}>
                   <span className="font-bold mr-2">
                     Masters and PhD programs start dates:
                   </span>
+                  <br />
                   January 2025 (Spring Semester) <br />
                   September 2025 (Fall Semester)
                 </li>
@@ -180,14 +181,16 @@ export default function PartnerUniversities() {
               </p>
               <ul>
                 <li className={dropdownTextClass + "text-start"}>
-                  <ul className="my-2 flex list-inside list-disc flex-col items-start justify-start px-5 gap-5">
+                  <ul className="my-2 flex list-inside list-disc flex-col  justify-start px-5 gap-5">
                     <li>
-                      Bachelor degree certificate and transcript (For Masters
-                      programs)
+                      Bachelor degree certificate and transcript
+                      <br />
+                      (For Masters programs)
                     </li>
                     <li>
-                      Masters degree certificate and transcript(For PhD
-                      programs)
+                      Masters degree certificate and transcript
+                      <br />
+                      (For PhD programs)
                     </li>
                   </ul>
                   <li>
@@ -302,7 +305,7 @@ export default function PartnerUniversities() {
                     This is a mandatory requirement only for international
                     students from non English speaking countries.
                   </p>
-                  <p>
+                  <p> 
                     To apply for the Study-in-Maryland scholarship to study at a
                     partner university, international students from
                     non-English-speaking countries must have their academic
@@ -314,8 +317,8 @@ export default function PartnerUniversities() {
                     requirement.
                   </p>
                   <p>
-                    We accept academic transcripts and certificates evaluated
-                    and verified by the Maryland academic evaluation center.{" "}
+                    International students can get their documents translated
+                    online at the Maryland academic evaluation center_
                     <a
                       href="https://maec.us"
                       target="_blank"
