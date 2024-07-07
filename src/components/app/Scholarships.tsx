@@ -19,7 +19,7 @@ export default function Scholarships() {
     <main className="flex flex-col items-center justify-center">
       <section className="w-[60%] p-10 max-md:w-full max-md:p-4 font-medium">
       <figure>
-          <img src={studentsImg} alt="Students" />
+          <img src={studentsImg} alt="Students" loading="lazy"/>
         </figure>
         <article>
           <p className="my-10 text-3xl font-bold text-red-500 max-md:text-3xl">

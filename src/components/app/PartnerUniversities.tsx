@@ -27,6 +27,7 @@ export default function PartnerUniversities() {
         <div className="my-10 flex w-full gap-5 text-center max-lg:flex-wrap max-sm:grid max-sm:grid-cols-2 ">
           <figure className="flex flex-col items-center justify-center max-sm:w-full">
             <img
+            loading="lazy"
               src={img3}
               alt="college"
               className="max-md:w-26 max-md:h-26 h-40 w-40 object-contain"
@@ -35,6 +36,7 @@ export default function PartnerUniversities() {
           </figure>
           <figure className="flex flex-col items-center justify-center max-sm:w-full">
             <img
+            loading="lazy"
               src={img1}
               alt="college"
               className="max-md:w-26 max-md:h-26 h-40 w-80 object-contain"
@@ -43,6 +45,7 @@ export default function PartnerUniversities() {
           </figure>
           <figure className="flex flex-col items-center justify-center max-sm:w-full">
             <img
+            loading="lazy"
               src={img2}
               alt="college"
               className="max-md:w-26 max-md:h-26 h-40 w-40 object-contain"
@@ -51,6 +54,7 @@ export default function PartnerUniversities() {
           </figure>
           <figure className="flex flex-col items-center justify-center max-sm:w-full">
             <img
+            loading="lazy"
               src={img4}
               alt="college"
               className="max-md:w-26 max-md:h-26 h-40 w-40 object-contain"
@@ -59,6 +63,7 @@ export default function PartnerUniversities() {
           </figure>
           <figure className="flex flex-col items-center justify-center max-sm:w-full">
             <img
+            loading="lazy"
               src={img5}
               alt="college"
               className="max-md:w-26 max-md:h-26 h-40 w-40 object-contain"
@@ -67,6 +72,7 @@ export default function PartnerUniversities() {
           </figure>
           <figure className="flex flex-col items-center justify-center max-sm:w-full">
             <img
+            loading="lazy"
               src={img6}
               alt="college"
               className="max-md:w-26 max-md:h-26 h-40 w-40 object-cover"

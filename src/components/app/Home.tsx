@@ -21,6 +21,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center bg-white">
       <img
+      loading="lazy"
         src={image}
         alt="hero image"
         className="relative h-[130vh] w-full object-cover max-sm:h-[100vh]"
@@ -59,6 +60,7 @@ export default function Home() {
           <div className="my-10 flex w-full gap-5 text-center max-lg:flex-wrap max-sm:grid max-sm:grid-cols-2">
             <figure className="flex flex-col items-center justify-center max-sm:w-full">
               <img
+              loading="lazy"
                 src={img3}
                 alt="college"
                 className="max-md:w-26 max-md:h-26 h-40 w-40 object-contain"
@@ -67,6 +69,7 @@ export default function Home() {
             </figure>
             <figure className="flex flex-col items-center justify-center max-sm:w-full">
               <img
+              loading="lazy"
                 src={img1}
                 alt="college"
                 className="max-md:w-26 max-md:h-26 h-40 w-80 object-contain"
@@ -75,6 +78,7 @@ export default function Home() {
             </figure>
             <figure className="flex flex-col items-center justify-center max-sm:w-full">
               <img
+              loading="lazy"
                 src={img2}
                 alt="college"
                 className="max-md:w-26 max-md:h-26 h-40 w-40 object-contain"
@@ -83,6 +87,7 @@ export default function Home() {
             </figure>
             <figure className="flex flex-col items-center justify-center max-sm:w-full">
               <img
+              loading="lazy"
                 src={img4}
                 alt="college"
                 className="max-md:w-26 max-md:h-26 h-40 w-40 object-contain"
@@ -91,6 +96,7 @@ export default function Home() {
             </figure>
             <figure className="flex flex-col items-center justify-center max-sm:w-full">
               <img
+              loading="lazy"
                 src={img5}
                 alt="college"
                 className="max-md:w-26 max-md:h-26 h-40 w-40 object-contain"
@@ -99,6 +105,7 @@ export default function Home() {
             </figure>
             <figure className="flex flex-col items-center justify-center max-sm:w-full">
               <img
+              loading="lazy"
                 src={img6}
                 alt="college"
                 className="max-md:w-26 max-md:h-26 h-40 w-40 object-cover"
@@ -163,6 +170,7 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-[2rem,1fr] items-center gap-3">
             <img
+            loading="lazy"
               src={icon1}
               alt="city"
               className="col-span-1 justify-self-center"
@@ -186,6 +194,7 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-[2rem,1fr] items-center gap-3">
             <img
+            loading="lazy"
               src={icon2}
               alt="city"
               className="col-span-1 justify-self-center"
@@ -208,6 +217,7 @@ export default function Home() {
 
           <div className="grid grid-cols-[2rem,1fr] items-center gap-3">
             <img
+            loading="lazy"
               src={icon4}
               alt="city"
               className="col-span-1 justify-self-center"
@@ -268,6 +278,7 @@ export default function Home() {
         <div className="flex flex-wrap gap-5 max-md:w-[95%]">
           <div className="relative flex h-[28rem] w-[19rem] items-center justify-center max-md:h-[20rem] max-md:w-[100%]">
             <img
+            loading="lazy"
               src={cardBg}
               alt="college background"
               className="absolute h-full w-full object-cover"
@@ -284,6 +295,7 @@ export default function Home() {
           </a>
           <div className="relative flex h-[28rem] w-[19rem] items-center justify-center max-md:h-[20rem] max-md:w-[100%]">
             <img
+            loading="lazy"
               src={MarylandMap}
               alt="college background"
               className="absolute h-full w-full object-cover"

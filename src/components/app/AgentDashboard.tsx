@@ -166,6 +166,7 @@ export default function AgentDashboard() {
             className="h-full w-full rounded-full  drop-shadow-lg "
             width={300}
             height={300}
+            loading="lazy"
           />
           {imageError && (
             <p className="text-sm font-medium text-red-500 text-center">
