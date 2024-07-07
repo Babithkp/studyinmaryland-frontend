@@ -348,7 +348,7 @@ export default function PartnerUniversities() {
               <span className="ml-5 mr-10">Application Deadline</span>
             </AccordionTrigger>
             <AccordionContent>
-              <p className="w-full bg-slate-300 p-3 font-semibold">
+              <p className="w-full bg-slate-300 p-3 font-semibold text-center">
                 All international students would have to submit their
                 scholarship application to study at one of our partner
                 universities in Maryland before the application deadline.
