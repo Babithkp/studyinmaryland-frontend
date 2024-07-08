@@ -1,4 +1,5 @@
-import {  Accordion,
+import {
+  Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
@@ -259,8 +260,9 @@ export default function PartnerUniversities() {
                     educational background on par with U.S. academic standards.
                   </span>
                   <span>
-                    We accept academic transcripts and certificates evaluated
-                    and verified by the Maryland academic evaluation center.
+                    We accept academic transcripts and certificates that are
+                    evaluated and verified by the Maryland academic evaluation
+                    center.
                     <a
                       href="https://Maec.us"
                       target="_blank"
@@ -284,9 +286,9 @@ export default function PartnerUniversities() {
                     <span className="font-bold mr-2">
                       Identification Documents:
                     </span>
-                    <br />A copy of your ID document is required <br/>( International
-                    passport, Driver’s license, or National identity card are
-                    accepted.)
+                    <br />A copy of your ID document is required <br />(
+                    International passport, Driver’s license, or National
+                    identity card are accepted.)
                   </p>
                   <p>
                     <span className="font-bold mr-2">Birth Certificate:</span>
@@ -305,7 +307,7 @@ export default function PartnerUniversities() {
                     This is a mandatory requirement only for international
                     students from non English speaking countries.
                   </p>
-                  <p> 
+                  <p>
                     To apply for the Study-in-Maryland scholarship to study at a
                     partner university, international students from
                     non-English-speaking countries must have their academic

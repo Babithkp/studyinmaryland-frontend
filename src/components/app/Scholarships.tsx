@@ -35,7 +35,7 @@ export default function Scholarships() {
             scholarship program has significantly contributed to the influx of
             international students in Maryland and represents a
             long-term investment plan, as international students have played a
-            major role in shaping the U.S economy and communitie over the past
+            major role in shaping the U.S economy and Communities over the past
             decade.
           </p>
 

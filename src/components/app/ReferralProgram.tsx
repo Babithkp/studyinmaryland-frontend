@@ -14,10 +14,8 @@ export default function ReferralProgram() {
     <main className="flex items-center justify-center">
       <section className="w-[60%] p-10 max-md:w-full max-md:p-4 font-medium">
         <article>
-          <h1 className="my-10 text-5xl font-bold text-red-500 max-md:text-3xl">
-            Referral program
-          </h1>
-          <p className="my-10 text-3xl font-bold text-red-500 max-md:text-3xl">
+    
+          <p className="my-10 text-3xl font-bold text-red-500 max-md:text-xl">
             Study in Maryland Referral Program
           </p>
 
@@ -155,8 +153,7 @@ export default function ReferralProgram() {
                 <p>
                   Review the terms and conditions of our referral program and
                   once they are clearly understood, sign up to join our referral
-                  program. (They will be a link to downloadable pdf document
-                  here)
+                  program. 
                 </p>
               </li>
               <li>
@@ -196,13 +193,6 @@ export default function ReferralProgram() {
               Let’s make a difference together!
             </p>
           </div>
-          <p className="my-10 text-3xl font-bold text-red-500 max-md:text-3xl">
-            Contact Us
-          </p>
-          <p className="text-md my-5">
-            If you have any questions or need more information, please don't
-            hesitate to reach our support team at
-          </p>
           {!isLoggined && (
             <div className="flex w-full justify-center">
               <Button
@@ -213,6 +203,14 @@ export default function ReferralProgram() {
               </Button>
             </div>
           )}
+          <p className="my-10 text-3xl font-bold text-red-500 max-md:text-3xl">
+            Contact Us
+          </p>
+          <p className="text-md my-5">
+            If you have any questions or need more information, please don't
+            hesitate to reach our support team at
+          </p>
+          
           <div className="text-white">
             <AgentSlide />
           </div>
