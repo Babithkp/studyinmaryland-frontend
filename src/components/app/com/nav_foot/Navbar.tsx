@@ -65,7 +65,7 @@ export default function Navbar() {
           </svg>
         </a>
       </figure>
-      <ul className="relative flex justify-end flex-wrap gap-8 max-lg:w-[80%] max-lg:gap-5 max-md:hidden">
+      <ul className="relative flex justify-end flex-wrap gap-7 max-lg:w-[80%] max-lg:gap-5 max-md:hidden">
         <li>
           <a href={"/aboutus"}>About Us</a>
         </li>
@@ -99,7 +99,7 @@ export default function Navbar() {
         </li>
         {!agentId && (
           <li>
-            <a href={"/Agent-signin"}>Ambassador login</a>
+            <a href={"/Agent-signin"}>Sign In</a>
           </li>
         )}
         <li>
@@ -198,7 +198,7 @@ export default function Navbar() {
                   href={"/Agent-signin"}
                   className="block w-full border-b-[1px] px-5 py-4 text-base font-medium text-black hover:bg-red-500 hover:text-white"
                 >
-                  Ambassador login
+                  Sign In
                 </a>
               )}
               <a
