@@ -74,6 +74,11 @@ export default function Navbar() {
             <a href={`/agent-dashboard/${agentId}`}>Dashboard</a>
           </li>
         )}
+        {!agentId && (
+          <li>
+            <a href={"/Agent-signin"}>Ambassador login</a>
+          </li>
+        )}
         <li>
           <a href={"/partner-universities"}>Partner Universities</a>
         </li>
@@ -131,39 +136,47 @@ export default function Navbar() {
               </a>
               <a
                 href={"/aboutus"}
-                className="block w-full border-b-[1px] px-5 py-4 text-base font-medium text-black"
+                className="block w-full border-b-[1px] px-5 py-4 text-base font-medium text-black hover:bg-red-500 hover:text-white"
               >
                 About Us
               </a>
               {agentId && (
                 <a
                   href={`/agent-dashboard/${agentId}`}
-                  className="block w-full border-b-[1px] px-5 py-4 text-base font-medium text-black"
+                  className="block w-full border-b-[1px] px-5 py-4 text-base font-medium text-black hover:bg-red-500 hover:text-white"
                 >
                   Dashboard
                 </a>
               )}
+              {!agentId && (
+                <a
+                  href={"/Agent-signin"}
+                  className="block w-full border-b-[1px] px-5 py-4 text-base font-medium text-black hover:bg-red-500 hover:text-white"
+                >
+                  Ambassador login
+                </a>
+              )}
               <a
                 href={"/partner-universities"}
-                className="block w-full border-b-[1px] px-5 py-4 text-base font-medium text-black"
+                className="block w-full border-b-[1px] px-5 py-4 text-base font-medium text-black hover:bg-red-500 hover:text-white"
               >
                 Partner Universities
               </a>
               <a
                 href={"/Scholarships"}
-                className="block w-full border-b-[1px] px-5 py-4 text-base font-medium text-black"
+                className="block w-full border-b-[1px] px-5 py-4 text-base font-medium text-black hover:bg-red-500 hover:text-white"
               >
                 Scholarships
               </a>
               <a
                 href={"/student-life"}
-                className="block w-full border-b-[1px] px-5 py-4 text-base font-medium text-black"
+                className="block w-full border-b-[1px] px-5 py-4 text-base font-medium text-black hover:bg-red-500 hover:text-white"
               >
                 Student Life
               </a>
               <a
                 href={"/visa"}
-                className="block w-full border-b-[1px] px-5 py-4 text-base font-medium text-black"
+                className="block w-full border-b-[1px] px-5 py-4 text-base font-medium text-black hover:bg-red-500 hover:text-white"
               >
                 Visa
               </a>

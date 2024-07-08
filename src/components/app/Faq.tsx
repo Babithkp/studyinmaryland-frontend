@@ -1,5 +1,4 @@
-export default function Faq() {
-  return (
+export default function Faq() {  return (
     <main className="flex items-center justify-center ">
       <section className="w-[60%] p-10 max-md:w-full max-md:p-4 font-medium">
         <article>
@@ -83,6 +82,15 @@ export default function Faq() {
             services and how we assist international students aiming to study in
             Maryland. For further inquiries or personalized assistance, feel
             free to reach out to us directly.
+          </p>
+          <p className="my-10 text-3xl font-bold text-red-500 max-md:text-3xl">
+            When will I know the status of my application?
+          </p>
+          <p className="text-md my-5">
+            An email notification will be sent to you once you have successfully
+            submitted your application and you will be informed about the status
+            of your scholarship application 30 days after the application
+            deadline.
           </p>
         </article>
       </section>

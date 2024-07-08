@@ -187,7 +187,7 @@ export default function AgentDashboard() {
                 className="cursor-pointer text-white hover:text-blue-500 bg-blue-400 m-2 p-2 rounded-xl"
                 onClick={onChangeProfileCick}
               >
-                Change Photo
+                Upload Photo
               </p>
             )}
           </div>
