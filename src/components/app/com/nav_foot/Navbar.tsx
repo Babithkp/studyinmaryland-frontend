@@ -74,11 +74,7 @@ export default function Navbar() {
             <a href={`/agent-dashboard/${agentId}`}>Dashboard</a>
           </li>
         )}
-        {!agentId && (
-          <li>
-            <a href={"/Agent-signin"}>Ambassador login</a>
-          </li>
-        )}
+        
         <li>
           <a href={"/partner-universities"}>Partner Universities</a>
         </li>
@@ -101,6 +97,11 @@ export default function Navbar() {
         <li>
           <a href={"/referralProgram"}>Referral Program</a>
         </li>
+        {!agentId && (
+          <li>
+            <a href={"/Agent-signin"}>Ambassador login</a>
+          </li>
+        )}
         <li>
           <a href={"/contact"}>Contact</a>
         </li>
@@ -148,14 +149,6 @@ export default function Navbar() {
                   Dashboard
                 </a>
               )}
-              {!agentId && (
-                <a
-                  href={"/Agent-signin"}
-                  className="block w-full border-b-[1px] px-5 py-4 text-base font-medium text-black hover:bg-red-500 hover:text-white"
-                >
-                  Ambassador login
-                </a>
-              )}
               <a
                 href={"/partner-universities"}
                 className="block w-full border-b-[1px] px-5 py-4 text-base font-medium text-black hover:bg-red-500 hover:text-white"
@@ -200,7 +193,14 @@ export default function Navbar() {
               >
                 Referral Program
               </a>
-
+              {!agentId && (
+                <a
+                  href={"/Agent-signin"}
+                  className="block w-full border-b-[1px] px-5 py-4 text-base font-medium text-black hover:bg-red-500 hover:text-white"
+                >
+                  Ambassador login
+                </a>
+              )}
               <a
                 href="/contact"
                 className="flex w-full items-center border-b-[1px] px-5 py-4 text-base font-medium text-black hover:bg-red-500 hover:text-white"
