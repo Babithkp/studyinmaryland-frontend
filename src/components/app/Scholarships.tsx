@@ -33,7 +33,7 @@ export default function Scholarships() {
             resources. This scholarship initiative aims to help these students
             achieve their dream of studying in the United States. The
             scholarship program has significantly contributed to the influx of
-            international students in Maryland. cities and represents a
+            international students in Maryland and represents a
             long-term investment plan, as international students have played a
             major role in shaping the U.S economy and communitie over the past
             decade.

@@ -153,7 +153,7 @@ export default function PartnerUniversities() {
                 </li>
                 <li className={dropdownTextClass}>
                   <span className="font-bold mr-2">PhD programs duration:</span>
-                  <br />5 Years full-time. (Includes Preparation and
+                  <br />5 Years full-time. (Includes preparation and
                   presentation of a dissertation proposal, dissertation
                   research, and defense of final dissertation.)
                 </li>
@@ -284,7 +284,7 @@ export default function PartnerUniversities() {
                     <span className="font-bold mr-2">
                       Identification Documents:
                     </span>
-                    <br />A copy of your ID document is required ( International
+                    <br />A copy of your ID document is required <br/>( International
                     passport, Driver’s license, or National identity card are
                     accepted.)
                   </p>
@@ -318,7 +318,7 @@ export default function PartnerUniversities() {
                   </p>
                   <p>
                     International students can get their documents translated
-                    online at the Maryland academic evaluation center_
+                    online at the Maryland academic evaluation center.
                     <a
                       href="https://maec.us"
                       target="_blank"
@@ -358,7 +358,7 @@ export default function PartnerUniversities() {
               </p>
               <ul>
                 <li className={dropdownTextClass}>
-                  Spring semester: starting in January 2025.
+                  Spring semester: Starting in January 2025.
                 </li>
                 <li className={dropdownTextClass}>
                   Application deadline: September 30th, 2024.
