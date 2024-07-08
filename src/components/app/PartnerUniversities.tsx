@@ -195,7 +195,7 @@ export default function PartnerUniversities() {
                     </li>
                   </ul>
                   <li>
-                    Only original scanned copies of bachelor or masters degree
+                    only original scanned copies of bachelor or masters degree
                     certificates and transcripts are accepted.
                   </li>
                 </li>

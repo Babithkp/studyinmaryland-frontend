@@ -1,5 +1,6 @@
-import studentsImg from "/scholarshipStudents.jpg"
-import { useEffect } from "react";import HomeSlider from "./com/objects/HomeSlider";
+import studentsImg from "/scholarshipStudents.jpg";
+import { useEffect } from "react";
+import HomeSlider from "./com/objects/HomeSlider";
 export default function Scholarships() {
   useEffect(() => {
     const url = new URLSearchParams(window.location.search);
@@ -18,8 +19,8 @@ export default function Scholarships() {
   return (
     <main className="flex flex-col items-center justify-center">
       <section className="w-[60%] p-10 max-md:w-full max-md:p-4 font-medium">
-      <figure>
-          <img src={studentsImg} alt="Students" loading="lazy"/>
+        <figure>
+          <img src={studentsImg} alt="Students" loading="lazy" />
         </figure>
         <article>
           <p className="my-10 text-3xl font-bold text-red-500 max-md:text-3xl">
@@ -33,10 +34,9 @@ export default function Scholarships() {
             resources. This scholarship initiative aims to help these students
             achieve their dream of studying in the United States. The
             scholarship program has significantly contributed to the influx of
-            international students in Maryland and represents a
-            long-term investment plan, as international students have played a
-            major role in shaping the U.S economy and Communities over the past
-            decade.
+            international students in Maryland and represents a long-term
+            investment plan, as international students have played a major role
+            in shaping the U.S economy and Communities over the past decade.
           </p>
 
           <p className="text-md my-5">
@@ -100,9 +100,9 @@ export default function Scholarships() {
             Application Requirements
           </p>
           <div className="text-md my-5">
-            <ul className="ml-5 list-disc">
+            <ul className="ml-5 list-disc flex flex-col gap-3">
               <li>
-                <span className="text-lg font-bold">For Masters Program:</span>
+                <span className="text-lg  font-bold">For Masters Program:</span>
                 <p>Bachelors degree certificate and transcript.</p>
               </li>
               <li>
@@ -121,13 +121,27 @@ export default function Scholarships() {
 
               <li>
                 Official translated copy of birth certificate from Maryland
-                academic evaluation center MAEC. (Only required for birth
+                academic evaluation center 
+                <a
+                      href="https://Maec.us"
+                      target="_blank"
+                      className="underline-offset-2 underline text-blue-600"
+                    >
+                      {" "}MAEC
+                    </a>
+                . (Only required for birth
                 certificates that are not in English.).
               </li>
               <li>
-                <span className="text-lg font-bold">
+                <span className="text-lg ">
                   Academic credentials evaluation report from the Maryland
-                  academic evaluation center MAEC:{" "}
+                  academic evaluation center <a
+                      href="https://Maec.us"
+                      target="_blank"
+                      className="underline-offset-2 underline text-blue-600"
+                    >
+                      MAEC
+                    </a>:{" "}
                 </span>
                 (This credential evaluation report shows that the U.S
                 equivalency of your courses and gpa has been evaluated, and that
@@ -144,7 +158,7 @@ export default function Scholarships() {
                 >
                   IELTS
                 </a>
-                 _ or _ 
+                {" "}or{" "}
                 <a
                   href="http://www.ets.org/toefl.html"
                   className="underline text-blue-600"
@@ -153,10 +167,24 @@ export default function Scholarships() {
                   TOEFL
                 </a>
                 ( This is only required for international students whose degree
-                certificates and transcripts are not in English language. The
-                IELTS or TOEFL is not a mandatory requirement for international
-                students whose degree certificate and transcripts are in
-                English.).
+                certificates and transcripts are not in English language. The{" "}
+                <a
+                  href="http://www.ielts.org"
+                  className="underline text-blue-600"
+                  target="_blank"
+                >
+                  IELTS
+                </a>
+                {" "}or{" "}
+                <a
+                  href="http://www.ets.org/toefl.html"
+                  className="underline text-blue-600"
+                  target="_blank"
+                >
+                  TOEFL {" "}
+                </a>
+                is not a mandatory requirement for international students whose
+                degree certificate and transcripts are in English.).
               </li>
               <li>
                 Birth certificate issued by relevant government authorities in

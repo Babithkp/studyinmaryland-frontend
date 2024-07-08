@@ -6,11 +6,7 @@ export default function AddApplicationArtical() {  return (
 
       <p className="text-md my-5">
         All applicants should enter their details correctly and upload all the
-        required application documents to submit their study in Maryland.
-      </p>
-      <p className="text-md my-5">
-        Successful study in Maryland scholarship recipients will receive an
-        admission to study at one of our partner universities.
+        required application documents to submit their application.
       </p>
       <p className="text-md my-5">
         International students are not required to pay any application/admission

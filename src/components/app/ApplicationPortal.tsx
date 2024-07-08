@@ -1,4 +1,5 @@
-export default function ApplicationPortal() {  return (
+export default function ApplicationPortal() {
+  return (
     <main className="flex items-center justify-center">
       <section className="w-[60%] p-10 max-md:w-full max-md:p-4 font-medium">
         <article className="">
@@ -6,9 +7,9 @@ export default function ApplicationPortal() {  return (
             How To Apply:
           </h1>
           <p className="text-md my-5">
-            The following guide are the requirements to apply for the study in
-            Maryland scholarship to study a masters or phd degree program at one
-            of our partner universities.
+            The following guide are the requirements to apply for the
+            Study-In-Maryland scholarship to study a masters or phd degree
+            program at one of our partner universities.
           </p>
           <p className="text-md my-5">
             The Study-In-Maryland scholarship recipients are automatically
@@ -18,8 +19,7 @@ export default function ApplicationPortal() {  return (
           <p className="text-md my-5">
             International students would have to fill the online application
             form and upload the following documents on the application portal to
-            successfully submit their Study-In-Maryland scholarship and
-            admission application.
+            successfully submit their Study-In-Maryland scholarship application.
           </p>
           <div className="text-md my-5">
             <ul className="ml-5 list-disc flex flex-col gap-3">
@@ -42,13 +42,13 @@ export default function ApplicationPortal() {  return (
                 students).
               </li>
               <li>
-                UPload your IELTS or TOEFL test result from
+                Upload your IELTS or TOEFL test result from
                 <a
                   href={"https://ielts.org"}
                   target="_blank"
                   className="ml-2 underline-offset-2 underline text-blue-800 mr-1"
                 >
-                IELTS
+                  IELTS
                 </a>
                 or
                 <a
@@ -56,7 +56,7 @@ export default function ApplicationPortal() {  return (
                   target="_blank"
                   className="ml-2 underline-offset-2 underline text-blue-800 mr-1"
                 >
-                ETS
+                  TOEFL
                 </a>
                 ( This is only required for students whose degree certificates
                 and transcripts are not in English language)
@@ -86,8 +86,8 @@ export default function ApplicationPortal() {  return (
               </li>
               <li>
                 Upload a recommendation or reference letter from your previous
-                or current employer or an academic advisor from your
-                academic institution.
+                or current employer or an academic advisor from your academic
+                institution.
               </li>
             </ul>
           </div>

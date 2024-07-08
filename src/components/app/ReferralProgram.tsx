@@ -1,4 +1,5 @@
-import { useState } from "react";import { Button } from "../ui/button";
+import { useState } from "react";
+import { Button } from "../ui/button";
 import AgentSlide from "./com/objects/AgentSlide";
 export default function ReferralProgram() {
   const [isLoggined, setIsLoggined] = useState(false);
@@ -14,9 +15,8 @@ export default function ReferralProgram() {
     <main className="flex items-center justify-center">
       <section className="w-[60%] p-10 max-md:w-full max-md:p-4 font-medium">
         <article>
-    
-          <p className="my-10 text-3xl font-bold text-red-500 max-md:text-xl">
-            Study in Maryland Referral Program
+          <p className="my-10 text-3xl font-bold text-red-500 max-md:text-2xl">
+            Referral Program
           </p>
 
           <p className="text-md my-5">
@@ -26,7 +26,7 @@ export default function ReferralProgram() {
           </p>
           <p className="text-md my-5">
             Over 2,000 students annually benefit from the Study-In-Maryland
-            scholarship initiative thanks to our ambassador such as, study
+            scholarship initiative thanks to our ambassadors such as, study
             abroad consultants, education consultants, university
             agents,scholarship recipients, and the individuals who has played a
             significant role in helping us recruit international students who
@@ -153,13 +153,7 @@ export default function ReferralProgram() {
                 <p>
                   Review the terms and conditions of our referral program and
                   once they are clearly understood, sign up to join our referral
-                  program. 
-                </p>
-              </li>
-              <li>
-                <p>
-                  Once all the terms and conditions are understood, Sign up to
-                  join our referral program by
+                  program.
                 </p>
               </li>
               <li>
@@ -210,7 +204,7 @@ export default function ReferralProgram() {
             If you have any questions or need more information, please don't
             hesitate to reach our support team at
           </p>
-          
+
           <div className="text-white">
             <AgentSlide />
           </div>

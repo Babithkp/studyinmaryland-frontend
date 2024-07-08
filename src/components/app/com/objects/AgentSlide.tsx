@@ -131,7 +131,7 @@ export default function AgentSlide() {
             <BiSolidQuoteAltRight className="-scale-x-100 mb-5" size={"3rem"} />
           </span>
           <p>
-            The decision to become an agent partner with Study in Maryland has
+            The decision to become an as an ambassador with Study in Maryland has
             been one of the best strategic moves for my study abroad agency. The
             organization’s dedication to helping international students secure
             fully funded scholarships for master's and PhD programs at esteemed
