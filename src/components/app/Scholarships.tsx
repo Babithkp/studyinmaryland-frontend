@@ -5,7 +5,6 @@ export default function Scholarships() {
   useEffect(() => {
     const url = new URLSearchParams(window.location.search);
     const myParam = url.get("referral");
-    console.log(myParam);
     if (myParam) {
       if (
         !localStorage.getItem("referral") ||
@@ -36,7 +35,7 @@ export default function Scholarships() {
             scholarship program has significantly contributed to the influx of
             international students in Maryland and represents a long-term
             investment plan, as international students have played a major role
-            in shaping the U.S economy and Communities over the past decade.
+            in shaping the U.S economy and communities over the past decade.
           </p>
 
           <p className="text-md my-5">
@@ -58,7 +57,10 @@ export default function Scholarships() {
               </li>
               <li>
                 <span className="text-lg font-bold">Host:</span>
-                <p>Maryland state department of education.</p>
+                <p>
+                  The state of Maryland & Maryland state department of
+                  education.
+                </p>
               </li>
               <li>
                 <span className="text-lg font-bold">Host Country:</span>
@@ -66,7 +68,17 @@ export default function Scholarships() {
               </li>
               <li>
                 <span className="text-lg font-bold">Eligible Countries:</span>
-                <p>Worldwide.</p>
+                <p>
+                  Citizens of the following countries are eligible to apply:
+                  Algeria, Azerbaijan, Brazil, Botswana, Burkina Faso,
+                  Bangladesh, Benin, China, Cameroon, Congo, Czechia, DR Congo,
+                  Dominican Republic, Egypt, Gambia, Ghana, India, Indonesia,
+                  Ivory Cost, Kazakhstan, Kenya, Lebanon, Liberia, Malawi,
+                  Malaysia, Morocco, Nepal, Nigeria, Pakistan, Philippines,
+                  Rwanda, Sierra Leone, Sri Lanka, South Africa, Tanzania,
+                  Turkey, Tunisia, Uganda, Ukraine, Uzbekistan, Vietnam, Zambia,
+                  Zimbabwe.
+                </p>
               </li>
               <li>
                 <span className="text-lg font-bold">Eligible Candidates:</span>
@@ -78,9 +90,10 @@ export default function Scholarships() {
               <li>
                 <span className="text-lg font-bold">Scholarship Benefits:</span>
                 <p>
-                  Direct admission to study an eligible masters or phd degree
-                  program at a partner university.
-                  <br />
+                  Admission to study an eligible masters or phd degree program
+                  at a partner university.
+                </p>
+                <p className="mt-3">
                   Covers full tuition and accommodation fees for the entire
                   duration of the Masters or PhD program at a partner
                   university.
@@ -92,7 +105,7 @@ export default function Scholarships() {
               </li>
               <li>
                 <span className="text-lg font-bold">Application Deadline:</span>
-                <p>September 30th, 2024.</p>
+                <p>October, 18th 2024.</p>
               </li>
             </ul>
           </div>
@@ -114,34 +127,17 @@ export default function Scholarships() {
           <div className="text-md my-5">
             <ul className="ml-5 list-disc flex flex-col gap-3">
               <li>
-                Official English translated copy of acdemic transcripts from the
-                Maryland academic evaluation center. MAEC (Only required for
-                academic transcripts that are not in English).
-              </li>
-
-              <li>
-                Official translated copy of birth certificate from Maryland
-                academic evaluation center 
-                <a
-                      href="https://Maec.us"
-                      target="_blank"
-                      className="underline-offset-2 underline text-blue-600"
-                    >
-                      {" "}MAEC
-                    </a>
-                . (Only required for birth
-                certificates that are not in English.).
-              </li>
-              <li>
-                <span className="text-lg ">
+                <span className="font-bold">
                   Academic credentials evaluation report from the Maryland
-                  academic evaluation center <a
-                      href="https://Maec.us"
-                      target="_blank"
-                      className="underline-offset-2 underline text-blue-600"
-                    >
-                      MAEC
-                    </a>:{" "}
+                  academic evaluation center{" "}
+                  <a
+                    href="https://maec.us"
+                    target="_blank"
+                    className="underline-offset-2 underline text-blue-600"
+                  >
+                    MAEC
+                  </a>
+                  :{" "}
                 </span>
                 (This credential evaluation report shows that the U.S
                 equivalency of your courses and gpa has been evaluated, and that
@@ -150,6 +146,36 @@ export default function Scholarships() {
                 service in Maryland, United States.).
               </li>
               <li>
+                Official English translated copy of acdemic transcripts from the
+                Maryland academic evaluation center. 
+                <a
+                  href="https://maec.us"
+                  target="_blank"
+                  className="underline-offset-2 underline text-blue-600"
+                >
+                  {" "}
+                  MAEC
+                </a>
+                 (Only required for
+                academic transcripts that are not in English).
+              </li>
+
+              <li>
+                Official translated copy of birth certificate from Maryland
+                academic evaluation center
+                <a
+                  href="https://maec.us"
+                  target="_blank"
+                  className="underline-offset-2 underline text-blue-600"
+                >
+                  {" "}
+                  MAEC
+                </a>
+                . (Only required for birth certificates that are not in
+                English.).
+              </li>
+
+              <li>
                 English language proficiency test result from{" "}
                 <a
                   href="http://www.ielts.org"
@@ -157,8 +183,8 @@ export default function Scholarships() {
                   target="_blank"
                 >
                   IELTS
-                </a>
-                {" "}or{" "}
+                </a>{" "}
+                or{" "}
                 <a
                   href="http://www.ets.org/toefl.html"
                   className="underline text-blue-600"
@@ -174,14 +200,14 @@ export default function Scholarships() {
                   target="_blank"
                 >
                   IELTS
-                </a>
-                {" "}or{" "}
+                </a>{" "}
+                or{" "}
                 <a
                   href="http://www.ets.org/toefl.html"
                   className="underline text-blue-600"
                   target="_blank"
                 >
-                  TOEFL {" "}
+                  TOEFL{" "}
                 </a>
                 is not a mandatory requirement for international students whose
                 degree certificate and transcripts are in English.).

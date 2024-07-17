@@ -17,10 +17,6 @@ export default function Contact() {
             <p className=" font-bold ">Referral program inquires :</p>
             referrals@studyinmaryland.org
           </p>
-          <p className="text-md my-5 max-md:flex-col flex items-center gap-3 ">
-            <p className=" font-bold ">Phone: </p>
-            <p className="  ">+1 4437509584</p>
-          </p>
         </article>
       </section>
     </main>

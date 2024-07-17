@@ -28,6 +28,7 @@ interface Student {
   identityDocName: string;
   degreeDocName: string[];
   academicDocName: string[];
+  credentailsDocName: string[];
   birthDocName: string;
   motivationDocName: string;
   ieltsDocName: string;

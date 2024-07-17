@@ -43,6 +43,7 @@ interface FormValues {
   identityDocName: string;
   degreeDocName: string[];
   academicDocName: string[];
+  credentailsDocName: string[];
   birthDocName: string;
   motivationDocName: string;
   ieltsDocName: string;
@@ -55,6 +56,7 @@ interface FormValuesFileType {
   identityFileName: string;
   degreeDocName: string[];
   academiFileName: string[];
+  credentailsName: string[];
   birthcerFileName: string;
   ieltFileName: string;
   motivationFileName: string;
@@ -65,6 +67,7 @@ interface FormValuesFileType {
 interface multiFileType {
   degreeMsg: boolean;
   academicMsg: boolean;
+  credentailsMsg:boolean
   englishMsg: boolean;
 }
 
@@ -72,6 +75,7 @@ export default function AddApplication() {
   const indentityRef = useRef<HTMLInputElement | null>(null);
   const degreeRef = useRef<HTMLInputElement | null>(null);
   const academicRef = useRef<HTMLInputElement | null>(null);
+  const credentailRef = useRef<HTMLInputElement | null>(null);
   const birthRef = useRef<HTMLInputElement | null>(null);
   const motivationRef = useRef<HTMLInputElement | null>(null);
   const ieltsRef = useRef<HTMLInputElement | null>(null);
@@ -81,6 +85,7 @@ export default function AddApplication() {
     identityFileName: "",
     degreeDocName: [],
     academiFileName: [],
+    credentailsName: [],
     birthcerFileName: "",
     ieltFileName: "",
     motivationFileName: "",
@@ -90,14 +95,17 @@ export default function AddApplication() {
   const [indentityFileError, setIndentityFileError] = useState<string | null>();
   const [degreeFileError, setDegreeFileError] = useState<string | null>();
   const [academicFileError, setAcademicFileError] = useState<string | null>();
+  const [credentailsFileError, setcredentailsFileError] = useState<string | null>();
   const [birthFileError, setBirthFileError] = useState<string | null>();
   const [motivateFileError, setMotivateFileError] = useState<string | null>();
+  const [recommendationFileError, setRecommendationFileError] = useState<string | null>();
   const [ieltsFileError, setIeltsFileError] = useState<string | null>();
   const [engTransFileError, setEngTransFileError] = useState<string | null>();
   const [recFileError, setRecFileError] = useState<string | null>();
   const [overloadmsg, setOverloadmsg] = useState<multiFileType>({
     degreeMsg: false,
     academicMsg: false,
+    credentailsMsg: false,
     englishMsg: false,
   });
   const [dataStorage, setDataStorage] = useState<FormValues>({
@@ -120,6 +128,7 @@ export default function AddApplication() {
     identityDocName: "",
     degreeDocName: [],
     academicDocName: [],
+    credentailsDocName: [],
     birthDocName: "",
     motivationDocName: "",
     ieltsDocName: "",
@@ -236,6 +245,37 @@ export default function AddApplication() {
       }));
     }
   };
+  // functions for handling Crendentails Document
+  const handleCredentailsChange = async (event: ChangeEvent<HTMLInputElement>) => {
+    if (dataStorage.credentailsDocName.length >= 2) {
+      setOverloadmsg((prev) => ({ ...prev, academicMsg: true }));
+      return;
+    }
+    const files = event.target.files;
+    if (files) {
+      const file = files[0];
+      if (file.size > 5000000) {
+        setcredentailsFileError("File size is too large, (minimum sixe is 5Mb)");
+        return;
+      } else {
+        setcredentailsFileError(null);
+      }
+      formdata.delete("files");
+      const newId = v4() + file.name;
+      setDataStorage((prev) => ({
+        ...prev,
+        credentailsDocName: [...prev.credentailsDocName, newId],
+      }));
+      setIsloading(true);
+      formdata.append("files", file, newId);
+      await uploadsingleFile(formdata);
+      setIsloading(false);
+      setFileName((prev) => ({
+        ...prev,
+        credentailsName: [...prev.credentailsName, file.name],
+      }));
+    }
+  };
   const deleteSingleFileAca = (index: number) => {
     const filteredOut = dataStorage.academicDocName.filter(
       (_, i) => i != index
@@ -243,6 +283,14 @@ export default function AddApplication() {
     const filteredName = fileName.academiFileName.filter((_, i) => i != index);
     setFileName((prev) => ({ ...prev, academiFileName: filteredName }));
     setDataStorage((prev) => ({ ...prev, academicDocName: filteredOut }));
+  };
+  const deleteSingleFileCre = (index: number) => {
+    const filteredOut = dataStorage.credentailsDocName.filter(
+      (_, i) => i != index
+    );
+    const filteredName = fileName.credentailsName.filter((_, i) => i != index);
+    setFileName((prev) => ({ ...prev, credentailsName: filteredName }));
+    setDataStorage((prev) => ({ ...prev, credentailsDocName: filteredOut }));
   };
 
   // functions for handling Birth certificate Document
@@ -411,6 +459,16 @@ export default function AddApplication() {
       setAcademicFileError("This Field is Required To Register");
       return;
     }
+    if (dataStorage.credentailsDocName.length <= 0) {
+      credentailRef.current?.classList.remove("hidden");
+      credentailRef.current?.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+      credentailRef.current?.classList.add("hidden");
+      setcredentailsFileError("This Field is Required To Register");
+      return;
+    }
     if (dataStorage.birthDocName.length <= 0) {
       birthRef.current?.classList.remove("hidden");
       birthRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
@@ -426,6 +484,16 @@ export default function AddApplication() {
       });
       motivationRef.current?.classList.add("hidden");
       setMotivateFileError("This Field is Required To Register");
+      return;
+    }
+    if (dataStorage.recommendationDocName === "") {
+      recommendationRef.current?.classList.remove("hidden");
+      recommendationRef.current?.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+      recommendationRef.current?.classList.add("hidden");
+      setRecommendationFileError("This Field is Required To Register");
       return;
     }
     let referralCode;
@@ -457,6 +525,7 @@ export default function AddApplication() {
       degreeDocName: dataStorage.degreeDocName,
       academicDocName: dataStorage.academicDocName,
       birthDocName: dataStorage.birthDocName,
+      credentailsDocName: dataStorage.credentailsDocName,
       motivationDocName: dataStorage.motivationDocName,
       ieltsDocName: dataStorage.ieltsDocName,
       englishDocName: dataStorage.englishDocName,
@@ -466,15 +535,18 @@ export default function AddApplication() {
     try {
       setIsloading(true);
       const response = await newUserregistration(formSubmittiedData);
+      console.log(response);
+      
       if (!response.data.error) {
         setResponseStatus(false);
         setOpen(true);
-        setIsloading(false);
+        
         reset();
         setFileName({
           identityFileName: "",
           degreeDocName: [],
           academiFileName: [],
+          credentailsName: [],
           birthcerFileName: "",
           ieltFileName: "",
           motivationFileName: "",
@@ -488,7 +560,9 @@ export default function AddApplication() {
       }
     } catch (err) {
       console.log(err);
+      setIsloading(false);
     }
+    setIsloading(false);
   };
   return (
     <main className="flex items-center justify-center font-medium">
@@ -925,7 +999,7 @@ export default function AddApplication() {
           </div>
           <div className="my-5">
             <label className="text-sm font-semibold">
-              Academic Credential Evaluation Report
+              Academic Transcript Evaluation Report
               <span className="text-red-500 ml-1">*</span>
             </label>
             <div className="flex items-end gap-1 rounded-sm border-[1.9px] border-slate-300">
@@ -971,6 +1045,57 @@ export default function AddApplication() {
             {academicFileError && (
               <span className="text-red-500 text-sm font-medium mt-2">
                 {academicFileError}
+              </span>
+            )}
+          </div>
+          <div className="my-5">
+            <label className="text-sm font-semibold">
+            Academic credentials verification report.
+              <span className="text-red-500 ml-1">*</span>
+            </label>
+            <div className="flex items-end gap-1 rounded-sm border-[1.9px] border-slate-300">
+              <button
+                type="button"
+                className="bg-blue-500 px-2 py-1 text-white"
+                onClick={() => credentailRef.current?.click()}
+              >
+                Browse
+              </button>
+              <input
+                type="file"
+                className="w-full px-2 text-sm focus:outline-blue-400 hidden"
+                placeholder=""
+                ref={credentailRef}
+                onChange={handleCredentailsChange}
+                accept=".xlsx,.xls,image/*,.doc, .docx,.ppt, .pptx,.txt,.pdf"
+              />
+              <div className="w-full  flex flex-wrap gap-1">
+                {fileName.credentailsName.map((doc, i) => (
+                  <span
+                    className="text-sm  font-medium mx-2 border rounded-lg p-1 bg-blue-200 max-md:m-0  max-md:text-xs flex items-center gap-1"
+                    key={i}
+                  >
+                    {doc.substring(0, 20)}
+                    <ButtonOld
+                      variant={"secondary"}
+                      className="p-0 rounded-full w-5 h-5"
+                      onClick={() => deleteSingleFileCre(i)}
+                      type="button"
+                    >
+                      <RxCrossCircled className="w-full h-full" />
+                    </ButtonOld>
+                  </span>
+                ))}
+              </div>
+            </div>
+            {overloadmsg.credentailsMsg && (
+              <span className=" text-sm font-medium  text-red-500">
+                Maxmium File Count Exceeded
+              </span>
+            )}
+            {credentailsFileError && (
+              <span className="text-red-500 text-sm font-medium mt-2">
+                {credentailsFileError}
               </span>
             )}
           </div>
@@ -1161,6 +1286,7 @@ export default function AddApplication() {
             <label className="text-sm font-semibold">
               Copy of Recommendation or Reference Letter
             </label>
+            <span className="text-red-500 ml-1">*</span>
             <div className="flex items-center rounded-sm border-[1.9px] border-slate-300">
               <button
                 type="button"
@@ -1202,7 +1328,11 @@ export default function AddApplication() {
               </span>
             )}
           </div>
-
+          {recommendationFileError && (
+              <span className="text-red-500 text-sm font-medium mt-2">
+                {recommendationFileError}
+              </span>
+            )}
           <p className="text-md my-5">
             By clicking submit you are agreeing that you have uploaded all the
             original documents for your scholarship application.

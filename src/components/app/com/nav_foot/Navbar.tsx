@@ -99,7 +99,7 @@ export default function Navbar() {
         </li>
         {!agentId && (
           <li>
-            <a href={"/Agent-signin"}>Sign In</a>
+            <a href={"/Agent-signup"}>Sign up</a>
           </li>
         )}
         <li>
@@ -195,10 +195,10 @@ export default function Navbar() {
               </a>
               {!agentId && (
                 <a
-                  href={"/Agent-signin"}
+                  href={"/Agent-signup"}
                   className="block w-full border-b-[1px] px-5 py-4 text-base font-medium text-black hover:bg-red-500 hover:text-white"
                 >
-                  Sign In
+                  Sign Up
                 </a>
               )}
               <a

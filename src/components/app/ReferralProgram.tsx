@@ -30,16 +30,15 @@ export default function ReferralProgram() {
             abroad consultants, education consultants, university
             agents,scholarship recipients, and the individuals who has played a
             significant role in helping us recruit international students who
-            have a strong academic background to study in a masters or phd
-            program on a full scholarship at a partner university in Maryland,
-            USA.
+            have a strong academic background to pursue an eligible masters or
+            phd degree program on a full scholarship at a partner university in
+            Maryland, USA.
           </p>
           <p className="text-md my-5">
             We offer an incredible opportunity for you to earn generous
             incentives by referring international students to apply for a
-            masters or phd program to study a masters or phd program at one of
-            our esteemed partner universities through the Study-In-Maryland
-            scholarship initiative.
+            scholarship to study an eligible masters or phd degree program at a
+            partner university through the Study-In-Maryland scholarship.
           </p>
           <p className="my-10 text-3xl font-bold text-red-500 max-md:text-3xl">
             How It Works
@@ -144,39 +143,7 @@ export default function ReferralProgram() {
             How to Get Started
           </p>
           <div className="text-md my-5">
-            <ul className="ml-5 list-disc flex flex-col gap-3">
-              <li>
-                <p className="text-lg font-bold">
-                  Download and review our referral program partnership terms and
-                  conditions:
-                </p>
-                <p>
-                  Review the terms and conditions of our referral program and
-                  once they are clearly understood, sign up to join our referral
-                  program.
-                </p>
-              </li>
-              <li>
-                <p className="text-lg font-bold">
-                  Get Your Unique Referral Link:
-                </p>
-                <p>
-                  Once registered, you will receive a unique referral link to
-                  share with potential students. Your unique referral can be
-                  used to keep track of the number students you have referred
-                  and the status of their application.
-                </p>
-              </li>
-              <li>
-                <p className="text-lg font-bold">Start Referring:</p>
-                <p>
-                  Spread the word and start referring students using your
-                  referral link. Use social media, email, or any other method
-                  you prefer to share about the study in Maryland scholarship
-                  opportunity.
-                </p>
-              </li>
-            </ul>
+            <p>To join our ambassador referral program kindly email us: <span className="font-bold">ambassador@studyinmaryland.org </span></p>
             <p className="text-md my-5">
               Join the Study in Maryland Referral Program today and start
               earning while making a positive impact on students' lives!
@@ -197,13 +164,6 @@ export default function ReferralProgram() {
               </Button>
             </div>
           )}
-          <p className="my-10 text-3xl font-bold text-red-500 max-md:text-3xl">
-            Contact Us
-          </p>
-          <p className="text-md my-5">
-            If you have any questions or need more information, please don't
-            hesitate to reach our support team at
-          </p>
 
           <div className="text-white">
             <AgentSlide />

@@ -194,8 +194,8 @@ export default function PartnerUniversities() {
                     </li>
                   </ul>
                   <li>
-                    only original scanned copies of bachelor or masters degree
-                    certificates and transcripts are accepted.
+                    Only the original scanned copies of bachelors or masters
+                    degree certificates and transcripts are accepted.
                   </li>
                 </li>
                 <li className={dropdownTextClass}>
@@ -259,17 +259,17 @@ export default function PartnerUniversities() {
                     educational background on par with U.S. academic standards.
                   </span>
                   <span>
-                    We accept academic transcripts and certificates that are
-                    evaluated and verified by the Maryland academic evaluation
-                    center.
-                    <a
-                      href="https://Maec.us"
-                      target="_blank"
-                      className="underline-offset-2 underline text-blue-800"
-                    >
-                      MAEC
-                    </a>
+                    International students would have to get their academic
+                    certificates and transcripts evaluated and verified by the
+                    Maryland academic evaluation center.
                   </span>
+                  <a
+                    href="https://maec.us"
+                    target="_blank"
+                    className="underline-offset-2 underline text-blue-800"
+                  >
+                    MAEC
+                  </a>
                 </li>
 
                 <li className={dropdownTextClass}>
@@ -292,8 +292,9 @@ export default function PartnerUniversities() {
                   <p>
                     <span className="font-bold mr-2">Birth Certificate:</span>
                     <br />
-                    an original copy of your birth certificate issued by the
-                    relevant authority in your home country.
+                    International students would have to submit an original copy
+                    of your birth certificate issued by the relevant authority
+                    in your home country.
                   </p>
                 </li>
                 <li className={dropdownTextClass + " flex flex-col gap-3"}>
@@ -320,6 +321,7 @@ export default function PartnerUniversities() {
                   <p>
                     International students can get their documents translated
                     online at the Maryland academic evaluation center.
+                  </p>
                     <a
                       href="https://maec.us"
                       target="_blank"
@@ -327,7 +329,6 @@ export default function PartnerUniversities() {
                     >
                       MAEC
                     </a>
-                  </p>
                 </li>
                 <li className={dropdownTextClass}>
                   <p>
@@ -358,11 +359,11 @@ export default function PartnerUniversities() {
                 universities in Maryland before the application deadline.
               </p>
               <ul>
-                <li className={dropdownTextClass}>
-                  Spring semester: Starting in January 2025.
+                <li className={dropdownTextClass + " font-bold"} >
+                For the spring semester start(January 2025)
                 </li>
                 <li className={dropdownTextClass}>
-                  Application deadline: September 30th, 2024.
+                  Application deadline: October 18th, 2024.
                 </li>
               </ul>
             </AccordionContent>

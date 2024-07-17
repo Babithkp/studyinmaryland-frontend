@@ -1,5 +1,4 @@
-export default function ApplicationPortal() {
-  return (
+export default function ApplicationPortal() {  return (
     <main className="flex items-center justify-center">
       <section className="w-[60%] p-10 max-md:w-full max-md:p-4 font-medium">
         <article className="">
@@ -7,9 +6,9 @@ export default function ApplicationPortal() {
             How To Apply:
           </h1>
           <p className="text-md my-5">
-            The following guide are the requirements to apply for the
-            Study-In-Maryland scholarship to study a masters or phd degree
-            program at one of our partner universities.
+            These are are the guidelines to apply for the Study-In-Maryland
+            scholarship to pursue an eligible masters or phd degree program at
+            one of our partner universities.
           </p>
           <p className="text-md my-5">
             The Study-In-Maryland scholarship recipients are automatically
@@ -32,7 +31,7 @@ export default function ApplicationPortal() {
                 Upload your evaluation and verification report of degree
                 certificate and transcripts from{" "}
                 <a
-                  href="https://Maec.us"
+                  href="https://maec.us"
                   target="_blank"
                   className="underline-offset-2 underline text-blue-800"
                 >
@@ -65,7 +64,7 @@ export default function ApplicationPortal() {
                 Upload the official English translated copy of your academic
                 transcript and birth certificate from{" "}
                 <a
-                  href="https://Maec.us"
+                  href="https://maec.us"
                   target="_blank"
                   className="underline-offset-2 underline text-blue-800"
                 >
@@ -78,7 +77,7 @@ export default function ApplicationPortal() {
                 Upload the official copy of your birth certificate from the
                 relevant issuing authority in your home country.
               </li>
-              <li>A motivation letter or statement of purpose.</li>
+              <li>Upload your motivation letter or personal statement.</li>
               <li>
                 Upload identification document: (Accepted means of
                 identification can be a copy of your international passport,
@@ -92,7 +91,7 @@ export default function ApplicationPortal() {
             </ul>
           </div>
         </article>
-        <div className="mt-[2rem] ">
+        <div className="my-10 w-full justify-center flex ">
           <a
             href={"applicationPortal/addApplication/"}
             className="h-fit w-fit rounded-md bg-red-500 hover:bg-red-600 px-3 py-2 text-lg uppercase text-white "

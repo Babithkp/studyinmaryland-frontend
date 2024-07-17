@@ -55,6 +55,7 @@ interface Students {
   identityDocName: string;
   degreeDocName: string[];
   academicDocName: string[];
+  credentailsDocName: string[];
   birthDocName: string;
   motivationDocName: string;
   ieltsDocName: string;
@@ -305,8 +306,21 @@ export default function AgentDashboard() {
                   </a>
                 </Typography>
               ))}
-              <p className="font-medium">Academic Documents:</p>
+              <p className="font-medium">Academic Transcript Evaluation report.:</p>
               {stud.academicDocName.map((doc, i) => (
+                <Typography className="md:w-[70rem] pl-4 pt-4" key={i}>
+                  {doc.substring(36)}{" "}
+                  <a
+                    target="_blank"
+                    href={`https://studyinmaryland-stroage-bucket.s3.ap-southeast-2.amazonaws.com/${doc}`}
+                    className=" border p-2 bg-slate-50 hover:bg-slate-100"
+                  >
+                    Download
+                  </a>
+                </Typography>
+              ))}
+              <p className="font-medium">Academic credentials verification report.:</p>
+              {stud.credentailsDocName.map((doc, i) => (
                 <Typography className="md:w-[70rem] pl-4 pt-4" key={i}>
                   {doc.substring(36)}{" "}
                   <a
