@@ -25,11 +25,16 @@ import {
 } from "../../http/fetch";
 import { RiArrowUpSLine } from "react-icons/ri";
 import { v4 } from "uuid";
+import { ToastContainer, toast } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
 
 interface AgentType {
   id: string;
   name: string;
   email: string;
+  address: string;
+  phone: number;
   referralCode: string;
   referredStudent: string;
   profileImageUrl: string;
@@ -63,6 +68,7 @@ interface Students {
 }
 
 export default function AgentDashboard() {
+  const notify = () => toast("copied to clipboard !");
   const [agentDetails, setAgentDeatils] = useState<AgentType>();
   const [studentDetails, setStudentDeatils] = useState<Students[]>();
   const [isUploading, setIsUploading] = useState(false);
@@ -126,6 +132,7 @@ export default function AgentDashboard() {
     const text = `https://studyinmaryland.vercel.app/Scholarships?referral=${agentDetails?.referralCode}`;
     setIsCopying(true);
     navigator.clipboard.writeText(text);
+    notify()
     setTimeout(() => {
       setIsCopying(false);
     }, 2000);
@@ -201,8 +208,14 @@ export default function AgentDashboard() {
             <p className="font-semibold">
               Email: <span className="font-medium">{agentDetails?.email}</span>
             </p>
+            <p className="font-semibold">
+              Addess: <span className="font-medium">{agentDetails?.address}</span>
+            </p>
+            <p className="font-semibold">
+              Phone No. : <span className="font-medium">{agentDetails?.phone}</span>
+            </p>
             <h3 className="text-lg font-semibold uppercase text-slate-400">
-              Referral url
+            Referral Link
             </h3>
             <div className="flex w-full  h-full border-[2px] rounded-md gap-3  items-start  bg-slate-50">
               <p className="ml-1  overflow-x-auto">
@@ -424,6 +437,7 @@ export default function AgentDashboard() {
       >
         <CircularProgress color="inherit" />
       </Backdrop>
+        <ToastContainer theme="light"/>
     </main>
   );
 }

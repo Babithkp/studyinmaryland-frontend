@@ -1,4 +1,5 @@
-import {  Backdrop,
+import {
+  Backdrop,
   Button,
   Checkbox,
   CircularProgress,
@@ -22,6 +23,8 @@ interface FormValues {
   name: string;
   email: string;
   password: string;
+  address: string;
+  phone: number;
   confirmPassword: string;
   agentIpAddress: string;
   agentCountry: string;
@@ -102,7 +105,7 @@ export default function AgentSigning() {
           <h1 className="text-3xl font-medium text-red-500">Sign Up</h1>
         </div>
         <form
-          className="w-3/4 max-md:w-[90%] flex flex-col gap-5"
+          className="w-3/4 max-md:w-[70%] flex flex-col gap-5"
           onSubmit={handleSubmit(onSubmit)}
         >
           <TextField
@@ -112,6 +115,22 @@ export default function AgentSigning() {
             type="text"
             required
             {...register("name")}
+          />
+          <TextField
+            id="outlined-basic 1"
+            label="Your Address"
+            variant="outlined"
+            type="text"
+            required
+            {...register("address")}
+          />
+          <TextField
+            id="outlined-basic 1"
+            label="Phone Number"
+            variant="outlined"
+            type="text"
+            required
+            {...register("phone")}
           />
 
           <TextField
@@ -161,7 +180,12 @@ export default function AgentSigning() {
               }))
             }
             required
-            control={<Checkbox checked={checkboxStatus.firstCheckbox} className="absolute max-md:-top-3"/>}
+            control={
+              <Checkbox
+                checked={checkboxStatus.firstCheckbox}
+                className="absolute max-md:-top-3"
+              />
+            }
             label="I agree to the Privacy Policy, Terms of Service and IP Policy."
           />
           <FormControlLabel
@@ -172,8 +196,13 @@ export default function AgentSigning() {
               }))
             }
             required
-            control={<Checkbox checked={checkboxStatus.secCheckbox} className="absolute -top-3"/>}
-            label="Send me useful emails to help me get the most out of studyinmarylang.edu"
+            control={
+              <Checkbox
+                checked={checkboxStatus.secCheckbox}
+                className="absolute -top-3"
+              />
+            }
+            label="Send me useful emails to help me get the most out of studyinmaryland.org"
           />
           <div className="w-full flex justify-end">
             <Button variant="contained" type="submit">
