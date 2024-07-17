@@ -1,5 +1,4 @@
-import {
-  Accordion,
+import {  Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
@@ -23,7 +22,7 @@ export default function PartnerUniversities() {
         <p className="text-md my-5 font-medium">
           We have collaborated with some of the prestigious public universities
           in Maryland to help international students globally to achieve their
-          dreams of study in United States on a full scholarship.
+          dreams of studying in United States
         </p>
         <div className="my-10 flex w-full gap-5 text-center max-lg:flex-wrap max-sm:grid max-sm:grid-cols-2 ">
           <figure className="flex flex-col items-center justify-center max-sm:w-full">

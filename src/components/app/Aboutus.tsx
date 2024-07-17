@@ -1,4 +1,5 @@
-export default function Aboutus() {  return (
+export default function Aboutus() {
+  return (
     <main className="flex items-center justify-center">
       <section className="w-[60%] p-10 max-md:w-full max-md:p-4 font-medium max-md:text-center">
         <article>
@@ -12,10 +13,10 @@ export default function Aboutus() {  return (
           <p className="text-md my-5">
             Our program is commissioned by the state of Maryland to promote
             higher education in one of America's most vibrant and historic
-            regions.The Study-In-Maryland scholarship initiative awards full
-            scholarships to international students with strong academic
-            backgrounds to study at one of our prestigious partner universities
-            in Maryland, USA.
+            regions. The Study-In-Maryland scholarship initiative awards full
+            scholarships to international students with a strong academic
+            background to study an eligible degree program at a partner
+            university in Maryland, USA.
           </p>
           <p className="text-md my-5">
             Our in-depth understanding of the importance of a multicultural
@@ -26,17 +27,16 @@ export default function Aboutus() {  return (
           </p>
           <p className="text-md my-5">
             Since our inception in 2020, we have supported over 8,000
-            international students from around the world to study at prestigious
-            universities in Maryland through the Study-In-Maryland full
-            scholarship funded by the state of Maryland and the Maryland state
-            department of education.
+            international students to study at prestigious universities in
+            Maryland through the Study-In-Maryland scholarship funded by state
+            of Maryland and the Maryland state department of education.
           </p>
           <p className="text-md my-5 ">
             The privilege of studying in the United States is a golden
             opportunity that we believe all international students should have
             access to, and we are committed to making this continuously possible
-            for graduate international students through the fully funded Study
-            in Maryland scholarship.
+            for graduate international students through the Study-In-Maryland
+            scholarship.
           </p>
         </article>
       </section>

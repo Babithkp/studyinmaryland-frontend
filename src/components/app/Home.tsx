@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center bg-white">
       <img
-      loading="lazy"
+        loading="lazy"
         src={image}
         alt="hero image"
         className="relative h-[130vh] w-full object-cover max-sm:h-[100vh]"
@@ -29,13 +29,13 @@ export default function Home() {
       <section className="absolute top-[25%] flex w-[50%] flex-col items-center justify-center max-md:w-[80%]">
         <article className="my-10 text-white">
           <h1 className="bg-red-500 px-14 py-10 text-5xl font-semibold max-md:p-4 max-md:text-2xl">
-            Study in Maryland - home to diverse and a vibrant student community
+            Study in Maryland: home to diverse and a vibrant student community
             in United States.
           </h1>
           <p className="bg-[#004890] p-8 text-lg font-medium max-md:p-4 max-sm:text-base text-center">
-            We make it possible for international students to study in Maryland
-            through scholarships which provides them with free access to a
-            world-class education and career opportunities in Maryland, USA.
+            We make it possible for international students to access free
+            word-class education and the career opportunities in Maryland, USA
+            through the Study-In-Maryland scholarship.
           </p>
         </article>
         <div className="flex max-sm:flex-col">
@@ -54,13 +54,13 @@ export default function Home() {
           </h2>
           <p className="px-5 text-center text-lg font-extralight">
             Each year we provide scholarship opportunities for more than 1,500
-            international students from worldwide to study an eligible masters
-            or phd program at a partner university.
+            international students to study an eligible masters or phd program
+            at a partner university.
           </p>
           <div className="my-10 flex w-full gap-5 text-center max-lg:flex-wrap max-sm:grid max-sm:grid-cols-2">
             <figure className="flex flex-col items-center justify-center max-sm:w-full">
               <img
-              loading="lazy"
+                loading="lazy"
                 src={img3}
                 alt="college"
                 className="max-md:w-26 max-md:h-26 h-40 w-40 object-contain"
@@ -69,25 +69,25 @@ export default function Home() {
             </figure>
             <figure className="flex flex-col items-center justify-center max-sm:w-full">
               <img
-              loading="lazy"
+                loading="lazy"
                 src={img1}
                 alt="college"
                 className="max-md:w-26 max-md:h-26 h-40 w-80 object-contain"
               />
-              <p>Maryland City Community College</p>
+              <p>Baltimore city community college</p>
             </figure>
             <figure className="flex flex-col items-center justify-center max-sm:w-full">
               <img
-              loading="lazy"
+                loading="lazy"
                 src={img2}
                 alt="college"
                 className="max-md:w-26 max-md:h-26 h-40 w-40 object-contain"
               />
-              <p>University of Maryland, School Of Dentistry</p>
+              <p>University of Maryland</p>
             </figure>
             <figure className="flex flex-col items-center justify-center max-sm:w-full">
               <img
-              loading="lazy"
+                loading="lazy"
                 src={img4}
                 alt="college"
                 className="max-md:w-26 max-md:h-26 h-40 w-40 object-contain"
@@ -96,7 +96,7 @@ export default function Home() {
             </figure>
             <figure className="flex flex-col items-center justify-center max-sm:w-full">
               <img
-              loading="lazy"
+                loading="lazy"
                 src={img5}
                 alt="college"
                 className="max-md:w-26 max-md:h-26 h-40 w-40 object-contain"
@@ -105,7 +105,7 @@ export default function Home() {
             </figure>
             <figure className="flex flex-col items-center justify-center max-sm:w-full">
               <img
-              loading="lazy"
+                loading="lazy"
                 src={img6}
                 alt="college"
                 className="max-md:w-26 max-md:h-26 h-40 w-40 object-cover"
@@ -137,7 +137,7 @@ export default function Home() {
             <CardApply
               image={counsellingIcon}
               title="University Placement"
-              content="All scholarship recipients are directly admitted to study at one of our partner universities."
+              content="All scholarship recipients are automatically admitted to study an eligible degree program at one of our partner universities."
               url="partner-universities"
             />
             <CardApply
@@ -170,7 +170,7 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-[2rem,1fr] items-center gap-3">
             <img
-            loading="lazy"
+              loading="lazy"
               src={icon1}
               alt="city"
               className="col-span-1 justify-self-center"
@@ -179,11 +179,11 @@ export default function Home() {
               Free World-Class Education!
             </h3>
             <p className="col-start-2">
-              Through our organization&apos;s partnership with leading public
+              Through our partnership with leading public
               universities in Maryland, we offer international students the
-              opportunity to pursue an eligible masters or phd degree program through the
-              Study-In-Maryland scholarship provided by the Maryland state
-              department of education.
+              opportunity to pursue an eligible masters or phd degree program
+              through the Study-In-Maryland scholarship provided by the Maryland
+              state department of education.
             </p>
             <a
               href={"/Scholarships"}
@@ -194,7 +194,7 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-[2rem,1fr] items-center gap-3">
             <img
-            loading="lazy"
+              loading="lazy"
               src={icon2}
               alt="city"
               className="col-span-1 justify-self-center"
@@ -204,8 +204,8 @@ export default function Home() {
             </h3>
             <p className="col-start-2">
               International students can use our seamless application portal to
-              apply directly for a scholarship to study a graduate program at a
-              partner university at no cost!
+              apply directly for a scholarship to study an eligible degree
+              program at a partner university for free!
             </p>
             <a
               href={"/applicationPortal"}
@@ -217,7 +217,7 @@ export default function Home() {
 
           <div className="grid grid-cols-[2rem,1fr] items-center gap-3">
             <img
-            loading="lazy"
+              loading="lazy"
               src={icon4}
               alt="city"
               className="col-span-1 justify-self-center"
@@ -242,10 +242,10 @@ export default function Home() {
       </section>
       <section className="flex w-full flex-col items-center justify-center gap-10">
         <a
-          href="/partner-universities"
+          href="/aboutus"
           className="my-8 px-5 text-5xl font-bold text-red-500 max-md:text-3xl hover:underline"
         >
-          Find out more about the universities
+          Find out more about us.
         </a>
         <div className="my-10 flex w-[80%] flex-wrap justify-between gap-10 max-md:justify-center">
           <div className="relative flex flex-col items-center text-center">
@@ -278,7 +278,7 @@ export default function Home() {
         <div className="flex flex-wrap gap-5 max-md:w-[95%]">
           <div className="relative flex h-[28rem] w-[19rem] items-center justify-center max-md:h-[20rem] max-md:w-[100%]">
             <img
-            loading="lazy"
+              loading="lazy"
               src={cardBg}
               alt="college background"
               className="absolute h-full w-full object-cover"
@@ -295,7 +295,7 @@ export default function Home() {
           </a>
           <div className="relative flex h-[28rem] w-[19rem] items-center justify-center max-md:h-[20rem] max-md:w-[100%]">
             <img
-            loading="lazy"
+              loading="lazy"
               src={MarylandMap}
               alt="college background"
               className="absolute h-full w-full object-cover"

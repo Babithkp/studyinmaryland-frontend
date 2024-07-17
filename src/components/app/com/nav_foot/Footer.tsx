@@ -36,13 +36,11 @@ export default function Footer() {
             General inquiries:
           </span>
           <div className="flex flex-col gap-5">
-            <a
-              href={"Info@studyinmaryland.org"}
-              target="_blank"
+            <p
               className="text-base underline"
             >
               Info@studyinmaryland.org
-            </a>
+            </p>
           </div>
         </div>
         <div>
