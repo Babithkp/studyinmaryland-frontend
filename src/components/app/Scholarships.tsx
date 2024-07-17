@@ -127,15 +127,15 @@ export default function Scholarships() {
           <div className="text-md my-5">
             <ul className="ml-5 list-disc flex flex-col gap-3">
               <li>
-                <span className="font-bold">
+                <span className="">
                   Academic credentials evaluation report from the Maryland
-                  academic evaluation center{" "}
+                  academic evaluation center MAEC
                   <a
                     href="https://maec.us"
                     target="_blank"
                     className="underline-offset-2 underline text-blue-600"
                   >
-                    MAEC
+                    {" "}https://maec.us
                   </a>
                   :{" "}
                 </span>
@@ -143,7 +143,7 @@ export default function Scholarships() {
                 equivalency of your courses and gpa has been evaluated, and that
                 the authenticity of your degree certificate and transcripts has
                 been verified by an official academic credential evaluation
-                service in Maryland, United States.).
+                service in Maryland, United States).
               </li>
               <li>
                 Official English translated copy of acdemic transcripts from the
@@ -172,7 +172,7 @@ export default function Scholarships() {
                   MAEC
                 </a>
                 . (Only required for birth certificates that are not in
-                English.).
+                English).
               </li>
 
               <li>
@@ -210,7 +210,7 @@ export default function Scholarships() {
                   TOEFL{" "}
                 </a>
                 is not a mandatory requirement for international students whose
-                degree certificate and transcripts are in English.).
+                degree certificate and transcripts are in English).
               </li>
               <li>
                 Birth certificate issued by relevant government authorities in
@@ -220,7 +220,7 @@ export default function Scholarships() {
               <li>
                 Identification document: (Accepted means of identification can
                 be a copy of your international passport, national identity
-                card, or a driver’s license.).
+                card, or a driver’s license).
               </li>
               <li>
                 Recommendations or Reference letter from your previous or

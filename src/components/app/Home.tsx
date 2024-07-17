@@ -1,5 +1,4 @@
-import image from "/backgroundHeroPage.jpg";
-import icon1 from "/city.svg";
+import image from "/backgroundHeroPage.jpg";import icon1 from "/city.svg";
 import icon2 from "/rocket-graph.svg";
 import icon4 from "/flag-point.svg";
 import cardBg from "/homePageStudent.jpg";
@@ -33,9 +32,9 @@ export default function Home() {
             in United States.
           </h1>
           <p className="bg-[#004890] p-8 text-lg font-medium max-md:p-4 max-sm:text-base text-center">
-            We make it possible for international students to access free
-            word-class education and the career opportunities in Maryland, USA
-            through the Study-In-Maryland scholarship.
+            We enable international students to access world-class education and
+            career opportunities in Maryland, USA, through the Study-In-Maryland
+            scholarship program.
           </p>
         </article>
         <div className="flex max-sm:flex-col">
@@ -179,11 +178,11 @@ export default function Home() {
               Free World-Class Education!
             </h3>
             <p className="col-start-2">
-              Through our partnership with leading public
-              universities in Maryland, we offer international students the
-              opportunity to pursue an eligible masters or phd degree program
-              through the Study-In-Maryland scholarship provided by the Maryland
-              state department of education.
+              Through our partnership with leading public universities in
+              Maryland, we offer international students the opportunity to
+              pursue an eligible masters or phd degree program through the
+              Study-In-Maryland scholarship provided by the Maryland state
+              department of education.
             </p>
             <a
               href={"/Scholarships"}
@@ -204,7 +203,7 @@ export default function Home() {
             </h3>
             <p className="col-start-2">
               International students can use our seamless application portal to
-              apply directly for a scholarship to study an eligible degree
+              apply for a scholarship to study an eligible degree
               program at a partner university for free!
             </p>
             <a

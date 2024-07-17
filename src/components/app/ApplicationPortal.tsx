@@ -81,7 +81,7 @@ export default function ApplicationPortal() {  return (
               <li>
                 Upload identification document: (Accepted means of
                 identification can be a copy of your international passport,
-                national identity card, or a driver’s license.)
+                national identity card, or a driver’s license).
               </li>
               <li>
                 Upload a recommendation or reference letter from your previous

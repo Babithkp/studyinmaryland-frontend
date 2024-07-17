@@ -1,4 +1,5 @@
-import {  Accordion,
+import {
+  Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
@@ -22,7 +23,7 @@ export default function PartnerUniversities() {
         <p className="text-md my-5 font-medium">
           We have collaborated with some of the prestigious public universities
           in Maryland to help international students globally to achieve their
-          dreams of studying in United States
+          dreams of studying in United States.
         </p>
         <div className="my-10 flex w-full gap-5 text-center max-lg:flex-wrap max-sm:grid max-sm:grid-cols-2 ">
           <figure className="flex flex-col items-center justify-center max-sm:w-full">
@@ -155,7 +156,7 @@ export default function PartnerUniversities() {
                   <span className="font-bold mr-2">PhD programs duration:</span>
                   <br />5 Years full-time. (Includes preparation and
                   presentation of a dissertation proposal, dissertation
-                  research, and defense of final dissertation.)
+                  research, and defense of final dissertation).
                 </li>
                 <li className={dropdownTextClass}>
                   <span className="font-bold mr-2">
@@ -261,15 +262,16 @@ export default function PartnerUniversities() {
                   <span>
                     International students would have to get their academic
                     certificates and transcripts evaluated and verified by the
-                    Maryland academic evaluation center.
+                    Maryland academic evaluation center. MAEC:
+                    <a
+                      href="https://maec.us"
+                      target="_blank"
+                      className="underline-offset-2 underline text-blue-800"
+                    >
+                      {" "}
+                      https://maec.us
+                    </a>
                   </span>
-                  <a
-                    href="https://maec.us"
-                    target="_blank"
-                    className="underline-offset-2 underline text-blue-800"
-                  >
-                    MAEC
-                  </a>
                 </li>
 
                 <li className={dropdownTextClass}>
@@ -287,13 +289,13 @@ export default function PartnerUniversities() {
                     </span>
                     <br />A copy of your ID document is required <br />(
                     International passport, Driver’s license, or National
-                    identity card are accepted.)
+                    identity card are accepted).
                   </p>
                   <p>
                     <span className="font-bold mr-2">Birth Certificate:</span>
                     <br />
                     International students would have to submit an original copy
-                    of your birth certificate issued by the relevant authority
+                    of their birth certificate issued by the relevant authority
                     in your home country.
                   </p>
                 </li>
@@ -320,15 +322,16 @@ export default function PartnerUniversities() {
                   </p>
                   <p>
                     International students can get their documents translated
-                    online at the Maryland academic evaluation center.
-                  </p>
+                    online at the Maryland academic evaluation center. MAEC:
                     <a
                       href="https://maec.us"
                       target="_blank"
-                      className="underline text-blue-600 underline-offset-2"
+                      className="underline-offset-2 underline text-blue-800"
                     >
-                      MAEC
+                      {" "}
+                      https://maec.us
                     </a>
+                  </p>
                 </li>
                 <li className={dropdownTextClass}>
                   <p>
@@ -359,7 +362,7 @@ export default function PartnerUniversities() {
                 universities in Maryland before the application deadline.
               </p>
               <ul>
-                <li className={dropdownTextClass + " font-bold"} >
+                <li className={dropdownTextClass + " font-bold"}>
                 For the spring semester start(January 2025)
                 </li>
                 <li className={dropdownTextClass}>

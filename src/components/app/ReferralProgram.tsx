@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "../ui/button";
 import AgentSlide from "./com/objects/AgentSlide";
+import referralProImg from "/conference.jpg"
 export default function ReferralProgram() {
   const [isLoggined, setIsLoggined] = useState(false);
 
@@ -14,6 +15,9 @@ export default function ReferralProgram() {
   return (
     <main className="flex items-center justify-center">
       <section className="w-[60%] p-10 max-md:w-full max-md:p-4 font-medium">
+      <figure>
+          <img src={referralProImg} alt="Students" loading="lazy"/>
+        </figure>
         <article>
           <p className="my-10 text-3xl font-bold text-red-500 max-md:text-2xl">
             Referral Program
@@ -139,6 +143,11 @@ export default function ReferralProgram() {
               </li>
             </ul>
           </div>
+          <p className="text-md my-10">
+              By referring international students to study in Maryland, you’re
+              not just earning rewards; you’re opening doors to their future.
+              Let’s make a difference together!
+            </p>
           <p className="my-10 text-3xl font-bold text-red-500 max-md:text-3xl">
             How to Get Started
           </p>
@@ -148,11 +157,7 @@ export default function ReferralProgram() {
               Join the Study in Maryland Referral Program today and start
               earning while making a positive impact on students' lives!
             </p>
-            <p className="text-md my-5">
-              By referring international students to study in Maryland, you’re
-              not just earning rewards; you’re opening doors to their future.
-              Let’s make a difference together!
-            </p>
+            
           </div>
           {!isLoggined && (
             <div className="flex w-full justify-center">

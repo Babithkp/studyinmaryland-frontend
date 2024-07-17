@@ -1050,7 +1050,7 @@ export default function AddApplication() {
           </div>
           <div className="my-5">
             <label className="text-sm font-semibold">
-            Academic credentials verification report.
+            Academic Credentials Verification Report.
               <span className="text-red-500 ml-1">*</span>
             </label>
             <div className="flex items-end gap-1 rounded-sm border-[1.9px] border-slate-300">
