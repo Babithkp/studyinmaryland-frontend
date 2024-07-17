@@ -1,36 +1,36 @@
 import axios from "axios";
-// const vercelUrl = import.meta.env.VITE_BACKEND_URL;
-const localUrl = "http://localhost:3000/"
+const vercelUrl = import.meta.env.VITE_BACKEND_URL;
+// const localUrl = "http://localhost:3000/"
 
 export const uploadsingleFile = async (file: unknown) => {
-  await axios.post(`${localUrl}api/fileupload`, file, {
+  await axios.post(`${vercelUrl}api/fileupload`, file, {
     headers: {
       "Content-Type": "multipart/form-data",
     },
   });
 };
 export const newUserregistration = async (file: unknown) => {
-  return await axios.post(`${localUrl}api/newRegistration`, file);
+  return await axios.post(`${vercelUrl}api/newRegistration`, file);
 };
 export const newAgentCreation = async (file: unknown) => {
-  return await axios.post(`${localUrl}api/createAgent`, file);
+  return await axios.post(`${vercelUrl}api/createAgent`, file);
 };
 export const agentLogin = async (file: unknown) => {
-  return await axios.post(`${localUrl}api/loginAgent`, file);
+  return await axios.post(`${vercelUrl}api/loginAgent`, file);
 };
 
 export const getAllStudents = async () => {
-  return await axios.get(`${localUrl}api/getStudentData`);
+  return await axios.get(`${vercelUrl}api/getStudentData`);
 };
 export const getAllAgents = async () => {
-  return await axios.get(`${localUrl}api/getAgentData`);
+  return await axios.get(`${vercelUrl}api/getAgentData`);
 };
 export const getAgentsById = async (id: unknown) => {
-  return await axios.post(`${localUrl}api/getSingleAgentById`, id);
+  return await axios.post(`${vercelUrl}api/getSingleAgentById`, id);
 };
 export const getUserDetailsByAgentId = async (id: unknown) => {
-  return await axios.post(`${localUrl}api/getUserDetailsByAgentId`, id);
+  return await axios.post(`${vercelUrl}api/getUserDetailsByAgentId`, id);
 };
 export const updateAgentProfileImg = async (data: unknown) => {
-  return await axios.post(`${localUrl}api/updateAgentProfileImg`, data);
+  return await axios.post(`${vercelUrl}api/updateAgentProfileImg`, data);
 };
