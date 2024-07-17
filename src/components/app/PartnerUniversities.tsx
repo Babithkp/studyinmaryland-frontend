@@ -217,7 +217,7 @@ export default function PartnerUniversities() {
                       <a
                         href={"https://ielts.org"}
                         target="_blank"
-                        className="ml-2 text-blue-800"
+                        className="ml-2 text-blue-600"
                       >
                         https://ielts.org
                       </a>
@@ -227,7 +227,7 @@ export default function PartnerUniversities() {
                       <a
                         href={"https://www.ets.org/toefl.html"}
                         target="_blank"
-                        className="ml-2 text-blue-800"
+                        className="ml-2 text-blue-600"
                       >
                         https://www.ets.org/toefl.html
                       </a>
@@ -261,12 +261,15 @@ export default function PartnerUniversities() {
                   </span>
                   <span>
                     International students would have to get their academic
-                    certificates and transcripts evaluated and verified by the
-                    Maryland academic evaluation center. MAEC:
+                    certificates and transcripts evaluated and verified online by the
+                    Maryland academic evaluation center.
+                  </span>
+                  <span className="mb-2">
+                    - MAEC:
                     <a
                       href="https://maec.us"
                       target="_blank"
-                      className="underline-offset-2 underline text-blue-800"
+                      className="underline-offset-2 underline text-blue-600"
                     >
                       {" "}
                       https://maec.us
@@ -322,11 +325,14 @@ export default function PartnerUniversities() {
                   </p>
                   <p>
                     International students can get their documents translated
-                    online at the Maryland academic evaluation center. MAEC:
+                    online at the Maryland academic evaluation center.
+                  </p>
+                  <p>
+                    - MAEC:
                     <a
                       href="https://maec.us"
                       target="_blank"
-                      className="underline-offset-2 underline text-blue-800"
+                      className="underline-offset-2 underline text-blue-600"
                     >
                       {" "}
                       https://maec.us
@@ -363,7 +369,7 @@ export default function PartnerUniversities() {
               </p>
               <ul>
                 <li className={dropdownTextClass + " font-bold"}>
-                For the spring semester start(January 2025)
+                  For the spring semester start(January 2025)
                 </li>
                 <li className={dropdownTextClass}>
                   Application deadline: October 18th, 2024.

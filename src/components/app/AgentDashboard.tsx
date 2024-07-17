@@ -1,5 +1,4 @@
-import { useParams } from "react-router-dom";
-import defaultImage from "/deafultProfile.jpg";
+import { useParams } from "react-router-dom";import defaultImage from "/deafultProfile.jpg";
 import {
   ChangeEvent,
   SyntheticEvent,
@@ -140,8 +139,6 @@ export default function AgentDashboard() {
           id: params.id,
         });
         if (agentResponse) {
-          console.log(agentResponse);
-
           if (agentResponse.data.error) {
             window.location.href = "/";
           } else {
@@ -225,202 +222,202 @@ export default function AgentDashboard() {
           </div>
         </div>
       </section>
-      <section className="my-5 w-[90%]">
-        <h2 className="text-lg font-semibold mb-3">Student List</h2>
+      <section className="my-10 w-[90%]">
         {studentDetails?.map((stud, i) => (
-          <Accordion
-            key={i}
-            expanded={expanded === `student${i}`}
-            onChange={handleChange(`student${i}`)}
-          >
-            <AccordionSummary
-              expandIcon={<RiArrowUpSLine />}
-              aria-controls="panel4bh-content"
-              id="panel4bh-header"
-              className=""
+          <>
+            <h2 className="text-lg font-semibold mb-3">Student List</h2>
+            <Accordion
+              key={i}
+              expanded={expanded === `student${i}`}
+              onChange={handleChange(`student${i}`)}
             >
-              <Typography sx={{ width: "33%", flexShrink: 0 }}>
-                {stud.firstName}
-              </Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography className="md:w-[70rem]">
-                Name: {stud.firstName} {stud.lastName}
-              </Typography>
-              <Typography className="md:w-[70rem]">
-                Email: {stud.email}
-              </Typography>
-              <Typography className="md:w-[70rem]">
-                Gender: {stud.gender}
-              </Typography>
-              <Typography className="md:w-[70rem]">
-                Birth date: {stud.dob}
-              </Typography>
-              <Typography className="md:w-[70rem]">
-                Phone: {stud.phone}
-              </Typography>
-              <Typography className="md:w-[70rem]">
-                Town: {stud.town}
-              </Typography>
-              <Typography className="md:w-[70rem]">
-                State: {stud.state}
-              </Typography>
-              <Typography className="md:w-[70rem]">
-                Address: {stud.address}
-              </Typography>
-              <Typography className="md:w-[70rem]">
-                Country: {stud.country}
-              </Typography>
-              <Typography className="md:w-[70rem]">
-                Course Start Month: {stud.courseStartMonth}
-              </Typography>
+              <AccordionSummary
+                expandIcon={<RiArrowUpSLine />}
+                aria-controls="panel4bh-content"
+                id="panel4bh-header"
+                className=""
+              >
+                <Typography sx={{ width: "33%", flexShrink: 0 }}>
+                  {stud.firstName}
+                </Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography className="md:w-[70rem]">
+                  Name: {stud.firstName} {stud.lastName}
+                </Typography>
+                <Typography className="md:w-[70rem]">
+                  Email: {stud.email}
+                </Typography>
+                <Typography className="md:w-[70rem]">
+                  Gender: {stud.gender}
+                </Typography>
+                <Typography className="md:w-[70rem]">
+                  Birth date: {stud.dob}
+                </Typography>
+                <Typography className="md:w-[70rem]">
+                  Phone: {stud.phone}
+                </Typography>
+                <Typography className="md:w-[70rem]">
+                  Town: {stud.town}
+                </Typography>
+                <Typography className="md:w-[70rem]">
+                  State: {stud.state}
+                </Typography>
+                <Typography className="md:w-[70rem]">
+                  Address: {stud.address}
+                </Typography>
+                <Typography className="md:w-[70rem]">
+                  Country: {stud.country}
+                </Typography>
+                <Typography className="md:w-[70rem]">
+                  Course Start Month: {stud.courseStartMonth}
+                </Typography>
 
-              <Typography className="md:w-[70rem]">
-                Course Start Year: {stud.courseStartYear}
-              </Typography>
-              <p className="font-medium">
-                {stud.identityDocName && "Identity Document."}
-              </p>
-              {stud.identityDocName && (
-                <Typography className="md:w-[70rem] pl-4" key={i}>
-                  {stud.identityDocName.substring(36)}{" "}
-                  <a
-                    target="_blank"
-                    href={`https://studyinmaryland-stroage-bucket.s3.ap-southeast-2.amazonaws.com/${stud.identityDocName}`}
-                    className=" border p-2 bg-slate-50 hover:bg-slate-100"
-                  >
-                    Download
-                  </a>
+                <Typography className="md:w-[70rem]">
+                  Course Start Year: {stud.courseStartYear}
                 </Typography>
-              )}
-              <p className="font-medium">Degree Documents:</p>
-              {stud.degreeDocName.map((doc, i) => (
-                <Typography className="md:w-[70rem] pl-4 pt-4" key={i}>
-                  {doc.substring(36)}{" "}
-                  <a
-                    target="_blank"
-                    href={`https://studyinmaryland-stroage-bucket.s3.ap-southeast-2.amazonaws.com/${doc}`}
-                    className=" border p-2 bg-slate-50 hover:bg-slate-100"
-                  >
-                    Download
-                  </a>
-                </Typography>
-              ))}
-              <p className="font-medium">Academic Transcript Evaluation report.:</p>
-              {stud.academicDocName.map((doc, i) => (
-                <Typography className="md:w-[70rem] pl-4 pt-4" key={i}>
-                  {doc.substring(36)}{" "}
-                  <a
-                    target="_blank"
-                    href={`https://studyinmaryland-stroage-bucket.s3.ap-southeast-2.amazonaws.com/${doc}`}
-                    className=" border p-2 bg-slate-50 hover:bg-slate-100"
-                  >
-                    Download
-                  </a>
-                </Typography>
-              ))}
-              <p className="font-medium">Academic credentials verification report.:</p>
-              {stud.credentailsDocName.map((doc, i) => (
-                <Typography className="md:w-[70rem] pl-4 pt-4" key={i}>
-                  {doc.substring(36)}{" "}
-                  <a
-                    target="_blank"
-                    href={`https://studyinmaryland-stroage-bucket.s3.ap-southeast-2.amazonaws.com/${doc}`}
-                    className=" border p-2 bg-slate-50 hover:bg-slate-100"
-                  >
-                    Download
-                  </a>
-                </Typography>
-              ))}
-              <p className="font-medium">
-                {stud.birthDocName && "Birth Certificate"}
-              </p>
-              {stud.birthDocName && (
-                <Typography className="md:w-[70rem] pl-4" key={i}>
-                  {stud.birthDocName.substring(36)}{" "}
-                  <a
-                    target="_blank"
-                    href={`https://studyinmaryland-stroage-bucket.s3.ap-southeast-2.amazonaws.com/${stud.birthDocName}`}
-                    className=" border p-2 bg-slate-50 hover:bg-slate-100"
-                  >
-                    Download
-                  </a>
-                </Typography>
-              )}
-              <p className="font-medium">
-                {stud.motivationDocName && "Motivational Letter"}
-              </p>
-              {stud.motivationDocName && (
-                <Typography className="md:w-[70rem] pl-4" key={i}>
-                  {stud.motivationDocName.substring(36)}{" "}
-                  <a
-                    target="_blank"
-                    href={`https://studyinmaryland-stroage-bucket.s3.ap-southeast-2.amazonaws.com/${stud.motivationDocName}`}
-                    className=" border p-2 bg-slate-50 hover:bg-slate-100"
-                  >
-                    Download
-                  </a>
-                </Typography>
-              )}
-              <p className="font-medium">
-                {stud.ieltsDocName && "IELTS or TOEFL"}
-              </p>
-              {stud.ieltsDocName && (
-                <Typography className="md:w-[70rem] pl-4" key={i}>
-                  {stud.ieltsDocName.substring(36)}{" "}
-                  <a
-                    target="_blank"
-                    href={`https://studyinmaryland-stroage-bucket.s3.ap-southeast-2.amazonaws.com/${stud.ieltsDocName}`}
-                    className=" border p-2 bg-slate-50 hover:bg-slate-100"
-                  >
-                    Download
-                  </a>
-                </Typography>
-              )}
-              {stud.englishDocName.length > 0 && (
                 <p className="font-medium">
-                  Official Translated Copy of Your Degree Certificates:
+                  {stud.identityDocName && "Identity Document."}
                 </p>
-              )}
-              {stud.englishDocName.map((doc, i) => (
-                <Typography className="md:w-[70rem] pl-4 pt-4" key={i}>
-                  {doc.substring(36)}{" "}
-                  <a
-                    target="_blank"
-                    href={`https://studyinmaryland-stroage-bucket.s3.ap-southeast-2.amazonaws.com/${doc}`}
-                    className=" border p-2 bg-slate-50 hover:bg-slate-100"
-                  >
-                    Download
-                  </a>
-                </Typography>
-              ))}
-              {stud.recommendationDocName && (
+                {stud.identityDocName && (
+                  <Typography className="md:w-[70rem] pl-4" key={i}>
+                    {stud.identityDocName.substring(36)}{" "}
+                    <a
+                      target="_blank"
+                      href={`https://studyinmaryland-stroage-bucket.s3.ap-southeast-2.amazonaws.com/${stud.identityDocName}`}
+                      className=" border p-2 bg-slate-50 hover:bg-slate-100"
+                    >
+                      Download
+                    </a>
+                  </Typography>
+                )}
+                <p className="font-medium">Degree Documents:</p>
+                {stud.degreeDocName.map((doc, i) => (
+                  <Typography className="md:w-[70rem] pl-4 pt-4" key={i}>
+                    {doc.substring(36)}{" "}
+                    <a
+                      target="_blank"
+                      href={`https://studyinmaryland-stroage-bucket.s3.ap-southeast-2.amazonaws.com/${doc}`}
+                      className=" border p-2 bg-slate-50 hover:bg-slate-100"
+                    >
+                      Download
+                    </a>
+                  </Typography>
+                ))}
                 <p className="font-medium">
-                  Recommendation or Reference Letter
+                  Academic Transcript Evaluation report.:
                 </p>
-              )}
-              {stud.recommendationDocName && (
-                <Typography className="md:w-[70rem] pl-4 pt-4" key={i}>
-                  {stud.recommendationDocName.substring(36)}
-                  <a
-                    target="_blank"
-                    href={`https://studyinmaryland-stroage-bucket.s3.ap-southeast-2.amazonaws.com/${stud.recommendationDocName}`}
-                    className=" border p-2 bg-slate-50 hover:bg-slate-100"
-                  >
-                    Download
-                  </a>
-                </Typography>
-              )}
-            </AccordionDetails>
-          </Accordion>
+                {stud.academicDocName.map((doc, i) => (
+                  <Typography className="md:w-[70rem] pl-4 pt-4" key={i}>
+                    {doc.substring(36)}{" "}
+                    <a
+                      target="_blank"
+                      href={`https://studyinmaryland-stroage-bucket.s3.ap-southeast-2.amazonaws.com/${doc}`}
+                      className=" border p-2 bg-slate-50 hover:bg-slate-100"
+                    >
+                      Download
+                    </a>
+                  </Typography>
+                ))}
+                <p className="font-medium">
+                  Academic credentials verification report.:
+                </p>
+                {stud.credentailsDocName.map((doc, i) => (
+                  <Typography className="md:w-[70rem] pl-4 pt-4" key={i}>
+                    {doc.substring(36)}{" "}
+                    <a
+                      target="_blank"
+                      href={`https://studyinmaryland-stroage-bucket.s3.ap-southeast-2.amazonaws.com/${doc}`}
+                      className=" border p-2 bg-slate-50 hover:bg-slate-100"
+                    >
+                      Download
+                    </a>
+                  </Typography>
+                ))}
+                <p className="font-medium">
+                  {stud.birthDocName && "Birth Certificate"}
+                </p>
+                {stud.birthDocName && (
+                  <Typography className="md:w-[70rem] pl-4" key={i}>
+                    {stud.birthDocName.substring(36)}{" "}
+                    <a
+                      target="_blank"
+                      href={`https://studyinmaryland-stroage-bucket.s3.ap-southeast-2.amazonaws.com/${stud.birthDocName}`}
+                      className=" border p-2 bg-slate-50 hover:bg-slate-100"
+                    >
+                      Download
+                    </a>
+                  </Typography>
+                )}
+                <p className="font-medium">
+                  {stud.motivationDocName && "Motivational Letter"}
+                </p>
+                {stud.motivationDocName && (
+                  <Typography className="md:w-[70rem] pl-4" key={i}>
+                    {stud.motivationDocName.substring(36)}{" "}
+                    <a
+                      target="_blank"
+                      href={`https://studyinmaryland-stroage-bucket.s3.ap-southeast-2.amazonaws.com/${stud.motivationDocName}`}
+                      className=" border p-2 bg-slate-50 hover:bg-slate-100"
+                    >
+                      Download
+                    </a>
+                  </Typography>
+                )}
+                <p className="font-medium">
+                  {stud.ieltsDocName && "IELTS or TOEFL"}
+                </p>
+                {stud.ieltsDocName && (
+                  <Typography className="md:w-[70rem] pl-4" key={i}>
+                    {stud.ieltsDocName.substring(36)}{" "}
+                    <a
+                      target="_blank"
+                      href={`https://studyinmaryland-stroage-bucket.s3.ap-southeast-2.amazonaws.com/${stud.ieltsDocName}`}
+                      className=" border p-2 bg-slate-50 hover:bg-slate-100"
+                    >
+                      Download
+                    </a>
+                  </Typography>
+                )}
+                {stud.englishDocName.length > 0 && (
+                  <p className="font-medium">
+                    Official Translated Copy of Your Degree Certificates:
+                  </p>
+                )}
+                {stud.englishDocName.map((doc, i) => (
+                  <Typography className="md:w-[70rem] pl-4 pt-4" key={i}>
+                    {doc.substring(36)}{" "}
+                    <a
+                      target="_blank"
+                      href={`https://studyinmaryland-stroage-bucket.s3.ap-southeast-2.amazonaws.com/${doc}`}
+                      className=" border p-2 bg-slate-50 hover:bg-slate-100"
+                    >
+                      Download
+                    </a>
+                  </Typography>
+                ))}
+                {stud.recommendationDocName && (
+                  <p className="font-medium">
+                    Recommendation or Reference Letter
+                  </p>
+                )}
+                {stud.recommendationDocName && (
+                  <Typography className="md:w-[70rem] pl-4 pt-4" key={i}>
+                    {stud.recommendationDocName.substring(36)}
+                    <a
+                      target="_blank"
+                      href={`https://studyinmaryland-stroage-bucket.s3.ap-southeast-2.amazonaws.com/${stud.recommendationDocName}`}
+                      className=" border p-2 bg-slate-50 hover:bg-slate-100"
+                    >
+                      Download
+                    </a>
+                  </Typography>
+                )}
+              </AccordionDetails>
+            </Accordion>
+          </>
         ))}
       </section>
-      {!studentDetails && (
-        <span className="w-full mb-2 font-medium text-center">
-          No Students Found
-        </span>
-      )}
-
       <Backdrop
         sx={{ color: "#fff", zIndex: (theme) => theme.zIndex.drawer + 1 }}
         open={isUploading}

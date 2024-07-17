@@ -1,4 +1,5 @@
-import {  Backdrop,
+import {
+  Backdrop,
   Button,
   Checkbox,
   CircularProgress,
@@ -97,12 +98,12 @@ export default function AgentSigning() {
   };
   return (
     <main className=" flex justify-center items-center">
-      <section className="w-[60%]  p-10  max-md:w-full max-md:p-0 flex flex-col items-center my-5 md:shadow-lg">
+      <section className="w-[70%]  p-10  max-md:w-full max-md:p-0 flex flex-col items-center my-5 md:shadow-lg">
         <div className="p-5 m-5 border-b-[1px] w-3/4 max-md:w-[80%] text-center">
           <h1 className="text-3xl font-medium text-red-500">Sign Up</h1>
         </div>
         <form
-          className="w-3/4 max-md:w-[80%] flex flex-col gap-5"
+          className="w-3/4 max-md:w-[90%] flex flex-col gap-5 "
           onSubmit={handleSubmit(onSubmit)}
         >
           <TextField
@@ -164,17 +165,21 @@ export default function AgentSigning() {
             control={<Checkbox checked={checkboxStatus.firstCheckbox} />}
             label="I agree to the Privacy Policy, Terms of Service and IP Policy."
           />
-          <FormControlLabel
-            onClick={() =>
-              setCheckboxStatus((prev) => ({
-                ...prev,
-                secCheckbox: !checkboxStatus.secCheckbox,
-              }))
-            }
-            required
-            control={<Checkbox checked={checkboxStatus.secCheckbox} />}
-            label="Send me useful emails to help me get the most out of studyinmarylang.edu"
-          />
+          <div className="text">
+            <FormControlLabel
+              onClick={() =>
+                setCheckboxStatus((prev) => ({
+                  ...prev,
+                  secCheckbox: !checkboxStatus.secCheckbox,
+                }))
+              }
+              required
+              control={<Checkbox checked={checkboxStatus.secCheckbox} />}
+              label="Send me useful emails to help me get the most out of studyinmarylang.edu"
+              className="text-xs "
+              
+            />
+          </div>
           <div className="w-full flex justify-end">
             <Button variant="contained" type="submit">
               Proceed

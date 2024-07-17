@@ -1,5 +1,4 @@
-import { useRef, useState } from "react";
-import { GiHamburgerMenu } from "react-icons/gi";
+import { useRef, useState } from "react";import { GiHamburgerMenu } from "react-icons/gi";
 // import { RiCloseCircleFill } from "react-icons/ri";
 
 import {
@@ -74,7 +73,7 @@ export default function Navbar() {
             <a href={`/agent-dashboard/${agentId}`}>Dashboard</a>
           </li>
         )}
-        
+
         <li>
           <a href={"/partner-universities"}>Partner Universities</a>
         </li>
@@ -201,12 +200,6 @@ export default function Navbar() {
                   Sign Up
                 </a>
               )}
-              <a
-                href="/contact"
-                className="flex w-full items-center border-b-[1px] px-5 py-4 text-base font-medium text-black hover:bg-red-500 hover:text-white"
-              >
-                Contact
-              </a>
               {agentId && (
                 <button
                   onClick={logoutHandler}
@@ -215,6 +208,12 @@ export default function Navbar() {
                   Logout
                 </button>
               )}
+              <a
+                href="/contact"
+                className="flex w-full items-center border-b-[1px] px-5 py-4 text-base font-medium text-black hover:bg-red-500 hover:text-white"
+              >
+                Contact
+              </a>
             </ul>
           </section>
           <AlertDialogCancel
