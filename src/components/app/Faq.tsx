@@ -52,7 +52,7 @@ export default function Faq() {  return (
             What are the admission requirements for universities in Maryland?
           </p>
           <p className="text-md my-5">
-            We helps you to understand the requirements to secure a direct
+            We help you to understand the requirements to secure a direct
             admission to study a graduate program through the study-in-maryland
             scholarship at a partner university. Visit our partner universities
             page to know more about the application requirements.
@@ -87,7 +87,7 @@ export default function Faq() {  return (
             of your scholarship application 30 days after the application
             deadline.
           </p>
-          <p className="text-md my-5">
+          <p className="text-md my-5 mt-36">
             These FAQs cover essential aspects of Study in Maryland&apos;s
             services and how we assist international students aiming to study in
             Maryland. For further inquiries or personalized assistance, feel

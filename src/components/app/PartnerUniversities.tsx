@@ -219,7 +219,7 @@ export default function PartnerUniversities() {
                         target="_blank"
                         className="ml-2 text-blue-600"
                       >
-                        https://ielts.org
+                        www.ielts.org 
                       </a>
                     </li>
                     <li>
@@ -229,7 +229,7 @@ export default function PartnerUniversities() {
                         target="_blank"
                         className="ml-2 text-blue-600"
                       >
-                        https://www.ets.org/toefl.html
+                        www.ets.org
                       </a>
                     </li>
                   </ul>
@@ -272,7 +272,7 @@ export default function PartnerUniversities() {
                       className="underline-offset-2 underline text-blue-600"
                     >
                       {" "}
-                      https://maec.us
+                      www.maec.us
                     </a>
                   </span>
                 </li>
@@ -335,7 +335,7 @@ export default function PartnerUniversities() {
                       className="underline-offset-2 underline text-blue-600"
                     >
                       {" "}
-                      https://maec.us
+                      www.maec.us
                     </a>
                   </p>
                 </li>
