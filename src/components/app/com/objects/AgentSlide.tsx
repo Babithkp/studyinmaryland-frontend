@@ -1,5 +1,4 @@
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
-import { BiSolidQuoteAltRight } from "react-icons/bi";
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";import { BiSolidQuoteAltRight } from "react-icons/bi";
 import { Swiper, SwiperSlide } from "swiper/react";
 import agent1Img from "/reviewImage/agent1.jpg";
 import agent2Img from "/reviewImage/agent2.jpg";
@@ -102,9 +101,8 @@ export default function AgentSlide() {
           <p>
             Financially, the collaboration has been highly rewarding. Study in
             Maryland offers attractive referral payments to their ambassadors
-            which has considerably increased our earnings, which has
-            considerably increased our earnings. The initiative has been a
-            tremendous asset for our clients, many of whom had dreamed of
+            which has considerably increased our earnings. The initiative has
+            been a tremendous asset for our clients, many of whom had dreamed of
             studying in the USA but lacked the necessary funding. Thanks to
             Study in Maryland, these students are now thriving in their academic
             pursuits. The scholarship program is not only a beacon of hope for
@@ -131,13 +129,13 @@ export default function AgentSlide() {
             <BiSolidQuoteAltRight className="-scale-x-100 mb-5" size={"3rem"} />
           </span>
           <p>
-            The decision to become an ambassador with Study in Maryland
-            has been one of the best strategic moves for my study abroad agency.
-            The organization’s dedication to helping international students
-            secure fully funded scholarships for master's and PhD programs at
-            esteemed universities in Maryland is remarkable. The support they
-            provide to both agents and students is top-notch, ensuring a
-            seamless process from application to acceptance.
+            The decision to become an ambassador with Study in Maryland has been
+            one of the best strategic moves for my study abroad agency. The
+            organization’s dedication to helping international students secure
+            fully funded scholarships for master's and PhD programs at esteemed
+            universities in Maryland is remarkable. The support they provide to
+            both agents and students is top-notch, ensuring a seamless process
+            from application to acceptance.
           </p>
           <p>
             Our agency has seen a significant increase in successful placements,
