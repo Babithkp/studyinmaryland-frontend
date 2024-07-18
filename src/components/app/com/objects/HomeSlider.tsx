@@ -1,4 +1,5 @@
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";import { BiSolidQuoteAltRight } from "react-icons/bi";
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+import { BiSolidQuoteAltRight } from "react-icons/bi";
 import { Swiper, SwiperSlide } from "swiper/react";
 import stud1Img from "/reviewImage/student1.jpg";
 import stud2Img from "/reviewImage/student2.jpg";
@@ -46,9 +47,9 @@ export default function HomeSlider() {
           </span>
           <p>
             The Study in Maryland scholarship has not only opened the door to a
-            world-class education but also provided the chance to live and study
-            in the beautiful state of Maryland. The picturesque campuses and
-            vibrant local culture have enriched my overall experience.
+            world-class education but also Provided me the chance to live and
+            study in the beautiful state of Maryland. The picturesque campuses
+            and vibrant local culture have enriched my overall experience.
             Career-wise, being in Maryland has given me access to numerous
             internships and job opportunities, many of which I wouldn’t have
             encountered elsewhere. Without this scholarship, studying in the USA
@@ -113,7 +114,7 @@ export default function HomeSlider() {
           resources, cutting-edge technology, and a collaborative learning
           environment. The scholarship has enabled me to pursue my passion for
           research without any financial constraints, which has been incredibly
-          liberating. Financially, it has provided stability and allowed me to
+          liberating. It has provided stability and allowed me to
           focus on my education and personal growth rather than worrying about
           finances. This opportunity has significantly broadened my horizons and
           prepared me for a successful career ahead.
@@ -141,11 +142,11 @@ export default function HomeSlider() {
           experience for me. Academically, I’ve had the chance to work with
           world-renowned professors and researchers, pushing the boundaries of
           my field. The access to state-of-the-art facilities and resources has
-          significantly advanced my research capabilities. Financially, the
-          scholarship has alleviated the burden of tuition and living expenses,
-          allowing me to focus entirely on my studies without the constant worry
-          of debt. This opportunity has opened doors to networking and
-          professional growth that I could never have imagined.
+          significantly advanced my research capabilities. The scholarship has
+          alleviated the burden of tuition and living expenses, allowing me to
+          focus entirely on my studies without the constant worry of debt. This
+          opportunity has opened doors to networking and professional growth
+          that I could never have imagined.
           <div className="flex my-4 justify-around items-center gap-3">
             <div className="w-[5rem] h-[4rem] ">
               <img
@@ -164,14 +165,13 @@ export default function HomeSlider() {
         </SwiperSlide>
       </Swiper>
       <div className="flex justify-center mt-4 gap-3">
-      <div className="button-prev-slide   hover:bg-slate-400 active:scale-95 active:bg-white text-black border-black border-[2px] rounded-2xl">
+        <div className="button-prev-slide   hover:bg-slate-400 active:scale-95 active:bg-white text-black border-black border-[2px] rounded-2xl">
           <IoMdArrowRoundBack size={60} />
         </div>
         <div className="button-next-slide hover:bg-slate-400 active:scale-95 active:bg-white  text-black border-black border-[2px] rounded-2xl">
           <IoMdArrowRoundForward size={60} />
         </div>
-      
-    </div>
+      </div>
     </>
   );
 }

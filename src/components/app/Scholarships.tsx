@@ -129,14 +129,15 @@ export default function Scholarships() {
               <li>
                 <span className="">
                   Academic credentials evaluation report from the Maryland
-                  academic evaluation center MAEC
+                  academic evaluation center
                   <a
-                    href="https://maec.us"
-                    target="_blank"
-                    className="underline-offset-2 underline text-blue-600"
-                  >
-                    {" "}https://maec.us
-                  </a>
+                  href="https://maec.us"
+                  target="_blank"
+                  className="underline-offset-2 underline text-blue-600"
+                >
+                  {" "}
+                  MAEC{}
+                </a>
                   :{" "}
                 </span>
                 (This credential evaluation report shows that the U.S
@@ -154,7 +155,7 @@ export default function Scholarships() {
                   className="underline-offset-2 underline text-blue-600"
                 >
                   {" "}
-                  MAEC
+                  MAEC{" "}
                 </a>
                  (Only required for
                 academic transcripts that are not in English).
@@ -190,7 +191,7 @@ export default function Scholarships() {
                   className="underline text-blue-600"
                   target="_blank"
                 >
-                  TOEFL
+                  TOEFL {" "}
                 </a>
                 ( This is only required for international students whose degree
                 certificates and transcripts are not in English language. The{" "}

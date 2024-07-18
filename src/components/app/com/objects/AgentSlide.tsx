@@ -1,4 +1,5 @@
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";import { BiSolidQuoteAltRight } from "react-icons/bi";
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+import { BiSolidQuoteAltRight } from "react-icons/bi";
 import { Swiper, SwiperSlide } from "swiper/react";
 import agent1Img from "/reviewImage/agent1.jpg";
 import agent2Img from "/reviewImage/agent2.jpg";
@@ -56,7 +57,7 @@ export default function AgentSlide() {
             game-changer for my study abroad agency, allowing us to offer
             unparalleled opportunities to our clients.
           </p>
-          <p >
+          <p>
             The financial benefits have been substantial as well. The commission
             payments from Study in Maryland are generous, reflecting their
             commitment to supporting their agents. This has not only boosted my
@@ -79,7 +80,7 @@ export default function AgentSlide() {
             <div>
               <p className="font-medium text-lg">Samuel dima</p>
               <p className="font-extralight">
-              Study abroad consultant, Nigeria.
+                Study abroad consultant, Nigeria.
               </p>
             </div>
           </div>
@@ -93,21 +94,22 @@ export default function AgentSlide() {
             operations and significantly enhanced our service offerings. The
             experience of working with them has been incredibly positive, as
             they provide thorough guidance and support throughout the
-            recruitment process. Many of our students have received fully funded
+            recruitment process. Many of our students have received full
             scholarships, enabling them to pursue advanced degrees at top
             universities in Maryland. This has greatly elevated our agency's
             reputation, attracting more clients seeking similar opportunities.
           </p>
-          <p  >
+          <p>
             Financially, the collaboration has been highly rewarding. Study in
-            Maryland offers attractive commission payments to their partner
-            agents, which has considerably increased our earnings. The
-            initiative has been a tremendous asset for our clients, many of whom
-            had dreamed of studying in the USA but lacked the necessary funding.
-            Thanks to Study in Maryland, these students are now thriving in
-            their academic pursuits. The scholarship program is not only a
-            beacon of hope for aspiring scholars but also a lucrative venture
-            for recruitment agencies.
+            Maryland offers attractive referral payments to their ambassadors
+            which has considerably increased our earnings, which has
+            considerably increased our earnings. The initiative has been a
+            tremendous asset for our clients, many of whom had dreamed of
+            studying in the USA but lacked the necessary funding. Thanks to
+            Study in Maryland, these students are now thriving in their academic
+            pursuits. The scholarship program is not only a beacon of hope for
+            aspiring scholars but also a lucrative venture for recruitment
+            agencies.
           </p>
 
           <div className="flex my-4 justify-around items-center gap-3">
@@ -120,9 +122,7 @@ export default function AgentSlide() {
             </div>
             <div>
               <p className="font-medium text-lg">Parveen sharma</p>
-              <p className="font-extralight">
-              Education consultant, India.
-              </p>
+              <p className="font-extralight">Education consultant, India.</p>
             </div>
           </div>
         </SwiperSlide>
@@ -131,15 +131,15 @@ export default function AgentSlide() {
             <BiSolidQuoteAltRight className="-scale-x-100 mb-5" size={"3rem"} />
           </span>
           <p>
-            The decision to become an as an ambassador with Study in Maryland has
-            been one of the best strategic moves for my study abroad agency. The
-            organization’s dedication to helping international students secure
-            fully funded scholarships for master's and PhD programs at esteemed
-            universities in Maryland is remarkable. The support they provide to
-            both agents and students is top-notch, ensuring a seamless process
-            from application to acceptance.
+            The decision to become an ambassador with Study in Maryland
+            has been one of the best strategic moves for my study abroad agency.
+            The organization’s dedication to helping international students
+            secure fully funded scholarships for master's and PhD programs at
+            esteemed universities in Maryland is remarkable. The support they
+            provide to both agents and students is top-notch, ensuring a
+            seamless process from application to acceptance.
           </p>
-          <p  >
+          <p>
             Our agency has seen a significant increase in successful placements,
             with many students benefitting from the scholarships offered through
             this initiative. This success has translated into substantial
@@ -167,7 +167,7 @@ export default function AgentSlide() {
             <div>
               <p className="font-medium text-lg">Rafiq khan</p>
               <p className="font-extralight">
-              International student recruiter, Pakistan.
+                International student recruiter, Pakistan.
               </p>
             </div>
           </div>

@@ -241,7 +241,7 @@ export default function PartnerUniversities() {
                     </span>
                     <br />
                     It is mandatory for all international students to submit an
-                    evaluation report of their academic credentials in other to
+                    evaluation report of their academic credentials to
                     be eligible for admission and a scholarship to study at one
                     of our partner universities.
                   </span>

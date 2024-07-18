@@ -1284,7 +1284,7 @@ export default function AddApplication() {
 
           <div className="my-5">
             <label className="text-sm font-semibold">
-              Copy of Recommendation or Reference Letter
+              Recommendation or Reference Letter
             </label>
             <span className="text-red-500 ml-1">*</span>
             <div className="flex items-center rounded-sm border-[1.9px] border-slate-300">

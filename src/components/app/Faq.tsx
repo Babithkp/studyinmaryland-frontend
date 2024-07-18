@@ -52,10 +52,10 @@ export default function Faq() {  return (
             What are the admission requirements for universities in Maryland?
           </p>
           <p className="text-md my-5">
-            Study in Maryland helps you to understand the requirements to secure
-            a direct admission to study a graduate program through the study in
-            Maryland scholarship at a partner university. Visit our partner
-            universities page to know more about the application requirements.
+            We helps you to understand the requirements to secure a direct
+            admission to study a graduate program through the study-in-maryland
+            scholarship at a partner university. Visit our partner universities
+            page to know more about the application requirements.
           </p>
 
           <p className="my-10 text-3xl font-bold text-red-500 max-md:text-3xl">
@@ -77,12 +77,7 @@ export default function Faq() {  return (
             provide advice on living in Maryland, and address any concerns you
             may have throughout your academic journey.
           </p>
-          <p className="text-md my-5">
-            These FAQs cover essential aspects of Study in Maryland&apos;s
-            services and how we assist international students aiming to study in
-            Maryland. For further inquiries or personalized assistance, feel
-            free to reach out to us directly.
-          </p>
+
           <p className="my-10 text-3xl font-bold text-red-500 max-md:text-3xl">
             When will I know the status of my application?
           </p>
@@ -91,6 +86,12 @@ export default function Faq() {  return (
             submitted your application and you will be informed about the status
             of your scholarship application 30 days after the application
             deadline.
+          </p>
+          <p className="text-md my-5">
+            These FAQs cover essential aspects of Study in Maryland&apos;s
+            services and how we assist international students aiming to study in
+            Maryland. For further inquiries or personalized assistance, feel
+            free to reach out to us directly.
           </p>
         </article>
       </section>
