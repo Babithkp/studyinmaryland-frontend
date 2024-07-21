@@ -105,7 +105,7 @@ export default function Scholarships() {
               </li>
               <li>
                 <span className="text-lg font-bold">Application Deadline:</span>
-                <p>October, 18th 2024.</p>
+                <p>October 18th, 2024.</p>
               </li>
             </ul>
           </div>

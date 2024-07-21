@@ -152,7 +152,7 @@ export default function ReferralProgram() {
             How to Get Started
           </p>
           <div className="text-md my-5">
-            <p>To join our ambassador referral program email us: <span className="font-bold">ambassador@studyinmaryland.org </span></p>
+            <p>To join our ambassador referral program, contact us: <span className="font-bold">ambassador@studyinmaryland.org </span></p>
             <p className="text-md my-5">
               Join the Study in Maryland Referral Program today and start
               earning while making a positive impact on students' lives!
