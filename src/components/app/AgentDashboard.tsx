@@ -1,4 +1,5 @@
-import { useParams } from "react-router-dom";import defaultImage from "/deafultProfile.jpg";
+import { useParams } from "react-router-dom";
+import defaultImage from "/deafultProfile.jpg";
 import {
   ChangeEvent,
   SyntheticEvent,
@@ -25,9 +26,9 @@ import {
 } from "../../http/fetch";
 import { RiArrowUpSLine } from "react-icons/ri";
 import { v4 } from "uuid";
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer, toast } from "react-toastify";
 
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
 
 interface AgentType {
   id: string;
@@ -132,7 +133,7 @@ export default function AgentDashboard() {
     const text = `https://studyinmaryland.vercel.app/Scholarships?referral=${agentDetails?.referralCode}`;
     setIsCopying(true);
     navigator.clipboard.writeText(text);
-    notify()
+    notify();
     setTimeout(() => {
       setIsCopying(false);
     }, 2000);
@@ -209,17 +210,19 @@ export default function AgentDashboard() {
               Email: <span className="font-medium">{agentDetails?.email}</span>
             </p>
             <p className="font-semibold">
-              Addess: <span className="font-medium">{agentDetails?.address}</span>
+              Addess:{" "}
+              <span className="font-medium">{agentDetails?.address}</span>
             </p>
             <p className="font-semibold">
-              Phone No. : <span className="font-medium">{agentDetails?.phone}</span>
+              Phone No. :{" "}
+              <span className="font-medium">{agentDetails?.phone}</span>
             </p>
             <h3 className="text-lg font-semibold uppercase text-slate-400">
-            Referral Link
+              Referral Link
             </h3>
             <div className="flex w-full  h-full border-[2px] rounded-md gap-3  items-start  bg-slate-50">
               <p className="ml-1  overflow-x-auto">
-                https://studyinmaryland.vercel.app/Scholarships?referral=
+                https://studyinmaryland.org/Scholarships?referral=
                 {agentDetails?.referralCode}
               </p>
               <Button
@@ -437,7 +440,7 @@ export default function AgentDashboard() {
       >
         <CircularProgress color="inherit" />
       </Backdrop>
-        <ToastContainer theme="light"/>
+      <ToastContainer theme="light" />
     </main>
   );
 }

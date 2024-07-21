@@ -94,7 +94,7 @@ export default function Navbar() {
         </li>
 
         <li>
-          <a href={"/referralProgram"}>Referral Program</a>
+          <a href={"/referralProgram"}>Become An Ambassador</a>
         </li>
         {!agentId && (
           <li>
@@ -190,7 +190,7 @@ export default function Navbar() {
                 href={"/referralProgram"}
                 className="flex w-full items-center border-b-[1px] px-5 py-4 text-base font-medium text-black hover:bg-red-500 hover:text-white"
               >
-                Referral Program
+                Become An Ambassador
               </a>
               {!agentId && (
                 <a
