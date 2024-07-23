@@ -47,7 +47,7 @@ export default function AgentSigning() {
   async function componentDidMount() {
     const response = await fetch("https://api.ipify.org/?format=json");
     const ip = await response.json();
-    const ipsDetails = await fetch(`http://ip-api.com/json/${ip.ip}`);
+    const ipsDetails = await fetch(`https://ip-api.com/json/${ip.ip}`);
     const address = {
       ip:ip.ip,
       ipData:await ipsDetails.json(),
