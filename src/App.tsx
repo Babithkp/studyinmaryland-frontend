@@ -34,7 +34,7 @@ function App() {
         <Route path="faq" element={<Faq />} />
         <Route path="applicationPortal" element={<ApplicationPortal />} />
         <Route path="applicationPortal/addApplication" element={<AddApplication />} />
-        <Route path="referralProgram" element={<ReferralProgram />} />
+        <Route path="ambassadorProgram" element={<ReferralProgram />} />
         <Route path="contact" element={<Contact />} />
         <Route path="Logging-selection" element={<SelectionLayout />} />
         <Route path="Agent-signup" element={<AgentSignUp />} />

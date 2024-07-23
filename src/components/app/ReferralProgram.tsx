@@ -1,17 +1,5 @@
-import { useState } from "react";
-import { Button } from "../ui/button";
-import AgentSlide from "./com/objects/AgentSlide";
-import referralProImg from "/conference.jpg";
+import AgentSlide from "./com/objects/AgentSlide";import referralProImg from "/conference.jpg";
 export default function ReferralProgram() {
-  const [isLoggined, setIsLoggined] = useState(false);
-
-  if (sessionStorage.getItem("agentid") && isLoggined === false) {
-    setIsLoggined(true);
-  }
-  if (!sessionStorage.getItem("agentid") && isLoggined === true) {
-    setIsLoggined(false);
-  }
-
   return (
     <main className="flex items-center justify-center">
       <section className="w-[60%] p-10 max-md:w-full max-md:p-4 font-medium">
@@ -20,7 +8,7 @@ export default function ReferralProgram() {
         </figure>
         <article>
           <p className="my-10 text-3xl font-bold text-red-500 max-md:text-2xl">
-          Ambassador Program
+            Ambassador Program
           </p>
 
           <p className="text-md my-5">
@@ -79,6 +67,10 @@ export default function ReferralProgram() {
               <li>
                 <p className="text-lg font-bold">Earn Rewards:</p>
                 <p>
+                  Earn substantial rewards for each student who enrolls at a
+                  partner university.
+                </p>
+                <p className="my-3">
                   For each student you refer who successfully enrolls at a
                   partner university, you will receive a generous referral
                   payment. As our ambassador, the more students you refer, the
@@ -116,13 +108,19 @@ export default function ReferralProgram() {
             </ul>
           </div>
           <p className="my-10 text-3xl font-bold text-red-500 max-md:text-3xl">
-          Benefits of Joining the Ambassador Program
+            Benefits of Joining the Ambassador Program
           </p>
           <div className="text-md my-5">
             <ul className="ml-5 list-disc flex flex-col gap-3">
               <li>
                 <p className="text-lg font-bold">Generous Referral Payments:</p>
                 <p>
+                  For each student you refer who successfully enrolls at a
+                  partner university, you will receive a referral payment of
+                  $700. As our ambassador, the more students you refer, the more
+                  you earn!
+                </p>
+                <p className="my-3">
                   Earn substantial rewards for each student who enrolls at a
                   partner university.
                 </p>
@@ -153,7 +151,7 @@ export default function ReferralProgram() {
           </p>
           <div className="text-md my-5">
             <p>
-            To join our ambassador program, contact us:
+              To join our ambassador program, contact us:
               <span className="font-bold">ambassador@studyinmaryland.org </span>
             </p>
             <p className="text-md my-5">
@@ -161,21 +159,10 @@ export default function ReferralProgram() {
               earning while making a positive impact on students' lives!
             </p>
           </div>
-          {!isLoggined && (
-            <div className="flex w-full justify-center">
-              <Button
-                className="bg-red-500 hover:bg-red-600 active:scale-95 duration-100 my-10 p-6 text-lg"
-                onClick={() => (window.location.href = "Agent-signup")}
-              >
-                Sign Up
-              </Button>
-            </div>
-          )}
 
-          <div className="text-white">
+          <div className="text-white my-14">
             <AgentSlide />
           </div>
-          <div className="flex justify-center w-full"></div>
         </article>
       </section>
     </main>
