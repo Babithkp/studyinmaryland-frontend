@@ -1,8 +1,9 @@
-import AgentSlide from "./com/objects/AgentSlide";import referralProImg from "/conference.jpg";
+import AgentSlide from "./com/objects/AgentSlide";
+import referralProImg from "/conference.jpg";
 export default function ReferralProgram() {
   return (
-    <main className="flex items-center justify-center">
-      <section className="w-[60%] p-10 max-md:w-full max-md:p-4 font-medium">
+    <main className="flex items-center justify-center ">
+      <section className="w-[60%] p-10 max-md:w-full max-md:p-4 font-medium max-w-[1280px]">
         <figure>
           <img src={referralProImg} alt="Students" loading="lazy" />
         </figure>
@@ -70,12 +71,6 @@ export default function ReferralProgram() {
                   Earn substantial rewards for each student who enrolls at a
                   partner university.
                 </p>
-                <p className="my-3">
-                  For each student you refer who successfully enrolls at a
-                  partner university, you will receive a generous referral
-                  payment. As our ambassador, the more students you refer, the
-                  more you earn!
-                </p>
               </li>
             </ul>
           </div>
@@ -119,10 +114,6 @@ export default function ReferralProgram() {
                   partner university, you will receive a referral payment of
                   $700. As our ambassador, the more students you refer, the more
                   you earn!
-                </p>
-                <p className="my-3">
-                  Earn substantial rewards for each student who enrolls at a
-                  partner university.
                 </p>
               </li>
               <li>
