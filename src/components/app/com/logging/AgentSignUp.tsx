@@ -45,7 +45,7 @@ export default function AgentSigning() {
   const fullScreen = useMediaQuery(theme.breakpoints.down("md"));
 
   async function componentDidMount() {
-    const response = await fetch("https://geolocation-db.com/json/");
+    const response = await fetch("https://api.ipregistry.co/?key=tryout");
     return await response.json();
   }
 
@@ -71,9 +71,10 @@ export default function AgentSigning() {
   const onSubmit: SubmitHandler<FormValues> = async (data) => {
     setFormState((prev) => ({ ...prev, isLoading: true }));
     const ip = await componentDidMount();
-
-    data.agentCountry = ip.country_name;
-    data.agentIpAddress = ip.IPv4;
+    
+    data.agentCountry = ip.location.country.name;
+    data.agentIpAddress = ip.ip;
+    
 
     try {
       const response = await newAgentCreation(data);

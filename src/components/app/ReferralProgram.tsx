@@ -20,7 +20,7 @@ export default function ReferralProgram() {
           <p className="text-md my-5">
             Annually, over 2,000 students from eligible countries benefit from
             the Study-In-Maryland scholarship program thanks to our ambassadors
-            such as, study abroad consultants, education consultants,
+            Such as; study abroad consultants, education consultants,
             International student recruiters,scholarship recipients, and the
             individuals who has played a significant role in helping us recruit
             international students who have a strong academic background to
@@ -38,12 +38,6 @@ export default function ReferralProgram() {
           </p>
           <div className="text-md my-5">
             <ul className="ml-5 list-disc flex flex-col gap-3">
-              <li>
-                <p>
-                  Join our ambassador referral program by signing up on our
-                  website. It's quick and easy!
-                </p>
-              </li>
               <li>
                 <p className="text-lg font-bold">Refer Students:</p>
                 <p>
