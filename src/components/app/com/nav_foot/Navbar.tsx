@@ -98,7 +98,7 @@ export default function Navbar() {
         </li>
         {!agentId && (
           <li>
-            <a href={"/Agent-signup"}>Sign up</a>
+            <a href={"/signup"}>Sign up</a>
           </li>
         )}
         <li>
@@ -194,7 +194,7 @@ export default function Navbar() {
               </a>
               {!agentId && (
                 <a
-                  href={"/Agent-signup"}
+                  href={"/signup"}
                   className="block w-full border-b-[1px] px-5 py-4 text-base font-medium text-black hover:bg-red-500 hover:text-white"
                 >
                   Sign Up
@@ -220,11 +220,6 @@ export default function Navbar() {
             ref={newRef}
             className="absolute -top-[48rem] right-[5rem] z-[-1] h-[200%] w-full border-none bg-transparent hover:bg-transparent"
           >
-            {/* <RiCloseCircleFill
-              size={"2.5rem"}
-              color="white"
-              className="z-[100]"
-            /> */}
           </AlertDialogCancel>
         </AlertDialogContent>
       </AlertDialog>

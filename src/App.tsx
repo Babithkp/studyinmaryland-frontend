@@ -37,7 +37,7 @@ function App() {
         <Route path="ambassadorProgram" element={<ReferralProgram />} />
         <Route path="contact" element={<Contact />} />
         <Route path="Logging-selection" element={<SelectionLayout />} />
-        <Route path="Agent-signup" element={<AgentSignUp />} />
+        <Route path="signup" element={<AgentSignUp />} />
         <Route path="Agent-signin" element={<AgentSignin />} />
         <Route path="admin-dashboard" element={<AdminDashboard />} />
         <Route path="agent-dashboard/:id" element={<AgentDashboard />} />
