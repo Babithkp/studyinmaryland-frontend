@@ -1,5 +1,4 @@
-import studentsImg from "/scholarshipStudents.jpg";
-import { useEffect } from "react";
+import studentsImg from "/scholarshipStudents.jpg";import { useEffect } from "react";
 import HomeSlider from "./com/objects/HomeSlider";
 export default function Scholarships() {
   useEffect(() => {
@@ -26,16 +25,17 @@ export default function Scholarships() {
             Overview
           </p>
           <p className="text-md my-5">
-            The state of Maryland, in collaboration with public universities,
-            has invested millions of dollars in the Study-In-Maryland
-            scholarship initiative to support international students,
-            particularly those from developing countries with limited financial
-            resources. This scholarship initiative aims to help these students
-            achieve their dream of studying in the United States. The
-            scholarship program has significantly contributed to the influx of
-            international students in Maryland and represents a long-term
-            investment plan, as international students have played a major role
-            in shaping the U.S economy and communities over the past decade.
+            The Maryland state department of education in collaboration with
+            prestigious public universities in Maryland has invested millions of
+            dollars in the Study-In-Maryland scholarship initiative to support
+            international students, particularly those from developing countries
+            with limited financial resources. This scholarship initiative aims
+            to help these students achieve their dream of studying in the United
+            States. The scholarship program has significantly contributed to the
+            influx of international students in Maryland and represents a
+            long-term investment plan, as international students have played a
+            major role in shaping the U.S economy and communities over the past
+            decade.
           </p>
 
           <p className="text-md my-5">
@@ -57,10 +57,7 @@ export default function Scholarships() {
               </li>
               <li>
                 <span className="text-lg font-bold">Host:</span>
-                <p>
-                  The state of Maryland & Maryland state department of
-                  education.
-                </p>
+                <p>The Maryland state department of education.</p>
               </li>
               <li>
                 <span className="text-lg font-bold">Host Country:</span>
@@ -105,7 +102,7 @@ export default function Scholarships() {
               </li>
               <li>
                 <span className="text-lg font-bold">Application Deadline:</span>
-                <p>October 18th, 2024.</p>
+                <p>October 31, 2024.</p>
               </li>
             </ul>
           </div>
@@ -128,42 +125,26 @@ export default function Scholarships() {
             <ul className="ml-5 list-disc flex flex-col gap-3">
               <li>
                 <span className="">
-                  Academic credentials evaluation report from the Maryland
-                  academic evaluation center
+                  Academic credentials evaluation report from Maryland academic
+                  evaluation center
                   <a
-                  href="https://maec.us"
-                  target="_blank"
-                  className="underline-offset-2 underline text-blue-600"
-                >
-                  {" "}
-                  MAEC{}
-                </a>
+                    href="https://maec.us"
+                    target="_blank"
+                    className="underline-offset-2 underline text-blue-600"
+                  >
+                    {" "}
+                    MAEC{}
+                  </a>
                   :{" "}
                 </span>
                 (This credential evaluation report shows that the U.S
-                equivalency of your courses and gpa has been evaluated, and that
-                the authenticity of your degree certificate and transcripts has
-                been verified by an official academic credential evaluation
-                service in Maryland, United States).
-              </li>
-              <li>
-                Official English translated copy of acdemic transcripts from the
-                Maryland academic evaluation center. 
-                <a
-                  href="https://maec.us"
-                  target="_blank"
-                  className="underline-offset-2 underline text-blue-600"
-                >
-                  {" "}
-                  MAEC{" "}
-                </a>
-                 (Only required for
-                academic transcripts that are not in English).
+                equivalency of your courses and gpa has been evaluated according
+                to U.S academic standards.)
               </li>
 
               <li>
-                Official translated copy of birth certificate from Maryland
-                academic evaluation center
+                Academic verification report from Maryland academic evaluation
+                center.
                 <a
                   href="https://maec.us"
                   target="_blank"
@@ -172,8 +153,10 @@ export default function Scholarships() {
                   {" "}
                   MAEC
                 </a>
-                . (Only required for birth certificates that are not in
-                English).
+                . (This report confirms that the authenticity of your degree
+                certificate and transcripts has been verified by an official
+                academic credential evaluation service in Maryland, United
+                States).
               </li>
 
               <li>
@@ -191,10 +174,10 @@ export default function Scholarships() {
                   className="underline text-blue-600"
                   target="_blank"
                 >
-                  TOEFL {" "}
+                  TOEFL{" "}
                 </a>
                 ( This is only required for international students whose degree
-                certificates and transcripts are not in English language. The{" "}
+                certificates and transcripts are not in English language. 
                 <a
                   href="http://www.ielts.org"
                   className="underline text-blue-600"

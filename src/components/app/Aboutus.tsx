@@ -1,5 +1,4 @@
-export default function Aboutus() {
-  return (
+export default function Aboutus() {  return (
     <main className="flex items-center justify-center">
       <section className="w-[60%] p-10 max-md:w-full max-md:p-4 font-medium max-md:text-center">
         <article>
@@ -11,11 +10,11 @@ export default function Aboutus() {
             recruitment program in Maryland, United States.
           </p>
           <p className="text-md my-5">
-            Our program is commissioned by the state of Maryland to promote
-            higher education in one of America's most vibrant and historic
-            regions. The Study-In-Maryland scholarship initiative awards full
-            scholarships to international students with a strong academic
-            background to study an eligible degree program at a partner
+            Our program is funded by the Maryland state department of education
+            to promote higher education in one of America's most vibrant and
+            historic regions. The Study-In-Maryland scholarship initiative
+            awards full scholarships to international students with a strong
+            academic background to study an eligible degree program at a partner
             university in Maryland, USA.
           </p>
           <p className="text-md my-5">
@@ -28,8 +27,7 @@ export default function Aboutus() {
           <p className="text-md my-5">
             Since our inception in 2020, we have supported over 8,000
             international students to study at prestigious universities in
-            Maryland through the Study-In-Maryland scholarship funded by state
-            of Maryland and the Maryland state department of education.
+            Maryland through the Study-In-Maryland scholarship funded by the Maryland state department of education.
           </p>
           <p className="text-md my-5 ">
             The privilege of studying in the United States is a golden

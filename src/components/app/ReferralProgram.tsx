@@ -1,5 +1,4 @@
-import AgentSlide from "./com/objects/AgentSlide";
-import referralProImg from "/conference.jpg";
+import AgentSlide from "./com/objects/AgentSlide";import referralProImg from "/conference.jpg";
 export default function ReferralProgram() {
   return (
     <main className="flex items-center justify-center ">
@@ -9,67 +8,31 @@ export default function ReferralProgram() {
         </figure>
         <article>
           <p className="my-10 text-3xl font-bold text-red-500 max-md:text-2xl">
-            Ambassador Program
+            Partner With Us!
           </p>
 
           <p className="text-md my-5">
-            Become a valued study in Maryland ambassador and join us in our
-            mission to establish Maryland, United States as a top study
-            destination for international students.
+            Become a valued study in Maryland partner and join us in our mission
+            to establish Maryland, United States as a top study destination for
+            international students.
           </p>
           <p className="text-md my-5">
             Annually, over 2,000 students from eligible countries benefit from
-            the Study-In-Maryland scholarship program thanks to our ambassadors
-            Such as; study abroad consultants, education consultants,
-            International student recruiters,scholarship recipients, and the
-            individuals who has played a significant role in helping us recruit
-            international students who have a strong academic background to
-            pursue an eligible masters or phd degree program on a full
-            scholarship at a partner university in Maryland, USA.
+            the Study-In-Maryland scholarship program thanks to our student
+            recruitment partners who has played a significant role in helping us
+            recruit international students who have a strong academic background
+            to pursue an eligible masters or phd degree program on a full
+            scholarship at a partner university in Maryland, USA
           </p>
           <p className="text-md my-5">
             We offer an incredible opportunity for you to earn generous
-            incentives by referring international students to apply for a
-            scholarship to study an eligible masters or phd degree program at a
-            partner university through the Study-In-Maryland scholarship.
+            incentives by recruiting prospective graduate students with limited
+            financial resources to study an eligible masters or phd degree
+            program at a partner university in Maryland, United States through
+            the Study-In-Maryland scholarship program.
           </p>
           <p className="my-10 text-3xl font-bold text-red-500 max-md:text-3xl">
-            How It Works
-          </p>
-          <div className="text-md my-5">
-            <ul className="ml-5 list-disc flex flex-col gap-3">
-              <li>
-                <p className="text-lg font-bold">Refer Students:</p>
-                <p>
-                  Share the opportunity to study in Maryland at one of our
-                  prestigious partner universities with international students
-                  who are looking to pursue a masters or phd degree program on a
-                  fully funded scholarship in the United States. You can refer
-                  students by sharing your unique referral link to our
-                  scholarship application portal with your friends, colleagues
-                  or on your social media platforms.
-                </p>
-              </li>
-              <li>
-                <p className="text-lg font-bold">Students Apply:</p>
-                <p>
-                  Once referred,ً students can apply for a scholarship to study
-                  at one of our partner universities in Maryland on our
-                  application portal for free. We offer a streamlined
-                  application process to make it as simple as possible.
-                </p>
-              </li>
-              <li>
-                <p className="text-lg font-bold">Earn Rewards:</p>
-                <p>
-                  Earn substantial rewards for each student who enrolls at a
-                  partner university.
-                </p>
-              </li>
-            </ul>
-          </div>
-          <p className="my-10 text-3xl font-bold text-red-500 max-md:text-3xl">
-            Why Refer Students to Study in Maryland?
+            Why Recruit Students to Study in Maryland?
           </p>
           <div className="text-md my-5">
             <ul className="ml-5 list-disc flex flex-col gap-3">
@@ -97,17 +60,15 @@ export default function ReferralProgram() {
             </ul>
           </div>
           <p className="my-10 text-3xl font-bold text-red-500 max-md:text-3xl">
-            Benefits of Joining the Ambassador Program
+            Benefits of Becoming a Partner
           </p>
           <div className="text-md my-5">
             <ul className="ml-5 list-disc flex flex-col gap-3">
               <li>
-                <p className="text-lg font-bold">Generous Referral Payments:</p>
+                <p className="text-lg font-bold">Make a Difference:</p>
                 <p>
-                  For each student you refer who successfully enrolls at a
-                  partner university, you will receive a referral payment of
-                  $700. As our ambassador, the more students you refer, the more
-                  you earn!
+                  Help students achieve their dreams of studying in the United
+                  States and be a part of their success stories.
                 </p>
               </li>
               <li>
@@ -118,10 +79,10 @@ export default function ReferralProgram() {
                 </p>
               </li>
               <li>
-                <p className="text-lg font-bold">Make a Difference:</p>
+                <p className="text-lg font-bold">Generous Rewards:</p>
                 <p>
-                  Help students achieve their dreams of studying in the United
-                  States and be a part of their success stories.
+                  Earn a substantial financial reward for each student you
+                  recruit who successfully enrolls at a partner university.
                 </p>
               </li>
             </ul>
@@ -136,8 +97,8 @@ export default function ReferralProgram() {
           </p>
           <div className="text-md my-5">
             <p>
-              To join our ambassador program, contact us:
-              <span className="font-bold">ambassador@studyinmaryland.org </span>
+              To partner with us contact:
+              <span className="font-bold"> partner@studyinmaryland.org</span>
             </p>
             <p className="text-md my-5">
               Join the Study in Maryland ambassador program today and start

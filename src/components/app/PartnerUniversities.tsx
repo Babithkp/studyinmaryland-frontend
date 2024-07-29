@@ -372,7 +372,7 @@ export default function PartnerUniversities() {
                   For the spring semester start(January 2025)
                 </li>
                 <li className={dropdownTextClass}>
-                  Application deadline: October 18th, 2024.
+                  Application deadline: October 31, 2024.
                 </li>
               </ul>
             </AccordionContent>

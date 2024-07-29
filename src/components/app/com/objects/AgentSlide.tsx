@@ -1,4 +1,5 @@
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";import { BiSolidQuoteAltRight } from "react-icons/bi";
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+import { BiSolidQuoteAltRight } from "react-icons/bi";
 import { Swiper, SwiperSlide } from "swiper/react";
 import agent1Img from "/reviewImage/agent1.jpg";
 import agent2Img from "/reviewImage/agent2.jpg";
@@ -46,8 +47,8 @@ export default function AgentSlide() {
             <BiSolidQuoteAltRight className="-scale-x-100 mb-5" size={"3rem"} />
           </span>
           <p>
-            As an ambassador with Study in Maryland, my experience has been
-            incredibly rewarding on multiple levels. The organization has
+            As a recruitment partner for study in Maryland, my experience has
+            been incredibly rewarding on multiple levels. The organization has
             consistently provided comprehensive support, making the recruitment
             process smooth and efficient. Over the past two years, numerous
             students I’ve referred have successfully secured fully funded
@@ -100,7 +101,7 @@ export default function AgentSlide() {
           </p>
           <p>
             Financially, the collaboration has been highly rewarding. Study in
-            Maryland offers attractive referral payments to their ambassadors
+            Maryland offers attractive rewards to their recruitment partners
             which has considerably increased our earnings. The initiative has
             been a tremendous asset for our clients, many of whom had dreamed of
             studying in the USA but lacked the necessary funding. Thanks to
@@ -129,7 +130,7 @@ export default function AgentSlide() {
             <BiSolidQuoteAltRight className="-scale-x-100 mb-5" size={"3rem"} />
           </span>
           <p>
-            The decision to become an ambassador with Study in Maryland has been
+          The decision to partner with study in Maryland has been
             one of the best strategic moves for my study abroad agency. The
             organization’s dedication to helping international students secure
             fully funded scholarships for master's and PhD programs at esteemed

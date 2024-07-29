@@ -45,11 +45,13 @@ export default function AgentSigning() {
   const fullScreen = useMediaQuery(theme.breakpoints.down("md"));
 
   async function componentDidMount() {
+    try{
       const response = await fetch("https://ipapi.co/json");
       const res =  await response.json();
-      console.log(res);
       return res
-    
+    }catch(e){
+      return false;
+    }
   }
 
   const handleClose = () => {
@@ -78,10 +80,12 @@ export default function AgentSigning() {
     if(ip){
       data.agentCountry = ip.ip;
       data.agentIpAddress = ip.country_name;
+    }else{
+      data.agentCountry = "";
+      data.agentIpAddress = "";
     }
     console.log(data);
     
-
     
     try {
       const response = await newAgentCreation(data);
