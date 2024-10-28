@@ -29,7 +29,7 @@ export default function Home() {
         <article className="my-10 text-white">
           <h1 className="bg-red-500 px-14 py-10 text-5xl font-semibold max-md:p-4 max-md:text-2xl">
             Study in Maryland: home to diverse and a vibrant student community
-            in United States.
+            In the United States.
           </h1>
           <p className="bg-[#004890] p-8 text-lg font-medium max-md:p-4 max-sm:text-base text-center">
             We enable international students to access world-class education and

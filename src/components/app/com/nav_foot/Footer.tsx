@@ -83,7 +83,7 @@ export default function Footer() {
             Cookie Policy
           </a>
           <br />
-          <span className="">© 2020-2024 studyinmaryland.org </span>
+          <span className="">© 2020-2025 studyinmaryland.org </span>
         </div>
       </div>
     </footer>
