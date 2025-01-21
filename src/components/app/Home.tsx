@@ -64,7 +64,7 @@ export default function Home() {
                 alt="college"
                 className="max-md:w-26 max-md:h-26 h-40 w-40 object-contain"
               />
-              <p>The University of Maryland</p>
+              <p>The University of Baltimore</p>
             </figure>
             <figure className="flex flex-col items-center justify-center max-sm:w-full">
               <img
