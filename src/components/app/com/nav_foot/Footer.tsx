@@ -1,5 +1,4 @@
-import iiieImg from "/iie_logo.png";
-export default function Footer() {
+import iiieImg from "/iie_logo.png";export default function Footer() {
   return (
     <footer className="flex flex-col  justify-center items-center text-sm gap-5 bg-[#004890] py-10 text-white max-lg:gap-5 max-lg:p-10 max-lg:text-xs  max-md:flex-col">
       <div className="flex max-md:flex-col justify-around items-center w-full gap-5 max-md:gap-10">
@@ -36,11 +35,7 @@ export default function Footer() {
             General inquiries:
           </span>
           <div className="flex flex-col gap-5">
-            <p
-              className="text-base underline"
-            >
-              Info@studyinmaryland.org
-            </p>
+            <p className="text-base underline">Info@studyinmaryland.org</p>
           </div>
         </div>
         <div>
@@ -50,13 +45,11 @@ export default function Footer() {
           </p>
         </div>
         <div>
-          <image>
-            <img
-              src={iiieImg}
-              className="w-[10rem]"
-              alt="IIE the power of Intergnational Education"
-            />
-          </image>
+          <img
+            src={iiieImg}
+            className="w-[10rem]"
+            alt="IIE the power of Intergnational Education"
+          />
         </div>
         <div>
           <a href="/">Grantee Directory Press Links</a>
