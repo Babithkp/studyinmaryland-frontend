@@ -163,8 +163,8 @@ export default function PartnerUniversities() {
                     Masters and PhD programs start dates:
                   </span>
                   <br />
-                  January 2025 (Spring Semester) <br />
-                  September 2025 (Fall Semester)
+                  January 2026 (Spring Semester) <br />
+                  September 2026 (Fall Semester)
                 </li>
               </ul>
             </AccordionContent>
@@ -265,14 +265,14 @@ export default function PartnerUniversities() {
                     Maryland academic evaluation center.
                   </span>
                   <span className="mb-2">
-                    - MAEC:
+                    - MSAC:
                     <a
-                      href="https://maec.us"
+                      href="https://msac.us"
                       target="_blank"
                       className="underline-offset-2 underline text-blue-600"
                     >
                       {" "}
-                      www.maec.us
+                      www.msac.us
                     </a>
                   </span>
                 </li>
@@ -328,14 +328,14 @@ export default function PartnerUniversities() {
                     online at the Maryland academic evaluation center.
                   </p>
                   <p>
-                    - MAEC:
+                    - MSAC:
                     <a
-                      href="https://maec.us"
+                      href="https://msac.us"
                       target="_blank"
                       className="underline-offset-2 underline text-blue-600"
                     >
                       {" "}
-                      www.maec.us
+                      www.msac.us
                     </a>
                   </p>
                 </li>
@@ -369,10 +369,10 @@ export default function PartnerUniversities() {
               </p>
               <ul>
                 <li className={dropdownTextClass + " font-bold"}>
-                For the fall semester(September 2025)
+                For the spring semester(January 2026)
                 </li>
                 <li className={dropdownTextClass}>
-                  Application deadline: April 28th, 2025.
+                  Application deadline: November 10th, 2025.
                 </li>
               </ul>
             </AccordionContent>

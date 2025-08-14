@@ -31,11 +31,11 @@ export default function ApplicationPortal() {  return (
                 Upload your evaluation and verification report of degree
                 certificate and transcripts from{" "}
                 <a
-                  href="https://maec.us"
+                  href="https://msac.us"
                   target="_blank"
                   className="underline-offset-2 underline text-blue-800"
                 >
-                  MAEC
+                  MSAC
                 </a>{" "}
                 ( This is a mandatory requirement for all international
                 students).
@@ -64,11 +64,11 @@ export default function ApplicationPortal() {  return (
                 Upload the official English translated copy of your academic
                 transcript and birth certificate from{" "}
                 <a
-                  href="https://maec.us"
+                  href="https://msac.us"
                   target="_blank"
                   className="underline-offset-2 underline text-blue-800"
                 >
-                  MAEC
+                  MSAC
                 </a>{" "}
                 (This is only required for students whose birth certificates and
                 academic transcripts are not in English language).

@@ -102,7 +102,7 @@ export default function Scholarships() {
               </li>
               <li>
                 <span className="text-lg font-bold">Application Deadline:</span>
-                <p>April 28th, 2025.</p>
+                <p>November 10th, 2025.</p>
               </li>
             </ul>
           </div>
@@ -128,12 +128,12 @@ export default function Scholarships() {
                   Academic credentials evaluation report from Maryland academic
                   evaluation center
                   <a
-                    href="https://maec.us"
+                    href="https://msac.us"
                     target="_blank"
                     className="underline-offset-2 underline text-blue-600"
                   >
                     {" "}
-                    MAEC{}
+                    MSAC{}
                   </a>
                   :{" "}
                 </span>
@@ -146,12 +146,12 @@ export default function Scholarships() {
                 Academic verification report from Maryland academic evaluation
                 center.
                 <a
-                  href="https://maec.us"
+                  href="https://msac.us"
                   target="_blank"
                   className="underline-offset-2 underline text-blue-600"
                 >
                   {" "}
-                  MAEC
+                  MSAC
                 </a>
                 . (This report confirms that the authenticity of your degree
                 certificate and transcripts has been verified by an official
