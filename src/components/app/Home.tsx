@@ -248,7 +248,7 @@ export default function Home() {
         </a>
         <div className="my-10 flex w-[80%] flex-wrap justify-between gap-10 max-md:justify-center">
           <div className="relative flex flex-col items-center text-center">
-            <h6 className="text-7xl font-semibold text-yellow-300">4</h6>
+            <h6 className="text-7xl font-semibold text-yellow-300">5</h6>
             <p className="absolute top-[30%] w-[300%] text-lg font-bold text-slate-600 max-md:top-[35%]">
               YEARS OF EXPERIENCE
             </p>
