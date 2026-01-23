@@ -3,7 +3,7 @@ export default function Contact() {
     <main className=" flex justify-center items-center min-h-[67vh]">
       <section className="w-[60%] p-10 max-md:w-full max-md:p-4">
         <article>
-          <h1 className="text-red-500 text-5xl font-bold my-10 max-md:text-3xl">
+          <h1 className="text-yellow-500 text-5xl font-bold my-10 max-md:text-3xl">
             Contact
           </h1>
           <p className="text-md my-5 flex items-center gap-3 ">

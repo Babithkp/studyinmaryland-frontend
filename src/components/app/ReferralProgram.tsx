@@ -7,7 +7,7 @@ export default function ReferralProgram() {
           <img src={referralProImg} alt="Students" loading="lazy" />
         </figure>
         <article>
-          <p className="my-10 text-3xl font-bold text-red-500 max-md:text-2xl">
+          <p className="my-10 text-3xl font-bold text-yellow-500 max-md:text-2xl">
             Partner With Us!
           </p>
 
@@ -31,7 +31,7 @@ export default function ReferralProgram() {
             program at a partner university in Maryland, United States through
             the Study-In-Maryland scholarship program.
           </p>
-          <p className="my-10 text-3xl font-bold text-red-500 max-md:text-3xl">
+          <p className="my-10 text-3xl font-bold text-yellow-500 max-md:text-3xl">
             Why Recruit Students to Study in Maryland?
           </p>
           <div className="text-md my-5">
@@ -59,7 +59,7 @@ export default function ReferralProgram() {
               </li>
             </ul>
           </div>
-          <p className="my-10 text-3xl font-bold text-red-500 max-md:text-3xl">
+          <p className="my-10 text-3xl font-bold text-yellow-500 max-md:text-3xl">
             Benefits of Becoming a Partner
           </p>
           <div className="text-md my-5">
@@ -92,7 +92,7 @@ export default function ReferralProgram() {
             just earning rewards; you’re opening doors to their future. Let’s
             make a difference together!
           </p>
-          <p className="my-10 text-3xl font-bold text-red-500 max-md:text-3xl">
+          <p className="my-10 text-3xl font-bold text-yellow-500 max-md:text-3xl">
             How to Get Started
           </p>
           <div className="text-md my-5">

@@ -2,10 +2,10 @@ export default function Faq() {  return (
     <main className="flex items-center justify-center ">
       <section className="w-[60%] p-10 max-md:w-full max-md:p-4 font-medium">
         <article>
-          <h1 className="my-10 text-5xl font-bold text-red-500 max-md:text-3xl">
+          <h1 className="my-10 text-5xl font-bold text-yellow-500 max-md:text-3xl">
             FAQ
           </h1>
-          <p className="my-10 text-3xl font-bold text-red-500 max-md:text-3xl">
+          <p className="my-10 text-3xl font-bold text-yellow-500 max-md:text-3xl">
             Which universities does Study in Maryland assist with?
           </p>
           <p className="text-md my-5">
@@ -13,7 +13,7 @@ export default function Faq() {  return (
             Maryland, such as; University of Baltimore, University of Maryland,
             Morgan State University and many others.
           </p>
-          <p className="my-10 text-3xl font-bold text-red-500 max-md:text-3xl">
+          <p className="my-10 text-3xl font-bold text-yellow-500 max-md:text-3xl">
             What services does Study in Maryland provide?
           </p>
           <p className="text-md my-5">
@@ -25,7 +25,7 @@ export default function Faq() {  return (
             enroll at a prestigious institution in Maryland on a full
             scholarship.
           </p>
-          <p className="my-10 text-3xl font-bold text-red-500 max-md:text-3xl">
+          <p className="my-10 text-3xl font-bold text-yellow-500 max-md:text-3xl">
             How can Study in Maryland help with the application process?
           </p>
 
@@ -37,7 +37,7 @@ export default function Faq() {  return (
             transcripts and recommendation letters, to ensure that it meets the
             admission requirements of our partner universities in Maryland.
           </p>
-          <p className="my-10 text-3xl font-bold text-red-500 max-md:text-3xl">
+          <p className="my-10 text-3xl font-bold text-yellow-500 max-md:text-3xl">
             Access to Top-tier Education and Research Opportunities
           </p>
           <p className="text-md my-5">
@@ -48,7 +48,7 @@ export default function Faq() {  return (
             cutting-edge projects and collaborate with leading experts in their
             fields.
           </p>
-          <p className="my-10 text-3xl font-bold text-red-500 max-md:text-3xl">
+          <p className="my-10 text-3xl font-bold text-yellow-500 max-md:text-3xl">
             What are the admission requirements for universities in Maryland?
           </p>
           <p className="text-md my-5">
@@ -58,7 +58,7 @@ export default function Faq() {  return (
             page to know more about the application requirements.
           </p>
 
-          <p className="my-10 text-3xl font-bold text-red-500 max-md:text-3xl">
+          <p className="my-10 text-3xl font-bold text-yellow-500 max-md:text-3xl">
             What is the student life like in Maryland for international
             students?
           </p>
@@ -68,7 +68,7 @@ export default function Faq() {  return (
             there&apos;s always something to do. Study in Maryland provides
             insights into campus life and helps you settle into the city.
           </p>
-          <p className="my-10 text-3xl font-bold text-red-500 max-md:text-3xl">
+          <p className="my-10 text-3xl font-bold text-yellow-500 max-md:text-3xl">
             How does Study in Maryland support students after arrival?
           </p>
           <p className="text-md my-5">
@@ -78,7 +78,7 @@ export default function Faq() {  return (
             may have throughout your academic journey.
           </p>
 
-          <p className="my-10 text-3xl font-bold text-red-500 max-md:text-3xl">
+          <p className="my-10 text-3xl font-bold text-yellow-500 max-md:text-3xl">
             When will I know the status of my application?
           </p>
           <p className="text-md my-5">

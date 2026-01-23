@@ -114,7 +114,7 @@ export default function AgentSigning() {
     <main className=" flex justify-center items-center">
       <section className="w-[60%]  p-10  max-md:w-full max-md:p-0 flex flex-col items-center my-5 md:shadow-lg">
         <div className="p-5 m-5 border-b-[1px] w-3/4 max-md:w-[80%] text-center">
-          <h1 className="text-3xl font-medium text-red-500">Sign Up</h1>
+          <h1 className="text-3xl font-medium text-yellow-500">Sign Up</h1>
         </div>
         <form
           className="w-3/4 max-md:w-[70%] flex flex-col gap-5"
@@ -217,14 +217,14 @@ export default function AgentSigning() {
             label="Send me useful emails to help me get the most out of study in Maryland."
           />
           <div className="w-full flex justify-end">
-            <Button variant="contained" type="submit">
+            <Button variant="contained" type="submit"  > 
               Proceed
             </Button>
           </div>
         </form>
         <p className="my-5">
           Already have an account?{" "}
-          <a href="Agent-signin" className="text-red-500 font-medium underline">
+          <a href="Agent-signin" className="text-yellow-500 font-medium underline">
             Log in
           </a>
         </p>

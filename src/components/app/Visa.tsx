@@ -2,7 +2,7 @@ export default function Visa() {  return (
     <main className="flex items-center justify-center ">
       <section className="w-[60%] p-10 max-md:w-full max-md:p-4 font-medium">
         <article>
-          <h1 className="my-10 text-5xl font-bold text-red-500 max-md:text-3xl">
+          <h1 className="my-10 text-5xl font-bold text-yellow-500 max-md:text-3xl">
             Visa
           </h1>
           <p className="text-md my-5">
@@ -28,7 +28,7 @@ export default function Visa() {  return (
             </ul>
           </div>
 
-          <p className="my-10 text-2xl font-bold text-red-500 max-md:text-lg">
+          <p className="my-10 text-2xl font-bold text-yellow-500 max-md:text-lg">
             General Requirements
           </p>
           <div className="text-md my-5">
@@ -74,7 +74,7 @@ export default function Visa() {  return (
             </ul>
           </div>
 
-          <p className="my-10 text-2xl font-bold text-red-500 max-md:text-lg">
+          <p className="my-10 text-2xl font-bold text-yellow-500 max-md:text-lg">
             Documentation for Visa Interview
           </p>
           <div className="text-md my-5">
@@ -135,7 +135,7 @@ export default function Visa() {  return (
               </li>
             </ul>
           </div>
-          <p className="my-10 text-2xl font-bold text-red-500 max-md:text-lg">
+          <p className="my-10 text-2xl font-bold text-yellow-500 max-md:text-lg">
             Additional Steps
           </p>
           <div className="text-md my-5">
@@ -162,7 +162,7 @@ export default function Visa() {  return (
             </ul>
           </div>
 
-          <p className="my-10 text-2xl font-bold text-red-500 max-md:text-lg">
+          <p className="my-10 text-2xl font-bold text-yellow-500 max-md:text-lg">
             Post-Approval
           </p>
           <div className="text-md my-5">

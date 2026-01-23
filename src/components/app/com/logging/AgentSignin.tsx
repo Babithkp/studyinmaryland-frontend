@@ -69,7 +69,7 @@ export default function AgentLogin() {
     <main className=" flex justify-center items-center">
       <section className="w-[60%]  p-10  max-md:w-full max-md:p-0 flex flex-col items-center my-5 md:shadow-lg">
         <div className="p-5 m-5 border-b-[1px] w-3/4 max-md:w-[80%] text-center">
-          <h1 className="text-3xl font-medium text-red-500">Sign In</h1>
+          <h1 className="text-3xl font-medium text-yellow-500">Sign In</h1>
         </div>
         <form
           className="w-3/4 max-md:w-[80%] flex flex-col gap-5"
@@ -84,7 +84,7 @@ export default function AgentLogin() {
             {...register("email")}
           />
           {userNotFoundMessage && (
-            <span className="font-medium text-red-500">
+            <span className="font-medium text-yellow-500">
               Email not found please loggin
             </span>
           )}
@@ -121,7 +121,7 @@ export default function AgentLogin() {
         </form>
         <p className="my-5">
           Don't have an account?{" "}
-          <a href="Agent-signup" className="text-red-500 font-medium underline">
+          <a href="Agent-signup" className="text-yellow-500 font-medium underline">
             Sign Up
           </a>
         </p>

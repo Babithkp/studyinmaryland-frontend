@@ -7,7 +7,7 @@ export default function StudentLife() {
           <img src={studentsImg} alt="Students" loading="lazy"/>
         </figure>
         <article>
-          <h1 className="my-10 text-5xl font-bold text-red-500 max-md:text-3xl">
+          <h1 className="my-10 text-5xl font-bold text-yellow-500 max-md:text-3xl">
             Student Life
           </h1>
           <p className="text-md my-5">
@@ -20,7 +20,7 @@ export default function StudentLife() {
             performances at the Hippodrome Theatre or the Maryland Symphony
             Orchestra.
           </p>
-          <p className="text-red-500 text-3xl font-bold my-10 max-md:text-3xl">
+          <p className="text-yellow-500 text-3xl font-bold my-10 max-md:text-3xl">
             Community and Networking
           </p>
           <p className="text-md my-5">
@@ -33,7 +33,7 @@ export default function StudentLife() {
             frequently organized to help students build their careers.
           </p>
 
-          <p className="text-red-500 text-3xl font-bold my-10 max-md:text-3xl">
+          <p className="text-yellow-500 text-3xl font-bold my-10 max-md:text-3xl">
             Diverse and Inclusive Environment
           </p>
           <p className="text-md my-5">
@@ -43,7 +43,7 @@ export default function StudentLife() {
             cultural and international student organizations helps in easing the
             transition and fostering a sense of belonging.
           </p>
-          <p className="text-red-500 text-3xl font-bold my-10 max-md:text-3xl">
+          <p className="text-yellow-500 text-3xl font-bold my-10 max-md:text-3xl">
             Access to Top-tier Education and Research Opportunities
           </p>
           <p className="text-md my-5">
@@ -54,7 +54,7 @@ export default function StudentLife() {
             cutting-edge projects and collaborate with leading experts in their
             fields.
           </p>
-          <p className="text-red-500 text-3xl font-bold my-10 max-md:text-3xl">
+          <p className="text-yellow-500 text-3xl font-bold my-10 max-md:text-3xl">
             Career and Professional Development
           </p>
           <p className="text-md my-5">
@@ -65,7 +65,7 @@ export default function StudentLife() {
             helping students to gain practical experience and establish their
             careers in the U.S. or internationally.
           </p>
-          <p className="text-red-500 text-3xl font-bold my-10 max-md:text-3xl">
+          <p className="text-yellow-500 text-3xl font-bold my-10 max-md:text-3xl">
             Cultural Enrichment and Exploration
           </p>
           <p className="text-md my-5">
@@ -76,7 +76,7 @@ export default function StudentLife() {
             enriches the educational experience and broadens students
             worldviews.
           </p>
-          <p className="text-red-500 text-3xl font-bold my-10 max-md:text-3xl">
+          <p className="text-yellow-500 text-3xl font-bold my-10 max-md:text-3xl">
             Support Services
           </p>
           <p className="text-md my-5">

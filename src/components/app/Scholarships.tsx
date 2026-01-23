@@ -21,7 +21,7 @@ export default function Scholarships() {
           <img src={studentsImg} alt="Students" loading="lazy" />
         </figure>
         <article>
-          <p className="my-10 text-3xl font-bold text-red-500 max-md:text-3xl">
+          <p className="my-10 text-3xl font-bold text-yellow-500 max-md:text-3xl">
             Overview
           </p>
           <p className="text-md my-5">
@@ -46,7 +46,7 @@ export default function Scholarships() {
             scholarship to study an eligible masters or phd degree program at a
             partner university in Maryland, USA.
           </p>
-          <p className="my-10 text-3xl font-bold text-red-500 max-md:text-3xl">
+          <p className="my-10 text-3xl font-bold text-yellow-500 max-md:text-3xl">
             Scholarship Details
           </p>
           <div className="text-md my-5">
@@ -106,7 +106,7 @@ export default function Scholarships() {
               </li>
             </ul>
           </div>
-          <p className="my-10 text-3xl font-bold text-red-500 max-md:text-3xl">
+          <p className="my-10 text-3xl font-bold text-yellow-500 max-md:text-3xl">
             Application Requirements
           </p>
           <div className="text-md my-5">
@@ -216,7 +216,7 @@ export default function Scholarships() {
           <div className="my-10 mt-11">
             <a
               href="applicationPortal"
-              className="rounded-md bg-red-500 px-9 py-3 font-semibold text-white  hover:bg-red-600 "
+              className="rounded-md bg-yellow-500 px-9 py-3 font-semibold text-white  hover:bg-red-600 "
             >
               Apply
             </a>

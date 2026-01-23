@@ -2,7 +2,7 @@ export default function ApplicationPortal() {  return (
     <main className="flex items-center justify-center">
       <section className="w-[60%] p-10 max-md:w-full max-md:p-4 font-medium">
         <article className="">
-          <h1 className="my-10 text-5xl font-bold text-red-500 max-md:text-3xl">
+          <h1 className="my-10 text-5xl font-bold text-yellow-500 max-md:text-3xl">
             How To Apply:
           </h1>
           <p className="text-md my-5">
@@ -94,7 +94,7 @@ export default function ApplicationPortal() {  return (
         <div className="my-10 w-full justify-center flex ">
           <a
             href={"applicationPortal/addApplication/"}
-            className="h-fit w-fit rounded-md bg-red-500 hover:bg-red-600 px-3 py-2 text-lg uppercase text-white "
+            className="h-fit w-fit rounded-md bg-yellow-500 hover:bg-yellow-600 px-3 py-2 text-lg uppercase text-white "
           >
             Application portal
           </a>

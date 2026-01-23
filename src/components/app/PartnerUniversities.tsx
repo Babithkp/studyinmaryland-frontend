@@ -17,7 +17,7 @@ export default function PartnerUniversities() {
   return (
     <main className="flex flex-col items-center justify-center">
       <section className="w-[90%] p-10 max-md:w-full max-md:p-4">
-        <h1 className="my-10 text-5xl font-bold text-red-500 max-md:text-3xl">
+        <h1 className="my-10 text-5xl font-bold text-yellow-500 max-md:text-3xl">
           Partner universities
         </h1>
         <p className="text-md my-5 font-medium">

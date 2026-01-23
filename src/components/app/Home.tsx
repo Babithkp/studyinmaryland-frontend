@@ -1,4 +1,4 @@
-import image from "/backgroundHeroPage.jpg";import icon1 from "/city.svg";
+import image from "../../assets/background.jpeg";import icon1 from "/city.svg";
 import icon2 from "/rocket-graph.svg";
 import icon4 from "/flag-point.svg";
 import cardBg from "/homePageStudent.jpg";
@@ -27,11 +27,11 @@ export default function Home() {
       />
       <section className="absolute top-[25%] flex w-[50%] flex-col items-center justify-center max-md:w-[80%]">
         <article className="my-10 text-white">
-          <h1 className="bg-red-500 px-14 py-10 text-5xl font-semibold max-md:p-4 max-md:text-2xl">
+          <h1 className="bg-yellow-500 px-14 py-10 text-5xl font-semibold max-md:p-4 max-md:text-2xl">
             Study in Maryland: home to diverse and a vibrant student community
             In the United States.
           </h1>
-          <p className="bg-[#004890] p-8 text-lg font-medium max-md:p-4 max-sm:text-base text-center">
+          <p className="bg-black p-8 text-lg font-medium max-md:p-4 max-sm:text-base text-center">
             We enable international students to access world-class education and
             career opportunities in Maryland, USA, through the Study-In-Maryland
             scholarship program.
@@ -40,7 +40,7 @@ export default function Home() {
         <div className="flex max-sm:flex-col">
           <a
             href="student-life"
-            className="rounded-md bg-white px-9 py-3 font-semibold text-red-500"
+            className="rounded-md bg-white px-9 py-3 font-semibold text-yellow-500"
           >
             DISCOVER Maryland
           </a>
@@ -48,7 +48,7 @@ export default function Home() {
       </section>
       <section className="flex w-[95%] flex-col items-center">
         <div className="flex w-[90%] flex-col items-center justify-center gap-3">
-          <h2 className="my-8 text-5xl font-bold text-red-500 max-md:text-3xl text-center">
+          <h2 className="my-8 text-5xl font-bold text-yellow-500 max-md:text-3xl text-center">
             Study at one of our partner institutions
           </h2>
           <p className="px-5 text-center text-lg font-extralight">
@@ -115,10 +115,10 @@ export default function Home() {
         </div>
         <div className="my-20 flex w-full flex-col flex-wrap items-center justify-center gap-3">
           <div className="flex flex-col items-center">
-            <span className="text-xl font-bold uppercase text-red-500 underline">
+            <span className="text-xl font-bold uppercase text-yellow-500 underline">
               what we do
             </span>
-            <h3 className="my-8 w-[80%] text-center text-3xl font-bold text-red-500 max-md:text-lg">
+            <h3 className="my-8 w-[80%] text-center text-3xl font-bold text-yellow-500 max-md:text-lg">
               Direct Entry Into Our Prestigious Partner Universities
             </h3>
             <p className="text-center">
@@ -163,7 +163,7 @@ export default function Home() {
       <section className="mt-5 flex justify-center">
         <div className="grid w-[85%] gap-5 max-md:w-[95%] md:grid-cols-3 md:grid-rows-2">
           <div className="col-start-1 row-span-2 flex items-center">
-            <p className="my-8 text-center text-5xl font-bold text-red-500 max-md:text-2xl">
+            <p className="my-8 text-center text-5xl font-bold text-yellow-500 max-md:text-2xl">
               Why choose us for your study abroad dreams?
             </p>
           </div>
@@ -174,7 +174,7 @@ export default function Home() {
               alt="city"
               className="col-span-1 justify-self-center"
             />
-            <h3 className="my-5 text-3xl font-bold text-red-500 max-md:text-2xl">
+            <h3 className="my-5 text-3xl font-bold text-yellow-500 max-md:text-2xl">
               Free World-Class Education!
             </h3>
             <p className="col-start-2">
@@ -186,7 +186,7 @@ export default function Home() {
             </p>
             <a
               href={"/Scholarships"}
-              className="col-start-2 text-lg font-medium text-red-500 underline"
+              className="col-start-2 text-lg font-medium text-yellow-500 underline"
             >
               MORE INFO
             </a>
@@ -198,7 +198,7 @@ export default function Home() {
               alt="city"
               className="col-span-1 justify-self-center"
             />
-            <h3 className="my-5 text-3xl font-bold text-red-500 max-md:text-2xl">
+            <h3 className="my-5 text-3xl font-bold text-yellow-500 max-md:text-2xl">
               Streamlined Application Procedure.
             </h3>
             <p className="col-start-2">
@@ -208,7 +208,7 @@ export default function Home() {
             </p>
             <a
               href={"/applicationPortal"}
-              className="col-start-2 text-lg font-medium text-red-500 underline"
+              className="col-start-2 text-lg font-medium text-yellow-500 underline"
             >
               MORE INFO
             </a>
@@ -221,7 +221,7 @@ export default function Home() {
               alt="city"
               className="col-span-1 justify-self-center"
             />
-            <h3 className="my-5 text-3xl font-bold text-red-500 max-md:text-2xl">
+            <h3 className="my-5 text-3xl font-bold text-yellow-500 max-md:text-2xl">
               Career & Professional networking Opportunities.
             </h3>
             <p className="col-start-2">
@@ -232,7 +232,7 @@ export default function Home() {
             </p>
             <a
               href={"/student-life"}
-              className="col-start-2 text-lg font-medium text-red-500 underline"
+              className="col-start-2 text-lg font-medium text-yellow-500 underline"
             >
               MORE INFO
             </a>
@@ -242,7 +242,7 @@ export default function Home() {
       <section className="flex w-full flex-col items-center justify-center gap-10">
         <a
           href="/aboutus"
-          className="my-8 px-5 text-5xl font-bold text-red-500 max-md:text-3xl hover:underline"
+          className="my-8 px-5 text-5xl font-bold text-yellow-500 max-md:text-3xl hover:underline"
         >
           Find out more about us.
         </a>
@@ -282,13 +282,14 @@ export default function Home() {
               alt="college background"
               className="absolute h-full w-full object-cover"
             />
-            <h3 className="z-20 text-center text-4xl font-bold text-red-500 max-md:text-2xl">
+            <h3 className="z-20 text-center text-4xl font-bold text-yellow-500 max-md:text-2xl">
               There is always someone you can ask
             </h3>
           </div>
           <a
             href={"/faq"}
-            className=" text-2xl font-bold text-white underline hover:-translate-y-1 duration-100 max-md:text-xl flex h-[28rem] w-[19rem] items-center justify-center bg-red-500 max-md:h-[20rem] max-md:w-[100%]"
+            className=" text-2xl font-bold text-white underline hover:-translate-y-1 duration-100 
+            max-md:text-xl flex h-[28rem] w-[19rem] items-center justify-center bg-yellow-500 max-md:h-[20rem] max-md:w-[100%]"
           >
             FAQ
           </a>
@@ -302,14 +303,15 @@ export default function Home() {
           </div>
           <a
             href={"/contact"}
-            className="text-2xl font-bold text-white underline hover:-translate-y-1 duration-100 max-md:text-xl flex h-[28rem] w-[19rem] items-center justify-center bg-blue-500 max-md:h-[20rem] max-md:w-[100%]"
+            className="text-2xl font-bold text-white underline hover:-translate-y-1 duration-100 max-md:text-xl flex 
+            h-[28rem] w-[19rem] items-center justify-center bg-black max-md:h-[20rem] max-md:w-[100%]"
           >
             Contact
           </a>
         </div>
       </section>
       <section className="w-[98vw] p-5   ">
-        <h3 className="pt-10 text-center text-5xl font-bold text-red-500 max-md:text-3xl">
+        <h3 className="pt-10 text-center text-5xl font-bold text-yellow-500 max-md:text-3xl">
           See for yourself!
         </h3>
         <div className="my-14 font-semibold newFont text-white relative">

@@ -27,7 +27,7 @@ export default function SelectionLayout() {
   return (
     <main className="flex items-center justify-center ">
       <section className="w-[50%] p-10 max-md:w-full gap-14 max-md:p-4 font-medium flex flex-col items-center">
-        <h1 className="md:text-4xl font-semibold text-3xl text-center text-red-500">
+        <h1 className="md:text-4xl font-semibold text-3xl text-center text-yellow-500">
           Join as an Ambassador or Student
         </h1>
         <div className="flex max-md:flex-col gap-8">
