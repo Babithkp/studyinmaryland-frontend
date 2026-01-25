@@ -3,17 +3,17 @@ import iiieImg from "/iie_logo.png"; export default function Footer() {
     <footer className="flex flex-col  justify-center items-center text-sm gap-5 bg-black/80 py-10 text-white max-lg:gap-5 max-lg:p-10 max-lg:text-xs  max-md:flex-col">
       <div className="flex max-md:flex-col justify-around items-center w-full gap-5 max-md:gap-10">
         <div className="flex flex-col gap-10 max-lg:gap-5">
-          <a href={"/"} className="w-[10rem] ">
+          <a href={"/"} className="w-[15rem] ">
             <svg
-              className="h-full w-full"
-              width="306"
+              className="h-full w-full scale-110"
+              width="480"
               height="91"
               viewBox="0 0 306 91"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
               <rect
-                width="280"
+                width="580"
                 height="46"
                 transform="translate(45 45)"
                 fill="#EAD729"
@@ -26,7 +26,7 @@ import iiieImg from "/iie_logo.png"; export default function Footer() {
                 fontWeight="600"
                 fontFamily="Inter, Arial, sans-serif"
               >
-                Munich bildungsauslander 
+               Munich bildungsauslander scholarship
               </text>
               <path
                 d="M0 22.5C0 10.0736 10.0736 0 22.5 0C34.9264 0 45 10.0736 45 22.5V45H22.5C10.0736 45 0 34.9264 0 22.5Z"
@@ -46,8 +46,8 @@ import iiieImg from "/iie_logo.png"; export default function Footer() {
         </div>
         <div>
           <p className="text-center">
-            This is a program of the state of Maryland with funding provided by
-            the Maryland state department of education.
+            This is a program of the state of Munich bildungsauslander with funding provided by 
+            the Munich bildungsauslander with funding provided by state department of education.
           </p>
         </div>
         <div>

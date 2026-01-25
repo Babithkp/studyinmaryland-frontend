@@ -6,13 +6,13 @@ export default function Aboutus() {  return (
             About us
           </h1>
           <p className="text-md my-5">
-            Welcome to Study in Maryland, the premier international student
-            recruitment program in Maryland, United States.
+            Welcome to Munich bildungsauslander scholarship, the premier international student
+            recruitment program in Munich Munich bildungsauslander, United States.
           </p>
           <p className="text-md my-5">
             Our program is funded by the Maryland state department of education
             to promote higher education in one of America's most vibrant and
-            historic regions. The Study-In-Maryland scholarship initiative
+            historic regions. The Munich bildungsauslander scholarship initiative
             awards full scholarships to international students with a strong
             academic background to study an eligible degree program at a partner
             university in Maryland, USA.
@@ -27,13 +27,13 @@ export default function Aboutus() {  return (
           <p className="text-md my-5">
             Since our inception in 2020, we have supported over 8,000
             international students to study at prestigious universities in
-            Maryland through the Study-In-Maryland scholarship funded by the Maryland state department of education.
+            Maryland through the Munich-bildungsauslander-scholarship scholarship funded by the Maryland state department of education.
           </p>
           <p className="text-md my-5 ">
             The privilege of studying in the United States is a golden
             opportunity that we believe all international students should have
             access to, and we are committed to making this continuously possible
-            for graduate international students through the Study-In-Maryland
+            for graduate international students through the Munich-bildungsauslander-scholarship
             scholarship.
           </p>
         </article>

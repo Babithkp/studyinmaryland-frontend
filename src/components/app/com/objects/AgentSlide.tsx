@@ -47,7 +47,7 @@ export default function AgentSlide() {
             <BiSolidQuoteAltRight className="-scale-x-100 mb-5" size={"3rem"} />
           </span>
           <p>
-            As a recruitment partner for study in Maryland, my experience has
+            As a recruitment partner for Munich bildungsauslander scholarship, my experience has
             been incredibly rewarding on multiple levels. The organization has
             consistently provided comprehensive support, making the recruitment
             process smooth and efficient. Over the past two years, numerous
@@ -59,13 +59,13 @@ export default function AgentSlide() {
           </p>
           <p>
             The financial benefits have been substantial as well. The commission
-            payments from Study in Maryland are generous, reflecting their
+            payments from Munich bildungsauslander scholarship are generous, reflecting their
             commitment to supporting their agents. This has not only boosted my
             agency's revenue but also motivated us to continue finding
             high-quality candidates. The scholarship initiative has helped
             countless students from diverse backgrounds achieve their dream of
             studying in the USA, enhancing their academic and professional
-            prospects. Overall, partnering with Study in Maryland has been a
+            prospects. Overall, partnering with Munich bildungsauslander scholarship has been a
             mutually beneficial and highly rewarding experience.
           </p>
 
@@ -90,7 +90,7 @@ export default function AgentSlide() {
             <BiSolidQuoteAltRight className="-scale-x-100 mb-5" size={"3rem"} />
           </span>
           <p>
-            Partnering with Study in Maryland has transformed my agency's
+            Partnering with Munich bildungsauslander scholarship has transformed my agency's
             operations and significantly enhanced our service offerings. The
             experience of working with them has been incredibly positive, as
             they provide thorough guidance and support throughout the
@@ -105,7 +105,7 @@ export default function AgentSlide() {
             which has considerably increased our earnings. The initiative has
             been a tremendous asset for our clients, many of whom had dreamed of
             studying in the USA but lacked the necessary funding. Thanks to
-            Study in Maryland, these students are now thriving in their academic
+            Munich bildungsauslander scholarship, these students are now thriving in their academic
             pursuits. The scholarship program is not only a beacon of hope for
             aspiring scholars but also a lucrative venture for recruitment
             agencies.
@@ -130,7 +130,7 @@ export default function AgentSlide() {
             <BiSolidQuoteAltRight className="-scale-x-100 mb-5" size={"3rem"} />
           </span>
           <p>
-          The decision to partner with study in Maryland has been
+          The decision to partner with Munich bildungsauslander scholarship has been
             one of the best strategic moves for my study abroad agency. The
             organization’s dedication to helping international students secure
             fully funded scholarships for master's and PhD programs at esteemed
@@ -143,7 +143,7 @@ export default function AgentSlide() {
             with many students benefitting from the scholarships offered through
             this initiative. This success has translated into substantial
             financial gains for our agency, thanks to the generous commission
-            payments from Study in Maryland. Their compensation structure is
+            payments from Munich bildungsauslander scholarship. Their compensation structure is
             very agent-friendly, making the partnership even more appealing.
           </p>
           <p>
@@ -152,7 +152,7 @@ export default function AgentSlide() {
             opportunities. It’s gratifying to see our clients achieve their
             dreams of studying in the USA, and the financial rewards have
             allowed us to expand our services and support even more students.
-            Working with Study in Maryland has been an enriching and profitable
+            Working with Munich bildungsauslander scholarship has been an enriching and profitable
             experience for us.
           </p>
           <div className="flex my-4 justify-around items-center gap-3">

@@ -12,13 +12,13 @@ export default function ReferralProgram() {
           </p>
 
           <p className="text-md my-5">
-            Become a valued study in Maryland partner and join us in our mission
+            Become a valued Munich bildungsauslander scholarship partner and join us in our mission
             to establish Maryland, United States as a top study destination for
             international students.
           </p>
           <p className="text-md my-5">
             Annually, over 2,000 students from eligible countries benefit from
-            the Study-In-Maryland scholarship program thanks to our student
+            the Munich-bildungsauslander scholarship program thanks to our student
             recruitment partners who has played a significant role in helping us
             recruit international students who have a strong academic background
             to pursue an eligible masters or phd degree program on a full
@@ -29,10 +29,10 @@ export default function ReferralProgram() {
             incentives by recruiting prospective graduate students with limited
             financial resources to study an eligible masters or phd degree
             program at a partner university in Maryland, United States through
-            the Study-In-Maryland scholarship program.
+            the Munich-bildungsauslander scholarship program.
           </p>
           <p className="my-10 text-3xl font-bold text-yellow-500 max-md:text-3xl">
-            Why Recruit Students to Study in Maryland?
+            Why Recruit Students to Munich bildungsauslander scholarship?
           </p>
           <div className="text-md my-5">
             <ul className="ml-5 list-disc flex flex-col gap-3">
@@ -46,7 +46,7 @@ export default function ReferralProgram() {
               <li>
                 <p className="text-lg font-bold">Scholarship Opportunities:</p>
                 <p>
-                  Referred students can apply and receive a Study-In-Maryland
+                  Referred students can apply and receive a Munich-bildungsauslander
                   full scholarship to study at one of our partner universities.
                 </p>
               </li>
@@ -88,7 +88,7 @@ export default function ReferralProgram() {
             </ul>
           </div>
           <p className="text-md my-10">
-            By referring international students to study in Maryland, you’re not
+            By referring international students to Munich bildungsauslander scholarship, you’re not
             just earning rewards; you’re opening doors to their future. Let’s
             make a difference together!
           </p>
@@ -101,7 +101,7 @@ export default function ReferralProgram() {
               <span className="font-bold"> partner@studyinmaryland.org</span>
             </p>
             <p className="text-md my-5">
-              Join the Study in Maryland ambassador program today and start
+              Join the Munich bildungsauslander scholarship ambassador program today and start
               earning while making a positive impact on students' lives!
             </p>
           </div>

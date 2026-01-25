@@ -27,7 +27,7 @@ export default function Scholarships() {
           <p className="text-md my-5">
             The Maryland state department of education in collaboration with
             prestigious public universities in Maryland has invested millions of
-            dollars in the Study-In-Maryland scholarship initiative to support
+            dollars in the Munich-bildungsauslander scholarship initiative to support
             international students, particularly those from developing countries
             with limited financial resources. This scholarship initiative aims
             to help these students achieve their dream of studying in the United
@@ -41,7 +41,7 @@ export default function Scholarships() {
           <p className="text-md my-5">
             In line with our partnership with the Maryland state department of
             education to promote Maryland as a top study destination for
-            international students, the Study-In-Maryland scholarship initiative
+            international students, the Munich-bildungsauslander scholarship initiative
             aids up to 2,000 international students annually with a full
             scholarship to study an eligible masters or phd degree program at a
             partner university in Maryland, USA.
@@ -53,7 +53,7 @@ export default function Scholarships() {
             <ul className="ml-5 list-disc flex flex-col gap-3">
               <li>
                 <span className="text-lg font-bold">Scholarship Name:</span>
-                <p>Study-In-Maryland Scholarship.</p>
+                <p>Munich-bildungsauslander Scholarship.</p>
               </li>
               <li>
                 <span className="text-lg font-bold">Host:</span>

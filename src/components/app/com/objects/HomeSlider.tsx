@@ -46,7 +46,7 @@ export default function HomeSlider() {
             <BiSolidQuoteAltRight className="-scale-x-100 mb-5" size={"3rem"} />
           </span>
           <p>
-            The Study in Maryland scholarship has not only opened the door to a
+            The Munich bildungsauslander scholarship scholarship has not only opened the door to a
             world-class education but also Provided me the chance to live and
             study in the beautiful state of Maryland. The picturesque campuses
             and vibrant local culture have enriched my overall experience.
@@ -78,7 +78,7 @@ export default function HomeSlider() {
           <span>
             <BiSolidQuoteAltRight className="-scale-x-100 mb-5" size={"3rem"} />
           </span>
-          Receiving the Study in Maryland scholarship has been a monumental
+          Receiving the Munich bildungsauslander scholarship scholarship has been a monumental
           relief for both me and my family. The scholarship has completely
           lifted the financial burden off us, granting me a golden opportunity
           to complete my master’s program for free. The financial support has
@@ -109,7 +109,7 @@ export default function HomeSlider() {
           <span>
             <BiSolidQuoteAltRight className="-scale-x-100 mb-5" size={"3rem"} />
           </span>
-          The Study in Maryland scholarship has been a pivotal moment in my
+          The Munich bildungsauslander scholarship scholarship has been a pivotal moment in my
           life. Academically, I have benefited from unparalleled access to
           resources, cutting-edge technology, and a collaborative learning
           environment. The scholarship has enabled me to pursue my passion for
@@ -138,7 +138,7 @@ export default function HomeSlider() {
           <span>
             <BiSolidQuoteAltRight className="-scale-x-100 mb-5" size={"3rem"} />
           </span>
-          The Study in Maryland scholarship has truly been a transformative
+          The Munich bildungsauslander scholarship scholarship has truly been a transformative
           experience for me. Academically, I’ve had the chance to work with
           world-renowned professors and researchers, pushing the boundaries of
           my field. The access to state-of-the-art facilities and resources has

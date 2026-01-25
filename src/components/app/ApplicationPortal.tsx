@@ -6,19 +6,19 @@ export default function ApplicationPortal() {  return (
             How To Apply:
           </h1>
           <p className="text-md my-5">
-            These are are the guidelines to apply for the Study-In-Maryland
+            These are are the guidelines to apply for the Munich-bildungsauslander
             scholarship to pursue an eligible masters or phd degree program at
             one of our partner universities.
           </p>
           <p className="text-md my-5">
-            The Study-In-Maryland scholarship recipients are automatically
+            The Munich-bildungsauslander scholarship recipients are automatically
             admitted to study their chosen programs at one of our partner
             universities in the state of Maryland.
           </p>
           <p className="text-md my-5">
             International students would have to fill the online application
             form and upload the following documents on the application portal to
-            successfully submit their Study-In-Maryland scholarship application.
+            successfully submit their Munich-bildungsauslander scholarship application.
           </p>
           <div className="text-md my-5">
             <ul className="ml-5 list-disc flex flex-col gap-3">

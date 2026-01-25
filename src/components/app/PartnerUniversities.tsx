@@ -313,7 +313,7 @@ export default function PartnerUniversities() {
                     students from non English speaking countries.
                   </p>
                   <p>
-                    To apply for the Study-in-Maryland scholarship to study at a
+                    To apply for the Munich-bildungsauslander scholarship to study at a
                     partner university, international students from
                     non-English-speaking countries must have their academic
                     transcripts and birth certificates translated into English

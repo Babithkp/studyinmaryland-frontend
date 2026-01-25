@@ -37,22 +37,23 @@ export default function Navbar() {
 
   return (
     <nav className="flex justify-between border-b-[1px] p-4 text-lg font-medium ">
-      <figure className="mr-16 h-14 max-md:w-[10rem]">
+      <figure className=" h-14  pl-14">
         <a href={"/"}>
           <svg
-            className="h-full w-full scale-110"
-            width="346"
+            className="h-full w-full scale-125 max-md:scale-150"
+            width="700"
             height="91"
-            viewBox="0 0 306 91"
-            fill="none"
+            viewBox="0 0 700 91"
             xmlns="http://www.w3.org/2000/svg"
           >
             <rect
-              width="500"
+              width="360"
               height="46"
-              transform="translate(45 45)"
+              x="45"
+              y="45"
               fill="#EAD729"
             />
+
             <text
               x="55"
               y="75"
@@ -61,8 +62,9 @@ export default function Navbar() {
               fontWeight="600"
               fontFamily="Inter, Arial, sans-serif"
             >
-              Munich bildungsauslander
+              Munich Bildungsausländer Scholarship
             </text>
+
             <path
               d="M0 22.5C0 10.0736 10.0736 0 22.5 0C34.9264 0 45 10.0736 45 22.5V45H22.5C10.0736 45 0 34.9264 0 22.5Z"
               fill="#EAD729"

@@ -28,12 +28,12 @@ export default function Home() {
       <section className="absolute top-[25%] flex w-[50%] flex-col items-center justify-center max-md:w-[80%]">
         <article className="my-10 text-white">
           <h1 className="bg-yellow-500 px-14 py-10 text-5xl font-semibold max-md:p-4 max-md:text-2xl">
-            Study in Maryland: home to diverse and a vibrant student community
+            Munich bildungsauslander scholarship: home to diverse and a vibrant student community
             In the United States.
           </h1>
           <p className="bg-black p-8 text-lg font-medium max-md:p-4 max-sm:text-base text-center">
             We enable international students to access world-class education and
-            career opportunities in Maryland, USA, through the Study-In-Maryland
+            career opportunities in Maryland, USA, through the Munich-bildungsauslander
             scholarship program.
           </p>
         </article>
@@ -130,7 +130,7 @@ export default function Home() {
             <CardApply
               image={coachingIcon}
               title="Scholarship Assistance"
-              content="Free access to apply for the study-in-Maryland scholarship on our application portal."
+              content="Free access to apply for the Munich-bildungsauslander scholarship on our application portal."
               url="Scholarships"
             />
             <CardApply
@@ -181,7 +181,7 @@ export default function Home() {
               Through our partnership with leading public universities in
               Maryland, we offer international students the opportunity to
               pursue an eligible masters or phd degree program through the
-              Study-In-Maryland scholarship provided by the Maryland state
+              Munich-bildungsauslander scholarship provided by the Maryland state
               department of education.
             </p>
             <a
