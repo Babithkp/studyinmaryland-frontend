@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 // import { RiCloseCircleFill } from "react-icons/ri";
+import { Link } from "react-router-dom";
 
 import {
   AlertDialog,
@@ -37,16 +38,16 @@ export default function Navbar() {
 
   return (
     <nav className="flex justify-between border-b-[1px] p-4 text-lg font-medium ">
-      <figure className=" h-14  pl-14">
-        <a href={"/"}>
+      <a href={"/"} className=" ">
+        <figure className=" h-14  flex justify-center items-center " >
           <svg
-            className="h-full w-full scale-125 max-md:scale-150"
-            width="700"
-            height="91"
+            width="300"
+            height="90"
             viewBox="0 0 700 91"
             xmlns="http://www.w3.org/2000/svg"
           >
             <rect
+              className="scale-125"
               width="360"
               height="46"
               x="45"
@@ -61,57 +62,61 @@ export default function Navbar() {
               fontSize="18"
               fontWeight="600"
               fontFamily="Inter, Arial, sans-serif"
+              className="scale-125"
             >
-              Munich Bildungsausländer Scholarship
+              Munich bildungsauslander Scholarship
             </text>
 
             <path
               d="M0 22.5C0 10.0736 10.0736 0 22.5 0C34.9264 0 45 10.0736 45 22.5V45H22.5C10.0736 45 0 34.9264 0 22.5Z"
               fill="#EAD729"
+              className="scale-125"
             />
-            <circle cx="22.5" cy="22.5" r="11.25" fill="white" />
+            <circle cx="22.5" cy="22.5"
+              className="scale-125"
+              r="11.25" fill="white" />
           </svg>
-        </a>
-      </figure>
+        </figure>
+      </a>
       <ul className="relative flex justify-end flex-wrap gap-7 max-lg:w-[80%] max-lg:gap-5 max-md:hidden">
         <li>
-          <a href={"/aboutus"}>About Us</a>
+          <Link to={"/aboutus"}>About Us</Link>
         </li>
         {agentId && (
           <li>
-            <a href={`/agent-dashboard/${agentId}`}>Dashboard</a>
+            <Link to={`/agent-dashboard/${agentId}`}>Dashboard</Link>
           </li>
         )}
 
         <li>
-          <a href={"/partner-universities"}>Partner Universities</a>
+          <Link to={"/partner-universities"}>Partner Universities</Link>
         </li>
         <li>
-          <a href={"/Scholarships"}>Scholarships</a>
+          <Link to={"/Scholarships"}>Scholarships</Link>
         </li>
         <li>
-          <a href={"/student-life"}>Student Life</a>
+          <Link to={"/student-life"}>Student Life</Link>
         </li>
         <li>
-          <a href={"/visa"}>Visa</a>
+          <Link to={"/visa"}>Visa</Link>
         </li>
         <li>
-          <a href={"/faq"}>FAQ</a>
+          <Link to={"/faq"}>FAQ</Link>
         </li>
         <li>
-          <a href={"/applicationPortal"}>Application Portal</a>
+          <Link to={"/applicationPortal"}>Application Portal</Link>
         </li>
 
         <li>
-          <a href={"/ambassadorProgram"}>Become a Partner</a>
+          <Link to={"/ambassadorProgram"}>Become a Partner</Link>
         </li>
         {!agentId && (
           <li>
-            <a href={"/signup"}>Sign up</a>
+            <Link to={"/signup"}>Sign up</Link>
           </li>
         )}
         <li>
-          <a href={"/contact"}>Contact</a>
+          <Link to={"/contact"}>Contact</Link>
         </li>
         {agentId && (
           <li onClick={logoutHandler}>
@@ -121,13 +126,13 @@ export default function Navbar() {
       </ul>
 
       <AlertDialog>
-        <AlertDialogTrigger>
-          <div
+        <AlertDialogTrigger className="z-100  w-10 flex items-center justify-center ">
+          <button
             className="flex items-center justify-center gap-2 text-red-500 md:hidden"
             onClick={() => setMenustate(!menuState)}
           >
             <GiHamburgerMenu size={"1.7rem"} />
-          </div>
+          </button>
         </AlertDialogTrigger>
         <AlertDialogContent
           className="h-[100vh] w-full overflow-scroll bg-transparent md:hidden"
@@ -137,77 +142,77 @@ export default function Navbar() {
             <div className="bg-transparent"></div>
 
             <ul className="h-full flex-wrap gap-10 bg-white text-black">
-              <a
-                href={"/"}
+              <Link
+                to={"/"}
                 className="block w-full border-b-[1px] bg-red-500 px-5 py-4 text-base font-medium text-white"
               >
                 <p>Home</p>
-              </a>
-              <a
-                href={"/aboutus"}
+              </Link>
+              <Link
+                to={"/aboutus"}
                 className="block w-full border-b-[1px] px-5 py-4 text-base font-medium text-black hover:bg-red-500 hover:text-white"
               >
                 About Us
-              </a>
+              </Link>
               {agentId && (
-                <a
-                  href={`/agent-dashboard/${agentId}`}
+                <Link
+                  to={`/agent-dashboard/${agentId}`}
                   className="block w-full border-b-[1px] px-5 py-4 text-base font-medium text-black hover:bg-red-500 hover:text-white"
                 >
                   Dashboard
-                </a>
+                </Link>
               )}
-              <a
-                href={"/partner-universities"}
+              <Link
+                to={"/partner-universities"}
                 className="block w-full border-b-[1px] px-5 py-4 text-base font-medium text-black hover:bg-red-500 hover:text-white"
               >
                 Partner Universities
-              </a>
-              <a
-                href={"/Scholarships"}
+              </Link>
+              <Link
+                to={"/Scholarships"}
                 className="block w-full border-b-[1px] px-5 py-4 text-base font-medium text-black hover:bg-red-500 hover:text-white"
               >
                 Scholarships
-              </a>
-              <a
-                href={"/student-life"}
+              </Link>
+              <Link
+                to={"/student-life"}
                 className="block w-full border-b-[1px] px-5 py-4 text-base font-medium text-black hover:bg-red-500 hover:text-white"
               >
                 Student Life
-              </a>
-              <a
-                href={"/visa"}
+              </Link>
+              <Link
+                to={"/visa"}
                 className="block w-full border-b-[1px] px-5 py-4 text-base font-medium text-black hover:bg-red-500 hover:text-white"
               >
                 Visa
-              </a>
-              <a
-                href={"/faq"}
+              </Link>
+              <Link
+                to={"/faq"}
                 className="flex w-full items-center border-b-[1px] px-5 py-4 text-base font-medium text-black hover:bg-red-500 hover:text-white"
               >
                 FAQ
-              </a>
+              </Link>
 
-              <a
-                href={"/applicationPortal"}
+              <Link
+                to={"/applicationPortal"}
                 className="flex w-full items-center border-b-[1px] px-5 py-4 text-base font-medium text-black hover:bg-red-500 hover:text-white"
               >
                 Application Portal
-              </a>
+              </Link>
 
-              <a
-                href={"/ambassadorProgram"}
+              <Link
+                to={"/ambassadorProgram"}
                 className="flex w-full items-center border-b-[1px] px-5 py-4 text-base font-medium text-black hover:bg-red-500 hover:text-white"
               >
                 Become a Partner
-              </a>
+              </Link>
               {!agentId && (
-                <a
-                  href={"/signup"}
+                <Link
+                  to={"/signup"}
                   className="block w-full border-b-[1px] px-5 py-4 text-base font-medium text-black hover:bg-red-500 hover:text-white"
                 >
                   Sign Up
-                </a>
+                </Link>
               )}
               {agentId && (
                 <button
@@ -217,12 +222,12 @@ export default function Navbar() {
                   Logout
                 </button>
               )}
-              <a
-                href="/contact"
+              <Link
+                to="/contact"
                 className="flex w-full items-center border-b-[1px] px-5 py-4 text-base font-medium text-black hover:bg-red-500 hover:text-white"
               >
                 Contact
-              </a>
+              </Link>
             </ul>
           </section>
           <AlertDialogCancel
