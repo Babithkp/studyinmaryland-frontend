@@ -6,7 +6,7 @@ export default function Aboutus() {  return (
         </figure>
       <section className="w-[60%] p-10 max-md:w-full max-md:p-4 font-medium max-md:text-center">
         <article>
-          <h1 className="my-10 text-5xl font-bold text-yellow-500 max-md:text-3xl text-start">
+          <h1 className="my-10 text-5xl font-bold text-yellow-500 max-md:text-3xl text-start max-md:text-center">
             About us
           </h1>
           <p className="text-md my-5">
