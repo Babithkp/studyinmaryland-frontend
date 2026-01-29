@@ -12,6 +12,7 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { IoMdArrowRoundBack, IoMdArrowRoundForward } from "react-icons/io";
 
+
 export default function HomeSlider() {
   return (
     <>
@@ -41,22 +42,12 @@ export default function HomeSlider() {
         effect="fade"
         className="relative"
       >
-        <SwiperSlide className="bg-[#004890] rounded-2xl p-5 h-[35rem] flex flex-col justify-evenly max-md:h-[40rem]">
+        <SwiperSlide className="bg-[#004890] rounded-2xl p-5 h-[35rem] flex flex-col justify-between max-md:h-[40rem]">
           <span>
             <BiSolidQuoteAltRight className="-scale-x-100 mb-5" size={"3rem"} />
           </span>
           <p>
-            The Munich bildungsauslander scholarship scholarship has not only opened the door to a
-            world-class education but also Provided me the chance to live and
-            study in the beautiful state of Maryland. The picturesque campuses
-            and vibrant local culture have enriched my overall experience.
-            Career-wise, being in Maryland has given me access to numerous
-            internships and job opportunities, many of which I wouldn’t have
-            encountered elsewhere. Without this scholarship, studying in the USA
-            would have been a distant dream due to financial constraints. This
-            program has made the impossible possible, allowing me to pursue my
-            academic and career aspirations in one of the most dynamic states in
-            the country.
+            Receiving the Duales Studienstipendium completely changed my career path. I was able to study engineering at a German university while working with a partner company from my first year. The combination of theory and real work experience gave me confidence, financial stability, and practical skills that I would never get from a normal study program. Today, I’m already employed full-time in Germany, and the transition was seamless.
           </p>
           <div className="flex my-4 justify-around items-center gap-3">
             <div className="w-[5rem] h-[4rem] ">
@@ -74,20 +65,11 @@ export default function HomeSlider() {
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="bg-[#004890] rounded-2xl p-5 h-[35rem] flex flex-col justify-evenly max-md:h-[40rem]">
+        <SwiperSlide className="bg-[#004890] rounded-2xl p-5 h-[35rem] flex flex-col justify-between max-md:h-[40rem]">
           <span>
             <BiSolidQuoteAltRight className="-scale-x-100 mb-5" size={"3rem"} />
           </span>
-          Receiving the Munich bildungsauslander scholarship scholarship has been a monumental
-          relief for both me and my family. The scholarship has completely
-          lifted the financial burden off us, granting me a golden opportunity
-          to complete my master’s program for free. The financial support has
-          meant that my family doesn’t have to worry about covering my
-          educational expenses, which has significantly reduced their stress.
-          Additionally, studying in Maryland has been a dream come true, with
-          its beautiful landscapes and rich history enhancing my academic
-          journey. The professional connections and career opportunities I’ve
-          gained here have been invaluable, setting me on a path to a successful
+          As an international student, the biggest challenge was funding and long-term security. This scholarship solved both. I didn’t need a blocked account, I earned a salary during my studies, and I gained German work experience while studying. The program made it easy to integrate into German life, and it clearly set me on a path toward permanent residency.
           future.
           <div className="flex my-4 justify-around items-center gap-3">
             <div className="w-[5rem] h-[4rem] ">
@@ -105,19 +87,11 @@ export default function HomeSlider() {
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="bg-[#004890] rounded-2xl p-5 h-[35rem] flex flex-col justify-evenly max-md:h-[40rem]">
+        <SwiperSlide className="bg-[#004890] rounded-2xl p-5 h-[35rem] flex flex-col justify-between max-md:h-[40rem]">
           <span>
             <BiSolidQuoteAltRight className="-scale-x-100 mb-5" size={"3rem"} />
           </span>
-          The Munich bildungsauslander scholarship scholarship has been a pivotal moment in my
-          life. Academically, I have benefited from unparalleled access to
-          resources, cutting-edge technology, and a collaborative learning
-          environment. The scholarship has enabled me to pursue my passion for
-          research without any financial constraints, which has been incredibly
-          liberating. It has provided stability and allowed me to
-          focus on my education and personal growth rather than worrying about
-          finances. This opportunity has significantly broadened my horizons and
-          prepared me for a successful career ahead.
+          The dual study scholarship gave me the opportunity to study a healthcare-related degree while gaining hands-on experience in Germany.
           <div className="flex my-4 justify-around items-center gap-3">
             <div className="w-[5rem] h-[4rem] ">
               <img
@@ -134,19 +108,11 @@ export default function HomeSlider() {
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="bg-[#004890] rounded-2xl p-5 h-[35rem] flex flex-col justify-evenly max-md:h-[40rem]">
+        <SwiperSlide className="bg-[#004890] rounded-2xl p-5 h-[35rem] flex flex-col justify-between max-md:h-[40rem]">
           <span>
             <BiSolidQuoteAltRight className="-scale-x-100 mb-5" size={"3rem"} />
           </span>
-          The Munich bildungsauslander scholarship scholarship has truly been a transformative
-          experience for me. Academically, I’ve had the chance to work with
-          world-renowned professors and researchers, pushing the boundaries of
-          my field. The access to state-of-the-art facilities and resources has
-          significantly advanced my research capabilities. The scholarship has
-          alleviated the burden of tuition and living expenses, allowing me to
-          focus entirely on my studies without the constant worry of debt. This
-          opportunity has opened doors to networking and professional growth
-          that I could never have imagined.
+          This scholarship didn’t just give me education — it gave me a future. Studying and working at the same time helped me grow professionally and personally. I improved my German, built a strong professional network, and gained valuable work experience. Knowing I had guaranteed employment after graduation removed so much uncertainty and stress.
           <div className="flex my-4 justify-around items-center gap-3">
             <div className="w-[5rem] h-[4rem] ">
               <img

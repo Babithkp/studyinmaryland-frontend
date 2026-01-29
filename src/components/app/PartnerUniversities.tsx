@@ -4,12 +4,12 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "../ui/accordion";
-import img1 from "/universitiesLogo/bccc.png";
-import img2 from "/universitiesLogo/marylandpng.png";
-import img3 from "/universitiesLogo/universityOfBaltimorejpg.jpg";
-import img4 from "/universitiesLogo/coppin.svg";
-import img5 from "/universitiesLogo/morgan.png";
-import img6 from "/universitiesLogo/frostburg.png";
+import img1 from "../../assets/duale_hochschule.jpeg";
+import img2 from "../../assets/fulda.jpeg";
+import img3 from "../../assets/hochschule_worms.jpeg";
+import img4 from "../../assets/ludwigshafen.jpeg";
+import img5 from "../../assets/rhen-waal.jpeg";
+import img6 from "../../assets/technische.jpeg";
 
 export default function PartnerUniversities() {
   const dropdownTextClass =
@@ -33,7 +33,7 @@ export default function PartnerUniversities() {
               alt="college"
               className="max-md:w-26 max-md:h-26 h-40 w-40 object-contain"
             />
-            <p className="">The University of Baltimore</p>
+            <p className="">Hochschule Worms</p>
           </figure>
           <figure className="flex flex-col items-center justify-center max-sm:w-full">
             <img
@@ -42,7 +42,7 @@ export default function PartnerUniversities() {
               alt="college"
               className="max-md:w-26 max-md:h-26 h-40 w-80 object-contain"
             />
-            <p className="">Maryland City Community College</p>
+            <p className="">Duale Hochschule Baden-Wurttemberg</p>
           </figure>
           <figure className="flex flex-col items-center justify-center max-sm:w-full">
             <img
@@ -51,7 +51,7 @@ export default function PartnerUniversities() {
               alt="college"
               className="max-md:w-26 max-md:h-26 h-40 w-40 object-contain"
             />
-            <p className="">University Of Maryland</p>
+            <p className="">Hochshule Fulda</p>
           </figure>
           <figure className="flex flex-col items-center justify-center max-sm:w-full">
             <img
@@ -60,7 +60,7 @@ export default function PartnerUniversities() {
               alt="college"
               className="max-md:w-26 max-md:h-26 h-40 w-40 object-contain"
             />
-            <p className="">Coppin State University</p>
+            <p className="">Ludwigshafen University of Bussiness</p>
           </figure>
           <figure className="flex flex-col items-center justify-center max-sm:w-full">
             <img
@@ -69,7 +69,7 @@ export default function PartnerUniversities() {
               alt="college"
               className="max-md:w-26 max-md:h-26 h-40 w-40 object-contain"
             />
-            <p className="">Morgan State University</p>
+            <p className="">Hochshule Rhein-Waal</p>
           </figure>
           <figure className="flex flex-col items-center justify-center max-sm:w-full">
             <img
@@ -78,7 +78,7 @@ export default function PartnerUniversities() {
               alt="college"
               className="max-md:w-26 max-md:h-26 h-40 w-40 object-cover"
             />
-            <p className="">Frostburg State University</p>
+            <p className="">Ische Hochs Ingols</p>
           </figure>
         </div>
       </section>

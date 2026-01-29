@@ -39,32 +39,33 @@ export default function Navbar() {
   return (
     <nav className="flex justify-between border-b-[1px] p-4 text-lg font-medium ">
       <a href={"/"} className=" ">
-        <figure className=" h-14  flex justify-center items-center " >
+      <figure className="w-[28rem] h-[6rem] flex justify-center items-center max-md:w-[20rem] ">
           <svg
-            width="300"
-            height="90"
+            width="100%"
+            height="100%"
             viewBox="0 0 700 91"
+            preserveAspectRatio="xMidYMid meet"
             xmlns="http://www.w3.org/2000/svg"
           >
             <rect
-              className="scale-125"
-              width="360"
+              width="300"
               height="46"
               x="45"
               y="45"
               fill="#EAD729"
+              className="scale-125"
             />
 
             <text
               x="55"
               y="75"
               fill="white"
-              fontSize="18"
+              fontSize="22"
               fontWeight="600"
               fontFamily="Inter, Arial, sans-serif"
-              className="scale-125"
+              className="scale-125 "
             >
-              Munich bildungsauslander Scholarship
+              Duales Studienstipendium
             </text>
 
             <path
@@ -72,9 +73,14 @@ export default function Navbar() {
               fill="#EAD729"
               className="scale-125"
             />
-            <circle cx="22.5" cy="22.5"
+
+            <circle
+              cx="22.5"
+              cy="22.5"
+              r="11.25"
+              fill="white"
               className="scale-125"
-              r="11.25" fill="white" />
+            />
           </svg>
         </figure>
       </a>

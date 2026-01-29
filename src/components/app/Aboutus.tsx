@@ -1,41 +1,24 @@
+import studentsImg from "../../assets/studentsLife.jpeg";
 export default function Aboutus() {  return (
-    <main className="flex items-center justify-center">
+    <main className="flex flex-col items-center justify-center">
+      <figure className="w-[50%]">
+          <img src={studentsImg} alt="Students" loading="lazy"/>
+        </figure>
       <section className="w-[60%] p-10 max-md:w-full max-md:p-4 font-medium max-md:text-center">
         <article>
           <h1 className="my-10 text-5xl font-bold text-yellow-500 max-md:text-3xl text-start">
             About us
           </h1>
           <p className="text-md my-5">
-            Welcome to Munich bildungsauslander scholarship, the premier international student
-            recruitment program in Munich Munich bildungsauslander, United States.
+          The Duales Studienstipendium Scholarship is a forward-thinking international education initiative funded by the Federal Institute for Vocational Education and Training (Bundesinstitut für Berufsbildung – BIBB). It was created to promote Germany’s globally respected dual study system, which uniquely integrates academic learning with hands-on, paid workplace training. Since its inception in 2023, the scholarship has supported over 4,500 international students from across the world, opening structured and reliable pathways into Germany’s education and employment ecosystem.
           </p>
           <p className="text-md my-5">
-            Our program is funded by the Maryland state department of education
-            to promote higher education in one of America's most vibrant and
-            historic regions. The Munich bildungsauslander scholarship initiative
-            awards full scholarships to international students with a strong
-            academic background to study an eligible degree program at a partner
-            university in Maryland, USA.
+          At the heart of the program is a clear mission: not only to enable students to study in Germany, but to prepare them for rapid and sustainable entry into the German job market. By combining classroom instruction with real-world professional experience, scholars graduate with practical skills that are immediately relevant to employers. In parallel, students gain a strong command of the German language while studying and working, giving them a critical advantage for long-term career growth and social integration in Germany.
           </p>
           <p className="text-md my-5">
-            Our in-depth understanding of the importance of a multicultural
-            community and the diverse, impactful contributions that
-            international students have made in various cities across the United
-            States drives our mission to promote the state of Maryland as a
-            world-class study destination for international students.
+          Beyond funding, the Duales Studienstipendium represents opportunity, stability, and future readiness. It bridges the gap between education and employment, reduces the risks often associated with international study, and aligns global talent with Germany’s workforce needs. Through strong institutional partnerships and a structured support framework, the scholarship empowers students to build meaningful careers, contribute to the German economy, and become globally competitive professionals in an increasingly interconnected world.
           </p>
-          <p className="text-md my-5">
-            Since our inception in 2020, we have supported over 8,000
-            international students to study at prestigious universities in
-            Maryland through the Munich-bildungsauslander-scholarship scholarship funded by the Maryland state department of education.
-          </p>
-          <p className="text-md my-5 ">
-            The privilege of studying in the United States is a golden
-            opportunity that we believe all international students should have
-            access to, and we are committed to making this continuously possible
-            for graduate international students through the Munich-bildungsauslander-scholarship
-            scholarship.
-          </p>
+          
         </article>
       </section>
     </main>

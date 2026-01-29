@@ -1,17 +1,17 @@
-import image from "../../assets/background.jpeg";import icon1 from "/city.svg";
+import image from "../../assets/background.jpeg"; import icon1 from "/city.svg";
 import icon2 from "/rocket-graph.svg";
 import icon4 from "/flag-point.svg";
-import cardBg from "/homePageStudent.jpg";
-import img1 from "/universitiesLogo/bccc.png";
-import img2 from "/universitiesLogo/marylandpng.png";
-import img3 from "/universitiesLogo/universityOfBaltimorejpg.jpg";
-import img4 from "/universitiesLogo/coppin.svg";
-import img5 from "/universitiesLogo/morgan.png";
-import img6 from "/universitiesLogo/frostburg.png";
+import cardBg from "../../assets/graduate.jpeg";
+import cardBg2 from "../../assets/classroom.jpeg";
+import img1 from "../../assets/duale_hochschule.jpeg";
+import img2 from "../../assets/fulda.jpeg";
+import img3 from "../../assets/hochschule_worms.jpeg";
+import img4 from "../../assets/ludwigshafen.jpeg";
+import img5 from "../../assets/rhen-waal.jpeg";
+import img6 from "../../assets/technische.jpeg";
 import counsellingIcon from "/icon-counselling.png";
 import coachingIcon from "/coaching-vector.png";
 import visaIcon from "/icon-visa.png";
-import financialIcon from "/icon-financial.png";
 import CardApply from "./com/objects/CardApply";
 import MarylandMap from "/baltimore-map.jpg";
 import Slider from "./com/objects/HomeSlider";
@@ -28,13 +28,13 @@ export default function Home() {
       <section className="absolute top-[25%] flex w-[50%] flex-col items-center justify-center max-md:w-[80%]">
         <article className="my-10 text-white">
           <h1 className="bg-yellow-500 px-14 py-10 text-5xl font-semibold max-md:p-4 max-md:text-2xl">
-            Munich bildungsauslander scholarship: home to diverse and a vibrant student community
-            In the United States.
+            Duales Studienstipendium : Study and gain real work practical experience in Germany.
           </h1>
           <p className="bg-black p-8 text-lg font-medium max-md:p-4 max-sm:text-base text-center">
-            We enable international students to access world-class education and
-            career opportunities in Maryland, USA, through the Munich-bildungsauslander
-            scholarship program.
+            The Duales Studium scholarship offers international students the opportunity to pursue a degree at
+            our partner universities while combining their studies with paid, hands-on work at a company in Germany.
+            This unique dual model allows students to gain practical experience and earn an income while studying a bachelor or
+            masters degree program in Germany tuition-free!
           </p>
         </article>
         <div className="flex max-sm:flex-col">
@@ -42,21 +42,20 @@ export default function Home() {
             href="student-life"
             className="rounded-md bg-white px-9 py-3 font-semibold text-yellow-500"
           >
-            DISCOVER Maryland
+            Discover More
           </a>
         </div>
       </section>
       <section className="flex w-[95%] flex-col items-center">
         <div className="flex w-[90%] flex-col items-center justify-center gap-3">
           <h2 className="my-8 text-5xl font-bold text-yellow-500 max-md:text-3xl text-center">
-            Study at one of our partner institutions
+            Study at a partner institution for free!
           </h2>
           <p className="px-5 text-center text-lg font-extralight">
-            Each year we provide scholarship opportunities for more than 1,500
-            international students to study an eligible masters or phd program
-            at a partner university.
+            In the past three years over 4000 international students have been provided with the
+            opportunity to pursue a dual-study bachelor or masters degree program at a partner university in Germany.
           </p>
-          <div className="my-10 flex w-full gap-5 text-center max-lg:flex-wrap max-sm:grid max-sm:grid-cols-2">
+          <div className="my-10 flex w-full gap-5 text-center  flex-wrap justify-between">
             <figure className="flex flex-col items-center justify-center max-sm:w-full">
               <img
                 loading="lazy"
@@ -64,7 +63,7 @@ export default function Home() {
                 alt="college"
                 className="max-md:w-26 max-md:h-26 h-40 w-40 object-contain"
               />
-              <p>The University of Baltimore</p>
+              <p>Hochschule Worms University</p>
             </figure>
             <figure className="flex flex-col items-center justify-center max-sm:w-full">
               <img
@@ -73,7 +72,7 @@ export default function Home() {
                 alt="college"
                 className="max-md:w-26 max-md:h-26 h-40 w-80 object-contain"
               />
-              <p>Baltimore city community college</p>
+              <p>Dual Hochschule Baden-Wurttemberg</p>
             </figure>
             <figure className="flex flex-col items-center justify-center max-sm:w-full">
               <img
@@ -82,7 +81,7 @@ export default function Home() {
                 alt="college"
                 className="max-md:w-26 max-md:h-26 h-40 w-40 object-contain"
               />
-              <p>University of Maryland</p>
+              <p>Hochschule Fulda</p>
             </figure>
             <figure className="flex flex-col items-center justify-center max-sm:w-full">
               <img
@@ -91,7 +90,7 @@ export default function Home() {
                 alt="college"
                 className="max-md:w-26 max-md:h-26 h-40 w-40 object-contain"
               />
-              <p>Coppin State University</p>
+              <p>Ludwigshafen University of Business</p>
             </figure>
             <figure className="flex flex-col items-center justify-center max-sm:w-full">
               <img
@@ -100,7 +99,7 @@ export default function Home() {
                 alt="college"
                 className="max-md:w-26 max-md:h-26 h-40 w-40 object-contain"
               />
-              <p>Morgan State University</p>
+              <p>Hochschule Rhein-Waal</p>
             </figure>
             <figure className="flex flex-col items-center justify-center max-sm:w-full">
               <img
@@ -109,46 +108,36 @@ export default function Home() {
                 alt="college"
                 className="max-md:w-26 max-md:h-26 h-40 w-40 object-cover"
               />
-              <p>Frostburg State University</p>
+              <p>Ische Hochs Ingols</p>
             </figure>
           </div>
         </div>
         <div className="my-20 flex w-full flex-col flex-wrap items-center justify-center gap-3">
           <div className="flex flex-col items-center">
-            <span className="text-xl font-bold uppercase text-yellow-500 underline">
-              what we do
-            </span>
             <h3 className="my-8 w-[80%] text-center text-3xl font-bold text-yellow-500 max-md:text-lg">
-              Direct Entry Into Our Prestigious Partner Universities
+              Free education at our prestigious universities.
             </h3>
             <p className="text-center">
-              Our mission is to make your dream of studying in the USA come
-              true.
+              Our mission is to make your dream of studying in Germany come true.
             </p>
           </div>
           <div className="flex flex-wrap items-center justify-center gap-5">
             <CardApply
               image={coachingIcon}
-              title="Scholarship Assistance"
-              content="Free access to apply for the Munich-bildungsauslander scholarship on our application portal."
+              title="Full Scholarship"
+              content="International students can apply for the scholarship for free on the application portal."
               url="Scholarships"
             />
             <CardApply
               image={counsellingIcon}
-              title="University Placement"
-              content="All scholarship recipients are automatically admitted to study an eligible degree program at one of our partner universities."
+              title="University Admissions"
+              content="Scholarship recipients gain direct admission to pursue a bachelor or master dual study program at a partner university."
               url="partner-universities"
             />
             <CardApply
               image={visaIcon}
-              title="Visa Counselling"
-              content="Get professional  student visa counseling and guidance from professionals."
-              url="contact"
-            />
-            <CardApply
-              image={financialIcon}
-              title="Free Counseling"
-              content="We guide you throughout the entire process of achieving your goals and dreams free of charge!"
+              title="Job Placements"
+              content="Scholarship recipients get paid-work placements at a partner companies of our universities throughout the duration of the dual study program."
               url="contact"
             />
           </div>
@@ -160,29 +149,22 @@ export default function Home() {
           View Our Top Study Programs.
         </a>
       </section>
-      <section className="mt-5 flex justify-center">
-        <div className="grid w-[85%] gap-5 max-md:w-[95%] md:grid-cols-3 md:grid-rows-2">
-          <div className="col-start-1 row-span-2 flex items-center">
-            <p className="my-8 text-center text-5xl font-bold text-yellow-500 max-md:text-2xl">
-              Why choose us for your study abroad dreams?
-            </p>
-          </div>
-          <div className="grid grid-cols-[2rem,1fr] items-center gap-3">
-            <img
-              loading="lazy"
-              src={icon1}
-              alt="city"
-              className="col-span-1 justify-self-center"
-            />
-            <h3 className="my-5 text-3xl font-bold text-yellow-500 max-md:text-2xl">
-              Free World-Class Education!
-            </h3>
-            <p className="col-start-2">
-              Through our partnership with leading public universities in
-              Maryland, we offer international students the opportunity to
-              pursue an eligible masters or phd degree program through the
-              Munich-bildungsauslander scholarship provided by the Maryland state
-              department of education.
+      <section className="mt-5 flex justify-center  "> 
+        <div className=" flex w-[90%] max-md:flex-col justify-between">
+          <div className=" items-center gap-3 flex flex-col w-[30%] max-md:w-full">
+            <div className="flex gap-5">
+              <img
+                loading="lazy"
+                src={icon1}
+                alt="city"
+                className="col-span-1 justify-self-center"
+              />
+              <h3 className="my-5 text-3xl font-bold text-yellow-500 max-md:text-2xl">
+                Free World-Class Education!
+              </h3>
+            </div>
+            <p >
+              Through our partnership with leading public universities in Germany , we offer international students the opportunity to pursue an eligible bachelor or a masters degree program through the duales studienstipendium provided by the Federal Institute for Vocational Education and Training (Bundesinstitut für Berufsbildung – BIBB).
             </p>
             <a
               href={"/Scholarships"}
@@ -191,20 +173,20 @@ export default function Home() {
               MORE INFO
             </a>
           </div>
-          <div className="grid grid-cols-[2rem,1fr] items-center gap-3">
-            <img
-              loading="lazy"
-              src={icon2}
-              alt="city"
-              className="col-span-1 justify-self-center"
-            />
-            <h3 className="my-5 text-3xl font-bold text-yellow-500 max-md:text-2xl">
-              Streamlined Application Procedure.
-            </h3>
-            <p className="col-start-2">
-              International students can use our seamless application portal to
-              apply for a scholarship to study an eligible degree
-              program at a partner university for free!
+          <div className=" items-center gap-3 flex flex-col w-[30%] max-md:w-full">
+            <div className="flex gap-5">
+              <img
+                loading="lazy"
+                src={icon2}
+                alt="city"
+                className="col-span-1 justify-self-center"
+              />
+              <h3 className="my-5 text-3xl font-bold text-yellow-500 max-md:text-2xl">
+                Streamlined Application Procedure.
+              </h3>
+            </div>
+            <p >
+              International students can use our seamless application portal to apply for the duales studienstipendium scholarship for free!
             </p>
             <a
               href={"/applicationPortal"}
@@ -214,21 +196,20 @@ export default function Home() {
             </a>
           </div>
 
-          <div className="grid grid-cols-[2rem,1fr] items-center gap-3">
-            <img
-              loading="lazy"
-              src={icon4}
-              alt="city"
-              className="col-span-1 justify-self-center"
-            />
-            <h3 className="my-5 text-3xl font-bold text-yellow-500 max-md:text-2xl">
-              Career & Professional networking Opportunities.
-            </h3>
-            <p className="col-start-2">
-              The annual student data in Maryland shows that 72% of university
-              graduates in Maryland find jobs within 6 months of graduation.
-              International students can benefit from our international student
-              alumni network.
+          <div className=" items-center gap-3 flex flex-col w-[30%] max-md:w-full">
+            <div className="flex gap-5">
+              <img
+                loading="lazy"
+                src={icon4}
+                alt="city"
+                className="col-span-1 justify-self-center"
+              />
+              <h3 className="my-5 text-3xl font-bold text-yellow-500 max-md:text-2xl">
+                Career & Professional networking Opportunities.
+              </h3>
+            </div>
+            <p >
+              The annual student data shows that 90% of international students gain full-time employment after completing a dual study bachelor or masters program in Germany.
             </p>
             <a
               href={"/student-life"}
@@ -248,13 +229,13 @@ export default function Home() {
         </a>
         <div className="my-10 flex w-[80%] flex-wrap justify-between gap-10 max-md:justify-center">
           <div className="relative flex flex-col items-center text-center">
-            <h6 className="text-7xl font-semibold text-yellow-300">5</h6>
+            <h6 className="text-7xl font-semibold text-yellow-300">3</h6>
             <p className="absolute top-[30%] w-[300%] text-lg font-bold text-slate-600 max-md:top-[35%]">
               YEARS OF EXPERIENCE
             </p>
           </div>
           <div className="relative flex flex-col items-center">
-            <h6 className="text-7xl font-semibold text-yellow-300">8000+</h6>
+            <h6 className="text-7xl font-semibold text-yellow-300">4000+</h6>
             <p className="absolute top-[30%] text-lg font-bold text-slate-600 max-md:top-[35%]">
               Scholarships Awarded
             </p>
@@ -268,7 +249,7 @@ export default function Home() {
           <div className="relative flex flex-col items-center">
             <h6 className="text-7xl font-semibold text-yellow-300">99%</h6>
             <p className="absolute top-[30%] w-[120%] text-lg font-bold text-slate-600 max-md:top-[35%]">
-              Visa Success Rate
+              Job success rate
             </p>
           </div>
         </div>
@@ -286,12 +267,16 @@ export default function Home() {
               There is always someone you can ask
             </h3>
           </div>
-          <a
-            href={"/faq"}
-            className=" text-2xl font-bold text-white underline hover:-translate-y-1 duration-100 
-            max-md:text-xl flex h-[28rem] w-[19rem] items-center justify-center bg-yellow-500 max-md:h-[20rem] max-md:w-[100%]"
-          >
-            FAQ
+          <a href="/faq" className="relative flex h-[28rem] w-[19rem] items-center justify-center max-md:h-[20rem] max-md:w-[100%]">
+            <img
+              loading="lazy"
+              src={cardBg2}
+              alt="college background"
+              className="absolute h-full w-full object-cover"
+            />
+            <h3 className="z-20 underline text-center text-4xl font-bold text-yellow-500 max-md:text-2xl">
+              FAQ
+            </h3>
           </a>
           <div className="relative flex h-[28rem] w-[19rem] items-center justify-center max-md:h-[20rem] max-md:w-[100%]">
             <img
@@ -311,10 +296,7 @@ export default function Home() {
         </div>
       </section>
       <section className="w-[98vw] p-5   ">
-        <h3 className="pt-10 text-center text-5xl font-bold text-yellow-500 max-md:text-3xl">
-          See for yourself!
-        </h3>
-        <div className="my-14 font-semibold newFont text-white relative">
+        <div className="my-14 font-semibold newFont text-black relative">
           <Slider />
         </div>
       </section>

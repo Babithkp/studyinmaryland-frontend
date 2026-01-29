@@ -7,7 +7,7 @@ import { Button } from "../../../ui/button";interface cardType {
 export default function CardApply({ image, title, content,url }: cardType) {
   const re_direct_to_contactUs = () => [(window.location.href = `/${url}`)];
   return (
-    <div className="flex max-w-[17rem] flex-col items-center gap-3 rounded-lg border-[1px] bg-white py-5 px-4 drop-shadow-lg">
+    <div className="flex h-[18rem] max-w-[17rem] flex-col items-center justify-between rounded-lg border-[1px] bg-white py-5 px-4 drop-shadow-lg">
       <img src={image} alt="counselling icon" className="h-14 w-14" />
       <span className="text-xl font-semibold">{title}</span>
       <p className="text-center text-sm">{content}</p>
