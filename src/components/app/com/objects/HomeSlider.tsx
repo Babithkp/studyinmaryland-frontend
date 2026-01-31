@@ -42,7 +42,7 @@ export default function HomeSlider() {
         effect="fade"
         className="relative"
       >
-        <SwiperSlide className="bg-[#004890] rounded-2xl p-5 h-[35rem] flex flex-col justify-between max-md:h-[40rem]">
+        <SwiperSlide className="bg-yellow-500 rounded-2xl p-5 h-[35rem] flex flex-col justify-between max-md:h-[40rem]">
           <span>
             <BiSolidQuoteAltRight className="-scale-x-100 mb-5" size={"3rem"} />
           </span>
@@ -60,12 +60,12 @@ export default function HomeSlider() {
             <div>
               <p className="font-medium text-lg">Inaaya Singh</p>
               <p className="font-extralight">
-                Student at University of Baltimore
+                Student at Duale Hochschule Baden-Wurttemberg
               </p>
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="bg-[#004890] rounded-2xl p-5 h-[35rem] flex flex-col justify-between max-md:h-[40rem]">
+        <SwiperSlide className="bg-yellow-500 rounded-2xl p-5 h-[35rem] flex flex-col justify-between max-md:h-[40rem]">
           <span>
             <BiSolidQuoteAltRight className="-scale-x-100 mb-5" size={"3rem"} />
           </span>
@@ -82,12 +82,12 @@ export default function HomeSlider() {
             <div>
               <p className="font-medium text-lg">Rajesh Atwal</p>
               <p className="font-extralight">
-                Student at Morgan State University
+                Student at Ludwigshafen University of business and society.
               </p>
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="bg-[#004890] rounded-2xl p-5 h-[35rem] flex flex-col justify-between max-md:h-[40rem]">
+        <SwiperSlide className="bg-yellow-500 rounded-2xl p-5 h-[35rem] flex flex-col justify-between max-md:h-[40rem]">
           <span>
             <BiSolidQuoteAltRight className="-scale-x-100 mb-5" size={"3rem"} />
           </span>
@@ -103,12 +103,12 @@ export default function HomeSlider() {
             <div>
               <p className="font-medium text-lg">Sunil Samad</p>
               <p className="font-extralight">
-                Student at University of Maryland
+                Student at Rhine-waal university of applied sciences
               </p>
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="bg-[#004890] rounded-2xl p-5 h-[35rem] flex flex-col justify-between max-md:h-[40rem]">
+        <SwiperSlide className="bg-yellow-500 rounded-2xl p-5 h-[35rem] flex flex-col justify-between max-md:h-[40rem]">
           <span>
             <BiSolidQuoteAltRight className="-scale-x-100 mb-5" size={"3rem"} />
           </span>
@@ -124,7 +124,8 @@ export default function HomeSlider() {
             <div>
               <p className="font-medium text-lg">Omolara Adeoye</p>
               <p className="font-extralight">
-                Student at Frostburg state university
+                Student at Hochschule Worms 
+                University of applied science
               </p>
             </div>
           </div>

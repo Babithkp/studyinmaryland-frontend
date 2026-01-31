@@ -137,7 +137,7 @@ export default function Home() {
             <CardApply
               image={visaIcon}
               title="Job Placements"
-              content="Scholarship recipients get paid-work placements at a partner companies of our universities throughout the duration of the dual study program."
+              content="Scholarship recipients are guaranteed a placement and receive paid work experience at partner companies of our university."
               url="contact"
             />
           </div>
@@ -150,7 +150,7 @@ export default function Home() {
         </a>
       </section>
       <section className="mt-5 flex justify-center  "> 
-        <div className=" flex w-[90%] max-md:flex-col justify-between">
+        <div className=" flex w-[90%] max-md:flex-col justify-between max-md:gap-20">
           <div className=" items-center gap-3 flex flex-col w-[30%] max-md:w-full">
             <div className="flex gap-5">
               <img
@@ -168,7 +168,7 @@ export default function Home() {
             </p>
             <a
               href={"/Scholarships"}
-              className="col-start-2 text-lg font-medium text-yellow-500 underline"
+              className="col-start-2 text-md font-medium text-yellow-500 underline"
             >
               MORE INFO
             </a>
@@ -190,7 +190,7 @@ export default function Home() {
             </p>
             <a
               href={"/applicationPortal"}
-              className="col-start-2 text-lg font-medium text-yellow-500 underline"
+              className="col-start-2 text-md font-medium text-yellow-500 underline"
             >
               MORE INFO
             </a>
@@ -213,7 +213,7 @@ export default function Home() {
             </p>
             <a
               href={"/student-life"}
-              className="col-start-2 text-lg font-medium text-yellow-500 underline"
+              className="col-start-2 text-md font-medium text-yellow-500 underline"
             >
               MORE INFO
             </a>
@@ -296,7 +296,7 @@ export default function Home() {
         </div>
       </section>
       <section className="w-[98vw] p-5   ">
-        <div className="my-14 font-semibold newFont text-black relative">
+        <div className="my-14 font-semibold newFont text-white relative">
           <Slider />
         </div>
       </section>

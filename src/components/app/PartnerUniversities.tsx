@@ -21,9 +21,7 @@ export default function PartnerUniversities() {
           Partner universities
         </h1>
         <p className="text-md my-5 font-medium">
-          We have collaborated with some of the prestigious public universities
-          in Maryland to help international students globally to achieve their
-          dreams of studying in United States.
+          We have collaborated with some of the prestigious public universities in Germany to help international students globally to achieve their dreams of studying  tuition free in Germany.
         </p>
         <div className="my-10 flex w-full gap-5 text-center max-lg:flex-wrap max-sm:grid max-sm:grid-cols-2 ">
           <figure className="flex flex-col items-center justify-center max-sm:w-full">
@@ -90,52 +88,29 @@ export default function PartnerUniversities() {
             </AccordionTrigger>
             <AccordionContent className=" ">
               <p className="w-full bg-slate-300 p-3 text-center font-semibold">
-                International students can apply for a scholarship to study any
-                of the following eligible masters and phd degree programs at one
-                of our partner universities.
+                International students are eligible to apply for the following dual study program at partner university.
               </p>
               <ul className="">
-                <li className={dropdownTextClass}> Accounting</li>
-                <li className={dropdownTextClass}>
-                  Artificial Intelligence for Business.
-                </li>
-                <li className={dropdownTextClass}>
-                  Applied Molecular Biology and Biochemistry
-                </li>
-                <li className={dropdownTextClass}> Architecture </li>
                 <li className={dropdownTextClass}> Business Administration</li>
-                <li className={dropdownTextClass}> Business-Finance</li>
-                <li className={dropdownTextClass}> Construction Management </li>
-                <li className={dropdownTextClass}> Cybersecurity </li>
-                <li className={dropdownTextClass}> Civil Engineering </li>
-                <li className={dropdownTextClass}> Chemical Engineering </li>
-                <li className={dropdownTextClass}> Computer Engineering </li>
                 <li className={dropdownTextClass}>
-                  Data Analytics And Visualization
-                </li>
-                <li className={dropdownTextClass}> Electrical Angineering </li>
-                <li className={dropdownTextClass}> Environmental Science </li>
-                <li className={dropdownTextClass}>
-                  Global Journalism And Communications
+                  Logistics & Supply Chain Management
                 </li>
                 <li className={dropdownTextClass}>
-                  Global Affairs and Human Security
+                  Marketing & Digital Communication
                 </li>
-                <li className={dropdownTextClass}> Health Administration</li>
-                <li className={dropdownTextClass}> Hospitality Management </li>
-                <li className={dropdownTextClass}>
-                  Information Systems/Technology
-                </li>
-                <li className={dropdownTextClass}> International Business </li>
-                <li className={dropdownTextClass}> Management </li>
-                <li className={dropdownTextClass}> Marketing </li>
-                <li className={dropdownTextClass}> Mechanical Engineering</li>
-                <li className={dropdownTextClass}> Nursing </li>
-                <li className={dropdownTextClass}> Project Management </li>
-                <li className={dropdownTextClass}> Public Health </li>
-                <li className={dropdownTextClass}> Social Work </li>
-                <li className={dropdownTextClass}> Urban Transportation</li>
+                <li className={dropdownTextClass}> Computer Engineering / Computer Science </li>
+                <li className={dropdownTextClass}> Software Engineering</li>
+                <li className={dropdownTextClass}> Business Informatics & IT</li>
+                <li className={dropdownTextClass}> Cyber Security & Data Science </li>
+                <li className={dropdownTextClass}> Electrical / Mechanical Engineering </li>
+                <li className={dropdownTextClass}> Industrial Engineering / Engineering Management </li>
+                <li className={dropdownTextClass}> Industrial Production & Manufacturing </li>
+                <li className={dropdownTextClass}> Nursing/Healthcare Sciences </li>
+
               </ul>
+              <p className="w-full bg-slate-300 p-3 text-center font-semibold">
+                All bachelor and masters programs are dual study integrated programs with work placements.
+              </p>
             </AccordionContent>
           </AccordionItem>
         </Accordion>
@@ -148,23 +123,21 @@ export default function PartnerUniversities() {
               <ul>
                 <li className={dropdownTextClass}>
                   <span className="font-bold mr-2">
-                    Masters programs duration:
+                    Bachelor programs duration:
                   </span>
-                  <br />2 Years full-time.
+                  <br />6 semesters
                 </li>
                 <li className={dropdownTextClass}>
-                  <span className="font-bold mr-2">PhD programs duration:</span>
-                  <br />5 Years full-time. (Includes preparation and
-                  presentation of a dissertation proposal, dissertation
-                  research, and defense of final dissertation).
+                  <span className="font-bold mr-2">Masters programs duration:</span>
+                  <br /> 3 semesters
                 </li>
                 <li className={dropdownTextClass}>
                   <span className="font-bold mr-2">
-                    Masters and PhD programs start dates:
+                    Bachelor and Masters programs start dates:
                   </span>
                   <br />
-                  January 2026 (Spring Semester) <br />
                   September 2026 (Fall Semester)
+                  January 2027 (Spring Semester) <br />
                 </li>
               </ul>
             </AccordionContent>
@@ -177,104 +150,25 @@ export default function PartnerUniversities() {
             </AccordionTrigger>
             <AccordionContent className=" ">
               <p className="w-full bg-slate-300 p-3 font-semibold">
-                International students must submit the following requirements to
-                apply for a scholarship to study at a partner university.
+                International students must submit the following requirements to apply for the Duales Studienstipendium scholarship.
               </p>
               <ul>
                 <li className={dropdownTextClass + "text-start"}>
                   <ul className="my-2 flex list-inside list-disc flex-col  justify-start px-5 gap-5">
                     <li>
-                      Bachelor degree certificate and transcript
+                      High school certificate and transcript
+                      <br />
+                      (For Bachelor program)
+                    </li>
+                    <li>
+                      Bachelor certificate and transcript
                       <br />
                       (For Masters programs)
                     </li>
-                    <li>
-                      Masters degree certificate and transcript
-                      <br />
-                      (For PhD programs)
-                    </li>
                   </ul>
                   <li>
-                    Only the original scanned copies of bachelors or masters
-                    degree certificates and transcripts are accepted.
+                    Only the original scanned copies of bachelors or masters degree certificates and transcripts are accepted.
                   </li>
-                </li>
-                <li className={dropdownTextClass}>
-                  <span className="font-bold mr-2">IELTS/TOEFL:</span>
-                  <br />
-                  To be eligible for a scholarship to study a bachelors or a
-                  masters degree program at one of our partner universities on a
-                  state-funded scholarship, international students with degree
-                  certificates and transcripts in English language are not
-                  required to submit an English language proficiency
-                  certificate, such as IELTS or TOEFL. However, international
-                  students with degree certificates and transcripts in a foreign
-                  language (Not in English language) must submit an IELTS or
-                  TOEFL certificate.
-                  <ul className="my-3 w-full text-center">
-                    <li>
-                      - IELTS:
-                      <a
-                        href={"https://ielts.org"}
-                        target="_blank"
-                        className="ml-2 text-blue-600"
-                      >
-                        www.ielts.org 
-                      </a>
-                    </li>
-                    <li>
-                      - TOEFL:
-                      <a
-                        href={"https://www.ets.org/toefl.html"}
-                        target="_blank"
-                        className="ml-2 text-blue-600"
-                      >
-                        www.ets.org
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-                <li className={dropdownTextClass + " flex flex-col gap-5"}>
-                  <span>
-                    <span className="font-bold mr-2">
-                      Credential Evaluation:
-                    </span>
-                    <br />
-                    It is mandatory for all international students to submit an
-                    evaluation report of their academic credentials to
-                    be eligible for admission and a scholarship to study at one
-                    of our partner universities.
-                  </span>
-                  <span>
-                    An academic credential evaluation in the United States is a
-                    process where an academic evaluation agency in the United
-                    States compares your academic records from your home country
-                    to the U.S. academic equivalents. This evaluation confirms
-                    the authenticity of your academic transcripts, certificates,
-                    recognizes the status of the academic document issuing
-                    institution, and determines the U.S equivalency of your
-                    program of study. It provides detailed information on
-                    individual course credits, including the U.S. equivalent of
-                    course titles, grade points average (GPA). These evaluations
-                    help universities in the U.S understand and assess your
-                    educational background on par with U.S. academic standards.
-                  </span>
-                  <span>
-                    International students would have to get their academic
-                    certificates and transcripts evaluated and verified online by the
-                    Maryland academic evaluation center.
-                  </span>
-                  <span className="mb-2">
-                    - MSAC:
-                    <a
-                      href="https://msac.us"
-                      target="_blank"
-                      className="underline-offset-2 underline text-blue-600"
-                    >
-                      {" "}
-                      www.msac.us
-                    </a>
-                  </span>
                 </li>
 
                 <li className={dropdownTextClass}>
@@ -301,43 +195,33 @@ export default function PartnerUniversities() {
                     of their birth certificate issued by the relevant authority
                     in your home country.
                   </p>
+                  <p>
+                    <span className="font-bold mr-2">Recommendation Letter or Reference Letter:</span>
+                    <br />
+                    A recommendation letter or references letter from your current or previous employer or an academic supervisor or representative at your previous academic institution can help boost your scholarship application.
+                  </p>
                 </li>
                 <li className={dropdownTextClass + " flex flex-col gap-3"}>
                   <p>
                     <span className="font-bold mr-2">
-                      Official copy of a certified translation of your academic
-                      documents and birth certificate:
+                      Official copy of a certified translation of your Application documents:
                     </span>
                     <br />
-                    This is a mandatory requirement only for international
-                    students from non English speaking countries.
+                    This is a mandatory requirement for all scholarship applicants: All academic certificates, transcripts, birth certificates etc.. must be officially translated to German language.
                   </p>
                   <p>
-                    To apply for the Munich-bildungsauslander scholarship to study at a
-                    partner university, international students from
-                    non-English-speaking countries must have their academic
-                    transcripts and birth certificates translated into English
-                    by an official translator in Maryland, United States, if
-                    these documents are not already in English. However,
-                    international students whose academic transcripts and birth
-                    certificates are in English are exempt from this
-                    requirement.
+                    All scholarship applicants must submit their documents at the international translation services to get their application documents officially translated to german language.
                   </p>
                   <p>
-                    International students can get their documents translated
-                    online at the Maryland academic evaluation center.
-                  </p>
-                  <p>
-                    - MSAC:
-                    <a
-                      href="https://msac.us"
+                    All scholarship applicants can get their application documents translated online at <a
+                      href="https://www.ITS.de"
                       target="_blank"
                       className="underline-offset-2 underline text-blue-600"
                     >
-                      {" "}
-                      www.msac.us
+                      ITS.de
                     </a>
                   </p>
+
                 </li>
                 <li className={dropdownTextClass}>
                   <p>
@@ -363,16 +247,14 @@ export default function PartnerUniversities() {
             </AccordionTrigger>
             <AccordionContent>
               <p className="w-full bg-slate-300 p-3 font-semibold text-center">
-                All international students would have to submit their
-                scholarship application to study at one of our partner
-                universities in Maryland before the application deadline.
+              All international students would have to submit their scholarship application to before the application deadline.
               </p>
               <ul>
                 <li className={dropdownTextClass + " font-bold"}>
-                For the spring semester(January 2026)
+                For the fall semester( September 2026) 
                 </li>
                 <li className={dropdownTextClass}>
-                  Application deadline: November 10th, 2025.
+                Application deadline: May 15, 2026.
                 </li>
               </ul>
             </AccordionContent>

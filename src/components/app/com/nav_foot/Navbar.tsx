@@ -37,8 +37,8 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="flex justify-between border-b-[1px] p-4 text-lg font-medium ">
-      <a href={"/"} className=" ">
+    <nav className="flex justify-between border-b-[1px] max-md:px-4 md:p-4  text-lg font-medium sticky top-0 z-50 bg-white">
+      <a href={"/"} >
       <figure className="w-[28rem] h-[6rem] flex justify-center items-center max-md:w-[20rem] ">
           <svg
             width="100%"
@@ -46,6 +46,7 @@ export default function Navbar() {
             viewBox="0 0 700 91"
             preserveAspectRatio="xMidYMid meet"
             xmlns="http://www.w3.org/2000/svg"
+            className="max-md:pb-8"
           >
             <rect
               width="300"
@@ -134,7 +135,7 @@ export default function Navbar() {
       <AlertDialog>
         <AlertDialogTrigger className="z-100  w-10 flex items-center justify-center ">
           <button
-            className="flex items-center justify-center gap-2 text-red-500 md:hidden"
+            className="flex items-center justify-center gap-2  md:hidden"
             onClick={() => setMenustate(!menuState)}
           >
             <GiHamburgerMenu size={"1.7rem"} />

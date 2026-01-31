@@ -1,6 +1,6 @@
 import iiieImg from "/iie_logo.png"; export default function Footer() {
   return (
-    <footer className="flex flex-col  justify-center items-center text-sm gap-5 bg-black/80 py-10 text-white max-lg:gap-5 max-lg:p-10 max-lg:text-xs  max-md:flex-col">
+    <footer className="flex flex-col  justify-center items-center text-sm gap-5 bg-black py-10 text-white max-lg:gap-5 max-lg:p-10 max-lg:text-xs  max-md:flex-col">
       <div className="flex max-md:flex-col justify-around items-center w-full gap-5 max-md:gap-10">
         <div className="flex flex-col gap-10 max-lg:gap-5">
           <a href={"/"} className="w-[15rem] ">
