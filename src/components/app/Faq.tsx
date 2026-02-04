@@ -1,98 +1,65 @@
-export default function Faq() {  return (
+const FAQ = [
+  {
+    question: "What is the Duales Studienstipendium Scholarship?",
+    answer: "The Duales Studienstipendium is a dual study scholarship that allows international students to study tuition-free in Germany while working in paid positions related to their field of study, leading to a recognized bachelor or degree qualification.."
+  },
+  {
+    question: "Is the program really tuition-free?",
+    answer: "Yes. The scholarship fully covers tuition fees, allowing students to study in Germany without paying tuition for the duration of the program."
+  },
+  {
+    question: "Will I be paid while studying?",
+    answer: "Yes. Scholarship recipients receive a monthly stipend of €1,200 throughout the entire program to support living expenses while studying and working in Germany."
+  },
+  {
+    question: "Are the jobs ordinary student jobs?",
+    answer: "No. The dual study system offers paid professional roles directly related to your academic field, not casual or unrelated student jobs. This ensures relevant work experience and career-focused training."
+  },
+  {
+    question: "What are the career opportunities after graduation?",
+    answer: "Graduates of dual study programs in Germany have strong employment prospects. Many students receive job offers from their partner companies during or immediately after graduation, providing a clear career pathway."
+  },
+  {
+    question: "Do I need a blocked account to apply for the student visa?",
+    answer: "No. Duales Studienstipendium scholarship recipients are exempt from providing a blocked account when applying for a German student visa, as financial support is covered by the scholarship stipend."
+  },
+  {
+    question: "Can I travel to other countries while studying in Germany?",
+    answer: "Yes. While living and studying in Germany, students can travel freely within the Schengen Area, allowing easy access to many European countries."
+  },
+  {
+    question: "Do I need to speak German before applying?",
+    answer: "German language skills are not always required at the time of application, depending on the program. However, German language training is included as part of the academic curriculum, helping students develop strong language skills during the program."
+  },
+  {
+    question: "Can international students work while studying in Germany?",
+    answer: "Yes. Under the dual study system, students are legally permitted to work as part of their program, with paid employment directly related to their field of study and fully integrated into their academic schedule."
+  },
+  {
+    question: "Can I stay and work in Germany after completing the program?",
+    answer: "Yes. After graduation, students can transition to a work or residence permit in Germany. Many graduates continue working with their partner companies, making long-term settlement and career growth possible."
+  },
+  
+]
+
+export default function Faq() {
+  return (
     <main className="flex items-center justify-center ">
       <section className="w-[60%] p-10 max-md:w-full max-md:p-4 font-medium">
         <article>
           <h1 className="my-10 text-5xl font-bold text-yellow-500 max-md:text-3xl">
             FAQ
           </h1>
-          <p className="my-10 text-3xl font-bold text-yellow-500 max-md:text-3xl">
-            Which universities does Munich bildungsauslander scholarship assist with?
-          </p>
-          <p className="text-md my-5">
-            Munich bildungsauslander scholarship works with some of the prestigious universities in
-            Maryland, such as; University of Baltimore, University of Maryland,
-            Morgan State University and many others.
-          </p>
-          <p className="my-10 text-3xl font-bold text-yellow-500 max-md:text-3xl">
-            What services does Munich bildungsauslander scholarship provide?
-          </p>
-          <p className="text-md my-5">
-            We provide an opportunity for international students with a strong
-            academic background to Munich bildungsauslander scholarship on a full scholarship at
-            one of our partner universities. We also offer free counseling
-            services tailored to support international students with all the
-            necessary guidance and information needed for them to successfully
-            enroll at a prestigious institution in Maryland on a full
-            scholarship.
-          </p>
-          <p className="my-10 text-3xl font-bold text-yellow-500 max-md:text-3xl">
-            How can Munich bildungsauslander scholarship help with the application process?
-          </p>
-
-          <p className="text-md my-5">
-            Our experienced counselors provide personalized guidance throughout
-            every step of the scholarship application process. We also assist
-            with helping students with vital information in regards to the
-            preparation of application documents, such as certificates,
-            transcripts and recommendation letters, to ensure that it meets the
-            admission requirements of our partner universities in Maryland.
-          </p>
-          <p className="my-10 text-3xl font-bold text-yellow-500 max-md:text-3xl">
-            Access to Top-tier Education and Research Opportunities
-          </p>
-          <p className="text-md my-5">
-            International students in Maryland have access to some of the best
-            educational and research facilities in the world. Institutions like
-            the University of Maryland are leaders in research and innovation,
-            providing international students with opportunities to engage in
-            cutting-edge projects and collaborate with leading experts in their
-            fields.
-          </p>
-          <p className="my-10 text-3xl font-bold text-yellow-500 max-md:text-3xl">
-            What are the admission requirements for universities in Maryland?
-          </p>
-          <p className="text-md my-5">
-            We help you to understand the requirements to secure a direct
-            admission to study a graduate program through the Munich-bildungsauslander
-            scholarship at a partner university. Visit our partner universities
-            page to know more about the application requirements.
-          </p>
-
-          <p className="my-10 text-3xl font-bold text-yellow-500 max-md:text-3xl">
-            What is the student life like in Maryland for international
-            students?
-          </p>
-          <p className="text-md my-5">
-            Maryland offers a vibrant and diverse student life experience. From
-            cultural events to recreational activities and student clubs,
-            there&apos;s always something to do. Munich bildungsauslander scholarship provides
-            insights into campus life and helps you settle into the city.
-          </p>
-          <p className="my-10 text-3xl font-bold text-yellow-500 max-md:text-3xl">
-            How does Munich bildungsauslander scholarship support students after arrival?
-          </p>
-          <p className="text-md my-5">
-            Our support doesn’t end once you arrive in Maryland. We offer
-            orientation sessions, help you get acquainted with campus resources,
-            provide advice on living in Maryland, and address any concerns you
-            may have throughout your academic journey.
-          </p>
-
-          <p className="my-10 text-3xl font-bold text-yellow-500 max-md:text-3xl">
-            When will I know the status of my application?
-          </p>
-          <p className="text-md my-5">
-            An email notification will be sent to you once you have successfully
-            submitted your application and you will be informed about the status
-            of your scholarship application 30 days after the application
-            deadline.
-          </p>
-          <p className="text-md my-5 mt-36">
-            These FAQs cover essential aspects of Munich bildungsauslander scholarship&apos;s
-            services and how we assist international students aiming to study in
-            Maryland. For further inquiries or personalized assistance, feel
-            free to reach out to us directly.
-          </p>
+          {FAQ.map((item, index) => (
+            <div key={index}>
+              <p className="my-10 text-3xl font-bold text-yellow-500 max-md:text-3xl">
+                {item.question}
+              </p>
+              <p className="text-md my-5">
+                {item.answer}
+              </p>
+            </div>
+          ))}
         </article>
       </section>
     </main>

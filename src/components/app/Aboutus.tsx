@@ -1,7 +1,7 @@
 import studentsImg from "../../assets/studentsLife.jpeg";
 export default function Aboutus() {  return (
     <main className="flex flex-col items-center justify-center">
-      <figure className="w-[80%] pt-10">
+      <figure className="w-[80%] pt-10 flex justify-center">
           <img src={studentsImg} alt="Students" loading="lazy"/>
         </figure>
       <section className="w-[60%] p-10 max-md:w-full max-md:p-4 font-medium max-md:text-center">
