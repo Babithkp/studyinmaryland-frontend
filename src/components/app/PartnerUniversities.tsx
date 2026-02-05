@@ -137,7 +137,7 @@ export default function PartnerUniversities() {
                   </span>
                   <br />
                   September 2026 (Fall Semester)
-                  January 2027 (Spring Semester) <br />
+                  January 2027 (Spring Semester)
                 </li>
               </ul>
             </AccordionContent>
@@ -167,17 +167,13 @@ export default function PartnerUniversities() {
                     </li>
                   </ul>
                   <li>
-                    Only the original scanned copies of bachelors or masters degree certificates and transcripts are accepted.
+                  Only the German translated copies of high school or bachelor degree certificates and transcripts will be accepted.
                   </li>
                 </li>
 
                 <li className={dropdownTextClass}>
                   <span className="font-bold mr-2">Statement of Purpose:</span>
-                  <br />A personal statement, that tells the admissions
-                  committee who you are, what your academic and professional
-                  interests are, how you will add value to your chosen degree
-                  program and how the degree program aligns with your career
-                  goals.
+                  <br />A personal statement, that tells the scholarship committee who you are, what your academic and professional interests are, how you will add value to your chosen degree program and how the degree program aligns with your career goals.
                 </li>
                 <li className={dropdownTextClass + " flex flex-col gap-3"}>
                   <p>
@@ -198,7 +194,7 @@ export default function PartnerUniversities() {
                   <p>
                     <span className="font-bold mr-2">Recommendation Letter or Reference Letter:</span>
                     <br />
-                    A recommendation letter or references letter from your current or previous employer or an academic supervisor or representative at your previous academic institution can help boost your scholarship application.
+                    A recommendation letter or references letter from your current or previous employer or an academic supervisor or representative at your previous or current academic institution.
                   </p>
                 </li>
                 <li className={dropdownTextClass + " flex flex-col gap-3"}>
@@ -223,19 +219,6 @@ export default function PartnerUniversities() {
                   </p>
 
                 </li>
-                <li className={dropdownTextClass}>
-                  <p>
-                    <span className="font-bold mr-2">
-                      Recommendation Letter or Reference Letter:
-                    </span>
-                    <br />A recommendation letter or references letter from your
-                    current or previous employer or an academic supervisor or
-                    representative at your previous academic institution can
-                    help boost your application chances of securing a full
-                    scholarship to study a masters or phd program at a partner
-                    university.
-                  </p>
-                </li>
               </ul>
             </AccordionContent>
           </AccordionItem>
@@ -247,14 +230,14 @@ export default function PartnerUniversities() {
             </AccordionTrigger>
             <AccordionContent>
               <p className="w-full bg-slate-300 p-3 font-semibold text-center">
-              All international students would have to submit their scholarship application to before the application deadline.
+              All international students would have to submit their scholarship application before the application deadline.
               </p>
               <ul>
                 <li className={dropdownTextClass + " font-bold"}>
                 For the fall semester( September 2026) 
                 </li>
                 <li className={dropdownTextClass}>
-                Application deadline: May 15, 2026.
+                Application deadline: May 30, 2026.
                 </li>
               </ul>
             </AccordionContent>

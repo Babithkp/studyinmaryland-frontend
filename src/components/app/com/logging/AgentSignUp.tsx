@@ -214,7 +214,7 @@ export default function AgentSigning() {
                 className="absolute -top-3"
               />
             }
-            label="Send me useful emails to help me get the most out of Munich bildungsauslander scholarship."
+            label="Send me useful emails to help me get the most out of Duales studienstipendium scholarship."
           />
           <div className="w-full flex justify-end">
             <Button variant="contained" type="submit"  > 

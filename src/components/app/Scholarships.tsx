@@ -44,7 +44,7 @@ export default function Scholarships() {
             <ul className="ml-5 list-disc flex flex-col gap-3">
               <li>
                 <span className="text-lg font-bold">Scholarship Name:</span>
-                <p>Duales Studienstipendium Scholarship.</p>
+                <p>Duales Studienstipendium</p>
               </li>
               <li>
                 <span className="text-lg font-bold">Host:</span>
@@ -72,18 +72,6 @@ export default function Scholarships() {
                 <span className="text-lg font-bold">Eligible Candidates:</span>
                 <p>
                   International students with a high school certificate or International students with bachelor degree certificate.
-                </p>
-              </li>
-              <li>
-                <span className="text-lg font-bold">Scholarship Benefits:</span>
-                <p>
-                  Admission to study an eligible masters or phd degree program
-                  at a partner university.
-                </p>
-                <p className="mt-3">
-                  Covers full tuition and accommodation fees for the entire
-                  duration of the Masters or PhD program at a partner
-                  university.
                 </p>
               </li>
               <li>
@@ -117,11 +105,13 @@ export default function Scholarships() {
                 <p>Job placement with university partner companies during  graduation.</p>
               </li>
               <li>
-                <p>Practical Industry Experience in Germany
+              <span className="text-lg  font-bold">Practical Industry Experience in Germany:</span>
+                <p>
                   Graduate with valuable hands-on experience in Germany’s world-class work environment.</p>
               </li>
               <li>
-                <p>German Language Training Included
+              <span className="text-lg  font-bold">Learn German Language Training Included:</span>
+                <p>
                 Learn German as part of your academic curriculum for better integration and career growth.</p>
               </li>
               <li>
@@ -157,98 +147,6 @@ export default function Scholarships() {
               </li>
               <li>
                 <p>All scholarship application documents except the copy of your Identity documents must be translated to German language by the German international translation service. ITS</p>
-              </li>
-            </ul>
-          </div>
-          <div className="text-md my-5">
-            <ul className="ml-5 list-disc flex flex-col gap-3">
-              <li>
-                <span className="">
-                  Academic credentials evaluation report from Maryland academic
-                  evaluation center
-                  <a
-                    href="https://msac.us"
-                    target="_blank"
-                    className="underline-offset-2 underline text-blue-600"
-                  >
-                    {" "}
-                    MSAC{ }
-                  </a>
-                  :{" "}
-                </span>
-                (This credential evaluation report shows that the U.S
-                equivalency of your courses and gpa has been evaluated according
-                to U.S academic standards.)
-              </li>
-
-              <li>
-                Academic verification report from Maryland academic evaluation
-                center.
-                <a
-                  href="https://msac.us"
-                  target="_blank"
-                  className="underline-offset-2 underline text-blue-600"
-                >
-                  {" "}
-                  MSAC
-                </a>
-                . (This report confirms that the authenticity of your degree
-                certificate and transcripts has been verified by an official
-                academic credential evaluation service in Maryland, United
-                States).
-              </li>
-
-              <li>
-                English language proficiency test result from{" "}
-                <a
-                  href="http://www.ielts.org"
-                  className="underline text-blue-600"
-                  target="_blank"
-                >
-                  IELTS
-                </a>{" "}
-                or{" "}
-                <a
-                  href="http://www.ets.org/toefl.html"
-                  className="underline text-blue-600"
-                  target="_blank"
-                >
-                  TOEFL{" "}
-                </a>
-                ( This is only required for international students whose degree
-                certificates and transcripts are not in English language.
-                <a
-                  href="http://www.ielts.org"
-                  className="underline text-blue-600"
-                  target="_blank"
-                >
-                  IELTS
-                </a>{" "}
-                or{" "}
-                <a
-                  href="http://www.ets.org/toefl.html"
-                  className="underline text-blue-600"
-                  target="_blank"
-                >
-                  TOEFL{" "}
-                </a>
-                is not a mandatory requirement for international students whose
-                degree certificate and transcripts are in English).
-              </li>
-              <li>
-                Birth certificate issued by relevant government authorities in
-                your home country.
-              </li>
-              <li>Motivation letter/personal statement.</li>
-              <li>
-                Identification document: (Accepted means of identification can
-                be a copy of your international passport, national identity
-                card, or a driver’s license).
-              </li>
-              <li>
-                Recommendations or Reference letter from your previous or
-                current employer or an advisor, representative of your academic
-                institution.
               </li>
             </ul>
           </div>

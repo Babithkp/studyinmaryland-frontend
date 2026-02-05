@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { Link, useLocation } from "react-router-dom";
-import { Drawer } from 'antd';
+import Drawer from '@mui/material/Drawer';
 
 
 export default function Navbar() {
@@ -126,7 +126,7 @@ export default function Navbar() {
             to={"/Scholarships"}
             className={`px-3 py-2 rounded ${isActive("/Scholarships") ? "bg-yellow-500 text-white" : ""}`}
           >
-            Scholarships
+            Scholarship
           </Link>
         </li>
         <li>
@@ -135,14 +135,6 @@ export default function Navbar() {
             className={`px-3 py-2 rounded ${isActive("/student-life") ? "bg-yellow-500 text-white" : ""}`}
           >
             Student Life
-          </Link>
-        </li>
-        <li>
-          <Link
-            to={"/visa"}
-            className={`px-3 py-2 rounded ${isActive("/visa") ? "bg-yellow-500 text-white" : ""}`}
-          >
-            Visa
           </Link>
         </li>
         <li>
@@ -192,16 +184,12 @@ export default function Navbar() {
         <GiHamburgerMenu size={"1.7rem"} />
       </button>
       <Drawer
-        title="Duales Studienstipendium"
-        closable={{ 'aria-label': 'Close Button' }}
         onClose={onClose}
         open={menuState}
-        size={"300px"}
-        styles={{ body: { padding: 0 } }}
+        anchor="right"
+        PaperProps={{ style: { width: "250px" } }}
       >
-
         <section className="w-full h-full ">
-
           <ul className="h-full flex-wrap gap-10 bg-white text-black ">
             <Link
               to={"/"}
@@ -238,7 +226,7 @@ export default function Navbar() {
               onClick={handleNavClick}
               className={`block w-full border-b-[1px] px-5 py-4 text-base font-medium ${isActive("/Scholarships") ? "bg-yellow-500 text-white" : "text-black hover:bg-yellow-500 hover:text-white"}`}
             >
-              Scholarships
+              Scholarship
             </Link>
             <Link
               to={"/student-life"}
@@ -246,13 +234,6 @@ export default function Navbar() {
               className={`block w-full border-b-[1px] px-5 py-4 text-base font-medium ${isActive("/student-life") ? "bg-yellow-500 text-white" : "text-black hover:bg-yellow-500 hover:text-white"}`}
             >
               Student Life
-            </Link>
-            <Link
-              to={"/visa"}
-              onClick={handleNavClick}
-              className={`block w-full border-b-[1px] px-5 py-4 text-base font-medium ${isActive("/visa") ? "bg-yellow-500 text-white" : "text-black hover:bg-yellow-500 hover:text-white"}`}
-            >
-              Visa
             </Link>
             <Link
               to={"/faq"}

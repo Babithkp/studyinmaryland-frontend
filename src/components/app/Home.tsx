@@ -131,13 +131,13 @@ export default function Home() {
             <CardApply
               image={counsellingIcon}
               title="University Admissions"
-              content="Scholarship recipients gain direct admission to pursue a bachelor or master dual study program at a partner university."
+              content="Scholarship recipients gain direct admission to pursue a bachelor or masters degree dual study program at a partner university."
               url="partner-universities"
             />
             <CardApply
               image={visaIcon}
               title="Job Placements"
-              content="Scholarship recipients are guaranteed a placement and receive paid work experience at partner companies of our university."
+              content="In line with the curriculum of the dual study integrated program in Germany, scholarship recipients are guaranteed paid work placements at a partner company of our Universities."
               url="contact"
             />
           </div>
@@ -164,7 +164,7 @@ export default function Home() {
               </h3>
             </div>
             <p >
-              Through our partnership with leading public universities in Germany , we offer international students the opportunity to pursue an eligible bachelor or a masters degree program through the duales studienstipendium provided by the Federal Institute for Vocational Education and Training (Bundesinstitut für Berufsbildung – BIBB).
+              Through our partnership with leading public universities in Germany, we offer international students the opportunity to pursue an eligible bachelor or a masters degree program through the duales studienstipendium provided by the Federal Institute for Vocational Education and Training (Bundesinstitut für Berufsbildung – BIBB).
             </p>
             <a
               href={"/Scholarships"}
@@ -231,7 +231,7 @@ export default function Home() {
           <div className="relative flex flex-col items-center text-center">
             <h6 className="text-7xl font-semibold text-yellow-300">3</h6>
             <p className="absolute top-[30%] w-[300%] text-lg font-bold text-slate-600 max-md:top-[35%]">
-              YEARS OF EXPERIENCE
+              YEARS
             </p>
           </div>
           <div className="relative flex flex-col items-center">

@@ -1,4 +1,5 @@
-export default function ApplicationPortal() {  return (
+export default function ApplicationPortal() {
+  return (
     <main className="flex items-center justify-center">
       <section className="w-[60%] p-10 max-md:w-full max-md:p-4 font-medium">
         <article className="">
@@ -6,82 +7,35 @@ export default function ApplicationPortal() {  return (
             How To Apply:
           </h1>
           <p className="text-md my-5">
-            These are are the guidelines to apply for the Munich-bildungsauslander
-            scholarship to pursue an eligible masters or phd degree program at
-            one of our partner universities.
+            These are are the guidelines on how to apply for the duales studienstipendium scholarship to pursue an eligible bachelor or masters degree dual study program at one of our partner universities.
           </p>
           <p className="text-md my-5">
-            The Munich-bildungsauslander scholarship recipients are automatically
-            admitted to study their chosen programs at one of our partner
-            universities in the state of Maryland.
+            The Duales Studienstipendium scholarship recipients are automatically admitted to study their chosen dual study programs at one of our partner universities in Germany.
           </p>
           <p className="text-md my-5">
-            International students would have to fill the online application
-            form and upload the following documents on the application portal to
-            successfully submit their Munich-bildungsauslander scholarship application.
+            Applicants would have to fill the online application form and upload the following documents on the application portal to successfully submit their scholarship application.
           </p>
           <div className="text-md my-5">
             <ul className="ml-5 list-disc flex flex-col gap-3">
               <li>
-                Upload the original scanned copy of your bachelor or masters
-                degree certificate and transcript on the application portal
-                form.
+                Upload the official German translated copy of your high school certificate or bachelor degree certificate.
               </li>
               <li>
-                Upload your evaluation and verification report of degree
-                certificate and transcripts from{" "}
-                <a
-                  href="https://msac.us"
-                  target="_blank"
-                  className="underline-offset-2 underline text-blue-800"
-                >
-                  MSAC
-                </a>{" "}
-                ( This is a mandatory requirement for all international
-                students).
+                Upload the official German translated copy of your high school transcript or bachelor degree transcript from ITS
               </li>
               <li>
-                Upload your IELTS or TOEFL test result from
-                <a
-                  href={"https://ielts.org"}
-                  target="_blank"
-                  className="ml-2 underline-offset-2 underline text-blue-800 mr-1"
-                >
-                  IELTS
-                </a>
-                or
-                <a
-                  href={"https://www.ets.org/"}
-                  target="_blank"
-                  className="ml-2 underline-offset-2 underline text-blue-800 mr-1"
-                >
-                  TOEFL
-                </a>
-                ( This is only required for students whose degree certificates
-                and transcripts are not in English language)
+                Upload the official translated copy of your birth certificate from ITS
               </li>
               <li>
-                Upload the official English translated copy of your academic
-                transcript and birth certificate from{" "}
-                <a
-                  href="https://msac.us"
-                  target="_blank"
-                  className="underline-offset-2 underline text-blue-800"
-                >
-                  MSAC
-                </a>{" "}
-                (This is only required for students whose birth certificates and
-                academic transcripts are not in English language).
+                Upload the official german translated copy of your statement of purpose from 
+                ITS
               </li>
               <li>
-                Upload the official copy of your birth certificate from the
-                relevant issuing authority in your home country.
+                Upload a the official german translated copy of your recommendation or reference letter from ITS
               </li>
               <li>Upload your motivation letter or personal statement.</li>
               <li>
-                Upload identification document: (Accepted means of
-                identification can be a copy of your international passport,
-                national identity card, or a driver’s license).
+              Upload identification document: (Accepted means of identification can be a copy of your international passport, national identity card, or a driver’s license).
               </li>
               <li>
                 Upload a recommendation or reference letter from your previous

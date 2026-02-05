@@ -5,15 +5,13 @@ export default function AddApplicationArtical() {  return (
       </h1>
 
       <p className="text-md my-5">
-        All applicants should enter their details correctly and upload all the
-        required application documents to submit their application.
+      All applicants should enter their details correctly and upload all the required application documents to submit their application.
       </p>
       <p className="text-md my-5">
-        International students are not required to pay any application/admission
-        fees.
+      International students are not required to pay any application/admission fees.
       </p>
       <p className="text-md my-5">
-        Fill out the online application form and submit your application.
+      Only official German translated copies of applications documents by ITS should be uploaded except Identity documents such as : international passport, national identity cards or drivers license.
       </p>
       <h2 className="my-10 text-5xl font-bold text-yellow-500 max-md:text-3xl">
         Pre-Application Form

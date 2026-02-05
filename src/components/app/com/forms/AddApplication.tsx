@@ -819,8 +819,8 @@ export default function AddApplication() {
                 {...register("programType", { required: true })}
               >
                 <option value="">--Please select option--</option>
+                <option value="Bachelor Degree">Bachelor Degree</option>
                 <option value="Masters Degree">Masters Degree</option>
-                <option value="PhD Degree">PhD Degree</option>
               </select>
             </div>
             {errors.programType && (
@@ -948,7 +948,7 @@ export default function AddApplication() {
           </div>
           <div className="my-5">
             <label className="text-sm font-semibold">
-              Degree Certificate and Transcript
+            High school certificate or bachelor degree certificate (official German translated copy)
               <span className="text-red-500 ml-1">*</span>
             </label>
             <div className="flex items-end gap-2 rounded-sm border-[1.9px] border-slate-300 ">
@@ -999,7 +999,7 @@ export default function AddApplication() {
           </div>
           <div className="my-5">
             <label className="text-sm font-semibold">
-              Academic Transcript Evaluation Report
+            High school transcript or Bachelor degree transcript ( official German translated copy)
               <span className="text-red-500 ml-1">*</span>
             </label>
             <div className="flex items-end gap-1 rounded-sm border-[1.9px] border-slate-300">
@@ -1050,7 +1050,7 @@ export default function AddApplication() {
           </div>
           <div className="my-5">
             <label className="text-sm font-semibold">
-            Academic Credentials Verification Report.
+            Birth certificate ( official German translated copy)
               <span className="text-red-500 ml-1">*</span>
             </label>
             <div className="flex items-end gap-1 rounded-sm border-[1.9px] border-slate-300">
@@ -1101,7 +1101,7 @@ export default function AddApplication() {
           </div>
           <div className="my-5">
             <label className="text-sm font-semibold">
-              Birth Certificate
+            Statement of Purpose (official German translated copy)
               <span className="text-red-500 ml-1">*</span>
             </label>
             <div className="flex items-center rounded-sm border-[1.9px] border-slate-300">
@@ -1144,7 +1144,7 @@ export default function AddApplication() {
           </div>
           <div className="my-5">
             <label className="text-sm font-semibold">
-              Motivational Letter/Statement of Purpose
+            Recommendation/reference letter ( Official German translated copy)
             </label>
             <span className="text-red-500 ml-1">*</span>
             <div className="flex items-center rounded-sm border-[1.9px] border-slate-300">

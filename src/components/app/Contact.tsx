@@ -11,11 +11,7 @@ export default function Contact() {
           </p>
           <p className="text-md my-5 max-md:flex-col flex items-center gap-3 ">
             <p className=" font-bold ">General inquiries :</p>
-            info@studyinmaryland.org
-          </p>
-          <p className="text-md my-5 max-md:flex-col flex items-center gap-3 ">
-            <p className=" font-bold ">Referral program inquires :</p>
-            ambassador@studyinmaryland.org
+            Info@dualesstudienstipendium.de
           </p>
         </article>
       </section>
