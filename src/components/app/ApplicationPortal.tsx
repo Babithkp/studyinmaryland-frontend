@@ -18,7 +18,7 @@ export default function ApplicationPortal() {
           <div className="text-md my-5">
             <ul className="ml-5 list-disc flex flex-col gap-3">
               <li>
-                Upload the official German translated copy of your high school certificate or bachelor degree certificate.
+                Upload the official German translated copy of your high school certificate or bachelor degree certificate from ITS.
               </li>
               <li>
                 Upload the official German translated copy of your high school transcript or bachelor degree transcript from ITS
@@ -33,14 +33,8 @@ export default function ApplicationPortal() {
               <li>
                 Upload a the official german translated copy of your recommendation or reference letter from ITS
               </li>
-              <li>Upload your motivation letter or personal statement.</li>
               <li>
               Upload identification document: (Accepted means of identification can be a copy of your international passport, national identity card, or a driver’s license).
-              </li>
-              <li>
-                Upload a recommendation or reference letter from your previous
-                or current employer or an academic advisor from your academic
-                institution.
               </li>
             </ul>
           </div>

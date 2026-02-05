@@ -78,9 +78,6 @@ export default function AddApplication() {
   const credentailRef = useRef<HTMLInputElement | null>(null);
   const birthRef = useRef<HTMLInputElement | null>(null);
   const motivationRef = useRef<HTMLInputElement | null>(null);
-  const ieltsRef = useRef<HTMLInputElement | null>(null);
-  const translatedRef = useRef<HTMLInputElement | null>(null);
-  const recommendationRef = useRef<HTMLInputElement | null>(null);
   const [fileName, setFileName] = useState<FormValuesFileType>({
     identityFileName: "",
     degreeDocName: [],
@@ -98,10 +95,7 @@ export default function AddApplication() {
   const [credentailsFileError, setcredentailsFileError] = useState<string | null>();
   const [birthFileError, setBirthFileError] = useState<string | null>();
   const [motivateFileError, setMotivateFileError] = useState<string | null>();
-  const [recommendationFileError, setRecommendationFileError] = useState<string | null>();
-  const [ieltsFileError, setIeltsFileError] = useState<string | null>();
-  const [engTransFileError, setEngTransFileError] = useState<string | null>();
-  const [recFileError, setRecFileError] = useState<string | null>();
+
   const [overloadmsg, setOverloadmsg] = useState<multiFileType>({
     degreeMsg: false,
     academicMsg: false,
@@ -336,90 +330,7 @@ export default function AddApplication() {
       setFileName((prev) => ({ ...prev, motivationFileName: files[0].name }));
     }
   };
-  const handlIeltChange = async (event: ChangeEvent<HTMLInputElement>) => {
-    const files = event.target.files;
-    if (files) {
-      if (files[0].size > 5000000) {
-        setIeltsFileError("File size is too large, (minimum sixe is 5Mb)");
-        return;
-      } else {
-        setIeltsFileError(null);
-      }
-      formdata.delete("files");
-      const newId = v4() + files[0].name;
-      setDataStorage((prev) => ({ ...prev, ieltsDocName: newId }));
-      setIsloading(true);
-      formdata.append("files", files[0], newId);
-      await uploadsingleFile(formdata);
-      setIsloading(false);
-      setFileName((prev) => ({ ...prev, ieltFileName: files[0].name }));
-    }
-  };
 
-  // functions for handling English Translated certificate Document
-  const handleTranslatedChange = async (
-    event: ChangeEvent<HTMLInputElement>
-  ) => {
-    if (dataStorage.englishDocName.length >= 2) {
-      setOverloadmsg((prev) => ({ ...prev, englishMsg: true }));
-      return;
-    }
-    const files = event.target.files;
-    if (files) {
-      const file = files[0];
-      if (file.size > 5000000) {
-        setEngTransFileError("File size is too large, (minimum sixe is 5Mb)");
-        return;
-      } else {
-        setEngTransFileError(null);
-      }
-      formdata.delete("files");
-      const newId = v4() + file.name;
-      setDataStorage((prev) => ({
-        ...prev,
-        englishDocName: [...prev.englishDocName, newId],
-      }));
-      setIsloading(true);
-      formdata.append("files", file, newId);
-      await uploadsingleFile(formdata);
-      setIsloading(false);
-      setFileName((prev) => ({
-        ...prev,
-        englishDocName: [...prev.englishDocName, file.name],
-      }));
-    }
-  };
-  const deleteSingleFileEng = (index: number) => {
-    const filteredOut = dataStorage.englishDocName.filter((_, i) => i != index);
-    const filteredName = fileName.englishDocName.filter((_, i) => i != index);
-    setFileName((prev) => ({ ...prev, englishDocName: filteredName }));
-    setDataStorage((prev) => ({ ...prev, englishDocName: filteredOut }));
-  };
-
-  const handleRecommendationChange = async (
-    event: ChangeEvent<HTMLInputElement>
-  ) => {
-    const files = event.target.files;
-    if (files) {
-      if (files[0].size > 5000000) {
-        setRecFileError("File size is too large, (minimum sixe is 5Mb)");
-        return;
-      } else {
-        setRecFileError(null);
-      }
-      formdata.delete("files");
-      const newId = v4() + files[0].name;
-      setDataStorage((prev) => ({ ...prev, recommendationDocName: newId }));
-      setIsloading(true);
-      formdata.append("files", files[0], newId);
-      await uploadsingleFile(formdata);
-      setIsloading(false);
-      setFileName((prev) => ({
-        ...prev,
-        recommendationFileName: files[0].name,
-      }));
-    }
-  };
 
   const {
     register,
@@ -486,16 +397,6 @@ export default function AddApplication() {
       setMotivateFileError("This Field is Required To Register");
       return;
     }
-    if (dataStorage.recommendationDocName === "") {
-      recommendationRef.current?.classList.remove("hidden");
-      recommendationRef.current?.scrollIntoView({
-        behavior: "smooth",
-        block: "center",
-      });
-      recommendationRef.current?.classList.add("hidden");
-      setRecommendationFileError("This Field is Required To Register");
-      return;
-    }
     let referralCode;
     let code;
     if (localStorage.getItem("referral")) {
@@ -524,12 +425,9 @@ export default function AddApplication() {
       identityDocName: dataStorage.identityDocName,
       degreeDocName: dataStorage.degreeDocName,
       academicDocName: dataStorage.academicDocName,
-      birthDocName: dataStorage.birthDocName,
       credentailsDocName: dataStorage.credentailsDocName,
       motivationDocName: dataStorage.motivationDocName,
-      ieltsDocName: dataStorage.ieltsDocName,
       englishDocName: dataStorage.englishDocName,
-      recommendationDocName: dataStorage.recommendationDocName,
       referralCode: code,
     };
     try {
@@ -1188,151 +1086,8 @@ export default function AddApplication() {
               </span>
             )}
           </div>
-          <div className="my-5">
-            <label className="text-sm font-semibold">IELTS or TOEFL</label>
-            <div className="flex items-center rounded-sm border-[1.9px] border-slate-300">
-              <button
-                type="button"
-                className="bg-blue-500 px-2 py-1 text-white"
-                onClick={() => ieltsRef.current?.click()}
-              >
-                Browse
-              </button>
-              <input
-                type="file"
-                className="w-full px-2 text-sm focus:outline-blue-400 hidden"
-                placeholder=""
-                ref={ieltsRef}
-                onChange={handlIeltChange}
-                accept=".xlsx,.xls,image/*,.doc, .docx,.ppt, .pptx,.txt,.pdf"
-              />
-              {fileName.ieltFileName && (
-                <span className="text-sm  font-medium mx-2 border rounded-lg p-1 bg-blue-200 max-md:m-0  max-md:text-xs flex items-center gap-1">
-                  {fileName.ieltFileName}
-                  <ButtonOld
-                    variant={"secondary"}
-                    className="p-0 rounded-full w-5 h-5"
-                    onClick={() =>
-                      setFileName((prev) => ({
-                        ...prev,
-                        ieltFileName: "",
-                      }))
-                    }
-                    type="button"
-                  >
-                    <RxCrossCircled className="w-full h-full" />
-                  </ButtonOld>
-                </span>
-              )}
-            </div>
-            {ieltsFileError && (
-              <span className="text-red-500 text-sm font-medium mt-2">
-                {ieltsFileError}
-              </span>
-            )}
-          </div>
-          <div className="my-5">
-            <label className="text-sm font-semibold">
-            Official Translated Copy of Your birth Certificates and Transcripts.
-            </label>
-            <div className="flex items-end gap-1 rounded-sm border-[1.9px] border-slate-300">
-              <button
-                type="button"
-                className="bg-blue-500 px-2 py-1 text-white"
-                onClick={() => translatedRef.current?.click()}
-              >
-                Browse
-              </button>
-              <input
-                type="file"
-                className="w-full px-2 text-sm focus:outline-blue-400 hidden"
-                placeholder=""
-                ref={translatedRef}
-                onChange={handleTranslatedChange}
-                accept=".xlsx,.xls,image/*,.doc, .docx,.ppt, .pptx,.txt,.pdf"
-              />
-              <div className="w-full  flex flex-wrap gap-1">
-                {fileName.englishDocName.map((doc, i) => (
-                  <span
-                    className="text-sm  font-medium mx-2 border rounded-lg p-1 bg-blue-200 max-md:m-0  max-md:text-xs flex items-center gap-1"
-                    key={i}
-                  >
-                    {doc.substring(0, 20)}
-                    <ButtonOld
-                      variant={"secondary"}
-                      className="p-0 rounded-full w-5 h-5"
-                      onClick={() => deleteSingleFileEng(i)}
-                      type="button"
-                    >
-                      <RxCrossCircled className="w-full h-full" />
-                    </ButtonOld>
-                  </span>
-                ))}
-              </div>
-            </div>
-            {overloadmsg.englishMsg && (
-              <span className=" text-sm font-medium  text-red-500">
-                Maxmium File Count Exceeded
-              </span>
-            )}
-            {engTransFileError && (
-              <span className="text-red-500 text-sm font-medium mt-2">
-                {engTransFileError}
-              </span>
-            )}
-          </div>
 
-          <div className="my-5">
-            <label className="text-sm font-semibold">
-              Recommendation or Reference Letter
-            </label>
-            <span className="text-red-500 ml-1">*</span>
-            <div className="flex items-center rounded-sm border-[1.9px] border-slate-300">
-              <button
-                type="button"
-                className="bg-blue-500 px-2 py-1 text-white"
-                onClick={() => recommendationRef.current?.click()}
-              >
-                Browse
-              </button>
-              <input
-                type="file"
-                className="w-full px-2 text-sm focus:outline-blue-400 hidden"
-                placeholder=""
-                ref={recommendationRef}
-                onChange={handleRecommendationChange}
-                accept=".xlsx,.xls,image/*,.doc, .docx,.ppt, .pptx,.txt,.pdf"
-              />
-              {fileName.recommendationFileName && (
-                <span className="text-sm  font-medium mx-2 border rounded-lg p-1 bg-blue-200 max-md:m-0  max-md:text-xs flex items-center gap-1">
-                  {fileName.recommendationFileName}
-                  <ButtonOld
-                    variant={"secondary"}
-                    className="p-0 rounded-full w-5 h-5"
-                    onClick={() =>
-                      setFileName((prev) => ({
-                        ...prev,
-                        recommendationFileName: "",
-                      }))
-                    }
-                    type="button"
-                  >
-                    <RxCrossCircled className="w-full h-full" />
-                  </ButtonOld>
-                </span>
-              )}
-            </div>
-            {recFileError && (
-              <span className="text-red-500 text-sm font-medium mt-2">
-                {recFileError}
-              </span>
-            )}
-          </div>
-          {recommendationFileError && (
-              <span className="text-red-500 text-sm font-medium mt-2">
-                {recommendationFileError}
-              </span>
-            )}
+
           <p className="text-md my-5">
             By clicking submit you are agreeing that you have uploaded all the
             original documents for your scholarship application.

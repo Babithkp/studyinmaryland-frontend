@@ -137,7 +137,6 @@ export default function PartnerUniversities() {
                   </span>
                   <br />
                   September 2026 (Fall Semester)
-                  January 2027 (Spring Semester)
                 </li>
               </ul>
             </AccordionContent>

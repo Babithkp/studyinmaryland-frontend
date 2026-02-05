@@ -11,7 +11,7 @@ export default function AddApplicationArtical() {  return (
       International students are not required to pay any application/admission fees.
       </p>
       <p className="text-md my-5">
-      Only official German translated copies of applications documents by ITS should be uploaded except Identity documents such as : international passport, national identity cards or drivers license.
+      Only official German translated copies of application documents by ITS should be uploaded except Identity documents such as : international passport, national identity cards or drivers license.
       </p>
       <h2 className="my-10 text-5xl font-bold text-yellow-500 max-md:text-3xl">
         Pre-Application Form

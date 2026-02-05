@@ -4,7 +4,7 @@ export default function StudentLife() {
     <main className="flex items-center justify-center ">
       <section className="w-[60%] p-10 max-md:w-full max-md:p-4 font-medium">
         <figure className="w-full h-full flex justify-center ">
-          <img src={studentsImg} alt="Students" loading="lazy" />
+          <img src={studentsImg} alt="Students" loading="lazy" className="max-md:w-[300px]" />
         </figure>
         <article>
           <h1 className="my-10 text-5xl font-bold text-yellow-500 max-md:text-3xl">
