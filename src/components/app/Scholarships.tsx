@@ -91,13 +91,13 @@ export default function Scholarships() {
             <ul className="ml-5 list-disc flex flex-col gap-3">
               <li>
                 <span className="text-lg  font-bold">Tuition-Free Study in Germany:</span>
-                <p>Complete your bachelor or degree program in Germany with no tuition fees.</p>
+                <p>Complete your bachelors or masters degree program in Germany with no tuition fees.</p>
               </li>
               <li>
-                <p>Guaranteed monthly stipend of €1,200 to support your living expenses throughout the program.</p>
+                <p className="text-lg  font-bold">Guaranteed monthly stipend of €1,200 to support your living expenses throughout the program.</p>
               </li>
               <li>
-                <span className="text-lg  font-bold">Paid Work Directly Related to Your Field:</span>
+                <span className="text-lg  font-bold">Paid Work Directly Related to Your Field of Study:</span>
                 <p>Gain professional work experience through paid employment aligned with your academic field, not casual student jobs.</p>
               </li>
               <li>
@@ -110,7 +110,7 @@ export default function Scholarships() {
                   Graduate with valuable hands-on experience in Germany’s world-class work environment.</p>
               </li>
               <li>
-              <span className="text-lg  font-bold">Learn German Language Training Included:</span>
+              <span className="text-lg  font-bold">German Language Training Included:</span>
                 <p>
                 Learn German as part of your academic curriculum for better integration and career growth.</p>
               </li>

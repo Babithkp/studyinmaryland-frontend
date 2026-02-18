@@ -1,5 +1,4 @@
-import Backdrop from "@mui/material/Backdrop";
-import CircularProgress from "@mui/material/CircularProgress";
+import Backdrop from "@mui/material/Backdrop";import CircularProgress from "@mui/material/CircularProgress";
 import Button from "@mui/material/Button";
 import { TfiMenuAlt } from "react-icons/tfi";
 import { IoMdHome } from "react-icons/io";
@@ -13,7 +12,6 @@ import AddApplicationArtical from "../objects/AddApplicationArtical";
 import { ChangeEvent, useRef, useState } from "react";
 import { newUserregistration, uploadsingleFile } from "../../../../http/fetch";
 import { RxCrossCircled } from "react-icons/rx";
-import { v4 } from "uuid";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
 import Dialog from "@mui/material/Dialog";
@@ -22,7 +20,7 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 import { FaCheck } from "react-icons/fa6";
-
+const endpoint = import.meta.env.VITE_CLOUDEFLARE_ENDPOINT;
 interface FormValues {
   firstName: string;
   lastName: string;
@@ -67,7 +65,7 @@ interface FormValuesFileType {
 interface multiFileType {
   degreeMsg: boolean;
   academicMsg: boolean;
-  credentailsMsg:boolean
+  credentailsMsg: boolean;
   englishMsg: boolean;
 }
 
@@ -92,7 +90,9 @@ export default function AddApplication() {
   const [indentityFileError, setIndentityFileError] = useState<string | null>();
   const [degreeFileError, setDegreeFileError] = useState<string | null>();
   const [academicFileError, setAcademicFileError] = useState<string | null>();
-  const [credentailsFileError, setcredentailsFileError] = useState<string | null>();
+  const [credentailsFileError, setcredentailsFileError] = useState<
+    string | null
+  >();
   const [birthFileError, setBirthFileError] = useState<string | null>();
   const [motivateFileError, setMotivateFileError] = useState<string | null>();
 
@@ -159,11 +159,16 @@ export default function AddApplication() {
         setIndentityFileError(null);
       }
       formdata.delete("files");
-      const newId = v4() + files[0].name;
+      const newId = new Date().toISOString() + files[0].name;
       setIsloading(true);
-      setDataStorage((prev) => ({ ...prev, identityDocName: newId }));
+      setDataStorage((prev) => ({
+        ...prev,
+        identityDocName: endpoint + newId,
+      }));
       formdata.append("files", files[0], newId);
-      await uploadsingleFile(formdata);
+      const res = await uploadsingleFile(formdata);
+      console.log(res);
+
       setIsloading(false);
       setFileName((prev) => ({ ...prev, identityFileName: files[0].name }));
     }
@@ -185,10 +190,10 @@ export default function AddApplication() {
         setDegreeFileError(null);
       }
       formdata.delete("files");
-      const newId = v4() + file.name;
+      const newId = new Date().toISOString() + file.name;
       setDataStorage((prev) => ({
         ...prev,
-        degreeDocName: [...prev.degreeDocName, newId],
+        degreeDocName: [...prev.degreeDocName, endpoint + newId],
       }));
       setIsloading(true);
       formdata.append("files", file, newId);
@@ -224,10 +229,10 @@ export default function AddApplication() {
         setAcademicFileError(null);
       }
       formdata.delete("files");
-      const newId = v4() + file.name;
+      const newId = new Date().toISOString() + file.name;
       setDataStorage((prev) => ({
         ...prev,
-        academicDocName: [...prev.academicDocName, newId],
+        academicDocName: [...prev.academicDocName, endpoint + newId],
       }));
       setIsloading(true);
       formdata.append("files", file, newId);
@@ -240,7 +245,9 @@ export default function AddApplication() {
     }
   };
   // functions for handling Crendentails Document
-  const handleCredentailsChange = async (event: ChangeEvent<HTMLInputElement>) => {
+  const handleCredentailsChange = async (
+    event: ChangeEvent<HTMLInputElement>,
+  ) => {
     if (dataStorage.credentailsDocName.length >= 2) {
       setOverloadmsg((prev) => ({ ...prev, academicMsg: true }));
       return;
@@ -249,16 +256,18 @@ export default function AddApplication() {
     if (files) {
       const file = files[0];
       if (file.size > 5000000) {
-        setcredentailsFileError("File size is too large, (minimum sixe is 5Mb)");
+        setcredentailsFileError(
+          "File size is too large, (minimum sixe is 5Mb)",
+        );
         return;
       } else {
         setcredentailsFileError(null);
       }
       formdata.delete("files");
-      const newId = v4() + file.name;
+      const newId = new Date().toISOString() + file.name;
       setDataStorage((prev) => ({
         ...prev,
-        credentailsDocName: [...prev.credentailsDocName, newId],
+        credentailsDocName: [...prev.credentailsDocName, endpoint + newId],
       }));
       setIsloading(true);
       formdata.append("files", file, newId);
@@ -272,7 +281,7 @@ export default function AddApplication() {
   };
   const deleteSingleFileAca = (index: number) => {
     const filteredOut = dataStorage.academicDocName.filter(
-      (_, i) => i != index
+      (_, i) => i != index,
     );
     const filteredName = fileName.academiFileName.filter((_, i) => i != index);
     setFileName((prev) => ({ ...prev, academiFileName: filteredName }));
@@ -280,7 +289,7 @@ export default function AddApplication() {
   };
   const deleteSingleFileCre = (index: number) => {
     const filteredOut = dataStorage.credentailsDocName.filter(
-      (_, i) => i != index
+      (_, i) => i != index,
     );
     const filteredName = fileName.credentailsName.filter((_, i) => i != index);
     setFileName((prev) => ({ ...prev, credentailsName: filteredName }));
@@ -298,8 +307,8 @@ export default function AddApplication() {
         setBirthFileError(null);
       }
       formdata.delete("files");
-      const newId = v4() + files[0].name;
-      setDataStorage((prev) => ({ ...prev, birthDocName: newId }));
+      const newId = new Date().toISOString() + files[0].name;
+      setDataStorage((prev) => ({ ...prev, birthDocName: endpoint + newId }));
       setIsloading(true);
       formdata.append("files", files[0], newId);
       await uploadsingleFile(formdata);
@@ -310,7 +319,7 @@ export default function AddApplication() {
 
   // functions for handling motivation certificate Document
   const handleMotivationChange = async (
-    event: ChangeEvent<HTMLInputElement>
+    event: ChangeEvent<HTMLInputElement>,
   ) => {
     const files = event.target.files;
     if (files) {
@@ -321,8 +330,11 @@ export default function AddApplication() {
         setMotivateFileError(null);
       }
       formdata.delete("files");
-      const newId = v4() + files[0].name;
-      setDataStorage((prev) => ({ ...prev, motivationDocName: newId }));
+      const newId = new Date().toISOString() + files[0].name;
+      setDataStorage((prev) => ({
+        ...prev,
+        motivationDocName: endpoint + newId,
+      }));
       setIsloading(true);
       formdata.append("files", files[0], newId);
       await uploadsingleFile(formdata);
@@ -330,7 +342,6 @@ export default function AddApplication() {
       setFileName((prev) => ({ ...prev, motivationFileName: files[0].name }));
     }
   };
-
 
   const {
     register,
@@ -346,7 +357,6 @@ export default function AddApplication() {
         block: "center",
       });
       indentityRef.current?.classList.add("hidden");
-
       setIndentityFileError("This Field is Required To Register");
       return;
     }
@@ -435,10 +445,11 @@ export default function AddApplication() {
       const response = await newUserregistration(formSubmittiedData);
       console.log(response);
       
+
       if (!response.data.error) {
         setResponseStatus(false);
         setOpen(true);
-        
+
         reset();
         setFileName({
           identityFileName: "",
@@ -846,7 +857,8 @@ export default function AddApplication() {
           </div>
           <div className="my-5">
             <label className="text-sm font-semibold">
-            High school certificate or bachelor degree certificate (official German translated copy)
+              High school certificate or bachelor degree certificate (official
+              German translated copy)
               <span className="text-red-500 ml-1">*</span>
             </label>
             <div className="flex items-end gap-2 rounded-sm border-[1.9px] border-slate-300 ">
@@ -897,7 +909,8 @@ export default function AddApplication() {
           </div>
           <div className="my-5">
             <label className="text-sm font-semibold">
-            High school transcript or Bachelor degree transcript ( official German translated copy)
+              High school transcript or Bachelor degree transcript ( official
+              German translated copy)
               <span className="text-red-500 ml-1">*</span>
             </label>
             <div className="flex items-end gap-1 rounded-sm border-[1.9px] border-slate-300">
@@ -948,7 +961,7 @@ export default function AddApplication() {
           </div>
           <div className="my-5">
             <label className="text-sm font-semibold">
-            Birth certificate ( official German translated copy)
+              Birth certificate ( official German translated copy)
               <span className="text-red-500 ml-1">*</span>
             </label>
             <div className="flex items-end gap-1 rounded-sm border-[1.9px] border-slate-300">
@@ -999,7 +1012,7 @@ export default function AddApplication() {
           </div>
           <div className="my-5">
             <label className="text-sm font-semibold">
-            Statement of Purpose (official German translated copy)
+              Statement of Purpose (official German translated copy)
               <span className="text-red-500 ml-1">*</span>
             </label>
             <div className="flex items-center rounded-sm border-[1.9px] border-slate-300">
@@ -1042,7 +1055,7 @@ export default function AddApplication() {
           </div>
           <div className="my-5">
             <label className="text-sm font-semibold">
-            Recommendation/reference letter ( Official German translated copy)
+              Recommendation/reference letter ( Official German translated copy)
             </label>
             <span className="text-red-500 ml-1">*</span>
             <div className="flex items-center rounded-sm border-[1.9px] border-slate-300">
@@ -1086,7 +1099,6 @@ export default function AddApplication() {
               </span>
             )}
           </div>
-
 
           <p className="text-md my-5">
             By clicking submit you are agreeing that you have uploaded all the

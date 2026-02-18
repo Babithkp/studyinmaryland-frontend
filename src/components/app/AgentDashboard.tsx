@@ -25,7 +25,6 @@ import {
   uploadsingleFile,
 } from "../../http/fetch";
 import { RiArrowUpSLine } from "react-icons/ri";
-import { v4 } from "uuid";
 import { ToastContainer, toast } from "react-toastify";
 
 import "react-toastify/dist/ReactToastify.css";
@@ -80,12 +79,13 @@ export default function AgentDashboard() {
   const profileRef = useRef<HTMLInputElement>(null);
   const params = useParams();
   const formdata = new FormData();
-
+  const endpoint = import.meta.env.VITE_CLOUDEFLARE_ENDPOINT;
   if (!sessionStorage.getItem("token")) {
     window.location.href = "/";
   }
 
-  const originalUrl = `https://studyinmaryland-stroage-bucket.s3.ap-southeast-2.amazonaws.com/${profileImageUrl}`;
+  const originalUrl = `${profileImageUrl}`;
+  console.log(originalUrl);
 
   const handleChange =
     (panel: string) => (event: SyntheticEvent, isExpanded: boolean) => {
@@ -103,7 +103,7 @@ export default function AgentDashboard() {
     if (files) {
       const file = files[0];
 
-      const newId = v4() + file.name;
+      const newId = new Date().toISOString() + file.name;
       formdata.append("files", file, newId);
       if (file.size > 5000000) {
         setImageError("File size is too large, (minimum sixe is 5Mb)");
@@ -117,10 +117,10 @@ export default function AgentDashboard() {
         await uploadsingleFile(formdata);
         const updateResponse = await updateAgentProfileImg({
           id: agentDetails?.id,
-          imageUrl: newId,
+          imageUrl: endpoint + newId,
         });
         if (updateResponse) {
-          setProfileImageUrl(newId);
+          setProfileImageUrl(endpoint + newId);
           setIsUploading(false);
         }
       } catch (err) {
@@ -169,7 +169,7 @@ export default function AgentDashboard() {
           <img
             src={profileImageUrl ? originalUrl : defaultImage}
             alt="profile Image "
-            className="h-full w-full rounded-full  drop-shadow-lg "
+            className="h-full w-full rounded-full  drop-shadow-lg object-contain"
             width={300}
             height={300}
             loading="lazy"
@@ -297,10 +297,10 @@ export default function AgentDashboard() {
                 </p>
                 {stud.identityDocName && (
                   <Typography className="md:w-[70rem] pl-4" key={i}>
-                    {stud.identityDocName.substring(36)}{" "}
+                    {stud.identityDocName.substring(118)}{" "}
                     <a
                       target="_blank"
-                      href={`https://studyinmaryland-stroage-bucket.s3.ap-southeast-2.amazonaws.com/${stud.identityDocName}`}
+                      href={`${stud.identityDocName}`}
                       className=" border p-2 bg-slate-50 hover:bg-slate-100"
                     >
                       Download
@@ -310,10 +310,10 @@ export default function AgentDashboard() {
                 <p className="font-medium">Degree Documents:</p>
                 {stud.degreeDocName.map((doc, i) => (
                   <Typography className="md:w-[70rem] pl-4 pt-4" key={i}>
-                    {doc.substring(36)}{" "}
+                    {doc.substring(118)}{" "}
                     <a
                       target="_blank"
-                      href={`https://studyinmaryland-stroage-bucket.s3.ap-southeast-2.amazonaws.com/${doc}`}
+                      href={`${doc}`}
                       className=" border p-2 bg-slate-50 hover:bg-slate-100"
                     >
                       Download
@@ -325,10 +325,10 @@ export default function AgentDashboard() {
                 </p>
                 {stud.academicDocName.map((doc, i) => (
                   <Typography className="md:w-[70rem] pl-4 pt-4" key={i}>
-                    {doc.substring(36)}{" "}
+                    {doc.substring(118)}{" "}
                     <a
                       target="_blank"
-                      href={`https://studyinmaryland-stroage-bucket.s3.ap-southeast-2.amazonaws.com/${doc}`}
+                      href={`${doc}`}
                       className=" border p-2 bg-slate-50 hover:bg-slate-100"
                     >
                       Download
@@ -340,10 +340,10 @@ export default function AgentDashboard() {
                 </p>
                 {stud.credentailsDocName.map((doc, i) => (
                   <Typography className="md:w-[70rem] pl-4 pt-4" key={i}>
-                    {doc.substring(36)}{" "}
+                    {doc.substring(118)}{" "}
                     <a
                       target="_blank"
-                      href={`https://studyinmaryland-stroage-bucket.s3.ap-southeast-2.amazonaws.com/${doc}`}
+                      href={`${doc}`}
                       className=" border p-2 bg-slate-50 hover:bg-slate-100"
                     >
                       Download
@@ -355,10 +355,10 @@ export default function AgentDashboard() {
                 </p>
                 {stud.birthDocName && (
                   <Typography className="md:w-[70rem] pl-4" key={i}>
-                    {stud.birthDocName.substring(36)}{" "}
+                    {stud.birthDocName.substring(118)}{" "}
                     <a
                       target="_blank"
-                      href={`https://studyinmaryland-stroage-bucket.s3.ap-southeast-2.amazonaws.com/${stud.birthDocName}`}
+                      href={`${stud.birthDocName}`}
                       className=" border p-2 bg-slate-50 hover:bg-slate-100"
                     >
                       Download
@@ -370,10 +370,10 @@ export default function AgentDashboard() {
                 </p>
                 {stud.motivationDocName && (
                   <Typography className="md:w-[70rem] pl-4" key={i}>
-                    {stud.motivationDocName.substring(36)}{" "}
+                    {stud.motivationDocName.substring(118)}{" "}
                     <a
                       target="_blank"
-                      href={`https://studyinmaryland-stroage-bucket.s3.ap-southeast-2.amazonaws.com/${stud.motivationDocName}`}
+                      href={`${stud.motivationDocName}`}
                       className=" border p-2 bg-slate-50 hover:bg-slate-100"
                     >
                       Download
@@ -385,10 +385,10 @@ export default function AgentDashboard() {
                 </p>
                 {stud.ieltsDocName && (
                   <Typography className="md:w-[70rem] pl-4" key={i}>
-                    {stud.ieltsDocName.substring(36)}{" "}
+                    {stud.ieltsDocName.substring(118)}{" "}
                     <a
                       target="_blank"
-                      href={`https://studyinmaryland-stroage-bucket.s3.ap-southeast-2.amazonaws.com/${stud.ieltsDocName}`}
+                      href={`${stud.ieltsDocName}`}
                       className=" border p-2 bg-slate-50 hover:bg-slate-100"
                     >
                       Download
@@ -402,10 +402,10 @@ export default function AgentDashboard() {
                 )}
                 {stud.englishDocName.map((doc, i) => (
                   <Typography className="md:w-[70rem] pl-4 pt-4" key={i}>
-                    {doc.substring(36)}{" "}
+                    {doc.substring(118)}{" "}
                     <a
                       target="_blank"
-                      href={`https://studyinmaryland-stroage-bucket.s3.ap-southeast-2.amazonaws.com/${doc}`}
+                      href={`${doc}`}
                       className=" border p-2 bg-slate-50 hover:bg-slate-100"
                     >
                       Download
@@ -419,10 +419,10 @@ export default function AgentDashboard() {
                 )}
                 {stud.recommendationDocName && (
                   <Typography className="md:w-[70rem] pl-4 pt-4" key={i}>
-                    {stud.recommendationDocName.substring(36)}
+                    {stud.recommendationDocName.substring(118)}
                     <a
                       target="_blank"
-                      href={`https://studyinmaryland-stroage-bucket.s3.ap-southeast-2.amazonaws.com/${stud.recommendationDocName}`}
+                      href={`${stud.recommendationDocName}`}
                       className=" border p-2 bg-slate-50 hover:bg-slate-100"
                     >
                       Download

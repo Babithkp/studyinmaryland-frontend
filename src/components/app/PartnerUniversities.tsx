@@ -166,7 +166,7 @@ export default function PartnerUniversities() {
                     </li>
                   </ul>
                   <li>
-                  Only the German translated copies of high school or bachelor degree certificates and transcripts will be accepted.
+                    Only the German translated copies of high school or bachelor degree certificates and transcripts will be accepted.
                   </li>
                 </li>
 
@@ -188,7 +188,7 @@ export default function PartnerUniversities() {
                     <br />
                     International students would have to submit an original copy
                     of their birth certificate issued by the relevant authority
-                    in your home country.
+                    in their home country.
                   </p>
                   <p>
                     <span className="font-bold mr-2">Recommendation Letter or Reference Letter:</span>
@@ -199,21 +199,21 @@ export default function PartnerUniversities() {
                 <li className={dropdownTextClass + " flex flex-col gap-3"}>
                   <p>
                     <span className="font-bold mr-2">
-                      Official copy of a certified translation of your Application documents:
+                    Official German translated copies of application documents:
                     </span>
                     <br />
                     This is a mandatory requirement for all scholarship applicants: All academic certificates, transcripts, birth certificates etc.. must be officially translated to German language.
                   </p>
                   <p>
-                    All scholarship applicants must submit their documents at the international translation services to get their application documents officially translated to german language.
+                  All scholarship applicants must submit their documents at the German International Translation Service to get their application documents officially translated to german language.
                   </p>
                   <p>
                     All scholarship applicants can get their application documents translated online at <a
-                      href="https://www.ITS.de"
+                      href="https://www.Internationaltranslationservice.de"
                       target="_blank"
                       className="underline-offset-2 underline text-blue-600"
                     >
-                      ITS.de
+                      Internationaltranslationservice.de
                     </a>
                   </p>
 
@@ -229,14 +229,14 @@ export default function PartnerUniversities() {
             </AccordionTrigger>
             <AccordionContent>
               <p className="w-full bg-slate-300 p-3 font-semibold text-center">
-              All international students would have to submit their scholarship application before the application deadline.
+                All international students would have to submit their scholarship application before the application deadline.
               </p>
               <ul>
                 <li className={dropdownTextClass + " font-bold"}>
-                For the fall semester( September 2026) 
+                  For the fall semester( September 2026)
                 </li>
                 <li className={dropdownTextClass}>
-                Application deadline: May 30, 2026.
+                  Application deadline: May 30, 2026.
                 </li>
               </ul>
             </AccordionContent>
