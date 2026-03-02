@@ -1,4 +1,4 @@
-import image from "../../assets/background.jpeg"; import icon1 from "/city.svg";
+import image from "../../assets/background.jpeg";import icon1 from "/city.svg";
 import icon2 from "/rocket-graph.svg";
 import icon4 from "/flag-point.svg";
 import cardBg from "../../assets/graduate.jpeg";
@@ -13,8 +13,8 @@ import counsellingIcon from "/icon-counselling.png";
 import coachingIcon from "/coaching-vector.png";
 import visaIcon from "/icon-visa.png";
 import CardApply from "./com/objects/CardApply";
-import MarylandMap from "/baltimore-map.jpg";
 import Slider from "./com/objects/HomeSlider";
+import introVideo from "../../assets/intro.mp4";
 
 export default function Home() {
   return (
@@ -28,13 +28,16 @@ export default function Home() {
       <section className="absolute top-[25%] flex w-[50%] flex-col items-center justify-center max-md:w-[80%]">
         <article className="my-10 text-white">
           <h1 className="bg-yellow-500 px-14 py-10 text-5xl font-semibold max-md:p-4 max-md:text-2xl">
-            Duales Studienstipendium : Study and gain real work practical experience in Germany.
+            Duales Studienstipendium : Study and gain real work practical
+            experience in Germany.
           </h1>
           <p className="bg-black p-8 text-lg font-medium max-md:p-4 max-sm:text-base text-center">
-            The Duales Studium scholarship offers international students the opportunity to pursue a degree at
-            our partner universities while combining their studies with paid, hands-on work at a company in Germany.
-            This unique dual model allows students to gain practical experience and earn an income while studying a bachelor or
-            masters degree program in Germany tuition-free!
+            The Duales Studium scholarship offers international students the
+            opportunity to pursue a degree at our partner universities while
+            combining their studies with paid, hands-on work at a company in
+            Germany. This unique dual model allows students to gain practical
+            experience and earn an income while studying a bachelor or masters
+            degree program in Germany tuition-free!
           </p>
         </article>
         <div className="flex max-sm:flex-col">
@@ -52,8 +55,9 @@ export default function Home() {
             Study at a partner institution for free!
           </h2>
           <p className="px-5 text-center text-lg font-extralight">
-            In the past three years over 4000 international students have been provided with the
-            opportunity to pursue a dual-study bachelor or masters degree program at a partner university in Germany.
+            In the past three years over 4000 international students have been
+            provided with the opportunity to pursue a dual-study bachelor or
+            masters degree program at a partner university in Germany.
           </p>
           <div className="my-10 flex w-full gap-5 text-center  flex-wrap justify-between">
             <figure className="flex flex-col items-center justify-center max-sm:w-full">
@@ -118,7 +122,8 @@ export default function Home() {
               Free education at our prestigious universities.
             </h3>
             <p className="text-center">
-              Our mission is to make your dream of studying in Germany come true.
+              Our mission is to make your dream of studying in Germany come
+              true.
             </p>
           </div>
           <div className="flex flex-wrap items-center justify-center gap-5">
@@ -149,7 +154,7 @@ export default function Home() {
           View Our Top Study Programs.
         </a>
       </section>
-      <section className="mt-5 flex justify-center  "> 
+      <section className="mt-5 flex justify-center  ">
         <div className=" flex w-[90%] max-md:flex-col justify-between max-md:gap-20">
           <div className=" items-center gap-3 flex flex-col w-[30%] max-md:w-full">
             <div className="flex gap-5">
@@ -163,8 +168,13 @@ export default function Home() {
                 Free World-Class Education!
               </h3>
             </div>
-            <p >
-              Through our partnership with leading public universities in Germany, we offer international students the opportunity to pursue an eligible bachelor or a masters degree program through the duales studienstipendium provided by the Federal Institute for Vocational Education and Training (Bundesinstitut für Berufsbildung – BIBB).
+            <p>
+              Through our partnership with leading public universities in
+              Germany, we offer international students the opportunity to pursue
+              an eligible bachelor or a masters degree program through the
+              duales studienstipendium provided by the Federal Institute for
+              Vocational Education and Training (Bundesinstitut für
+              Berufsbildung – BIBB).
             </p>
             <a
               href={"/Scholarships"}
@@ -185,8 +195,9 @@ export default function Home() {
                 Streamlined Application Procedure.
               </h3>
             </div>
-            <p >
-              International students can use our seamless application portal to apply for the duales studienstipendium scholarship for free!
+            <p>
+              International students can use our seamless application portal to
+              apply for the duales studienstipendium scholarship for free!
             </p>
             <a
               href={"/applicationPortal"}
@@ -208,8 +219,10 @@ export default function Home() {
                 Career & Professional networking Opportunities.
               </h3>
             </div>
-            <p >
-              The annual student data shows that 90% of international students gain full-time employment after completing a dual study bachelor or masters program in Germany.
+            <p>
+              The annual student data shows that 90% of international students
+              gain full-time employment after completing a dual study bachelor
+              or masters program in Germany.
             </p>
             <a
               href={"/student-life"}
@@ -267,7 +280,10 @@ export default function Home() {
               There is always someone you can ask
             </h3>
           </div>
-          <a href="/faq" className="relative flex h-[28rem] w-[19rem] items-center justify-center max-md:h-[20rem] max-md:w-[100%]">
+          <a
+            href="/faq"
+            className="relative flex h-[28rem] w-[19rem] items-center justify-center max-md:h-[20rem] max-md:w-[100%]"
+          >
             <img
               loading="lazy"
               src={cardBg2}
@@ -279,11 +295,13 @@ export default function Home() {
             </h3>
           </a>
           <div className="relative flex h-[28rem] w-[19rem] items-center justify-center max-md:h-[20rem] max-md:w-[100%]">
-            <img
-              loading="lazy"
-              src={MarylandMap}
-              alt="college background"
-              className="absolute h-full w-full object-cover"
+            <video
+              src={introVideo}
+              className="h-full w-full object-cover"
+              autoPlay
+              muted
+              loop
+              controls
             />
           </div>
           <a

@@ -1,5 +1,4 @@
-import studentsImg from "../../assets/scholarshipStudents.jpeg";
-import { useEffect } from "react";
+import studentsImg from "../../assets/scholarshipStudents.jpeg";import { useEffect } from "react";
 import HomeSlider from "./com/objects/HomeSlider";
 export default function Scholarships() {
   useEffect(() => {
@@ -26,16 +25,38 @@ export default function Scholarships() {
             Overview
           </p>
           <p className="text-md my-5">
-            The Duales Studienstipendium Scholarship is a forward-thinking international education initiative funded by the Federal Institute for Vocational Education and Training (Bundesinstitut für Berufsbildung – BIBB). It was created to promote Germany’s globally respected dual study system, which uniquely integrates academic learning with hands-on, paid workplace training. Since its inception in 2023, the scholarship has supported over 4,500 international students from across the world, opening structured and reliable pathways into Germany’s education and employment ecosystem.
+            The Duales Studienstipendium Scholarship is a forward-thinking
+            international education initiative funded by the Federal Institute
+            for Vocational Education and Training (Bundesinstitut für
+            Berufsbildung – BIBB). It was created to promote Germany’s globally
+            respected dual study system, which uniquely integrates academic
+            learning with hands-on, paid workplace training. Since its inception
+            in 2023, the scholarship has supported over 4,500 international
+            students from across the world, opening structured and reliable
+            pathways into Germany’s education and employment ecosystem.
           </p>
 
           <p className="text-md my-5">
-            At the heart of the program is a clear mission: not only to enable students to study in Germany, but to prepare them for rapid and sustainable entry into the German job market. By combining classroom instruction with real-world professional experience, scholars graduate with practical skills that are immediately relevant to employers. In parallel, students gain a strong command of the German language while studying and working, giving them a critical advantage for long-term career growth and social integration in Germany.
-
+            At the heart of the program is a clear mission: not only to enable
+            students to study in Germany, but to prepare them for rapid and
+            sustainable entry into the German job market. By combining classroom
+            instruction with real-world professional experience, scholars
+            graduate with practical skills that are immediately relevant to
+            employers. In parallel, students gain a strong command of the German
+            language while studying and working, giving them a critical
+            advantage for long-term career growth and social integration in
+            Germany.
           </p>
           <p className="text-md my-5">
-            Beyond funding, the Duales Studienstipendium represents opportunity, stability, and future readiness. It bridges the gap between education and employment, reduces the risks often associated with international study, and aligns global talent with Germany’s workforce needs. Through strong institutional partnerships and a structured support framework, the scholarship empowers students to build meaningful careers, contribute to the German economy, and become globally competitive professionals in an increasingly interconnected world.
-
+            Beyond funding, the Duales Studienstipendium represents opportunity,
+            stability, and future readiness. It bridges the gap between
+            education and employment, reduces the risks often associated with
+            international study, and aligns global talent with Germany’s
+            workforce needs. Through strong institutional partnerships and a
+            structured support framework, the scholarship empowers students to
+            build meaningful careers, contribute to the German economy, and
+            become globally competitive professionals in an increasingly
+            interconnected world.
           </p>
           <p className="my-10 text-3xl font-bold text-yellow-500 max-md:text-3xl">
             Scholarship Details
@@ -48,7 +69,10 @@ export default function Scholarships() {
               </li>
               <li>
                 <span className="text-lg font-bold">Host:</span>
-                <p>Federal Institute for Vocational Education and Training (Bundesinstitut für Berufsbildung – BIBB).</p>
+                <p>
+                  Federal Institute for Vocational Education and Training
+                  (Bundesinstitut für Berufsbildung – BIBB).
+                </p>
               </li>
               <li>
                 <span className="text-lg font-bold">Host Country:</span>
@@ -71,7 +95,8 @@ export default function Scholarships() {
               <li>
                 <span className="text-lg font-bold">Eligible Candidates:</span>
                 <p>
-                  International students with a high school certificate or International students with bachelor degree certificate.
+                  International students with a high school certificate or
+                  International students with bachelor degree certificate.
                 </p>
               </li>
               <li>
@@ -90,33 +115,65 @@ export default function Scholarships() {
           <div className="text-md my-5">
             <ul className="ml-5 list-disc flex flex-col gap-3">
               <li>
-                <span className="text-lg  font-bold">Tuition-Free Study in Germany:</span>
-                <p>Complete your bachelors or masters degree program in Germany with no tuition fees.</p>
-              </li>
-              <li>
-                <p className="text-lg  font-bold">Guaranteed monthly stipend of €1,200 to support your living expenses throughout the program.</p>
-              </li>
-              <li>
-                <span className="text-lg  font-bold">Paid Work Directly Related to Your Field of Study:</span>
-                <p>Gain professional work experience through paid employment aligned with your academic field, not casual student jobs.</p>
-              </li>
-              <li>
-                <span className="text-lg  font-bold">Guaranteed Career & Employment Pathway:</span>
-                <p>Job placement with university partner companies during  graduation.</p>
-              </li>
-              <li>
-              <span className="text-lg  font-bold">Practical Industry Experience in Germany:</span>
+                <span className="text-lg  font-bold">
+                  Tuition-Free Study in Germany:
+                </span>
                 <p>
-                  Graduate with valuable hands-on experience in Germany’s world-class work environment.</p>
+                  Complete your bachelors or masters degree program in Germany
+                  with no tuition fees.
+                </p>
               </li>
               <li>
-              <span className="text-lg  font-bold">German Language Training Included:</span>
+                <p className="text-lg  font-bold">
+                  Guaranteed monthly stipend of €1,200 to support your living
+                  expenses throughout the program.
+                </p>
+              </li>
+              <li>
+                <span className="text-lg  font-bold">
+                  Paid Work Directly Related to Your Field of Study:
+                </span>
                 <p>
-                Learn German as part of your academic curriculum for better integration and career growth.</p>
+                  Gain professional work experience through paid employment
+                  aligned with your academic field, not casual student jobs.
+                </p>
               </li>
               <li>
-                <span className="text-lg  font-bold">No blocked account requirement:</span>
-                <p>Duales studienstipendium recipients are exempted from providing a blocked account in Germany when applying for their student visas.</p>
+                <span className="text-lg  font-bold">
+                  Guaranteed Career & Employment Pathway:
+                </span>
+                <p>
+                  Job placement with university partner companies during
+                  graduation.
+                </p>
+              </li>
+              <li>
+                <span className="text-lg  font-bold">
+                  Practical Industry Experience in Germany:
+                </span>
+                <p>
+                  Graduate with valuable hands-on experience in Germany’s
+                  world-class work environment.
+                </p>
+              </li>
+              <li>
+                <span className="text-lg  font-bold">
+                  German Language Training Included:
+                </span>
+                <p>
+                  Learn German as part of your academic curriculum for better
+                  integration and career growth.
+                </p>
+              </li>
+              <li>
+                <span className="text-lg  font-bold">
+                  No blocked account requirement:
+                </span>
+                <p>
+                  Duales studienstipendium recipients are exempted from
+                  providing a blocked account in Germany when applying for their
+                  student visas.
+                </p>
               </li>
             </ul>
           </div>
@@ -126,27 +183,82 @@ export default function Scholarships() {
           <div className="text-md my-5">
             <ul className="ml-5 list-disc flex flex-col gap-3">
               <li>
-                <span className="text-lg  font-bold">Bachelor’s degree programs:</span>
-                <p>High school certificate and transcript.(Must be officially translated to German by the German international translation service..ITS)</p>
+                <span className="text-lg  font-bold">
+                  Bachelor’s degree programs:
+                </span>
+                <p>
+                  High school certificate and transcript.(Must be officially
+                  translated to German by the German international translation
+                  service..
+                  <a
+                  className="text-blue-600"
+                    href="https://internationaltranslationservice.de"
+                    target="_blank"
+                  >
+                    ITS
+                  </a>
+                  )
+                </p>
               </li>
               <li>
-                <span className="text-lg font-bold">Master’s degree programs:</span>
-                <p>Bachelor’s degree certificate and transcript. (Must be officially translated to German language by the German international translation service. ITS)</p>
+                <span className="text-lg font-bold">
+                  Master’s degree programs:
+                </span>
+                <p>
+                  Bachelor’s degree certificate and transcript. (Must be
+                  officially translated to German language by the German
+                  international translation service. <a
+                  className="text-blue-600"
+                    href="https://internationaltranslationservice.de"
+                    target="_blank"
+                  >
+                    ITS
+                  </a>)
+                </p>
               </li>
               <li>
-                <p>Copy of birth certificate issued by the relevant authority in your home country. (Must be officially translated to German language by the German international translation services.)</p>
+                <p>
+                  Copy of birth certificate issued by the relevant authority in
+                  your home country. (Must be officially translated to German
+                  language by the German international translation services.)
+                </p>
               </li>
               <li>
-                <p>A Statement of Purpose explaining your motivation for applying and why you wish to be considered for the Duales Studienstipendium scholarship.( Must be officially translated by German international translation services.)</p>
+                <p>
+                  A Statement of Purpose explaining your motivation for applying
+                  and why you wish to be considered for the Duales
+                  Studienstipendium scholarship.( Must be officially translated
+                  by German international translation services.)
+                </p>
               </li>
               <li>
-                <p>A recommendation letter or references letter from your current or previous employer or an academic supervisor or representative at your current or previous academic institution. (Must be officially by the German international translation services.)</p>
+                <p>
+                  A recommendation letter or references letter from your current
+                  or previous employer or an academic supervisor or
+                  representative at your current or previous academic
+                  institution. (Must be officially by the German international
+                  translation services.)
+                </p>
               </li>
               <li>
-                <p>A copy of your ID document is required ( International passport, Driver’s license, or National identity card are accepted).</p>
+                <p>
+                  A copy of your ID document is required ( International
+                  passport, Driver’s license, or National identity card are
+                  accepted).
+                </p>
               </li>
               <li>
-                <p>All scholarship application documents except the copy of your Identity documents must be translated to German language by the German international translation service. ITS</p>
+                <p>
+                  All scholarship application documents except the copy of your
+                  Identity documents must be translated to German language by
+                  the German international translation service. <a
+                  className="text-blue-600"
+                    href="https://internationaltranslationservice.de"
+                    target="_blank"
+                  >
+                    ITS
+                  </a>
+                </p>
               </li>
             </ul>
           </div>
