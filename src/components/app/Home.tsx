@@ -240,28 +240,28 @@ export default function Home() {
         >
           Find out more about us.
         </a>
-        <div className="my-10 flex w-[80%] flex-wrap justify-between gap-10 max-md:justify-center">
-          <div className="relative flex flex-col items-center text-center">
+        <div className="my-10 flex w-[80%] flex-wrap justify-between gap-10 max-xl:justify-center">
+          <div className="relative flex flex-col items-center text-center max-xl:w-[30%]">
             <h6 className="text-7xl font-semibold text-yellow-300">3</h6>
-            <p className="absolute top-[30%] w-[300%] text-lg font-bold text-slate-600 max-md:top-[35%]">
+            <p className="absolute top-[30%] w-[300%] text-lg font-bold text-slate-600 max-xl:top-[35%]">
               YEARS
             </p>
           </div>
           <div className="relative flex flex-col items-center">
             <h6 className="text-7xl font-semibold text-yellow-300">4000+</h6>
-            <p className="absolute top-[30%] text-lg font-bold text-slate-600 max-md:top-[35%]">
+            <p className="absolute top-[30%] text-lg font-bold text-slate-600 max-xl:top-[35%]">
               Scholarships Awarded
             </p>
           </div>
           <div className="relative flex flex-col items-center">
             <h6 className="text-7xl font-semibold text-yellow-300">99%</h6>
-            <p className="absolute top-[30%] w-[180%] text-lg font-bold text-slate-600 max-md:top-[35%]">
+            <p className="absolute top-[30%] w-[180%] text-lg font-bold text-slate-600 max-xl:top-[35%]">
               University Acceptance Rate
             </p>
           </div>
           <div className="relative flex flex-col items-center">
             <h6 className="text-7xl font-semibold text-yellow-300">99%</h6>
-            <p className="absolute top-[30%] w-[120%] text-lg font-bold text-slate-600 max-md:top-[35%]">
+            <p className="absolute top-[30%] w-[120%] text-lg font-bold text-slate-600 max-xl:top-[35%]">
               Job success rate
             </p>
           </div>
