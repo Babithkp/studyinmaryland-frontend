@@ -236,7 +236,7 @@ export default function PartnerUniversities() {
                   For the fall semester( September 2026)
                 </li>
                 <li className={dropdownTextClass}>
-                  Application deadline: May 30, 2026.
+                  Application deadline: June 30, 2026.
                 </li>
               </ul>
             </AccordionContent>
