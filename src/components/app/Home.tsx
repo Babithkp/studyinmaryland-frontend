@@ -261,8 +261,8 @@ export default function Home() {
           </div>
           <div className="relative flex flex-col items-center">
             <h6 className="text-7xl font-semibold text-yellow-300">99%</h6>
-            <p className="absolute top-[30%] w-[120%] text-lg font-bold text-slate-600 max-xl:top-[35%]">
-              Job success rate
+            <p className="absolute top-[30%] w-[80%] text-lg font-bold text-slate-600 max-xl:top-[35%]">
+              Success rate
             </p>
           </div>
         </div>
