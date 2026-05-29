@@ -192,7 +192,7 @@ export default function Scholarships() {
                   service..
                   <a
                   className="text-blue-600"
-                    href="https://internationaltranslationservice.de"
+                    href="https://www.internationaltranslationsservice.com"
                     target="_blank"
                   >
                     ITS
@@ -209,7 +209,7 @@ export default function Scholarships() {
                   officially translated to German language by the German
                   international translation service. <a
                   className="text-blue-600"
-                    href="https://internationaltranslationservice.de"
+                    href="https://www.internationaltranslationsservice.com"
                     target="_blank"
                   >
                     ITS
@@ -253,7 +253,7 @@ export default function Scholarships() {
                   Identity documents must be translated to German language by
                   the German international translation service. <a
                   className="text-blue-600"
-                    href="https://internationaltranslationservice.de"
+                    href="https://www.internationaltranslationsservice.com"
                     target="_blank"
                   >
                     ITS

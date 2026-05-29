@@ -55,7 +55,7 @@ import iiieImg from "/iie_logo.png"; export default function Footer() {
             General inquiries:
           </span>
           <div className="flex flex-col gap-5">
-            <p className="text-base underline">Info@dualesstudienstipendium.de</p>
+            <p className="text-base underline">Info@dualesstudienstipendium.com</p>
           </div>
         </div>
         <div>
@@ -95,7 +95,7 @@ import iiieImg from "/iie_logo.png"; export default function Footer() {
             Cookie Policy
           </a>
           <br />
-          <span className="">© 2023-2026 www.dualesstudienstipendium.de</span>
+          <span className="">© 2023-2026 www.dualesstudienstipendium.com</span>
         </div>
       </div>
     </footer>

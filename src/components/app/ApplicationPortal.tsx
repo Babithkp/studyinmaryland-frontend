@@ -27,7 +27,7 @@ export default function ApplicationPortal() {  return (
                 Upload the official German translated copy of your high school
                 certificate or bachelor degree certificate from <a
                   className="text-blue-600"
-                    href="https://internationaltranslationservice.de"
+                    href="https://www.internationaltranslationsservice.com"
                     target="_blank"
                   >
                     ITS
@@ -37,7 +37,7 @@ export default function ApplicationPortal() {  return (
                 Upload the official German translated copy of your high school
                 transcript or bachelor degree transcript from <a
                   className="text-blue-600"
-                    href="https://internationaltranslationservice.de"
+                    href="https://www.internationaltranslationsservice.com"
                     target="_blank"
                   >
                     ITS
@@ -47,7 +47,7 @@ export default function ApplicationPortal() {  return (
                 Upload the official translated copy of your birth certificate
                 from <a
                   className="text-blue-600"
-                    href="https://internationaltranslationservice.de"
+                    href="https://www.internationaltranslationsservice.com"
                     target="_blank"
                   >
                     ITS
@@ -57,7 +57,7 @@ export default function ApplicationPortal() {  return (
                 Upload the official german translated copy of your statement of
                 purpose from <a
                   className="text-blue-600"
-                    href="https://internationaltranslationservice.de"
+                    href="https://www.internationaltranslationsservice.com"
                     target="_blank"
                   >
                     ITS
@@ -67,7 +67,7 @@ export default function ApplicationPortal() {  return (
                 Upload a the official german translated copy of your
                 recommendation or reference letter from <a
                   className="text-blue-600"
-                    href="https://internationaltranslationservice.de"
+                    href="https://www.internationaltranslationsservice.com"
                     target="_blank"
                   >
                     ITS

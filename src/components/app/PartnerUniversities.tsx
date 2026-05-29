@@ -209,11 +209,11 @@ export default function PartnerUniversities() {
                   </p>
                   <p>
                     All scholarship applicants can get their application documents translated online at <a
-                      href="https://www.Internationaltranslationservice.de"
+                      href="https://www.internationaltranslationsservice.com"
                       target="_blank"
                       className="underline-offset-2 underline text-blue-600"
                     >
-                      Internationaltranslationservice.de
+                      internationaltranslationsservice.com
                     </a>
                   </p>
 

@@ -13,7 +13,7 @@ export default function AddApplicationArtical() {  return (
       <p className="text-md my-5">
       Only official German translated copies of application documents by <a
                   className="text-blue-600"
-                    href="https://internationaltranslationservice.de"
+                    href="https://internationaltranslationsservice.com"
                     target="_blank"
                   >
                     ITS
